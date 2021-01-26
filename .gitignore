@@ -1,6 +1,6 @@
 .vscode
-.DS_store
-*/.DS_store
+.DS_Store
+*/.DS_Store
 .gitignore
 package-lock.json
 node_modules

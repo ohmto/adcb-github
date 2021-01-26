@@ -155,6 +155,26 @@ function watch() {
     gulp.watch(paths.ADCE_styles.src, ADCE_Ar_styles);
 }
 
+function watchADCB() {
+    // Static Server + watching scss/html files
+    // gulp.watch(paths.scripts.src, scripts);
+    //ADCB
+    gulp.watch(paths.ADCB_styles.src, ADCB_En_styles);
+    gulp.watch(paths.ADCB_styles.src, ADCB_Ar_styles);
+}
+
+function watchADCP() {
+    // ADCP
+    gulp.watch(paths.ADCP_styles.src, ADCP_En_styles);
+    gulp.watch(paths.ADCP_styles.src, ADCP_Ar_styles);
+}
+
+function watchADCE() {
+    //ADCE
+    gulp.watch(paths.ADCE_styles.src, ADCE_En_styles);
+    gulp.watch(paths.ADCE_styles.src, ADCE_Ar_styles);
+}
+
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
@@ -168,6 +188,9 @@ var build = gulp.series(clean, ADCB_En_styles, ADCB_Ar_styles, ADCP_En_styles, A
  */
 exports.clean = clean;
 exports.watch = watch;
+exports.watchADCB = watchADCB;
+exports.watchADCP = watchADCP;
+exports.watchADCE = watchADCE;
 // exports.scripts = scripts;
 exports.build = build;
 /*

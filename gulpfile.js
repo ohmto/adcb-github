@@ -16,15 +16,15 @@ var paths = {
     //   dest: 'scripts/'
     // },
     ADCB_styles: {
-        src: 'sass/adcb/**/*.scss',
+        src: 'src/adcb/**/*.scss',
         dest: 'dist/adcb/assets/styles/'
     },
     ADCE_styles: {
-        src: 'sass/adce/*.scss',
+        src: 'src/adce/*.scss',
         dest: 'dist/adce/assets/styles/'
     },
     ADCP_styles: {
-        src: 'sass/adcp/*.scss',
+        src: 'src/adcp/*.scss',
         dest: 'dist/adcp/assets/styles/'
     }
 };

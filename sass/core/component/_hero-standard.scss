@@ -1,0 +1,233 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - hero-standard
+02 - hero-standard__carousel
+03 - hero-standard__info
+04 - hero-premium__img-wrapper
+05 - caousel dots
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - hero-standard */
+.hero-standard {
+  width: 100%;
+  overflow: hidden;
+  $hrstd: &;
+
+  // #{$hrstd}__
+  /* 02 - hero-standard__carousel */
+  &__element {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 03 - hero-standard__carousel__info */
+  &__info {
+    padding: 50px 0;
+    height: 40vh;
+    // min-height below is a fix for landscape mode.
+    min-height: 250px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__category {
+    //@include fluid-type(10px, 13px);
+    //letter-spacing: 0.5 #{"/*rtl: 0*/"};
+    @include typography-label-tabs-commons();
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 18px;
+    line-height: 1;
+    color: $brand-primary-dark;
+//  @include themify($themes) {
+//    color: themed('brand-primary-light');
+//  }
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 1.2;
+    @include fluid-type(26px, 42px);
+    color: $brand-font;
+    // @include themify($themes) {
+//      color: themed('brand-font');
+//    }
+  }
+
+  &__cta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $white;
+    padding: 25px;
+    width: 212px;
+    height: 145px;
+    transform: translateY(50%);
+    background-color: $brand-primary-light;
+    @include fluid-type(17px, 23px);
+    //@include themify($themes) {
+//      background-color: themed('brand-primary-light');
+//    }
+    // Content Styles
+    p {
+      margin: 0;
+
+      span {
+        display: block;
+        @include fluid-type(20px, 25px);
+      }
+    }
+
+    // Icon
+    &:before {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      transform: rotate(0) #{"/*rtl:rotate(180deg)*/"};
+    }
+  }
+
+  // Info modifiers // Starts
+  .t-personal {
+    #{$hrstd}__category {
+      color: $brand-primary-light;
+      //@include themify($themes) {
+//        color: themed('brand-primary-light');
+//      }
+    }
+
+    #{$hrstd}__cta {
+      background-color: $brand-primary-light;
+      // @include themify($themes) {
+      //   background-color: themed('brand-primary-light');
+      // }
+    }
+  }
+
+  .t-business {
+    #{$hrstd}__category {
+      color: $brand-primary-light;
+      //@include themify($themes) {
+//        color: themed('brand-primary-light');
+//      }
+    }
+
+    #{$hrstd}__cta {
+      background-color: $brand-primary-light;
+      // @include themify($themes) {
+      //   background-color: themed('brand-primary-light');
+      // }
+    }
+  }
+
+  .t-islamic {
+    #{$hrstd}__category {
+      color: $generic-green;
+    }
+
+    #{$hrstd}__cta {
+      background-color: $generic-green;
+    }
+  }
+
+  .t-private {
+    #{$hrstd}__category {
+      color: $generic-blue;
+    }
+
+    #{$hrstd}__cta {
+      background-color: $generic-blue;
+    }
+  }
+
+  /* 04 - hero-standard__img-wrapper */
+  &__img-wrapper {
+    overflow: hidden;
+    width: 100vw;
+    height: calc(60vh - 100px);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // 05 - Carousel dots
+  .owl-dots {
+    position: absolute;
+    background-color: $white;
+    text-align: right;
+    top: 0;
+    right: 0;
+    margin-top: -20px;
+  }
+  .owl-dot:only-child {
+    display: none;
+  }
+  .owl-dot {
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba($brand-font, 0.4);
+    &.active {
+      background: $brand-font;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .hero-standard {
+    &__info {
+      height: 35vh;
+    }
+
+    &__img-wrapper {
+      height: calc(60vh - 100px);
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .hero-standard {
+    &__img-wrapper {
+      left: 0;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .hero-standard {
+    &__info {
+      height: 40vh;
+    }
+
+    &__img-wrapper {
+      height: 50vh;
+    }
+
+    &__cta {
+      padding: 40px;
+      width: 360px;
+      height: 240px;
+
+      // Icon
+      &:before {
+        bottom: 40px;
+        left: 40px;
+      }
+    }
+  }
+}
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

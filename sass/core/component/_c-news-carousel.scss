@@ -1,0 +1,178 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-news-carousel
+02 - media queries
+03 - owl carousel
+03 - owl carousel dots
+04 -
+05 -
+============================================================================== */
+
+// 01 - c-news-carousel
+.c-news-carousel {
+  .o-comp__title {
+    &.-relative {
+      .o-btn-rounded {
+        position: absolute;
+        right: 0;
+        height: 40px;
+        border: 1px solid rgba($brand-font, 0.3);
+
+        &:hover {
+          border: 1px solid rgba($brand-primary-light, 0.3);
+        }
+      }
+    }
+  }
+
+  .owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+
+  .o-comp__title {
+    margin-bottom: 0;
+
+    h2 {
+      text-align: left;
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  // 03 - Owl carousel
+  // 03 - Owl carousel
+  .owl-carousel {
+    padding-top: 10vw; // Equal height for all items
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-item {
+      display: flex;
+      flex: 1 0 auto;
+    }
+    .owl-dots {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: -20px;
+      .owl-dot {
+        background: rgba($brand-font, 0.4);
+        border-radius: 20px;
+        display: block;
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        &.active {
+          background: $brand-font;
+        }
+      }
+      .owl-dot:only-child {
+        display: none;
+      }
+    }
+  }
+  &.-simplified {
+    .o-comp__title {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/*===========================
+  02 - media queries
+===========================*/
+
+/* large mobile screen */
+
+/* @media (min-width: $screen-xs) {} */
+
+/* Small devices (tablets, 768px and up) */
+
+/* @media (min-width: $screen-sm-min) {} */
+
+/* Medium devices (tablets, 768px and up) */
+
+/* @media (min-width: $screen-md-min) {} */
+
+/* desktop */
+
+@media (min-width: $screen-md-min) {
+  .c-news-carousel {
+    .owl-carousel .owl-stage-outer {
+      overflow: hidden;
+    }
+    // 03 - Owl carousel
+    .owl-carousel {
+      padding-top: 50px; // owl carousel dots
+      .owl-nav {
+        top: -3.8vw;
+      }
+      .owl-item {
+        margin-bottom: 40px;
+        overflow: visible;
+      }
+      .owl-dots {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin-top: 0px;
+      }
+    }
+    .o-comp__title {
+      &.-relative {
+        + .owl-carousel {
+          .owl-nav {
+            right: 100px;
+          }
+        }
+      }
+    }
+    &.-simplified {
+      .owl-carousel {
+        .owl-nav {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* @media (min-width: $screen-lg-min) {} */
+/* desktop */
+@media (min-width: $screen-lg-min) {
+  .c-news-carousel {
+    .owl-carousel {
+      .owl-nav {
+        top: -43px;
+      }
+    }
+  }
+}
+
+
+/*Media Query for IE & Edge browsers*/
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none),
+(-ms-ime-align:auto) {
+  .c-news-carousel {
+    .o-comp__title {
+      &.-relative {
+        .o-btn-rounded {
+          top: 5px;
+        }
+        + .owl-carousel {
+          .owl-nav {
+            right: 110px;
+          }
+        }
+      }
+    }
+  }
+}

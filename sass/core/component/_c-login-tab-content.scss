@@ -1,0 +1,124 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-login-tab-content
+02 - media queries
+============================================================================== */
+
+/* 01 - c-login-tab-content */
+
+.c-login-tab-content {
+  &__item {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+  .container {
+    margin-top: 0;
+  }
+  &__wrapper-left {
+    .c-product-title {
+      .container {
+        margin: 0;
+        padding: 0;
+      }
+      .o-comp__title {
+        flex-flow: row wrap;
+        h2 {
+          text-align: left;
+        }
+        &_desc {
+          text-align: left;
+          margin-bottom: 20px;
+          @include typography-body-tiny-commons();
+        }
+      }
+      &__link {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__wrapper-right {
+    margin-bottom: 50px;
+    .o-tabs__tab-content-summary {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__summary {
+    @include typography-body-tiny-commons();
+    font-weight: 400;
+    color: rgba($brand-font, 0.7);
+  }
+  &__img-wrapper {
+    width: 100%;
+    min-height: 455px;
+  }
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.c-tab-content {
+  .container {
+    margin-bottom: 0;
+  }
+}
+
+/*===========================
+    02 - media queries
+    ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-login-tab-content {
+    .container {
+      margin-top: 0;
+    }
+    &__summary {
+      @include typography-body-big-commons();
+    }
+    &__wrapper-left {
+      margin-bottom: 0;
+      .c-product-title {
+        .o-comp__title {
+          &_desc {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+    &__wrapper-right {
+      .c-cms-content {
+        margin-top: 0;
+        padding: 0;
+      }
+    }
+    &__img {
+      height: 455px;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-md-min) {
+  .c-login-tab-content {
+    &__wrapper-right {
+      padding-left: 105px;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) 
+@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) 
+@media (min-width: $screen-xl-min) {}*/

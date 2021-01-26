@@ -1,0 +1,466 @@
+.c-table {
+  /* IG*/
+  @extend .c-cms-content;
+
+  table {
+    border: none;
+    width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    td {
+      @include typography-body-tiny-commons();
+      border: none;
+      font-weight: 600;
+      padding-left: 0;
+
+      &:first-child {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        span {
+          &:before {
+            vertical-align: middle;
+            font-size: 16px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        @include typography-legal-commons();
+        font-weight: 600;
+        order: -1;
+        z-index: 5;
+        margin-bottom: 14px;
+        color: $brand-font;
+        // @include themify($themes) {
+        //   color: themed("$brand-font");
+        // }
+      }
+
+      &:last-child {
+        padding-top: 4px;
+        font-weight: 400;
+      }
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 36px 0 32px;
+      border-top: 1px solid $brand-medium-gray;
+      background-color: $brand-body-bg;
+      // @include themify($themes) {
+      //   background-color: themed("$brand-body-bg");
+      // }
+
+      &:nth-child(odd) {
+        background-color: $brand-body-bg;
+        // @include themify($themes) {
+        //   background-color: themed("$brand-body-bg");
+        // }
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+
+      // &:last-child {
+      //   td {
+      //     padding-bottom: 0;
+      //   }
+      // }
+    }
+  }
+}
+
+.c-table-three-cols {
+  @extend .c-table;
+
+  a,
+  a:active,
+  a:visited {
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed("$brand-font");
+    // }
+
+    span {
+      color: $brand-primary-light;
+      // @include themify($themes) {
+      //   color: themed("$brand-primary-light");
+      // }
+
+      &:hover {
+        color: $brand-font;
+        // @include themify($themes) {
+        //   color: themed("$brand-font");
+        // }
+      }
+    }
+  }
+
+  table {
+    td {
+      &:last-child {
+        padding-top: 12px;
+        font-weight: 400;
+      }
+      &:nth-child(2) {
+        padding-right: 25px;
+      }
+    }
+
+    tr {
+      &:last-child {
+        border-bottom: 1px solid $brand-medium-gray;
+      }
+    }
+  }
+
+  .more-link {
+    @include typography-body-tiny-commons();
+    text-align: right;
+    padding-top: 45px;
+    max-width: 1024px;
+    margin: auto;
+
+    a {
+      margin-right: 15px;
+      cursor: pointer;
+      color: $brand-primary-dark;
+      // @include themify($themes) {
+      //   color: themed("$brand-primary-light");
+      // }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.-assembly {
+    .more-link {
+      margin-left: 0;
+      padding-top: 20px;
+    }
+
+    .c-table-header {
+      margin-bottom: 34px;
+      max-width: 1024px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      &__title {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -0.1px;
+        color: $brand-font;
+        text-align: left;
+      }
+      table {
+        tr {
+          td {
+            &:nth-child(2) {
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-thumbnails-table {
+  @extend .c-table-three-cols;
+
+  table {
+    td {
+      padding: 20px 0;
+
+      &:first-child {
+        transform: translateY(0%);
+        top: 10%;
+
+        img {
+          max-width: 130px;
+          max-height: 180px;
+        }
+      }
+    }
+  }
+}
+
+.c-table-two-cols {
+  @extend .c-table-three-cols;
+
+  table {
+    tr {
+      td {
+        &:last-child {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &.-opened-positions {
+    table {
+      td {
+        .o-link-more {
+          text-decoration: none;
+          color: $brand-primary-dark;
+        }
+
+        &:first-child {
+          color: $brand-font;
+        }
+      }
+    }
+  }
+}
+
+.c-table-seven-cols {
+  @extend .c-table;
+
+  table {
+    margin-top: 0;
+
+    tr {
+      td {
+        font-weight: 400;
+
+        &:before {
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        &:first-child {
+          font-weight: 400;
+          position: relative;
+          right: 0;
+          top: 0;
+          transform: translateY(0%);
+          color: $brand-font;
+          // @include themify($themes) {
+          //   color: themed("$brand-font");
+          // }
+        }
+
+        &:nth-child(3) {
+          order: 0;
+          margin-bottom: 0;
+          font-weight: 400;
+        }
+
+        &:last-child {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+/** New general table custom class has been added. Following css values are default values.
+These values can be overridden using modifier classes if required **/
+
+@media (min-width: $screen-sm-min) {
+  .c-table {
+    table {
+      margin: auto;
+      max-width: 1024px;
+
+      thead {
+        display: table-header-group;
+        border-top: 1px solid $brand-medium-gray;
+        background: $brand-body-bg;
+        // @include themify($themes) {
+        //   color: themed("$brand-body-bg");
+        // }
+
+        tr {
+          height: unset;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          th {
+            padding-bottom: 30px;
+            width: auto;
+            /** text align left added as text was not center aligned in IE **/
+            text-align: left;
+            &.-width {
+              $max: 100;
+              $step: 10;
+              /*Generating the classes for width and max-width with a step count of 1*/
+              @for $i from 1 through ceil($max/$step) {
+                $widthpercentage: $i * $step;
+
+                &-#{$widthpercentage} {
+                  width: percentage($widthpercentage/100);
+
+                  &-max {
+                    max-width: percentage($widthpercentage/100);
+                    width: auto;
+                  }
+                }
+                &.-left {
+                  text-align: left;
+                }
+                &.-right {
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      th {
+        @include typography-label-tabs-commons;
+        text-transform: uppercase;
+        border: none;
+        padding: 12px 0 0;
+        width: 15%;
+        height: unset;
+        color: rgba($brand-font, 0.7);
+      }
+
+      td {
+        width: 15%;
+
+        &:first-child {
+          position: static;
+          transform: none;
+          top: unset;
+          font-weight: 600;
+        }
+
+        &:nth-child(3) {
+          color: $brand-font;
+          // @include themify($themes) {
+          //   color: themed("$brand-font");
+          // }
+        }
+
+        &.-left {
+          text-align: left;
+        }
+
+        &.-right {
+          text-align: right;
+        }
+
+        &.-brand-color {
+          color: $brand-primary-light;
+          // @include themify($themes) {
+          //   color: themed("$brand-primary-light");
+          // }
+        }
+      }
+
+      tr {
+        display: table-row;
+        min-height: 110px;
+
+        &.-photo {
+          cursor: pointer;
+
+          &:hover {
+            td {
+              text-decoration: underline;
+              color: $brand-font;
+              // @include themify($themes) {
+              //   color: themed("$brand-font");
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-table-three-cols {
+    &.-assembly {
+      margin-top: 0;
+
+      .c-table-header {
+        flex-direction: row;
+        align-items: flex-end;
+        margin: auto auto 30px;
+
+        &__link {
+          margin-right: 10px;
+        }
+      }
+
+      table {
+        tr {
+          min-height: 128px;
+
+          td {
+            &:nth-child(2) {
+              padding-right: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-table-two-cols {
+    &.-opened-positions {
+      table {
+        td {
+          color: $brand-font;
+        }
+
+        th {
+          &:first-child {
+            margin-right: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .c-table-seven-cols {
+    &.bottom-line {
+      table {
+        border-bottom: 1px solid;
+        border-bottom-color: $brand-medium-gray;
+      }
+
+      .more-link {
+        margin-top: 80px;
+      }
+    }
+    table {
+      tr {
+        td {
+          &:first-child {
+            font-weight: 600;
+          }
+
+          &:last-child {
+            position: relative;
+            transform: translateY(0%);
+          }
+        }
+        .more-link {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}

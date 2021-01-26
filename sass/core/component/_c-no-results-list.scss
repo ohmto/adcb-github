@@ -1,0 +1,69 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - no-results-list
+02 - 
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*  no-results - list */
+.c-no-results {
+  .o-comp {
+    &__content {
+      max-width: 1040px;
+      margin-top: 200px;
+    }
+
+    &__title {
+      border-bottom: 1px solid rgba($brand-font, 0.2);
+      padding-bottom: 30px;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: normal;
+      .c-no-results__title {
+        text-align: left;
+      }
+    }
+  }
+
+  &__result {
+    @include typography-legal-commons();
+    color: rgba($brand-font, 0.3);
+
+    // @include themify($themes) {
+    //   color: themed("$brand-font"); //opTheme
+    // }
+  }
+}
+
+/*===========================
+  06 - media queries
+  ===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-no-results {
+    .o-comp__title {
+      display: block;
+      padding-bottom: 43px;
+    }
+
+    &__result {
+      margin-top: 15px;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/* @media (min-width: $screen-md-min) {} */
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* @media (min-width: $screen-md-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

@@ -1,0 +1,195 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - feature accordions
+02 -
+03 -
+04 -
+05 -
+06 - media queries
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+/* 01 - feature accordions */
+.feature-accordion-group {
+  .o-comp__content {
+    max-width: 992px;
+  }
+
+  .accordion-item {
+    width: 100%;
+    border-bottom: solid 1px rgba($brand-font, 0.2);
+    &[data-state='expanded'] {
+      padding-bottom: 20px;
+    }
+    &:first-child {
+      border-top: solid 1px rgba($brand-font, 0.2);
+    }
+
+    &__title {
+      @include fluid-type(19px, 23px);
+      font-weight: 600;
+      padding: 30px 40px 30px 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      span {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      padding: 0 0 50px;
+      overflow: hidden;
+      p {
+        @include typography-body-avg-commons();
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: rgba($brand-font, 0.7);
+        // @include themify($themes) {
+        //   color: themed('$brand-font');
+        //   //opTheme
+        // }
+      }
+      .c-cms-content {
+        padding-bottom: 40px;
+        ul {
+          li {
+            color: rgba($brand-font, 0.7);
+            // @include themify($themes) {
+            //   color: themed('$brand-font');
+            //   //opTheme
+            // }
+          }
+        }
+      }
+    }
+  }
+  & + .c-leads__container {
+    margin-top: 75px;
+  }
+}
+
+.js-acc-group {
+  &.-cols-2 ul {
+    margin-bottom: 0;
+  }
+  .js-acc-item {
+    .js-acc-title {
+      color: $brand-font;
+      // @include themify($themes) {
+      //   color: themed('$brand-font');
+      // }
+    }
+
+    .js-acc-content {
+      display: none;
+      @include transition-cubic(height, 600ms);
+      .c-tick-list__wrapper {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*===========================
+  06 (a) - media queries
+  ===========================*/
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+
+@media (min-width: $screen-sm-min) {
+  .feature-accordion-group {
+    .accordion-item {
+      &__content {
+        width: 82%;
+
+        p {
+          // font-size: 19px;
+          @include typography-body-big-commons();
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .accordion-item {
+    &__title {
+
+      &[class*="icon-"] {
+
+        &:before {
+          right: 8px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -10px;
+          width: 50px;
+          height: 50px;
+          z-index: 0;
+          border-radius: 50%;
+          opacity: 0.3;
+          transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+          transform: translate(0, -50%) scale(0);
+          transform-origin: center center;
+          background: $brand-medium-gray;
+        }
+
+        &:hover:after {
+          transform: translate(0, -50%) scale(1);
+        }
+      }
+
+      span {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+/*===========================
+   06 - (a) 992px & above
+  ===========================*/
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {} */
+
+/*===========================
+   06 - (a) 1232px & above
+  ===========================*/
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .feature-accordion-group {
+    .o-comp__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {} */
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

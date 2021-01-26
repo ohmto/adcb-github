@@ -1,0 +1,270 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-board-card
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-board-card IG*/
+
+.c-board-card {
+  width: 100%;
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 90px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    @include typography-titles-commons();
+    line-height: 1.3;
+    padding-top: 36px;
+    &--credit {
+      font-weight: 600;
+      line-height: 1.3;
+    }
+  }
+  &__ev-location {
+    @include typography-body-avg-commons();
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 20px;
+    display: block;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+//      color: themed('brand-font');
+//    }
+  }
+  &__sup {
+    @include typography-label-tabs-commons();
+    display: block;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: $brand-primary-light;
+//  @include themify($themes) {
+//      color: themed('brand-primary-light');
+//  }
+    &.-event {
+      color: rgba($brand-font, 0.6);//opTheme
+    }
+  }
+  &__img-wrapper {
+    &--credit {
+      @extend .c-board-card__img-wrapper;
+      background: url(../../images/cards/private_shadow.png) no-repeat;
+      background-size: 100% 100%;
+      padding-bottom: 125%;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__desc {
+    @include typography-body-avg-commons();
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+    //   color: themed('$brand-font');//opTheme
+    // }
+  }
+  &__highlight-wrap {
+    position: absolute;
+    width: 80%;
+    top: 26%;
+    left: 10%;
+  }
+  &__add-text {
+    @include typography-legal-commons();
+    padding-top: 20px;
+    display: block;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+    //   color: themed('$brand-font');//opTheme
+    // }
+  }
+
+  &__date {
+    @include typography-legal-commons();
+    line-height: 3.5;
+    color: rgba($brand-font, 0.7);
+  }
+
+  &.-credit {
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    // }
+    .c-board-card {
+      &__details {
+        position: relative;
+        .c-animated-arrow {
+          &__next {
+            bottom: -35px;
+            left: 0;
+          }
+          &__next-layer {
+            bottom: -30px;
+            left: 0;
+          }
+        }
+      }
+      &__title {
+        padding-top: 40px;
+        &--credit {
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+  .more-link {
+    margin-top: 15px;
+  }
+  &.-prizes-winners {
+    .c-board-card {
+      &__sup {
+        color: rgba($brand-font, 0.4);
+      }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-board-card {
+    flex-flow: row;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    min-height: 290px;
+    .more-link {
+      margin-top: 50px;
+    }
+    &.-prizes-winners {
+      .more-link {
+        display: inline-block;
+        &:first-of-type {
+          margin-right: 52px;
+        }
+      }
+    }
+    .o-comp__content {
+      padding: 60px 0;
+    }
+    &__details {
+      width: 50%;
+      border-top: 1px solid rgba($brand-font, 0.2);
+    }
+    &__title {
+      margin-bottom: 5px;
+    }
+    &__sup {
+      margin: 0 0 7px;
+    }
+    &__img {
+      max-width: 442px;
+      max-height: 290px;
+    }
+    &__highlight-wrap {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      min-height: 220px;
+      top: unset;
+      left: unset;
+    }
+    &__img-wrapper {
+      width: 43.75%;
+      margin-left: 6.25%;
+      &--credit {
+        background: url('../images/cards/private_horizontal-shadow.jpg') no-repeat;
+        background-size: 100% 100%;
+        padding: 0;
+      }
+    }
+    &__desc {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+    &.-credit {
+      .c-board-card {
+        &__details {
+          .c-animated-arrow {
+            &__next {
+              bottom: 21px;
+            }
+            &__next-layer {
+              bottom: 26px;
+            }
+          }
+        }
+        &__img {
+          max-width: unset;
+          max-height: unset;
+          position: absolute;
+          bottom: 18%;
+          left: 15%;
+          width: 74%;
+          @include transition-cubic(600ms, all);
+        }
+      }
+      &:hover {
+        .c-animated-arrow {
+          &__next {
+            margin-left: 25px;
+          }
+          &__next-layer {
+            width: 31px;
+          }
+        }
+        .c-board-card {
+          &__img-wrapper {
+            img {
+              transform: scale(1.08);
+            }
+            &.-animate {
+              img {
+                transform: rotate(4deg) translate(6px, 6px) #{"/*rtl: rotate(4deg) translate(6px, 6px)*/"};
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up)*/
+
+@media (min-width: $screen-md-min) {
+  .c-board-card {
+    &__details {
+      width: 47.91667%;
+      margin-left: 8.33333%;
+    }
+    &__img-wrapper {
+      width: 29.16667%;
+      margin-right: 8.33333%;
+    }
+    &.-credit {
+      .c-board-card {
+        &__img {
+          width: 62%;
+          bottom: 16%;
+          left: 18%;
+        }
+      }
+    }
+  }
+}

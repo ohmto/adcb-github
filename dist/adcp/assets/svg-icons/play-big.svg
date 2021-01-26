@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="32px" viewBox="0 0 25 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Video-Hub" transform="translate(-918.000000, -2399.000000)" fill="#FFFFFF">
+            <g id="Group-6-Copy-2" transform="translate(538.000000, 2205.000000)">
+                <g id="Large-Tile-Copy-2">
+                    <g id="Components-/-Icons-/-50px-/-Play" transform="translate(350.000000, 170.000000)">
+                        <path d="M34.0919466,24.5582497 L52.9941411,37.5507195 C54.868236,38.8388832 54.8690032,41.1588501 52.9941411,42.4475412 L34.0919466,55.4400111 C32.1900528,56.7472824 30.4,55.6694519 30.4,53.2070049 L30.4,26.7912558 C30.4,24.336718 32.1910801,23.2516844 34.0919466,24.5582497 Z" id="Play-Button"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

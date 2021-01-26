@@ -1,0 +1,139 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-mission-vision
+02 - media queries
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 c-mission-vision*/
+.c-mission-vision {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 75px 0;
+    border-top: 1px solid rgba($brand-font, 0.2);
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+    &.-grey-bg {
+      background: $brand-light-gray;
+      border: 0;
+    }
+  }
+
+  &__content-desc {
+    margin-bottom: 30px;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include typography-page-section-commons();
+    color: $brand-font;
+  }
+
+  &__desc {
+    @include typography-body-big-commons();
+    margin-top: 15px;
+    line-height: 1.8;
+
+    ul {
+      margin-top: 4vw;
+      display: table;
+
+      li {
+        @include typography-body-avg-commons();
+        list-style: disc outside;
+        display: table-row;
+
+        &:before {
+          content: ".";
+          display: table-cell;
+          text-align: right;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*===========================
+02 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-mission-vision {
+    &__list {
+      flex-direction: row;
+      padding: 100px 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__content {
+      max-width: 400px;
+      margin-bottom: 0;
+    }
+
+    &__content-desc {
+      margin-right: 50px;
+      margin-bottom: 0;
+      width: 50%;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+
+    &__card {
+      width: 50vw;
+      border-radius: 3px;
+      //border: 1px solid rgba($brand-primary-font, 0.2);
+      border: 1px solid rgba($brand-font, 0.2);
+
+      .c-leads {
+        &__wrap {
+          padding: 50px 40px;
+        }
+
+        &__radio-btn {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+@media (min-width: $screen-md-min) {
+  .c-mission-vision {
+    &__content {
+      max-width: 600px;
+    }
+    &__card {
+      width: 50vw;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-mission-vision {
+    &__list {
+      padding-left: 6vw;
+      padding-right: 6vw;
+    }
+  }
+}
+/* X-Large devices (large desktops, 1440px and up) */
+// @media (min-width: $screen-xl-min) {}

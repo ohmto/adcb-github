@@ -1,0 +1,134 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-our-testimonials
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-our-testimonials */
+.c-our-testimonials{
+	background-color: $brand-font;
+	color: $white;
+	margin-bottom: 96px ;
+  
+	.o-comp-testimonials-image{
+	text-align: center;
+	position: relative;
+	z-index: 0;
+
+		img{
+			width: 100%;
+			margin: 0px auto;
+			min-height: 200px;
+			object-fit: cover;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 75%;
+			z-index: 1;
+			background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(39, 50, 57, 0.7)), to(rgba(0, 0, 0, 0)));
+			background-image: linear-gradient(to top, rgba(39, 50, 57, 0.7), rgba(0, 0, 0, 0));
+		}
+	}
+  
+	.o-comp__content{
+	  margin-top: 0px !important;
+	  margin-bottom: 48px !important;
+	  max-width: calc(1040px + 96px * 2) !important;
+  
+	  .o-comp-logo{
+		transform: translateY(-4.5em);
+		width: 50px;
+		margin: auto;
+	  }
+	}
+	>.container{
+	  max-width: 1170px;
+	  margin-top: 0px !important;
+	  padding-top: 3em;
+	  transform: translateY(-3em);
+	  background-color: $brand-font;
+
+	  .c-blockqoute__section{
+		text-align: center;
+		padding: 20px 48px;
+	  }
+	  .c-blockqoute__section:before{
+		color: $brand-primary-light;
+		display: none;
+	  }
+	  .c-blockqoute__section:after{
+		color: $brand-primary-light;
+		display: none;
+	  }
+	  .c-blockqoute__para{
+		  width: 100%;
+		text-align: center;
+		color: $white;
+		height: 112px;
+		overflow: hidden !important;
+		text-align: center;
+	  }
+	  .c-blockqoute__cite {
+		color: $brand-primary-dark;
+		text-align: center;
+	  }
+	}
+  }
+
+	.flickity-viewport:before{
+		content: "\201C" #{'/*rtl: "\201D"*/'};
+		font-family: 'proxima_nova', 'sans-serif';
+		color: rgba($brand-gray,0.5);
+		display: block;
+		position: absolute;
+		left: 0;
+		top: -25px;
+		font-size: 130px;
+	}
+	.flickity-viewport:after{
+		content: "\201D"  #{'/*rtl: "\201C"*/'};
+		font-family: 'proxima_nova', 'sans-serif';
+		color: rgba($brand-gray,0.5);
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: -25px;
+		font-size: 130px;
+	}	
+
+@media (min-width: 768px) { 
+	.flickity-viewport:before{
+		left: 50px;
+		top: -50px;
+		font-size: 250px;
+	}
+	.flickity-viewport:after{
+		right: 50px;
+		bottom: -170px;
+		font-size: 250px;
+	}
+	.c-our-testimonials{
+		.o-comp__content{
+			margin-bottom: 0px !important;	
+			padding-bottom: 24px !important;
+
+		}
+		>.container{
+			.c-blockqoute__section{
+				text-align: center;
+				padding: 20px 60px;
+			}
+		}
+	}
+}

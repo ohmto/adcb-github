@@ -1,0 +1,85 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - company-news-item
+02 - -strategic
+03 - -is-feautured
+04 - media queries
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/*  01 company-news-item */
+
+.company-news-item {
+  color: $brand-primary-font;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba($brand-font, 0.2);
+  padding: 35px 0;
+  &__main-title {
+    display: flex;
+    flex-direction: column;
+    @include typography-label-tabs-commons();
+    margin: 0 0 12px 0;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed("brand-primary-light");
+    // }
+  }
+  &__title {
+    color: $brand-font;
+    margin: 0 0 10px 0;
+    @include typography-titles-commons();
+  }
+  &__summary,
+  &__fulldetails {
+    color: rgba($brand-font, 0.7);
+    @include typography-body-avg-commons();
+    line-height: 1.67;
+    transition: all 0.4s ease;
+    height: auto;
+    max-height: 1000px;
+  }
+  &__date {
+    @include typography-legal-commons();
+    color: rgba($brand-font, 0.7);
+    margin-top: 8px;
+    display: block;
+  }
+  &:last-child {
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+  }
+}
+
+/* 03 -is-feautured*/
+.-is-feautured {
+  .company-news-item:first-child {
+    border-top: 0;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .company-news-item {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 64px 0 44px;
+    &__main-title {
+      width: 200px;
+    }
+    &__details {
+      flex: 1;
+    }
+    &__title {
+      font-size: 19px;
+    }
+    &__summary {
+      font-size: 15px;
+    }
+  }
+}

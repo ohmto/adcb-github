@@ -1,0 +1,12 @@
+.c-dropdown-only-filter {
+  .o-comp__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  & + * {
+    .o-comp__content {
+      margin-top: 50px;
+    }
+  }
+}

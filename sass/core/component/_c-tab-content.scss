@@ -1,0 +1,235 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - tab-nav-content
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - tab-nav-content */
+.c-tab-content {
+  /* 02 - o-comp__content overrides for 855px max-width */
+  .o-comp__content {
+    margin-top: 0;
+    max-width: calc(1248px + #{$gutter-desktop} * 2);
+    h2 {
+      text-align: center;
+      sup {
+        @include typography-label-tabs-commons();
+        margin-bottom: 20px;
+        display: block;
+        text-transform: uppercase;
+        color: $brand-primary-light;
+        // @include themify($themes) {
+        //   color: themed('brand-primary-light');
+        // }
+      }
+    }
+  }
+  &__item {
+    .c-downloads__grid {
+      > li {
+        h5 {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  /* 01 - tab-nav */
+  .c-tab-nav {
+    // font-size: 13px;
+    @include typography-legal-commons();
+    margin-bottom: 100px;
+    overflow: hidden;
+    height: 40px;
+    &__wrapper {
+      position: relative;
+      &:after {
+        content: "";
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        position: absolute;
+        left: 0;
+        top: 38px;
+        width: 100%;
+      }
+    }
+    &__list {
+      display: flex;
+      border-bottom: 0;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      white-space: nowrap;
+      padding-bottom: 40px;
+      -webkit-overflow-scrolling: touch;
+    }
+    &__item {
+      margin: 0 45px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &__link {
+      @include typography-legal-commons();
+      padding: 10px 20px;
+      color: rgba($brand-font, 0.7);
+      position: relative;
+      display: inline-block;
+      transition: color 0.3s ease-out;
+      text-transform: uppercase;
+      &.is-active:hover {
+        color: $brand-font;
+        font-weight: 500;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 92%;
+        width: 0;
+        height: 4px;
+        transition: width 0.3s ease-out;
+        background: $brand-primary-light;
+        // @include themify($themes) {
+        //   background: themed('brand-primary-light');
+        // }
+      }
+      &.is-active:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 92%;
+        width: 100%;
+        height: 4px;
+        background: $brand-primary-light;
+        // @include themify($themes) {
+        //   background: themed('brand-primary-light');
+        // }
+      }
+    }
+    &.-icon-nav {
+      height: 276px;
+      margin-bottom: 68px;
+      .c-tab-nav__wrapper {
+        &:after {
+          content: none;
+        }
+        .c-tab-nav__list {
+          white-space: normal;
+          text-align: center;
+        }
+        .c-tab-nav__link {
+          text-transform: none;
+          &:after {
+            top: unset;
+            bottom: -22px;
+          }
+        }
+        .c-tab-nav__item {
+          margin: 0 20px;
+          min-width: 246px;
+        }
+      }
+      .-icon-nav__title {
+        @include typography-titles-commons();
+        margin: 20px 0 10px;
+        color: $font-gray;
+      }
+      .-icon-nav__desc {
+        @include typography-body-big-commons();
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .c-input-select {
+    input {
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: $font-gray;
+    }
+    &__wrap {
+      .icon-arrow-down {
+        &:after {
+          color: $brand-font;
+          // @include themify($themes) {
+          //   background: themed('brand-font');
+          // }
+        }
+      }
+    }
+  }
+  .c-cms-content {
+    ul {
+      li {
+        @include typography-body-big-commons();
+      }
+    }
+  }
+}
+/*===========================
+  03 - media queries
+  ===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-tab-content {
+    form {
+      display: none;
+    }
+    .c-tab-nav {
+      &.-icon-nav {
+        margin-bottom: 128px;
+        display: block;
+      }
+    }
+    .c-cms-content {
+      padding: 0 148px;
+    }
+    &__item {
+      .c-downloads__grid {
+        > li {
+          h5 {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+
+  .c-tab-content {
+    .c-tab-nav {
+      &.-icon-nav {
+        .c-tab-nav__list {
+          white-space: normal;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-min) {
+  .c-tab-content {
+    .c-tab-nav {
+      &__item {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

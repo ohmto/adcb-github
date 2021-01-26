@@ -1,0 +1,206 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-transparent-banking
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - transparent-banking */
+/*background color from &__information-icon will be removed once the icon is added. */
+.c-transparent-banking {
+  // font-size: 17px;
+  @include typography-body-avg-commons();
+  .o-comp__content {
+    max-width: 992px;
+    margin-bottom: 0;
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 75px 25px;
+    border: 1px solid rgba($brand-font, 0.2);
+  }
+  &__information-icon {
+    display: flex;
+    margin-bottom: 25px;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 13vw;
+      height: 13vw;
+      border-radius: 100%;
+      color: $white;
+      font-weight: 400;
+      font-size: 27px;
+      background-color: $brand-silver;
+    }
+  }
+
+  &__title {
+    @include typography-titles-commons();
+    margin-bottom: 0;
+    justify-content: left;
+    align-items: start;
+    text-align: center;
+    min-width: 25%;
+    h3 {
+      @include typography-titles-commons();
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+  &__information-message {
+    font-size: inherit;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    // }
+  }
+  &__desc{
+    ul {
+      padding-left: 15px;
+      font-weight: 400;
+      li {
+        @include typography-body-avg-commons();
+        list-style-type: disc;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        line-height: 1.7;
+        color: rgba($brand-font, 0.7);
+        // @include themify($themes) {
+        //   color: themed('brand-font');
+        // }
+        &:last-child {
+          padding-bottom: 0;
+        }
+        a {
+          @include typography-body-tiny-commons();
+          color: $brand-primary-dark;
+          // @include themify($themes) {
+          //   color: themed('brand-primary-light');
+          // }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    p {
+      // font-weight: 400;
+      // font-size: 15px;
+      @include typography-body-tiny-commons();
+      padding-bottom: 15px;
+      padding-left: 25px;
+      margin: 0;
+      line-height: 1.7;
+    }
+  }
+}
+
+/*===========================
+  06 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-transparent-banking {
+    &__desc {
+      ul {
+        li {
+          // font-size: 15px;
+          @include typography-body-tiny-commons();
+        }
+      }
+    }
+    .o-comp__content {
+      margin-top: 60px;
+    }
+    &__title {
+      width: 40vw;
+      max-width: 260px;
+      text-align: left;
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+    &__wrap {
+      flex-flow: row nowrap;
+      padding: 45px;
+    }
+    &__information-icon {
+      margin-bottom: 0;
+      span {
+        font-weight: 500;
+        font-size: 30px;
+        width: 6vw;
+        height: 6vw;
+      }
+    }
+
+    &__information-message {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      ul {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  /* 06 - (a) 992px & above */
+  /* Medium devices (desktops, 992px and up) */
+  .c-transparent-banking {
+    &__wrap {
+      padding: 75px;
+    }
+    &__title {
+      width: 25vw;
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+
+    &__wrap {
+      padding: 45px 78px;
+    }
+
+    &__information-icon {
+      span {
+        width: 3.5vw;
+        height: 3.5vw;
+        font-weight: 500;
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+/*===========================
+   06 - (a) 1232px & above
+  ===========================*/
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-transparent-banking {
+    .o-comp__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

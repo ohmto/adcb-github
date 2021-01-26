@@ -1,0 +1,247 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-discover-card-list
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-discover-card-list */
+.c-discover-card-list {
+  .o-comp {
+    &__content {
+      //max-width: calc(1052px + #{$gutter-desktop} * 2);
+      max-width: 1258px;
+    }
+    &__title {
+      padding: 0 11px;
+      h2 {
+        max-width: 620px;
+        text-align: center;
+      }
+    }
+    &__title-has-filter {
+      @extend .o-comp__title;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__filter {
+      margin-top: 20px;
+
+      ul {
+        li {
+          display: inline-block;
+          padding-right: 14px;
+          margin: 0 16px;
+          font-size: 0.5em;
+          line-height: 2em;
+          text-transform: uppercase;
+          border-bottom: 2px solid transparent;
+          transition: all 0.3s ease-in-out;
+          color: rgba($brand-font, 0.7);
+          cursor: pointer;
+
+          &.selected {
+            transition: all 0.3s ease-in-out;
+            color: $brand-font;
+            border-bottom-color: $brand-primary-light;
+            // @include themify($themes) {
+            //   color: themed('$brand-font');
+            //   border-bottom-color: themed('$brand-primary-light');
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  .c-discover-tab {
+    //font-size: 13px;
+    @include typography-legal-commons();
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &__wrapper {
+      position: relative;
+      text-align: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding-bottom: 40px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    & .o-comp-filter {
+      display: inline-flex;
+      white-space: nowrap;
+      flex-wrap: initial;
+      justify-content: center;
+
+      &__item {
+        margin: 0 10px;
+        padding: 0 5px;
+
+        &:after {
+          bottom: -2px;
+          height: 4px;
+        }
+      }
+
+      &__link {
+        // font-size: 13px;
+        @include typography-legal-commons();
+        padding: 10px;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease-out;
+        text-transform: uppercase;
+        color: rgba($brand-font, 0.7);
+      }
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*===========================
+03 - media queries
+===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-discover-card-list {
+    .o-comp {
+      &__title {
+        &.has-filter {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+        }
+      }
+
+      &__filter {
+        margin-top: 0;
+
+        ul {
+          li {
+            display: inline-block;
+            padding-right: 14px;
+            margin-right: 16px;
+            font-size: 0.4em;
+          }
+        }
+      }
+    }
+
+    &__wrap {
+      flex-flow: row wrap;
+      // since the space between the cards is managed by padding  i have increased the width of the wrapper
+      // based on the extra padding.
+      width: 100%;
+      //margin-left: -30px;
+      display: flex;
+    }
+
+    &__item {
+      width: 50%;
+      padding: 0 26px 0 13px;
+
+      &.-large-card {
+        width: 100%;
+
+        .c-discover-card {
+          &__thumb {
+            padding-bottom: 56.8181818182%;
+          }
+        }
+      }
+    }
+
+    .c-discover-tab {
+      margin-bottom: 0;
+      overflow: initial;
+      width: auto;
+      border: 0;
+
+      &__wrapper {
+        position: static;
+        overflow: hidden;
+      }
+
+      & .o-comp-filter {
+        overflow: hidden;
+
+        &__item {
+          &.is-selected {
+            padding-bottom: 10px;
+            height: 30px;
+          }
+
+          &:after {
+            bottom: 3px;
+          }
+        }
+
+        &__link {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-discover-card-list {
+    &__item {
+      width: 33.33%;
+
+      &.-large-card {
+        width: 66.66%;
+      }
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-discover-card-list {
+    &__item {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+  .c-discover-tab {
+    & .o-comp-filter {
+      &__item {
+        &.is-selected {
+          height: 25px;
+        }
+      }
+    }
+  }
+}

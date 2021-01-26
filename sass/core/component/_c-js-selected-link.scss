@@ -1,0 +1,103 @@
+.js-side-tabs.dropdown {
+  overflow: visible;
+  margin-bottom: 30px;
+  .js-selected-link {
+    // font-size: 15px;
+    // letter-spacing: 0.2px;
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    display: block;
+    position: relative;
+    padding: 16px 26px 14px;
+    border: 1px solid $brand-medium-gray;
+    height: 55px;
+    text-align: left;
+    min-width: 182px;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 1.7;
+    width: 100%;
+    @include transition-cubic(600ms, all);
+    &:before {
+      font-size: 1.8em;
+      font-weight: 400;
+      line-height: 18px;
+      position: absolute;
+      color: $brand-slate-gray;
+      right: 8px;
+      box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      z-index: 0;
+      border-radius: 50%;
+      opacity: 0.3;
+      transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+  .js-collapsible-nav__list {
+    // font-size: 15px;
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    min-width: 182px;
+    text-transform: none;
+    position: absolute;
+    background: $white;
+    z-index: 999;
+    min-height: 0;
+    height: 0;
+    overflow: hidden;
+    display: block;
+    border-radius: 1px;
+    box-shadow: 0 5px 25px 0 rgba($black, 0.15);
+    width: 100%;
+    //margin-top: 58px;
+    &.is-expanded {
+      height: auto;
+      padding: 8px 10px 18px;
+    }
+  }
+  .js-nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+    font-weight: 600;
+    margin: 0;
+    min-height: 40px;
+    a {
+      // font-size: 17px;
+      @include typography-body-avg-commons();
+      text-transform: capitalize;
+      color: $brand-font;
+      display: flex;
+      padding-left: 16px;
+      flex-direction: column;
+      justify-content: center;
+      height: 40px;
+      &:after {
+        display: none;
+      }
+      &:hover {
+        background-color: $brand-light-medium-gray;
+      }
+    }
+  }
+  &.-multi-level {
+    .js-nav-sub-nav {
+      padding-left: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .js-nav-item {
+        margin: 0;
+      }
+    }
+  }
+}

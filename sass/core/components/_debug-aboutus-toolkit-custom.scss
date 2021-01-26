@@ -1,0 +1,2211 @@
+/* custom code grabed from toolkit-en.css */
+
+@media screen and (min-width:320px) and (max-width:600px) {
+    .o-comp {
+        &.c-apply-card-list {
+            &.new-contact-us-comp {
+                background: #f4f5f5 !important;
+                .o-comp__title {
+                    h2 {
+                        max-width: 240px;
+                        margin-bottom: 48px;
+                    }
+                }
+            }
+        }
+    }
+    .o-comp__content {
+        &.rn-content {
+            padding: 75px 0px;
+        }
+    }
+}
+
+.o-comp {
+    &.c-apply-card-list {
+        &.new-contact-us-comp {
+            .c-apply-card__thumb {
+                width: 70px;
+                height: 70px;
+                img {
+                    width: 35px;
+                }
+            }
+            @media (min-width:768px) {
+                .c-apply-card__thumb {
+                    width: 100px;
+                    height: 100px;
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.new-contact-us-comp {
+    .c-table-custom__link-wrapper {
+        .more-link {
+            a.o-link-more {
+                margin: 24px 24px 0 24px;
+            }
+        }
+        @media screen {
+            .more-link {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .custom_changes {
+        .c-promise__wrapper {
+            &.for-object-center {
+                max-width: 50%;
+                border-radius: 1px;
+                position: relative;
+                background: #fff;
+            }
+        }
+    }
+    .o-comp {
+        &.c-board-committee {
+            &.mar-top-100 {
+                margin-top: 100px !important;
+            }
+        }
+    }
+    .padd-14 {
+        padding: 0px 15px 30px 15px;
+        margin: 0px;
+    }
+    .more-link {
+        &.rn-share-icon-wrap {
+            margin: 0px auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    .useful-info {
+        width: 33.33% !important;
+    }
+    .for_three_view {
+        .c-board-committee {
+            .c-offer-cards__item {
+                width: 33.33%;
+            }
+        }
+    }
+    .c-thumbnails-table--datareports table thead tr th.-width-90,
+    .c-thumbnails-table--reports table thead tr th.-width-90 {
+        width: 90%;
+    }
+    .c-thumbnails-table--datareports table thead tr th.-width-80,
+    .c-thumbnails-table--reports table thead tr th.-width-80 {
+        width: 80%;
+    }
+    .heading_for_red h3.c-feature-card__title {
+        color: #e62f2d;
+        font-size: 25px;
+    }
+    .no_border {
+        border: none;
+    }
+    .no_border_btm {
+        border-bottom: none !important;
+    }
+    .for_justify_content {
+        justify-content: normal !important;
+    }
+    .w-85.table thead tr th:first-child {
+        width: 85%;
+    }
+    .-no-padding-top {
+        padding-top: 0px !important;
+    }
+    .no-margin-tb {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .pad-tb-100 {
+        padding-top: 50px;
+        padding-bottom: 100px
+    }
+    .bk-grey {
+        background: rgba(151, 151, 151, 0.2) !important
+    }
+    .no_padding_btm {
+        padding-bottom: 0px !important
+    }
+    .no_margin {
+        margin: 0px !important
+    }
+    .for_margin h3.c-feature-card__title {
+        margin: 10px 0px 20px;
+    }
+    .mar-50 {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+    .no_margin_btm {
+        margin-bottom: 0px !important;
+    }
+    .heading_uppercase .c-about-highlight-item__title {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .pad_btm_10 {
+        padding-bottom: 10px !important;
+    }
+    .mrg_btm_50 {
+        margin-bottom: 50px !important;
+    }
+    .mrg_top_0 {
+        margin-top: 0px !important
+    }
+    .left-align {
+        text-align: left;
+        color: rgba(18, 18, 18, 0.75);
+        font-weight: 600;
+    }
+    .custom-wrap {
+        width: 90%;
+    }
+    .right_100 {
+        right: 100px;
+    }
+    /*     .new-contact-us-comp {
+margin: 0px auto;
+text-align: center;
+background: rgb(231, 231, 231);
+} */
+    .new-contact-us-comp {
+        .head_center {
+            h2 {
+                font-size: 25px;
+                font-weight: 500;
+                color: #273239;
+            }
+        }
+    }
+    .sub-head_center {
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            color: rgba(39, 50, 57, .7);
+            margin: 10px 0px;
+        }
+    }
+    .rn-share-title {
+        display: inline-block;
+    }
+    .o-comp .c-leads__list.rn-pad {
+        /* padding: 0 96px; */
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .c-leads__container.rn-container {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+    .rn-chart {
+        width: 100%;
+    }
+    .o-comp__title.rn-share-price-title {
+        padding: 0 10px 20px;
+        display: block;
+        text-align: left;
+    }
+    .rn-content-block {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+    }
+    .rn-content-block .rn-img {
+        height: 100%;
+        width: 100%;
+    }
+    .new-contact-us-comp.rn-reverse {
+        background: white;
+    }
+    .rn-reverse .o-comp {
+        flex-direction: row-reverse;
+    }
+    .c-leads__content-desc.rn-1 {
+        background-color: deeppink;
+        width: 100%;
+        min-height: 400px;
+        margin: 0 auto;
+    }
+    .c-leads__content-desc.rn-1 {
+        width: 65%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+    .c-leads__card.rn-2 {
+        background-color: deeppink;
+        width: 100%;
+        min-height: 400px;
+        margin: 50px auto 0;
+    }
+    .c-leads__card.rn-2 {
+        margin-top: 0px;
+    }
+    .c-leads__container.rn-c-leads-container {
+        padding: 0px 96px;
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+    .useful-info {
+        width: 33.33% !important;
+    }
+    .c-offer-cards__item {
+        padding: 0px 0px 30px 30px;
+    }
+    .o-comp__content.rn-content-mob,
+    .o-comp__content.rn-content-mob {
+        margin-top: 75px;
+        margin-bottom: 0;
+    }
+    .o-on-page-tabs.rn-b-pad {
+        /* margin-bottom: 50px; */
+        margin: 100px 96px;
+    }
+    .more-link.rn-share-icon-wrap {
+        margin: 0px auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .o-tabs__tab-content-summary .rn-desc-pad {
+        padding-bottom: 30px;
+    }
+    .o-tabs__tab-content-summary.rn-readmore-pad {
+        padding-top: 30px;
+    }
+    /*     .c-apply-card-list .o-comp__content.rn-content {
+padding: 100px 96px;
+margin-top: 0;
+margin-bottom: 0;
+} */
+    .c-offer-cards__item.rn-card-pad {
+        padding-bottom: 30px;
+    }
+    .c-news-carousel-item__desc.rn-news-pad {
+        margin: 0 0 30px;
+    }
+    .new-contact-us-comp.rn-contact-footer {
+        padding: 10px 0;
+    }
+    .rn-contact-footer .para_section {
+        display: block;
+    }
+    .para_section .first_part_para {
+        width: 100%;
+        margin: 10px auto;
+        font-weight: 500;
+        color: rgba(39, 50, 57, .7);
+        font-size: 18px;
+    }
+    .para_section .second_part_para {
+        display: block;
+        margin: 10px auto;
+        font-weight: 500;
+        font-size: 15px;
+        color: rgba(39, 50, 57, .5);
+    }
+    .second_part_para .first_span {
+        display: block;
+        margin: 10px auto;
+    }
+    .second_part_para .second_span {
+        display: block;
+        margin: 10px auto;
+    }
+    .c-offer-cards__form-wrapper form .o-form__field:last-child {
+        max-width: 260px;
+    }
+    .o-comp__content.rn-marTop0 {
+        margin-top: 0;
+    }
+    .o-comp__content.rn-tb-mar-0 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .c-leads__content-desc.rn-widget-block {
+        margin-right: 0;
+        min-height: 350px;
+        margin-top: 0;
+        margin-bottom: 0;
+        background: none;
+    }
+    .rn-widget-block.bg {
+        width: 65%;
+        padding: 0px;
+    }
+    .rn-widget-block.sm {
+        width: 35%;
+        padding: 0px;
+        padding-left: 48px !important;
+    }
+    .rn-grey {
+        color: rgba(39, 50, 57, .4);
+    }
+    .rn-field-wrapper {
+        align-items: center;
+    }
+    .c-hero-segment__title_desc.rn-center {
+        text-align: center;
+    }
+    .c-hero-segment__wrapper {
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    .c-hero-segment__wrapper:before {
+        background-image: linear-gradient(to top, rgba(44, 54, 66, .3), rgba(44, 54, 66, 0));
+    }
+    .c-thumb-table.rn-l-pad-0 {
+        padding-left: 0;
+    }
+    /*.o-comp__title.rn-title {
+margin-bottom: 50px;
+}
+.o-comp__title .rn-no-mar {
+margin: 0;
+}
+.c-breadcrumbs+.c-hero-segment .o-comp__content.rn-pad {
+margin-bottom: 100px;
+}
+
+.c-board-committee.rn-t-pad-100{
+padding-top: 50px;
+}
+
+.c-board-committee .container.rn-b-pad-100{
+padding-bottom: 50px;
+}
+
+.o-comp.rn-t-pad-100{
+padding-top: 50px;
+}
+
+.o-comp.rn-tb-pad-100{
+padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.o-comp.rn-t-mar-100{
+margin-top: 50px;
+}
+
+.hero-section__category-subdetails.rn-t-mar-25{
+margin-top: 25px;
+}
+
+.o-comp.rn-t-mar-0{
+margin-top: 0;
+}
+*/
+    .c-offer-card__expiration.rn-desc {
+        font-size: 15px;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: rgba(39, 50, 57, .7);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    /* .o-comp__content.rn-t-mar-0{
+margin-top: 0;
+} */
+    .rn-credit-pad {
+        padding-bottom: 80px;
+    }
+    /* .c-board-committee+.c-board-committee.rn-t-pad-100{
+margin-top: 0px !important;
+} */
+    .useful-info_container.rn-b-pad-100.o-comp__content.container.-related {
+        margin-bottom: 0px !important;
+    }
+}
+
+.useful-info.c-offer-cards__item.rn-card-pad.padd_14 {
+    padding-bottom: 30px;
+}
+
+@media (max-width: 398px) {
+    .o-link-more {
+        &.rn-arrow {
+            &:before {
+                right: 0;
+            }
+        }
+    }
+}
+
+.c-board-committee {
+    &+* {
+        margin-top: 75px;
+        /* hemmat 27April2020 */
+    }
+    &+.c-board-committee {
+        margin-top: 70px !important;
+        /* hemmat 27April2020 */
+    }
+}
+
+@media (max-width: 576px) {
+    .o-comp__content {
+        &.c-leads__list {
+            padding: 30px;
+        }
+    }
+    .c-promotion-carousel-item {
+        background: white;
+    }
+    .c-board-committee {
+        &+.c-board-committee {
+            margin-top: 70px;
+        }
+    }
+    .useful-info {
+        &.c-offer-cards__item {
+            &.rn-card-pad {
+                &.padd_14 {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+    .c-breadcrumbs {
+        &+.c-hero-segment {
+            .o-comp__content {
+                &.rn-pad {
+                    margin-bottom: 20px;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+    .c-breadcrumbs {
+        &+.hero-section {
+            .hero-section__content-wrapper {
+                &.rn-pad {
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .o-comp__content {
+        &.mob-pad {
+            margin-bottom: 25px;
+        }
+    }
+    .c-iframe-wrapper {
+        .rn-iframe-pad {
+            margin-top: 10px
+        }
+    }
+    .o-comp.rn-marTop0 {
+        margin-top: 0;
+    }
+    .o-comp__content {
+        &.rn-marTB20 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    }
+    .o-comp__content {
+        &.rn-marBottom0 {
+            margin-Bottom: 0;
+        }
+    }
+    .comp__content {
+        &.rn-marBottom0 {
+            margin-Bottom: 0;
+        }
+    }
+    .o-comp {
+        .c-leads__list {
+            &.rn-pad {
+                padding-top: 0px !important;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    /*.c-board-committee+.c-board-committee.rn-t-pad-100{
+margin-top: 0px;
+}*/
+}
+
+@media (max-width: 768px) {
+    .o-form__field {
+        &.rn-field {
+            padding: 0 20px;
+        }
+    }
+    .o-comp__content {
+        &.rn-news-pad {
+            margin-top: 0;
+        }
+    }
+    .rn-share-icon-wrap {
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+
+
+/*  for spacing issue 07-Jan-19 */
+
+@media (max-width: 768px) {
+    .o-tabs__tab-content-summary {
+        p {
+            max-height: 40px;
+            white-space: inherit;
+        }
+    }
+    .o-tabs__tab-content-summary {
+        .more-link {
+            margin-top: 10px;
+        }
+    }
+    .c-breadcrumbs {
+        &+.c-hero-segment {
+            .o-comp__content {
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    /*
+.o-comp__content {
+margin-bottom: 0px;
+margin-top: 0px; 
+}
+*/
+    .o-tabs {
+        &.-js-exceedsPort {
+            margin-bottom: 0px;
+        }
+    }
+    .o-tabs-content__wrapper {
+        padding-top: 0px;
+    }
+    .o-tabs__tab-content-item {
+        display: flex;
+    }
+}
+
+@media (max-width:992px) {
+    .o-comp__content {
+        &.rn-marBottom0 {
+            margin-bottom: 0;
+        }
+    }
+    .rn-widget-block {
+        &.bg,
+        &.sm {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .rn-content-block {
+        text-align: center;
+    }
+    .rn-share-price-title {
+        &.rn-mob-fix {
+            margin-top: 20px;
+        }
+    }
+    .rn-reverse {
+        .o-comp {
+            flex-direction: column-reverse;
+        }
+    }
+    .o-comp {
+        .c-leads__list {
+            &.rn-pad {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width:1280px) {
+    .o-comp__content {
+        &.container {
+            &.mar_top_bottom {
+                padding-top: 30px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .c-leads__container {
+        &.rn-c-leads-container {
+            padding: 0px 96px;
+            margin-top: 0;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .pad-right-0 {
+        padding-right: 0px !important;
+    }
+    .pad-left-0 {
+        padding-left: 0px !important;
+    }
+    .o-comp__content.rn-content-mob {
+        margin-top: 75px;
+    }
+    .new-contact-us-comp.rn-contact-footer {
+        padding: 75px 0;
+    }
+    .rn-contact-footer .para_section {
+        display: inline-flex;
+    }
+    .para_section .second_part_para {
+        margin: 20px 0 15px 0;
+    }
+    .second_part_para .first_span {
+        margin: 0px 45px 0px 0px;
+        display: inline;
+    }
+    .second_part_para .second_span {
+        display: inline;
+        margin: 0;
+    }
+    .para_section .first_part_para {
+        float: left;
+        margin: 18px 70px 18px 0px;
+        width: auto;
+    }
+    .rn-title-margin {
+        margin-top: 50px;
+    }
+    .o-on-page-tabs.rn-b-pad {
+        /* margin-bottom: 50px; */
+        margin: 100px 96px;
+    }
+    .o-tabs__tab-nav.rn-b-mar-0 {
+        margin-bottom: 0;
+    }
+    /*     .new-contact-us-comp {
+padding: 100px 96px;
+margin: 0px auto;
+text-align: center;
+background: rgba(39, 50, 57, .1);
+} */
+    /*
+.c-board-committee.rn-t-pad-100{
+padding-top: 100px;
+}
+.c-board-committee .container.rn-b-pad-100{
+padding-bottom: 100px;
+}
+.o-comp.rn-t-pad-100{
+padding-top: 100px;
+}
+.o-comp.rn-tb-pad-100{
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.o-comp.rn-t-mar-100{
+margin-top: 100px;
+}
+.o-comp__content.rn-t-pad-100{
+padding-top: 100px;
+}
+*/
+}
+
+@media(min-width:320px) and (max-width:600px) {
+    .o-form__field {
+        margin: 20px auto;
+    }
+}
+
+@media(min-width:767px) and (max-width:991px) {
+    /* .new-contact-us-comp {
+padding: 0px 48px;
+background: white;
+} */
+    .o-comp__title.rn-share-price-title {
+        padding: 0px 10px 1em;
+        font-weight: 400;
+    }
+    .c-leads__content-desc.rn-widget-block {
+        padding: 0px;
+    }
+}
+
+@media (min-width:992px) {
+    .o-comp__content.container.mar_top_40 {
+        margin-top: 40px;
+    }
+    .mar-dec-50 {
+        margin-top: -50px
+    }
+    .o-on-page-tabs.rn-b-pad {
+        /* margin-bottom: 50px; */
+        margin: 100px 96px;
+    }
+    .padd_14 {
+        padding: 0px 14px !important;
+    }
+    .-pad-r-30 {
+        padding-right: 30px !important;
+    }
+    .pad_100 {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+    .c-leads__content-desc.rn-1 {
+        width: 65%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+    .c-leads__card.rn-2 {
+        width: 35%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    /*.c-offer-cards__item.rn-card-pad {
+padding-bottom: 0px;
+}*/
+    .o-comp__content.container.mar_top_40 {
+        margin-top: 40px;
+    }
+    .c-leads__container.container.rn-c-leads-container {
+        margin-bottom: 100px !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .o-comp__content.container.mar_top_40 {
+        margin-top: 40px;
+    }
+    .o-comp__title.rn-share-price-title {
+        padding: 0px 10px 1em;
+        font-weight: 400;
+    }
+    .new-contact-us-comp {
+        .o-comp.c-leads__list.rn-pad.container {
+            padding: 0px;
+        }
+    }
+    .c-leads__content-desc.rn-widget-block {
+        background: none !important;
+        padding: 0px;
+    }
+    .new-contact-us-comp {
+        .o-comp__content.rn-content {
+            margin: 0px auto;
+        }
+    }
+    /* .new-contact-us-comp {
+padding: 50px 30px;
+margin: 0px auto;
+text-align: center;
+background: rgba(39, 50, 57.1);
+} */
+    .o-comp__content.rn-content {
+        padding: 50px 0px;
+    }
+    /*.o-comp.c-board-committee.rn-t-pad-100 {
+padding: 75px 0px;
+}*/
+    .c-board-committee .-related.container {
+        border-bottom: none;
+    }
+    .useful-info.c-offer-cards__item.mar-15 {
+        padding-bottom: 30px;
+    }
+    .useful-info.c-offer-cards__item.padd-14.rn-card-pad {
+        padding-bottom: 30px;
+    }
+    .more-link.rn-share-icon-wrap {
+        margin: 0px auto;
+        text-align: center;
+    }
+    .useful-info_container.rn-b-pad-100.o-comp__content.container.-related {
+        border: none;
+    }
+    .o-comp__content.container.rn-tb-mar-0 {
+        background: #f0f0f0;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        margin: 0px !important;
+    }
+    .c-leads__content-desc.rn-1 {
+        background: deeppink;
+        height: 400px;
+    }
+    .rn-2 {
+        background: deeppink;
+        width: 100%;
+        height: 150px;
+    }
+    .useful-info_container.rn-b-pad-100.o-comp__content.container.-related {
+        margin: 0px;
+    }
+}
+
+@media (min-width:768px) {
+    .c-easy-banking__item.-has-multi-links .more-link {
+        display: table;
+        margin-bottom: 13px
+    }
+    .c-company-news-results .c-company-news-list__wrap.-w-1066 {
+        max-width: 1066px;
+    }
+    .pad-right-0 {
+        padding-right: 0px !important;
+    }
+    .pad-left-0 {
+        padding-left: 0px !important;
+    }
+}
+
+@media (min-width:1280px) {
+    .reports_custom .o-comp__title {
+        margin-bottom: 30px;
+    }
+    .sub-head_center h3 {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(39, 50, 57, .7);
+        margin: 10px 0px;
+    }
+    .new-contact-us-comp {
+        .head_center {
+            h2 {
+                font-size: 30px;
+                font-weight: 500;
+                color: #273239;
+            }
+        }
+    }
+    .c-hero-segment__date,
+    .c-hero-segment__update {
+        font-size: 15px;
+        color: rgba(39, 50, 57, .4);
+        font-weight: 500;
+    }
+    .c-chart__legend {
+        right: 9%;
+    }
+    .c-feature-card__title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .heading_uppercase .c-about-highlight-item__title {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+        height: 3em;
+        overflow: hidden;
+        line-height: 1.5em;
+    }
+    .c-table-custom table thead tr th {
+        padding: 30px 0px;
+        text-align: left;
+        width: auto;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: none;
+        height: unset;
+        color: rgba(39, 50, 57, .7);
+    }
+    .c-table-custom table tr td {
+        font-size: 15px;
+    }
+    .c-table-custom table tr td.-td-bold {
+        font-weight: 500;
+        color: #45555f !important;
+    }
+    a.pdf-icon {
+        font-size: 25px;
+    }
+    .-td-center {
+        text-align: center;
+    }
+    .c-table-custom table tr td.-td-avg-font {
+        font-size: 13px;
+        letter-spacing: .1px;
+        font-weight: 500;
+        color: rgb(118, 118, 118);
+    }
+    .c-thumb-table.pad_left_55 {
+        padding-left: 55px;
+    }
+    .c-board-committee .-related .c-offer-cards__list {
+        max-width: 1250px;
+        padding: 0;
+        margin-top: 48px;
+    }
+    .c-product-feature__item {
+        margin-bottom: 15px;
+        max-width: 315px;
+        width: 100%;
+    }
+    .heading_for_red h3.c-feature-card__title {
+        color: #e62f2d;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .c-feature-card__summary {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+        margin-bottom: 20px;
+        color: rgba(39, 50, 57, .7);
+    }
+    .custom_news_changes .c-news-carousel-item__title {
+        font-size: 16px;
+    }
+    .custom_news_changes .c-news-carousel-item__desc {
+        font-size: 15px;
+    }
+    .mar-top-50 {
+        margin-top: 50px;
+    }
+    .w-75 {
+        margin: 0px auto;
+    }
+    .c-thumbnails-table--datareports.w-85 {
+        width: 80%;
+        margin: 0px auto;
+    }
+    .o-comp__content.container.mar_top_bottom {
+        margin: 10px auto;
+    }
+    .padd_top_btm {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .no-padding-left {
+        padding-left: 0px !important
+    }
+    .no-padding-right {
+        padding-right: 0px !important
+    }
+    .padd-14 {
+        padding: 0px 15px 30px 15px;
+        margin: 0px;
+    }
+    .padd_12 {
+        padding: 0 12px
+    }
+    .custom_changes .c-promise__wrapper {
+        padding: 70px 50px;
+        position: relative;
+    }
+    .custom_changes .c-promise__wrapper {
+        max-width: 530px;
+        border-radius: 1px;
+        position: relative;
+        background: #fff;
+    }
+    .custom_changes .c-promise__wrapper.for-object-center {
+        max-width: 50%;
+        border-radius: 1px;
+        position: relative;
+        background: #fff;
+    }
+    .c-promotion-carousel-item__info {
+        min-height: 175px;
+        padding: 25px;
+        background-color: #fff;
+    }
+    .c-promotion-carousel-item__img {
+        min-width: 150px;
+        width: 33%;
+        height: 175px;
+        overflow: hidden;
+    }
+    .custom_changes .c-promise__item {
+        border-bottom: 1px solid rgba(221, 221, 221, .2);
+        margin-bottom: 20px;
+    }
+    .custom_changes .o-tabs__tab-content-summary .-bottomspace {
+        margin-bottom: 20px;
+    }
+    .w-90 {
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+
+.c-board-committee .c-board-member__title,
+.c-board-committee .c-offer-card__title {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+img.custom_height {
+    height: 175px;
+    object-fit: cover;
+}
+
+
+/* investor relations (shareholders infor widget image fix) hemmat 27April2020 */
+
+.useful-info .custom_height {
+    height: auto;
+    object-fit: inherit;
+}
+
+.mar_20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.c-stamp+.c-hero-segment .o-comp__content,
+.site-content .c-hero-segment:first-child .o-comp__content.mar_top_40 {
+    margin-top: 40px;
+}
+
+.mar_btm_20 {
+    margin-bottom: 20px !important
+}
+
+.custom_brdr_padd_top {
+    border-top: 1px solid rgb(227, 227, 227);
+    padding-top: 100px;
+}
+
+.o-comp__content.container.custom-wrap.mar-top-50 {
+    margin-top: 50px;
+}
+
+.fnt_16 {
+    font-size: 15px !important;
+    font-weight: 500;
+}
+
+.for_mozilla_border_issue table tr {
+    position: static !important;
+}
+
+.-grey-dark-color {
+    color: #45555f;
+}
+
+.o-comp.c-apply-card-list.new-contact-us-comp {
+    background: rgba(39, 50, 57, .05);
+}
+
+.o-comp__content.rn-content {
+    padding: 75px 0px;
+}
+
+.useful-info__item.c-offer-card-list__item {
+    border: 1px solid rgba(39, 50, 57, .2);
+    background: white;
+}
+
+.useful-info__item.c-aboutus-card-list__item {
+    border: 1px solid rgba(39, 50, 57, .2);
+    background: white;
+}
+
+.useful-info.c-offer-cards__item {
+    padding-bottom: 30px;
+}
+
+.c-leads__content-desc.rn-widget-block {
+    background: none !important;
+    padding: 0px;
+}
+
+.o-comp__title.rn-share-price-title {
+    padding: 0px 10px 1em;
+    font-weight: 400;
+}
+
+.c-custom-no-border .c-board-card__details {
+    border: none !important;
+}
+
+.-pos-relative {
+    position: relative;
+}
+
+.-pos-relative a.o-link-more.icon-arrow-down {
+    position: absolute;
+    bottom: 20px;
+}
+
+// .no-top-padding {
+//     padding-top: 0px;
+// }
+// .no-top-pad {
+//     margin-top: 0px !important;
+// }
+// .no-bottom-pad {
+//     margin-bottom: 0px !important;
+// }
+.no-top-pad,
+.no-top-padding {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.no-bottom-pad,
+.no-bottom-padding {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+// ------------------------------------------ 
+// This is ABOUT-US section toolkit-custom Misc. debug/overwite css  
+// ------------------------------------------ 
+
+/* ------------------------------------------ */
+
+
+/* Req from Hemmat 01/20 */
+
+
+/* ------------------------------------------ */
+
+.c-board-committee .c-offer-card__details.corp_gover_tabs {
+    margin-bottom: 0px;
+    min-height: 190px;
+}
+
+
+/*.c-aboutus-tabs .container {
+max-width: 1040px;
+}*/
+
+.o-comp__content .o-comp__title .o-comp-head-center,
+.o-comp__content .o-comp__title .o-comp-head-center sup {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .c-news-carousel {
+        .o-comp__content {
+            margin-bottom: 75px;
+            margin-top: 75px;
+        }
+    }
+}
+
+
+/* for for "News" section text height */
+
+.c-news-carousel-item {
+    &__desc {
+        &.o-ellipse-two-lines {
+            display: block;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+
+/* ------------------------------------------ */
+
+
+/* Req  by Hammat 22-Jan-20*/
+
+
+/* ------------------------------------------ */
+
+.c-promotion-carousel-item {
+    /* fix for trending now transperant background when loading */
+    background: #ffffff !important;
+}
+
+.c-promotion-carousel-item__desc {
+    /* fix for "trending now" body text height when loading */
+    height: 3em !important;
+    line-height: 1.7 !important;
+    overflow: hidden !important;
+}
+
+.c-page-seperator {
+    &+.o-comp {
+        margin-top: 0px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-promotion-carousel {
+        .o-comp__content {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-custom-no-border {
+        .c-board-card__details {
+            padding-top: 36px;
+            padding-bottom: 36px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .o-tabs__tab-content-summary {
+        p {
+            max-height: none;
+            white-space: inherit;
+        }
+    }
+}
+
+.c-reports-table table td:first-child,
+.c-table-seven-cols table td:first-child,
+.c-table-two-cols table td:first-child,
+.c-thumbnails-table--datareports table td:first-child,
+.c-thumbnails-table--reports table td:first-child {
+    z-index: 99;
+}
+
+
+/* ------------------------------------------ */
+
+
+/* Req  by Hammat 26-Jan-20*/
+
+
+/* ------------------------------------------ */
+
+.c-offer-card__expiration {
+    font-size: 15px;
+}
+
+
+/* .c-aboutus-tabs .container {
+max-width: 1040px;
+}
+.o-tabs-content__wrapper .o-tabs__tab-content {
+width: 97%;
+} */
+
+.c-ticker {
+    z-index: 998 !important;
+    display: flex;
+    flex-direction: row #{"/*rtl:row-reverse*/"};
+    bottom: 40px;
+    padding: 0.75em 1.5em;
+    animation: tickerIntro 2s cubic-bezier(0, 0, 0.02, 1);
+    &>div {
+        color: #ec0100;
+        /*rtl:begin:ignore*/
+        padding-right: 1em;
+        /*rtl:end:ignore*/
+        text-align: left;
+    }
+    .c-ticker__frame {
+        width: 155px !important;
+    }
+}
+
+@keyframes tickerIntro {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 768px) {
+    .c-thumb-table .more-link {
+        padding-top: 10px !important;
+    }
+}
+
+
+/* ------------------------------------------ */
+
+
+/* About pages https://test.adcb.com/en/about */
+
+
+/* ------------------------------------------ */
+
+.c-breadcrumbs__item:last-child {
+    a {
+        pointer-events: all !important;
+        cursor: default;
+    }
+}
+
+.c-quick-links {
+    .c-quick-login__list {
+        &.is-expanded {
+            max-height: inherit !important;
+        }
+    }
+}
+
+.c-quick-links {
+    .btn-login:hover {
+        &:after {
+            width: 204px;
+        }
+    }
+}
+
+.former-unb-list {
+    a {
+        &:hover {
+            &:after {
+                color: #fff;
+                background-color: #758c95 !important;
+            }
+        }
+    }
+}
+
+.former-unb-list {
+    a {
+        &:after {
+            background: #758c95 !important;
+        }
+    }
+}
+
+.c-quick-login__list {
+    li {
+        &:first-child {
+            margin-top: 0px;
+        }
+    }
+}
+
+.c-quick-login__list {
+    li {
+        &:last-child {
+            margin-bottom: 0px !important;
+        }
+    }
+}
+
+.c-quick-links {
+    .c-quick-login__item {
+        padding: 0px;
+    }
+}
+
+.c-quick-login__item-adcb {
+    position: relative;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    padding: 15px 5px;
+}
+
+.c-quick-login__item-unb {
+    position: relative;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    background-color: #758c95;
+    padding: 15px 5px;
+}
+
+.former-unb {
+    color: #fff !important;
+    left: 16px;
+    position: relative;
+}
+
+.c-quick-links {
+    .btn-login {
+        min-width: 204px !important;
+    }
+}
+
+.former-unb {
+    img {
+        z-index: 99;
+        position: relative;
+        top: -4px;
+        left: 0px;
+        margin-right: 5px;
+    }
+}
+
+.-former-unb-customer {
+    margin-top: 15vh;
+    font-size: 28px !important;
+    letter-spacing: 0 !important;
+    border-left: 10px solid #758c95;
+    color: #758c95;
+}
+
+.-former-unb-customer-mob {
+    margin-top: 2.5vh;
+    font-size: 32px !important;
+    border-left: 5px solid #758c95;
+    color: #758c95;
+    padding-left: 16px !important;
+}
+
+.former-unb-list {
+    border-left: 5px solid #758c95;
+}
+
+.bor-top-none {
+    border-top: none;
+}
+
+.o-tabs__tab-content-thumb-wrap {
+    z-index: 1;
+}
+
+.c-board-committee {
+    .useful-info-card__details {
+        &.c-offer-card__details {
+            transform: translateY(0px);
+            padding: 2em 2.5em 2.5em !important;
+            margin: 0 0 1em;
+            background-color: transparent;
+        }
+    }
+}
+
+// @media only screen and (orientation: landscape) {
+//     .c-quick-login__list.is-expanded {max-height: 300px !important;overflow: scroll;overflow-y: scroll;} 
+// }
+@media (max-width: 768px) {
+    .former-unb {
+        left: 10px !important;
+    }
+    .c-main-nav {
+        .nav-footer__list {
+            li {
+                padding-right: 10px;
+                font-size: 13px;
+            }
+        }
+    }
+    .c-main-nav {
+        .nav-footer__list {
+            padding-left: 5px;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) {
+    .c-quick-links {
+        .c-quick-login__list {
+            &.is-expanded {
+                right: -48px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .c-table-custom table tr td.-td-avg-font {
+        /* fix for Annual general assymbly page */
+        font-size: 17px;
+        letter-spacing: 0.1px;
+        font-weight: 400;
+        color: rgb(118, 118, 118);
+    }
+    .c-table-custom .o-comp__content {
+        margin-top: 24px;
+    }
+}
+
+
+/* fixing the logo emblem width - hemmat 11May2020 */
+
+@media (min-width: 992px) {
+    .site-footer .c-footer .c-footer-brand__logo .o-site-logo__icon,
+    .site-footer .c-footer--securities .c-footer-brand__logo .o-site-logo__icon {
+        width: 27% !important;
+    }
+}
+
+
+/* start - Blog article fixes hemmat 14May2020 */
+
+.c-cms-content {
+    &.-article-content {
+        h3 {
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+        p {
+            margin-top: 24px;
+            margin-top: 24px;
+        }
+    }
+}
+
+.o-tabs.container {
+    &.-js-exceedPort {
+        margin-bottom: 0px;
+    }
+}
+
+.o-comp__content {
+    &.container {
+        &.-has-filter {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.c-board-list {
+    &+.container {
+        padding: 0px;
+    }
+}
+
+.o-comp {
+    &.c-product-feature {
+        .o-comp__title_desc {
+            text-align: center;
+            margin-top: 24px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .c-cms-content {
+        &.-article-content {
+            h3 {
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+        }
+    }
+    .o-tabs {
+        &.container {
+            &.-js-exceedPort {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .o-comp__content {
+        &.container {
+            &.-has-filter {
+                margin-bottom: 48px;
+            }
+        }
+    }
+    .c-board-list {
+        &+.container {
+            padding: 0px 24px;
+        }
+    }
+    .o-comp {
+        &.c-product-feature {
+            .o-comp__title_desc {
+                text-align: inherit;
+            }
+        }
+    }
+}
+
+
+/* end - Blog article fixes */
+
+
+/* fix for the about us PDF icon - hemmat 06April2020 */
+
+.c-reports-table table td:first-child span:before,
+.c-table table td:first-child span:before,
+.c-table-seven-cols table td:first-child span:before,
+.c-table-three-cols table td:first-child span:before,
+.c-table-two-cols table td:first-child span:before,
+.c-thumbnails-table table td:first-child span:before,
+.c-thumbnails-table--datareports table td:first-child span:before,
+.c-thumbnails-table--reports table td:first-child span:before,
+.icon-pdf:before {
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+}
+
+.icon-pdf {
+    &:before {
+        color: #ddd;
+    }
+}
+
+a {
+    .icon-pdf {
+        &:before {
+            color: #ec0100 !important;
+        }
+    }
+}
+
+.download-text {
+    font-size: 12px;
+    color: #ec0100;
+    margin-top: 5px;
+}
+
+
+/* procash video component fix hemmat 05April2020 */
+
+.c-hero-video {
+    &.-tabedcontent {
+        max-width: 100% !important;
+        padding: 0px;
+    }
+}
+
+.c-hero-video {
+    &.-tabedcontent {
+        .c-hero-video__wrapper {
+            background-color: none;
+            box-shadow: none;
+            border: none;
+        }
+    }
+}
+
+.c-hero-video {
+    &.-tabedcontent {
+        .c-hero-video__wrapper {
+            #video-overlay {
+                max-width: 100% !important;
+            }
+        }
+    }
+}
+
+
+/* bitaqati component top margin fix hemmat 08April2020 */
+
+.c-page-seperator {
+    &+.c-cardbanner {
+        margin-top: 0px;
+    }
+}
+
+
+/* bitaqati component visited link color hemmat fix 08April2020 */
+
+.c-cardbanner {
+    &.-darkgray-background {
+        .c-standalone-link {
+            a.o-link-more {
+                &:link,
+                &:visited,
+                &:hover {
+                    color: #ec0100 !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* board committee spacing fix hemmat 08April2020 */
+
+.c-board-committee {
+    .c-offer-card__details {
+        min-height: 150px !important;
+    }
+    .c-wm-detail {
+        border-bottom: 1px solid #eee;
+    }
+}
+
+
+/* AboutUs 3 tiles fix - hemmat Sep2020 */
+
+.c-board-committee {
+    .useful-info_container {
+        .useful-info {
+            &.c-offer-card__details {
+                min-height: 240px !important;
+                .c-offer-card__expiration {
+                    display: block;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+
+/* interactive tools page - two widgets component titles fix hemmat 08April2020*/
+
+.c-widgetcolumns {
+    h3 {
+        letter-spacing: -0.1px;
+        font-weight: 600;
+    }
+}
+
+
+/* annual general assymply page spacing fix hemmat 08April2020*/
+
+@media (min-width: 992px) {
+    .mrg_btm_50 {
+        margin-bottom: 24px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-offer-cards__form-wrapper {
+        form {
+            .o-form__field:last-child {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+
+/* corporate governance page spacing fix */
+
+.c-discover-card-list {
+    .c-discover-card-list__wrap {
+        margin-bottom: -48px;
+    }
+}
+
+
+/* about us tabs bottom spacing fix */
+
+
+/*.c-aboutus-tabs .container {
+margin-bottom: 50px;
+}*/
+
+
+/* about us investor relations (three columns cards) fix hemmat 09April2020*/
+
+.useful-info__item {
+    &.c-aboutus-card-list__item {
+        min-height: 405px !important;
+        height: 100%;
+    }
+}
+
+
+/* new alteration of general assembly component in investors relations page */
+
+.o-image-background {
+    background-color: rgba(39, 50, 57, 0.85);
+    background-image: url(/en/Images/ADCB_Segments_tcm41-140620.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    text-shadow: 0px 0px 15px rgba(39, 50, 57, 1);
+    .o-comp__title {
+        h2 {
+            color: #ffffff !important;
+        }
+    }
+    .o-comp__title_desc {
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+}
+
+
+/* about us section compnening spacing fix hemmat 12April2020 */
+
+.o-comp {
+    &.c-cardbanner {
+        margin-bottom: 0px !important;
+    }
+}
+
+.c-cardbanner {
+    &>.o-comp__content {
+        margin-bottom: 0;
+    }
+}
+
+
+/* about us Quarter 2019 hemmat 12April2020 */
+
+
+/* @media (min-width: 992px) {
+.c-apply-card-list .o-comp__content.rn-content {
+padding: 100px 96px;
+margin-top: 0;
+margin-bottom: 0;
+}
+} */
+
+
+/* misc fix to overwrite old shittty debugging in toolkit-ar.css :) */
+
+@media (min-width: 992px) {
+    .useful-info_container {
+        &.rn-b-pad-100 {
+            &.o-comp__content {
+                &.container {
+                    &.-related {
+                        margin-bottom: 0px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* about us hide not selected tabs-content */
+
+.o-tabs__tab-content-item {
+    &.is-active {
+        display: flex;
+        border: none;
+    }
+}
+
+.o-tabs__tab-content-item {
+    display: none;
+}
+
+
+/* about us > corporate governance title fix hemmat 12April2020 */
+
+.o-comp__content#active-tab {
+    margin-bottom: -2em;
+}
+
+
+/* about us > committee page tabs spacing */
+
+.o-tabs {
+    &.-js-exceedsPort {
+        position: relative;
+        margin-bottom: 48px;
+    }
+}
+
+
+/* about us > IR > ading two items to the tabs fix - hemmat 27April2020 */
+
+.c-easy-banking__list {
+    display: block;
+}
+
+
+/* about us > tabs fix hemmat 27April2020 */
+
+.c-aboutus-tabs {
+    .o-tabs-content__wrapper {
+        &>.o-tabs__tab-content {
+            max-width: 780px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    .o-tabs.-js-exceedsPort {
+        .o-tabs__tab-nav-item {
+            &:first-child {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            @media (min-width:768px) {
+                &:first-child {
+                    padding-left: inherit;
+                }
+                &:last-child {
+                    padding-right: inherit;
+                }
+            }
+        }
+    }
+}
+
+
+/* credit rating spacing issue fix hemmat 27april2020 */
+
+.c-about-credit-rating {
+    table {
+        border: none;
+        margin: 0px auto 0px;
+    }
+}
+
+
+/* Blog cms body text width - Hemmat - 8June2020 */
+
+.-article-content.c-reports-table,
+.-article-content.c-table,
+.-article-content.c-table-seven-cols,
+.-article-content.c-table-three-cols,
+.-article-content.c-table-two-cols,
+.-article-content.c-thumbnails-table,
+.-article-content.c-thumbnails-table--datareports,
+.-article-content.c-thumbnails-table--reports,
+.c-cms-content.-article-content {
+    max-width: 992px;
+}
+
+
+/* about overview title spacing fix - hemmat - 21June2020 */
+
+.c-product-title {
+    .o-comp__content {
+        margin-top: 0;
+    }
+}
+
+
+/* IR donut chart - hemmat - 22JUNE2020 */
+
+.c-board-committee {
+    .c-offer-card__thumb {
+        background: no-repeat;
+        /*rtl:begin:ignore*/
+        background-image: linear-gradient(10deg, #f6f6f6, #ffffff 25%);
+        /*rtl:end:ignore*/
+    }
+    &.-iframes {
+        .c-offer-card__thumb {
+            background: no-repeat;
+            /*rtl:begin:ignore*/
+            background-image: linear-gradient(10deg, #f6f6f6, #ffffff 25%);
+            /*rtl:end:ignore*/
+            padding: 1.25em 1em 0;
+            border-bottom: 0px;
+            &>iframe {
+                height: 230px !important;
+            }
+        }
+        @media (min-width:768px) {
+            .c-offer-card__thumb {
+                padding: 1.25em 2.5em 0;
+                // &>iframe {
+                //     height: 230px !important;
+                // }
+            }
+        }
+    }
+}
+
+
+/* MCLP lead form mobile backgrond image */
+
+@media (max-width:415px) {
+    .hero-premium__mobile-poster {
+        width: 100vw;
+        box-sizing: content-box;
+        z-index: 1;
+        position: absolute;
+    }
+    .hero-premium__mobile-poster img {
+        width: 100%
+    }
+}
+
+@media (min-width:416px) {
+    .hero-premium__mobile-poster {
+        display: none;
+    }
+}
+
+
+/* c-image-seperator mobile backgrond image */
+
+@media (max-width:415px) {
+    .c-image-seperator {
+        img.image-seperator-mobile {
+            display: block;
+        }
+        img.image-seperator-desktop {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:416px) {
+    .c-image-seperator {
+        img.image-seperator-mobile {
+            display: none;
+        }
+        img.image-seperator-desktop {
+            display: block;
+        }
+    }
+}
+
+
+/* superset text - hemmat */
+
+p>sup,
+li>sup,
+a>sup {
+    top: -.5em;
+}
+
+
+/* Aboutus Iframe - Ownership structure reset BODY background color to transperent */
+
+// .t-islamic body,
+// .t-personal body,
+// .t-securities body,
+// body {
+//     background-color: transparent !important;
+// }
+
+/* Aboutus page - Ownership structure - donut chart color chamge */
+
+#donut-chart .arc:nth-child(1) path,
+.c-chart__legend .c-legend__row:nth-child(1) .c-legend__circle {
+    fill: #ec0100 !important;
+}
+
+#donut-chart .arc:nth-child(2) path,
+.c-chart__legend .c-legend__row:nth-child(2) .c-legend__circle {
+    fill: #273239 !important;
+}
+
+#donut-chart .arc:nth-child(3) path,
+.c-chart__legend .c-legend__row:nth-child(3) .c-legend__circle {
+    fill: #cccccc !important;
+}
+
+.c-tooltip .c-tooltip__info svg {
+    display: none;
+}
+
+
+/* prospectus dropdown menu height on mobile  */
+
+@media (max-width:1231px) {
+    .c-prospectus-form__wrap {
+        .c-input-select.open {
+            .c-input-select__dropdown {
+                max-height: 300px !important;
+            }
+        }
+    }
+}
+
+
+/* AGA table component - dropdown margin override */
+
+@media (min-width:768px) {
+    .c-offer-cards__form-wrapper {
+        form {
+            .o-form__field:only-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+
+/* prospectus table - removing bold text style */
+
+._GMTNrecords {
+    td.-td-bold {
+        font-weight: normal !important;
+    }
+}
+
+
+/* About us disclosure component (links alignment) */
+
+.new-contact-us-comp {
+    .o-link-more {
+        text-align: center;
+        &:nth-child(2) {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+    }
+    .c-apply-card-list__wrap {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        &>div {
+            flex: 2;
+            min-width: 50%;
+            .c-apply-card__details {
+                padding: 12px 0 24px !important;
+                min-width: auto !important;
+                .c-apply-card__title {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .new-contact-us-comp {
+        display: block;
+        .o-link-more {
+            text-align: inherit !important;
+        }
+        .c-apply-card-list__wrap {
+            flex-flow: row nowrap;
+            max-width: 768px;
+            margin: auto;
+            &>div {
+                flex: 2;
+                min-width: auto;
+                .c-apply-card__details {
+                    padding: 24px 0 !important;
+                    min-width: auto !important;
+                    .c-apply-card__title {
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* About us Financial Reports "filter and title" padding */
+
+.c-thumbnails-table--datareports> :first-child {
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+
+
+/* tables on IE fix */
+
+@media screen and (-ms-high-contrast:active),
+all and (-ms-high-contrast:none) {
+    .o-comp__content {
+        max-height: none !important;
+    }
+}

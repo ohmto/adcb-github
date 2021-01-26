@@ -1,0 +1,219 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-board-member__title
+02 - c-board-committee
+03 - c-board-member
+04 - media queries
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 c-board-member__title */
+
+.c-board-member__title {
+  @extend .c-offer-card__title;
+  //font-size: 35px;
+  @include typography-page-title-commons();
+}
+
+/* 02 c-board-committee */
+
+.c-board-committee {
+  @extend .c-offer-cards;
+
+  & + * {
+    margin-top: 75px;
+  }
+
+  .c-offer-card {
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__details {
+      margin-bottom: 50px;
+      transform: unset;
+      padding-top: 30px;
+      padding-left: 0;
+      padding-bottom: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    padding-top: 34px;
+    border-top: 1px solid rgba($brand-font, 0.2);
+  }
+
+  + .c-board-committee {
+    margin-top: -70px;
+  }
+
+  .-related {
+    .c-offer-cards {
+      &__list {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 950px;
+        padding-bottom: 24px;
+      }
+
+      &__item {
+        .c-offer-card {
+          cursor: default;
+
+          a {
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    &.container {
+      padding-bottom: 0;
+      max-width: 1440px;
+      border-bottom: 1px solid rgba($brand-font, 0.2);
+    }
+  }
+}
+
+/* 03 c-board-member */
+
+.c-board-member {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 54px 0 0;
+
+  &__sup {
+    @extend .c-offer-card__sup;
+    letter-spacing: 1px;
+    color: $brand-primary-light;
+
+    // @include themify($themes) {
+    //   color: themed('$brand-primary-light');
+    // }
+  }
+
+  p {
+    margin: 0 auto 40px;
+  }
+
+  &__column {
+    text-align: left;
+
+    dt,
+    dd {
+      display: block;
+      letter-spacing: 0.1px;
+      line-height: 20px;
+      //margin-bottom: 10px;
+      margin-left: 0;
+    }
+
+    dd {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    dt {
+      font-weight: 400;
+
+      &.c-board-member__summary {
+        font-weight: 600;
+        margin-bottom: 42px;
+      }
+    }
+
+    sup {
+      margin-top: 25px;
+      letter-spacing: 1px;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $brand-primary-light;
+      line-height: 1.4;
+
+      // @include themify($themes) {
+      //   color: themed('$brand-primary-light');
+      // }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__studies {
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .c-board-committee {
+    & + * {
+      margin-top: 100px;
+    }
+
+    .c-offer-cards {
+      &__item {
+        width: 50%;
+      }
+    }
+
+    .c-board-member__title {
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      margin: 0 26px 40px;
+    }
+
+    .-related {
+      .c-offer-cards {
+        &__list {
+          max-width: 1024px;
+          padding: 0 0 24px;
+        }
+
+        &__item {
+          &:hover {
+            img {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-board-member {
+    flex-direction: row;
+    padding: 54px 26px 0;
+
+    &__column {
+      flex: 2;
+
+      &:first-of-type {
+        flex: 1;
+        margin-right: 52px;
+      }
+    }
+  }
+}

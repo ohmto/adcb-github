@@ -1,0 +1,92 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - Arabic debug overide style 
+I just collected the difference of toolkit-custom-ar.css regarding RTL and put it here
+So in near future i will add all above CSS to toolkit-ar.css
+==============================================================================*/
+
+
+/* 01 - Start - Arabic debug overide style */
+
+.c-mission-vision__content-desc {
+    margin-left: 50px !important;
+    /* arabic */
+}
+
+.c-mission-vision__desc ul li {
+    letter-spacing: 0 !important;
+    /* arabic */
+}
+
+.c-mission-vision__desc ul li:before {
+    text-align: left;
+    /* arabic */
+    padding-left: 20px !important;
+    /* arabic */
+}
+
+.c-mission-vision__content-desc:nth-child(even) {
+    margin-left: 0 !important;
+    /* arabic */
+}
+
+.c-mission-vision__title {
+    letter-spacing: 0 !important;
+    /* arabic */
+}
+
+@media (min-width: 768px) {
+    .c-mission-vision__title {
+        letter-spacing: 0 !important;
+        /* arabic */
+    }
+}
+
+a.viewmore.is-private-ubank:after {
+    left: 0 !important;
+    /* arabic */
+}
+
+.c-cardbanner .o-comp__title_desc {
+    text-align: inherit !important;
+    /* arabic */
+}
+
+@media (min-width: 992px) {
+    .c-section-nav__list {
+        padding-left: 30px !important;
+        /* arabic */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .c-campaign-leads {
+        &__content-desc {
+            padding: 50px 0px 50px 24px !important;
+            /* arabic */
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .c-cardbanner {
+        .c-cardbanner__features {
+            padding: 48px 0px 48px 48px !important;
+            /* arabic */
+        }
+    }
+}
+
+.c-campaign-leads {
+    .c-input-text {
+        .c-input__datepicker {
+            background-position: right 1em top 50%, 0 0 !important;
+            /* arabic */
+        }
+    }
+}
+
+
+/* End - Arabic debug overide style 
+==============================================================================*/

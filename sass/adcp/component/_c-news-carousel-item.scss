@@ -1,0 +1,124 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 -  c-news-carousel-item
+02 - media queries
+03 -
+03 -
+04 -
+05 -
+============================================================================== */
+// 01 - c-news-carousel-item
+.c-news-carousel-item {
+  display: flex;
+  line-height: 1.6;
+  color: $brand-font;
+  width: 100%;
+  min-height: 310px;
+
+  &__category {
+    // font-size: 13px;
+    // letter-spacing: 1px #{"/*rtl: 0*/"};
+    // font-weight: 500;
+    @include typography-label-tabs-commons();
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    color: rgba($brand-font, 0.6);
+  }
+
+  &__title {
+    // font-size: 17px; 
+    // 19px as per VD.
+    @include typography-body-big-commons();
+    font-weight: 600;
+    margin: 0 0 10px 0;
+  }
+
+  &__info {
+    min-height: 160px;
+    padding: 40px;
+    // border: 1px solid rgba($brand-primary-font, 0.2);
+    border: 1px solid rgba($brand-font, 0.2);
+    width: 100%;
+    background-color: $brand-body-bg;
+    // @include themify($themes) {
+    //   background-color: themed('$brand-body-bg');
+    // }
+    .o-tabs {
+      &__tab-content-summary {
+        .more-link {
+          position: absolute;
+          bottom: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid rgba($brand-font, 0.4);
+    }
+  }
+
+  &__desc {
+    // font-size: 15px;
+    // letter-spacing: 0.1px;
+    @include typography-body-tiny-commons();
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    //   //opTheme
+    // }
+    & + p {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  &__more {
+    // font-size: 15px;
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    color: $brand-primary-light;
+//    @include themify($themes) {
+//      color: themed('brand-primary-light');
+//    }
+  }
+  &.-simplified {
+    .c-news-carousel-item {
+      &__info {
+        text-align: center;
+        padding: 50px;
+      }
+    }
+  }
+}
+
+/*===========================
+02 - media queries
+===========================*/
+@media (min-width: $screen-sm-min) {
+  .c-news-carousel-item {
+    &__info {
+      padding: 40px 5vw;
+    }
+  }
+}
+
+/* desktop */
+@media (min-width: $screen-md-min) {
+  .c-news-carousel-item {
+    display: flex;
+    padding: 5px 10px 5px 0;
+
+    &__info {
+      padding: 40px 48px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-blockquotes
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - Blockquotes IG*/
+
+.c-blockqoute {
+  .o-comp__content {
+    //max-width: 1248px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  &__section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 60px;
+    &:before {
+      @extend .c-blockqoute-qoutes;
+      content: "\201C";
+      left: 0;
+      top: 0;
+      transform: rotateY(0) #{"/*rtl:rotateY(180deg)*/"};
+    }
+    &:after {
+      @extend .c-blockqoute-qoutes;
+      content: "\201D";
+      right: 0;
+      bottom: 50px;
+      transform: rotateY(0) #{"/*rtl:rotateY(180deg)*/"};
+    }
+  }
+
+  &__para {
+    @include typography-body-avg-commons();
+    font-weight: 400;
+    color: $brand-font;
+    line-height: 1.54;
+    padding-top: 20px;
+  }
+}
+
+/* extend c-blockqoute-qoutes */
+.c-blockqoute-qoutes {
+  display: block;
+  font-size: 130px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: rgba($brand-font, 0.1);
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-blockqoute {
+    .o-comp__content {
+      margin-top: 72px;
+      margin-bottom: 72px;
+      padding: 60px 0;
+    }
+
+    &__section {
+      padding: 20px 10%;
+      &:before {
+        font-size: 250px;
+        top: -120px;
+      }
+      &:after {
+        font-size: 250px;
+        right: 55px;
+      }
+    }
+    &__para {
+      font-size: 23px;
+      font-weight: 600;
+      padding: 0 60px;
+      margin: 0;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up)
+    @media (min-width: $screen-md-min) {} */

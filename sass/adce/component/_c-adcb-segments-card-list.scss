@@ -1,0 +1,164 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-discover-card-list
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-discover-card-list */
+.c-adcb-segments-card-list {
+  /* 02 - o-comp__content overrides for 1232px max-width */
+  .o-comp {
+    &__content {
+      max-width: calc(1052px + #{$gutter-desktop} * 2);
+    }
+
+    &__title-has-filter {
+      @extend .o-comp__title;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__filter {
+      margin-top: 20px;
+
+      ul {
+        li {
+          display: inline-block;
+          padding-right: 14px;
+          margin: 0 16px;
+          font-size: 0.5em;
+          line-height: 2em;
+          text-transform: uppercase;
+          border-bottom: 2px solid transparent;
+          transition: all 0.3s ease-in-out;
+          color: $brand-gray;
+          cursor: pointer;
+
+          &.selected {
+            transition: all 0.3s ease-in-out;
+            color: $brand-primary-font;
+            border-bottom-color: $brand-primary-light;
+            // @include themify($themes) {
+            //   border-bottom-color: themed('brand-primary-light');
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+      @include transition-cubic(1000ms, all);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+/*===========================
+03 - media queries
+===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-adcb-segments-card-list {
+    .o-comp {
+      &__title {
+        &.has-filter {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+        }
+      }
+
+      &__filter {
+        margin-top: 0;
+
+        ul {
+          li {
+            display: inline-block;
+            padding-right: 14px;
+            margin-right: 16px;
+            font-size: 0.4em;
+          }
+        }
+      }
+    }
+
+    &__wrap {
+      flex-flow: row wrap;
+      // since the space between the cards is managed by padding  i have increased the width of the wrapper
+      // based on the extra padding.
+      width: calc(100% + 60px) !important;
+      margin-left: -30px;
+    }
+
+    &__item {
+      width: 50%;
+      padding: 0 26px;
+
+      &:hover {
+        img {
+          transform: scale(1.08);
+          //opacity: 0.7;
+        }
+      }
+
+      &.-large-card {
+        width: 100%;
+        .c-adcb-segments-card-list {
+          &__thumb {
+            padding-bottom: 56.8181818182%;
+          }
+        }
+      }
+    }
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-adcb-segments-card-list {
+    &__item {
+      width: 33.33%;
+
+      &.-large-card {
+        width: 66.66%;
+      }
+    }
+  }
+}
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-adcb-segments-card-list {
+    &__item {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-search
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - value-card */
+.c-search {
+  max-height: 0;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  &__wrapper {
+    border-top: 1px solid rgba($brand-font, 0.2);
+    background-color: $brand-body-bg;
+  }
+
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+  }
+
+  &__listwrapper {
+    height: auto;
+    scroll-behavior: auto;
+    overflow-y: scroll;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    // font-size: 19px;
+    @include typography-body-big-commons();
+    font-weight: 600;
+    opacity: 1;
+    line-height: 1.58;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+
+    a {
+      opacity: 1;
+      color: $brand-font;
+
+      // @include themify($themes) {
+//        color: themed('brand-font');
+//      }
+    }
+
+    a:hover {
+      color: $brand-primary-light;
+
+      //@include themify($themes) {
+//        color: themed('brand-primary-light');
+//      }
+    }
+  }
+
+  &__predictivesection {
+    opacity: 0.4;
+  }
+
+  &__input {
+    flex: 1;
+
+    .full-box-search {
+      // font-size: 16px;
+      // letter-spacing: -0.2px #{"/*rtl:0*/"};
+      @include typography-body-avg-commons();
+      font-weight: 600;
+      outline: 0;
+      padding: 10px;
+      height: auto;
+      width: 100%;
+      line-height: 40px;
+      border: 0;
+      color: $brand-font;
+      background: $brand-body-bg;
+
+      // @include themify($themes) {
+      //   color: themed('brand-font');
+      //   background: themed('brand-body-bg');
+      // }
+    }
+
+    input::-ms-clear {
+      display: none;
+    }
+
+    /* webkit solution */
+    input::-webkit-input-placeholder {      
+      color: rgba($brand-font, 0.4);
+    }
+
+    /* mozilla solution - this is for firefox 18+ */
+    input::-moz-placeholder {
+      color: rgba($brand-font, 0.4);
+    }
+
+    /* mozilla solution - this is for firefox 18- */
+    input:-moz-placeholder {
+      color: rgba($brand-font, 0.4);
+    }
+  }
+
+  &__button {
+    width: auto;
+
+    .full-box-button {
+      padding: 10px 22px;
+    }
+  }
+
+  &__close {
+    .full-box-close {
+      font-size: 1.6em;
+      line-height: 0;
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-left: 16px;
+      cursor: pointer;
+      color: $brand-font;
+
+      // @include themify($themes) {
+      //   color: themed('$brand-font');
+      // }
+
+      .icon-close {
+        line-height: 0;
+
+        &:before {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  &.is-visible {
+    max-height: 700px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+/*===========================
+    06 - media queries
+    ===========================*/
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+  /* 01 - value-card */
+  .c-search {
+    &__input {
+      .full-box-search {
+        font-size: 35px;
+      }
+    }
+
+    &__button {
+      .full-box-button {
+        font-size: 1em;
+        padding: 10px 32px;
+      }
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

@@ -1,0 +1,75 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-offers-promotions-list
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-offers-promotions-list */
+.c-offers-promotions-list {
+
+  /* 02 - o-comp__content overrides for 1232px max-width */
+  .o-comp {
+    &__content {
+      max-width: calc(1052px + #{$gutter-desktop} * 2);
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    margin-bottom: 35px;
+  }
+}
+
+/*===========================
+03 - media queries
+===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-offers-promotions-list {
+    &__wrap {
+      flex-flow: row wrap;
+      // since the space between the cards is managed by padding  i have increased the width of the wrapper
+      // based on the extra padding.
+      width: calc(100% + 60px) !important;
+      margin-left: -30px;
+    }
+
+    &__item {
+      width: 50%;
+      padding: 0 26px;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-offers-promotions-list {
+    &__item {
+      width: 33.33%;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-offers-promotions-list {
+    &__item {
+      margin-bottom: 40px;
+    }
+  }
+}

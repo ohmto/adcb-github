@@ -1,0 +1,56 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-faq-cards-list-list
+02 - (a) 768px & above (b) 992px and up (c) 1440px and up
+============================================================================== */
+/* 01 - c-faq-cards-list */
+.c-faq-cards-list {
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    margin-bottom: 18px;
+  }
+}
+
+/*===========================
+  02 - media queries
+  ===========================*/
+/* 02 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-faq-cards-list {
+    &__wrap {
+      flex-flow: row wrap;
+      // since the space between the cards is managed by padding  i have increased the width of the wrapper
+      // based on the extra padding.
+      width: calc(100% + 60px) !important;
+      margin-left: -30px;
+    }
+
+    &__item {
+      width: 50%;
+      padding: 0 26px;
+    }
+  }
+}
+
+/* 02 - (b) 992px and up */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-faq-cards-list {
+    &__item {
+      width: 33.33%;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* 02 - (c) 1440px and up */
+/* X-Large devices (large desktops, 1440px and up) */
+/*@media (min-width: $screen-xl-min) {}*/

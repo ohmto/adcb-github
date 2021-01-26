@@ -1,0 +1,502 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - site-layout
+02 - layout-helpers
+02 - (a) center-block
+02 - (b) position-fixed
+02 - (c) no-scroll
+02 - (d) Arabic font-family helper
+02 - (e) content dimmer helper
+03 - default component styles
+03 - (a) default component media queries
+04 - mixins
+04 - (a) fluid font mixin
+05 -
+06 -
+07 -
+============================================================================== */
+
+$display-mobile-font-size: 70px;
+$display-mobile-font-weight: 500;
+$display-mobile-letter-spacing: -0.6px #{"/*rtl: 0*/"};
+$display-mobile-opacity: 100%;
+@mixin typography-display-commons() {
+    font-size: $display-mobile-font-size;
+    font-weight: $display-mobile-font-weight;
+    letter-spacing: $display-mobile-letter-spacing;
+    //opacity: $display-mobile-opacity;
+}
+
+// ------------------------------
+$hero-mobile-font-size: 32px;
+$hero-mobile-letter-spacing: -0.2px #{"/*rtl: 0*/"};
+$hero-mobile-font-weight: 600;
+$hero-mobile-opacity: 100%;
+$hero-desktop-font-size: 50px;
+$hero-desktop-letter-spacing: -0.3px #{"/*rtl: 0*/"};
+@mixin typography-hero-commons() {
+    @include fluid-type($hero-mobile-font-size, $hero-desktop-font-size);
+    font-weight: $hero-mobile-font-weight;
+    letter-spacing: $hero-mobile-letter-spacing;
+    @media (min-width: $screen-sm-min) {
+        letter-spacing: $hero-desktop-letter-spacing;
+    }
+}
+
+// ------------------------------
+$page-title-mobile-font-size: 32px;
+$page-title-mobile-letter-spacing: -0.2px #{"/*rtl: 0*/"};
+$page-title-mobile-font-weight: 600;
+$page-title-mobile-opacity: 100%;
+$page-title-desktop-font-size: 40px;
+$page-title-desktop-letter-spacing: -0.3px #{"/*rtl: 0*/"};
+@mixin typography-page-title-commons() {
+    @include fluid-type($page-title-mobile-font-size, $page-title-desktop-font-size);
+    font-weight: $page-title-mobile-font-weight;
+    letter-spacing: $page-title-mobile-letter-spacing;
+    @media (min-width: $screen-sm-min) {
+        letter-spacing: $page-title-desktop-letter-spacing;
+    }
+}
+
+// ------------------------------
+$page-section-mobile-font-size: 23px;
+$page-section-mobile-font-weight: 600;
+$page-section-mobile-letter-spacing: -0.2px #{"/*rtl: 0*/"};
+$page-section-mobile-opacity: 100%;
+$page-section-desktop-font-size: 35px;
+$page-section-desktop-letter-spacing: -0.1px #{"/*rtl: 0*/"};
+@mixin typography-page-section-commons() {
+    @include fluid-type($page-section-mobile-font-size, $page-section-desktop-font-size);
+    font-weight: $page-section-mobile-font-weight;
+    letter-spacing: $page-section-mobile-letter-spacing;
+    @media (min-width: $screen-sm-min) {
+        letter-spacing: $page-section-desktop-letter-spacing;
+    }
+}
+
+// ------------------------------
+$titles-mobile-font-size: 23px;
+$titles-mobile-font-weight: 600;
+$titles-mobile-letter-spacing: -0.1px #{"/*rtl: 0*/"};
+$titles-mobile-opacity: 100%;
+@mixin typography-titles-commons() {
+    font-size: $titles-mobile-font-size;
+    font-weight: $titles-mobile-font-weight;
+    letter-spacing: $titles-mobile-letter-spacing;
+}
+
+// ------------------------------
+$body-big-mobile-font-size: 19px;
+$body-big-mobile-letter-spacing: 0;
+@mixin typography-body-big-commons() {
+    font-size: $body-big-mobile-font-size;
+    letter-spacing: $body-big-mobile-letter-spacing;
+}
+
+// ------------------------------
+$body-avg-mobile-font-size: 17px;
+$body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
+@mixin typography-body-avg-commons() {
+    font-size: $body-avg-mobile-font-size;
+    letter-spacing: $body-avg-mobile-letter-spacing;
+}
+
+// ------------------------------
+$body-tiny-mobile-font-size: 15px;
+$body-tiny-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
+@mixin typography-body-tiny-commons() {
+    font-size: $body-tiny-mobile-font-size;
+    letter-spacing: $body-tiny-mobile-letter-spacing;
+}
+
+// ------------------------------
+$legal-mobile-font-size: 13px;
+$legal-mobile-font-weight: 400;
+$legal-mobile-letter-spacing: 0.2px #{"/*rtl: 0*/"};
+@mixin typography-legal-commons() {
+    font-size: $legal-mobile-font-size;
+    font-weight: $legal-mobile-font-weight;
+    letter-spacing: $legal-mobile-letter-spacing;
+}
+
+// ------------------------------
+$label-tabs-mobile-font-size: 13px;
+$label-tabs-mobile-font-weight: 500;
+$label-tabs-mobile-letter-spacing: 1px #{"/*rtl: 0*/"};
+@mixin typography-label-tabs-commons() {
+    font-size: $label-tabs-mobile-font-size;
+    font-weight: $label-tabs-mobile-font-weight;
+    letter-spacing: $label-tabs-mobile-letter-spacing;
+}
+
+
+/* 01 - site-layout */
+
+.site-wrap {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    .site-header {
+        width: 100%;
+    }
+    // this is for the tiny header link "go to islamic"
+    // .site-header+div {
+    //   margin-top: $top-nav-height-mobile;
+    // }
+    .site-header[data-theme="premium"]+div {
+        margin-top: 0;
+    }
+    .site-content {
+        width: 100%;
+    }
+    .site-footer {
+        width: 100%;
+    }
+}
+
+
+/*===================
+02 - layout-helpers
+====================*/
+
+
+/* 02 - (a) center-block */
+
+.center-block {
+    float: none;
+}
+
+
+/* 02 - (b) position-fixed */
+
+.position-fixed {
+    position: fixed;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* 02 - (c) no-scroll */
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* 02 - (d) Arabic font-family helper */
+
+.lang-ar {
+    font-family: "Tajawal";
+}
+
+
+/* 02 - (e) content dimmer helper */
+
+.js-dimmer {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($black, 0.5);
+    &-over-head {
+        z-index: 999;
+    }
+    &-map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 9999;
+        background: rgba($black, 0.5);
+    }
+    &--dropdown {
+        @extend .js-dimmer;
+        background: rgba($black, 0.05);
+    }
+    &--pop-up {
+        @extend .js-dimmer;
+        position: absolute;
+    }
+}
+
+.is-sticky {
+    position: fixed !important;
+}
+
+.owl-nav {
+    display: none;
+}
+
+@keyframes stickyAnimateIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.-no-top-pad {
+    margin-top: 0 !important;
+}
+
+.-no-bottom-pad {
+    margin-bottom: 0 !important;
+}
+
+
+/*===================
+03 - default component styles
+=====================*/
+
+.o-comp {
+    &__content {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        .-no-margin-title & {
+            margin: 0;
+        }
+        &.-relative {
+            position: relative;
+        }
+        &_desc {
+            @include typography-body-big-commons();
+            font-weight: 400;
+            text-align: left;
+            max-width: 700px;
+            margin-top: 0;
+            line-height: 1.6;
+            color: rgba($brand-font, 0.7);
+            margin: 0;
+            // @include themify($themes) {
+            //   color: themed('brand-font');
+            // }
+        }
+        h2 {
+            // @include fluid-type(25px, 35px);
+            // font-weight: 600;
+            @include typography-page-section-commons();
+            margin: 0 0 20px 0;
+            padding: 0;
+            text-align: center;
+        }
+        .o-comp-filter {
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            &__item {
+                font-weight: 600;
+                padding: 0 5px;
+                margin: 0 10px;
+                text-transform: uppercase;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: width 0.5s ease-out;
+                }
+            }
+            &__link {
+                color: rgba($brand-font, 0.7);
+            }
+            .is-selected {
+                a {
+                    color: $brand-font;
+                    // @include themify($themes) {
+                    //   background: themed("brand-font");
+                    // }
+                }
+                &:after {
+                    width: 100%;
+                    background: $brand-primary-light;
+                    // @include themify($themes) {
+                    //   background: themed("brand-primary-light");
+                    // }
+                }
+            }
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                .-align-left {
+                    justify-content: space-between;
+                }
+                >.o-comp-filter__item {
+                    margin-top: 10px;
+                }
+            }
+            &__list-wrap {
+                margin-top: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 30px;
+            }
+        }
+        .o-comp-filter--dropdown {
+            @extend .o-comp-filter;
+            align-items: center;
+            height: 50px;
+            width: auto;
+            display: flex;
+            overflow: scroll;
+            .o-comp-filter__item {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// since the brand label (red) is common between alot of components
+.o-brand-label {
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 32px;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed("brand-primary-light");
+    // }
+}
+
+
+/* 03 - (a) default component media queries */
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+    .owl-nav {
+        display: block;
+    }
+    .o-comp {
+        &__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                text-align: center;
+            }
+            &_desc {
+                text-align: center;
+            }
+            &__content {
+                margin-top: 75px;
+                margin-bottom: 75px;
+                .hero-section__img-wrapper+& {
+                    padding-top: 0;
+                }
+            }
+            .o-comp-filter {
+                flex-wrap: wrap;
+                margin-top: 20px;
+                &__item {
+                    &:last-child {
+                        margin: 0 10px;
+                    }
+                }
+                &__wrapper {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    &.-align-left {
+                        flex-direction: column;
+                    }
+                    >.o-comp-filter__item {
+                        margin-top: 0;
+                        margin-right: 0;
+                    }
+                }
+                &__list-wrap {
+                    margin-bottom: 0;
+                    padding-top: 8px;
+                    height: 32px;
+                }
+                &--dropdown {
+                    width: unset;
+                    flex-wrap: nowrap;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-md-min) {
+    // this is for the tiny header link "go to islamic"
+    // .site-wrap {
+    //   .site-header {
+    //     +div {
+    //       margin-top: $top-nav-height-desktop;
+    //     }
+    //   }
+    // }
+    .o-comp {
+        &__title {
+            h2 {
+                margin: 0;
+                //Please do not add margin/padding here as it affects standard sizing set for h2s
+            }
+            &_desc {
+                margin-bottom: 0;
+            }
+        }
+        &-filter {
+            &__wrapper {
+                &.-align-left {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+
+/* Large devices (large desktops, 1232px and up) */
+
+@media (min-width: $screen-lg-min) {
+    .o-comp {
+        &__content {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            // padding-top: 100px;
+            // padding-bottom: 80px;
+        }
+        .o-comp-filter--dropdown {
+            overflow: hidden;
+        }
+    }
+}
+
+
+/* X-Large devices (large desktops, 1440px and up) */
+
+@media (min-width: $screen-xl-min) {
+    .o-comp {
+        &__title {
+            font-size: 35px;
+        }
+    }
+}
+
+.ltr {
+    direction: ltr #{"/*rtl: ltr*/"}!important;
+}

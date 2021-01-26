@@ -1,0 +1,52 @@
+.js-mega-tabs {
+  .c-input-select {
+    &__wrap {
+      .o-input.js-mega-tabs__selected-link {
+        // font-size: 15px;
+        @include typography-body-tiny-commons();
+        font-weight: 600;
+        display: block;
+        position: relative;
+        padding: 16px 26px 14px;
+        border: 1px solid $brand-medium-gray;
+        height: 55px;
+        text-align: left;
+        min-width: 182px;
+        overflow: hidden;
+        cursor: pointer;
+        line-height: 1.7;
+        letter-spacing: 0.2px;
+        width: 100%;
+        @include transition-cubic(600ms, all);
+        &.-js-selected {
+          background: $white;
+        }
+      }
+    }
+
+    &.open {
+      .c-input-select {
+        &__dropdown {
+          padding: 8px 10px 18px;
+          top: 55px;
+        }
+        &__option {
+          // font-size: 17px;
+          @include typography-body-avg-commons();
+          font-weight: 600;
+          text-transform: capitalize;
+          display: flex;
+          padding-left: 16px;
+          flex-direction: column;
+          justify-content: center;
+          letter-spacing: 0;
+          white-space: nowrap;
+          color: $brand-font;
+          &:hover {
+            background-color: $brand-light-medium-gray;
+          }
+        }
+      }
+    }
+  }
+}

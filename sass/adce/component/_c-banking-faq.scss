@@ -1,0 +1,36 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-banking-faq
+02 -
+03 -
+04 -
+04 -
+05 -
+06 -
+============================================================================== */
+.c-banking-faq {
+  .c-cms-content {
+    margin-top: 0;
+    &:first-child {
+      p {
+        margin-bottom: 40px;
+      }
+    }
+    h3 {
+      //font-size: 19px;
+      @include typography-body-big-commons();
+      font-weight: 600;
+    }
+    h4 {
+      // font-size: 23px;
+      @include typography-titles-commons();
+      font-weight: 600;
+    }
+    &__video-text .o-btn-medium-red {
+      //font-size: 15px;
+      @include typography-body-tiny-commons();
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.c-general-icon {
+  &__backdrop {
+    fill: $brand-primary-dark;
+  }
+  &__pattern {
+    fill: $brand-primary-light;
+  }
+  &__text {
+    fill: $white;
+  }
+  &__subheading {
+    fill: $brand-primary-dark;
+  }
+}

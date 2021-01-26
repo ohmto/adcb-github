@@ -1,0 +1,101 @@
+$border-thickness: 2px;
+/* 01 - radio buttons */
+.o-calculator-radio {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  &__wrapper{
+    display: block;
+    margin: 20px auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__checkmark {
+    @include typography-body-big-commons();
+    line-height: 2;
+    text-align: center;
+    cursor: pointer;
+    background-color: $brand-body-bg;
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+    &:hover{
+      background-color: rgba($brand-font, 0.1);
+    }
+    .-touchpoints & {
+      @include typography-body-tiny-commons();
+    }
+  }
+  &__label {
+    width: 100%;
+    flex: 1;
+    margin-left: -1 * $border-thickness;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    &:checked {
+      + .o-calculator-radio__checkmark {
+        border: solid $border-thickness $brand-primary-light;  
+        color: $brand-font;
+        transform: translateZ(0);
+        &:hover{
+          background-color:$brand-body-bg;
+        }
+        .-touchpoints & {
+          border: solid 1px $brand-primary-light;
+          outline: solid 1px $brand-primary-light;
+        }
+      }
+    }
+    &:not(:checked) {
+      + .o-calculator-radio__checkmark {
+        border: solid $border-thickness $brand-silver;
+        color: rgba($brand-font, 0.7);
+      }
+    }
+  }
+  &__title{
+    // font-size: 15px;
+    // letter-spacing: 0.2px;
+    @include typography-body-tiny-commons();
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: $brand-font;
+  }
+  &__subInfo {      
+    font-size: 13px;
+    line-height: 2.3;
+    color: rgba($brand-font, 0.7);
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .o-calculator-radio {
+    input[type="radio"] {
+      &:checked {
+        + .o-calculator-radio__checkmark {
+          transform: none;
+          perspective: 10px;
+        }
+      }
+    }
+    &__label {
+      &.-selected {
+        perspective: 10px;
+      }
+    }
+  }
+}

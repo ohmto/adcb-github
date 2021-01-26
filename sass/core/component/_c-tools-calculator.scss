@@ -1,0 +1,92 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - calculator tools
+02 - media queries
+
+============================================================================== */
+
+/* 01 - calculator tools */
+
+.c-tools-calculator {
+  .o-comp__content {
+    margin-top: 0;
+  }
+  &__title {
+    @include typography-body-avg-commons();
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  &__summary {
+    @include typography-body-tiny-commons();
+    color: rgba($brand-font, 0.7);
+    line-height: 1.7;
+  }
+  .c-calculator {
+    &__apply-button-holder {
+      margin-bottom: 65px;
+      .o-btn-medium-red {
+        font-size: 13px;
+      }
+    }
+  }
+  &__img-wrapper {
+    width: 100%;
+    min-height: 390px;
+  }
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 390px;
+  }
+}
+
+/*===========================
+  02 - media queries
+  ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-tools-calculator {
+    .o-comp__content {
+      margin-top: 75px;
+    }
+    &__title {
+      @include typography-titles-commons();
+    }
+    &__summary {
+      @include typography-body-big-commons();
+      line-height: 1.6;
+    }
+    &__img-wrapper {
+      width: 100%;
+      min-height: auto;
+    }
+    &__img {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+    .c-calculator {
+      &__apply-button-holder {
+        max-width: 312px;
+        margin-bottom: 50px;
+        .o-btn-medium-red {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md-min) {} */
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

@@ -1,0 +1,173 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - product card item css
+02 - media queries
+
+============================================================================== */
+
+/* 01 - START:product card item css */
+
+.c-product-card-item {
+  text-align: center;
+  border: solid 1px rgba($brand-font, 0.2);
+  margin: 0 auto 10px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  &__wrapper {
+    padding: 0 25px;
+  }
+  &__link-wrapper {
+    display: flex;
+    padding: 0;
+    transform: translateY(100%);
+    justify-content: space-between;
+    @include transition-cubic(600ms, all);
+  }
+  &__promotional-value {
+    @include typography-body-big-commons();
+    font-weight: 600;
+    line-height: 1.58;
+    position: relative;
+    display: inline-block;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+    //   color: themed("brand-font");
+    // }
+  }
+
+  &__details {
+    padding: 0;
+  }
+
+  &__title {
+    @include typography-page-section-commons();
+    margin-bottom: 0;
+  }
+
+  &__summary {
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    margin: 0;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed("brand-font");
+    // }
+    .-add &, 
+    .-info & {
+      color: rgba($brand-font, 0.6);
+      // @include themify($themes) {
+      //   color: themed("brand-font");
+      // }
+    }
+    .-add & {
+      margin-top: 15px;
+    }
+  }
+  &__circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: solid 1px rgba($brand-font, 0.2);
+    .icon-add {
+      margin-top: 28px;
+      display: inline-flex;
+      font-size: 25px;
+    }
+  }
+}
+
+/** 01 - END:product card item css  **/
+
+.c-add-touchpoints {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/*===========================
+  02 - media queries
+  ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+@media (min-width: $screen-sm-min) {
+  .c-product-card-item {
+    @include transition-cubic(600ms, all);
+    .o-comp__content {
+      max-width: 286px;
+    }
+    &.-add {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__summary {
+      margin: 0;
+      &-add {
+        @include typography-label-tabs-commons();
+      }
+    }
+  }
+  .c-add-touchpoints {
+    flex-flow: row wrap;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) 
+@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-product-card-item {
+    &__link-wrapper {
+      opacity: 0;
+    }
+    &:hover {
+      border: solid 1px rgba($brand-font, 0.4);
+      .c-product-card-item__circle {
+        @include transition-cubic(600ms, all);
+        border: solid 1px $brand-font;
+      }
+      .c-product-card-item__summary {
+        color: $brand-font;
+        // @include themify($themes) {
+        //   color: themed("brand-font");
+        // }
+        &-add {
+          color: $brand-font;
+          // @include themify($themes) {
+          //   color: themed("brand-font");
+          // }
+        }
+      }
+      .c-product-card-item__link-wrapper {
+        opacity: 1;
+      }
+    }
+    &.-mod-hover {
+      &:hover {
+        border: solid 1px rgba($brand-font, 0.2);
+        cursor: default;
+      }
+    }
+    &__details {
+      @include typography-body-big-commons();
+    }
+  }
+  .c-add-touchpoints {
+    .c-calculator {
+      &__touchpoint-result {
+        max-width: 550px;
+      }
+    }
+  }
+}
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

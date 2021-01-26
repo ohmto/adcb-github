@@ -1,0 +1,123 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-apply-card-list
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-apply-card-list */
+.c-apply-card {
+  &-list {
+    &--highlights {
+      background-color: $brand-light-gray;
+      & .o-comp__content {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+      .c-apply-card__thumb {
+        img {
+          max-width: 40px;
+        }
+      }
+    }
+  }
+}
+.c-apply-card-list {
+  /* 02 - o-comp__content overrides for 855px max-width */
+  .o-comp__content {
+    max-width: calc(1260px + #{$gutter-desktop} * 2);
+  }
+  &.-grey-bg {
+    background: $brand-light-gray;
+  }
+  .o-comp__title {
+    justify-content: center;
+    p:nth-last-child(2){
+      max-width: 660px;
+      min-height: 60px;
+      // font-size: 19px;
+      @include typography-body-big-commons();
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.58;
+      letter-spacing: normal;
+      text-align: center;
+    }
+    a:last-child{
+      // font-size: 15px;
+      // font-weight: 500;
+      @include typography-body-tiny-commons();
+    }
+  }
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &.-border-bottom {
+      border-bottom: 1px solid rgba($brand-font, 0.2);
+      padding-bottom: 80px;
+    }
+  }
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+/*===========================
+  03 - media queries
+  ===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-apply-card-list {
+    &--highlights {
+      &.o-comp__content {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+    .o-comp {
+      &__content {
+        padding: 100px 0;
+        max-width: 100%;
+      }
+      &__title {
+        margin-bottom: 80px;
+      }
+    }
+    &__wrap {
+      flex-flow: row wrap;
+      align-items: stretch;
+      //margin-bottom: 20px;
+    }
+    &__item {
+      max-width: 350px;
+      // margin-bottom: 40px;
+      // &:nth-last-of-type(-n+2) {
+      //   margin-bottom: 0;
+      // }
+    }
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+/*@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Telecommunications</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Utility-Bill-Payments" transform="translate(-841.000000, -885.000000)">
+            <g id="Telecommunications" transform="translate(842.000000, 886.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="15.5428571" y="15.5428571" width="32.9142857" height="32.9142857"></rect>
+                <circle id="Oval-Copy-3" stroke-opacity="0.6" stroke="#273239" cx="32" cy="32" r="32"></circle>
+                <g id="Group-5" transform="translate(19.200000, 21.942857)" stroke="#273239" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M3.19428537,0 C1.2139693,2.24678308 0,5.27656615 0,8.60998993 C0,12.0041132 1.25858302,15.0834369 3.30322581,17.3419355" id="Oval"></path>
+                    <path d="M6.46350213,3.30322581 C5.4733441,4.58710185 4.86635945,6.31840646 4.86635945,8.22322005 C4.86635945,10.1627191 5.49565096,11.9223326 6.51797235,13.2129032" id="Oval-Copy-5"></path>
+                    <path d="M24.5767738,0 C22.5964578,2.24678308 21.3824885,5.27656615 21.3824885,8.60998993 C21.3824885,12.0041132 22.6410715,15.0834369 24.6857143,17.3419355" id="Oval" transform="translate(23.034101, 8.670968) scale(-1, 1) translate(-23.034101, -8.670968) "></path>
+                    <path d="M19.8533639,3.30322581 C18.8632058,4.58710185 18.2562212,6.31840646 18.2562212,8.22322005 C18.2562212,10.1627191 18.8855127,11.9223326 19.9078341,13.2129032" id="Oval-Copy-5" transform="translate(19.082028, 8.258065) scale(-1, 1) translate(-19.082028, -8.258065) "></path>
+                    <path d="M12.3428571,10.9714286 L12.3428571,22.8571429" id="Line"></path>
+                    <circle id="Oval" cx="12.3870968" cy="8.25806452" r="2.47741935"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

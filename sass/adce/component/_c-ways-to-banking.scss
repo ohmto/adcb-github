@@ -1,0 +1,512 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-ways-to-bank
+02 -
+03 -
+04 -
+05 -
+06 -
+07 - media queries
+08 - (a) 992px & above
+09 -
+============================================================================== */
+/* 01 - c-ways-to-bank */
+.c-ways-to-bank {
+  background-color: rgba($brand-font, 0.95);
+  /* 02 - c-ways-to-bank__wrapper */
+  &__wrapper {
+    max-width: 100%;
+  }
+
+  .o-comp {
+    &__content {
+      padding-top: 75px;
+      padding-bottom: 75px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &__title {
+      margin-bottom: 0;
+      text-align: left;
+      color: $white;
+
+      h2 {
+        @include typography-titles-commons();
+        margin-bottom: 50px;
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+
+        .o-form__field {
+          padding-left: 0;
+          min-height: 30px;
+
+          .c-input-select {
+            margin-top: -7px;
+            flex-direction: inherit;
+
+            &__dropdown {
+              z-index: 99;
+              overflow-y: hidden;
+              background-color: $brand-font;
+              top: 40px;
+              padding: 5px;
+              // @include themify($themes) {
+              //   background-color: themed('$brand-font');
+              // }
+            }
+
+            &__option {
+              @include typography-body-big-commons();
+              font-weight: 600;
+              padding: 16px 4px;
+              background-color: transparent;
+
+              &.hover {
+                background-color: transparent;
+              }
+            }
+
+            &__wrap {
+              width: auto;
+              z-index: 99;
+
+              input {
+                @include typography-titles-commons();
+                border: 0;
+                padding: 9px 0 3px;
+                min-height: 37px;
+                background-color: transparent;
+                color: $white;
+                border-bottom: 1px solid rgba($white, 0.95);
+                height: 38px;
+                margin-right: auto;
+                line-height: 1.3;
+                letter-spacing: -0.1px;
+                width: 232px #{"/*rtl: 280px;*/"};
+              }
+
+              .icon-arrow-down:before {
+                padding: 10px 0;
+                margin-right: -30px;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__tabs {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    a {
+      color: rgba($white, 0.4);
+      font-weight: 500;
+    }
+
+    .js-selected-link {
+      display: none;
+      color: $white;
+
+      &:before {
+        color: $white;
+      }
+    }
+
+    &.dropdown {
+      .c-ways-to-bank__wrap & {
+        position: relative;
+        height: auto;
+      }
+
+      .js-selected-link {
+        &:before {
+          color: rgba($white, 0.7);
+        }
+      }
+    }
+  }
+
+  &__tab-list-item {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__tab-list-link {
+    @include typography-label-tabs-commons();
+    text-transform: uppercase;
+    position: relative;
+    color: rgba($brand-font, 0.4);
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      left: 0;
+      bottom: -10px;
+      @include transition-cubic(all, 400ms);
+    }
+
+    &.is-active {
+      color: $white;
+
+      &:after {
+        width: 100%;
+        background: $brand-primary-light;
+        // @include themify($themes) {
+//          background: themed("brand-primary-light");
+ //       }
+      }
+    }
+  }
+
+  &__tab-content {
+    color: $white;
+    flex: 1;
+  }
+
+  &__tab-content-list {
+    width: 100%;
+  }
+
+  &__tab-content-item {
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    &.is-expanded {
+      display: block;
+    }
+  }
+
+  &__tab-content-summary {
+    h3 {
+      @include typography-hero-commons();
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+
+    p {
+      @include typography-body-avg-commons();
+      color: rgba($white, 0.7);
+      margin-bottom: 40px;
+      line-height: 25px;
+    }
+
+    .o-btn-group {
+      display: flex;
+      flex-direction: column;
+
+      .o-btn {
+        @include typography-body-tiny-commons();
+        opacity: 1;
+        display: inline-block;
+        color: $white;
+        padding: 0;
+        line-height: 48px;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        min-width: 80px;
+        /* this has been placed to hide laptop spilling to background*/
+        //background-color: #2f3c44;
+        background-color: transparent;
+        border: 1px solid rgba($white, 0.4);
+        @include transition-cubic(all, 400ms);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .-style-link {
+        padding: 12px 0;
+        border: none;
+        margin-left: 15px;
+        width: auto;
+      }
+    }
+  }
+
+  &__tab-content-thumb {
+    display: none;
+
+    img {
+      width: auto;
+    }
+  }
+}
+/*===========================
+  07 - media queries
+  ===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-ways-to-bank {
+    .o-comp {
+      &__content {
+        padding-top: 8vw;
+        padding-bottom: 8vw;
+      }
+    }
+
+    &.-removetabs-dropdown {
+      .c-ways-to-bank {
+        &__tab-list {
+          display: flex;
+          justify-content: flex-start;
+          overflow-x: auto;
+
+          &-item {
+            color: green;
+          }
+
+          &-link {
+            white-space: nowrap;
+          }
+
+          &:after,
+          &:before {
+            width: 24px;
+            height: 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+          }
+        }
+      }
+    }
+
+    &__tab-content {
+      display: flex;
+    }
+
+    &__tab-content-summary {
+      position: relative;
+      z-index: 9;
+      min-height: 270px;
+
+      h3 {
+        line-height: 1.1;
+      }
+
+      .o-btn-group {
+        display: flex;
+        flex-direction: row;
+
+        .o-btn {
+          margin-bottom: 0;
+          &:hover {
+            font-weight: 600;
+            background-color: $white;
+            color: $brand-font;
+            // @include themify($themes) {
+            //   color: themed('$brand-font');
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-ways-to-bank {
+    &__wrap {
+      display: flex;
+
+      input {
+        padding: 9px;
+        //min-width: 277px;
+      }
+    }
+
+    &__tabs {
+      height: auto;
+      min-width: 220px;
+      width: 20%;
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+    &__tab-list {
+      white-space: wrap;
+      padding-bottom: 0;
+      overflow-x: hidden;
+    }
+
+    &__tab-list-item {
+      margin-bottom: 28px;
+      margin-left: 0;
+      display: block;
+    }
+
+    &__tab-list-link {
+      padding: 0 4px 10px;
+
+      &:after {
+        bottom: 0;
+      }
+
+      &:hover {
+        color: $white;
+
+        &:after {
+          width: 100%;
+          background: $brand-medium-gray;
+        }
+      }
+    }
+
+    &__tab-content {
+      &-summary {
+        width: 42%;
+      }
+
+      &-item {
+        min-height: 400px;
+      }
+
+      &-thumb {
+        height: 100%;
+        position: absolute;
+        top: -70px;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+
+          &.stretch {
+            height: 120%;
+          }
+        }
+      }
+    }
+
+    .o-comp {
+      &__title {
+        h2 {
+          display: flex;
+          flex-direction: row;
+
+          .o-form__field {
+            padding-left: 10px;
+            min-height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+@media (min-width: $screen-lg-min) {
+  .c-ways-to-bank {
+    &__tab-content {
+      &-item {
+        min-height: 450px;
+      }
+    }
+
+    .o-comp {
+      &__content {
+        padding-top: 100px;
+        padding-bottom: 60px;
+      }
+    }
+  }
+}
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-ways-to-bank {
+    &__content {
+      padding-top: 120px;
+    }
+  }
+}
+/* Small Screen*/
+@media (max-width: $screen-sm-min) {
+  .c-ways-to-bank {
+    &__tab-content-summary {
+      h3 {
+        @include fluid-type(27px, 33px);
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__tabs {
+      min-width: calc(100% + 48px);
+      margin-left: -24px;
+
+      .c-ways-to-bank {
+        &__tab-list {
+          display: flex;
+          justify-content: flex-start;
+          overflow-x: auto;
+
+          &-link {
+            white-space: nowrap;
+          }
+
+          &:before {
+            content: "";
+            width: 24px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            margin-top: -10px;
+          }
+
+          &:after {
+            content: "";
+            width: 24px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            margin-top: -10px;
+          }
+
+          &.-show-left-shadow {
+            &:before {
+              background-image: linear-gradient(to left, rgba(39,50,57, 0), $brand-font);
+              z-index: 998;
+            }
+          }
+
+          &.-show-right-shadow {
+            &:after {
+              background-image: linear-gradient(to right, rgba(39,50,57, 0), $brand-font);
+              z-index: 998;
+            }
+          }
+        }
+        &__tab-list-item {
+          &:first-child {
+            padding-left: 24px;
+          }
+
+          &:last-child {
+            padding-right: 24px;
+          }
+        }
+      }
+    }
+  }
+}

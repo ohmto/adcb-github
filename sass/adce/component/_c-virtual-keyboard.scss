@@ -1,0 +1,102 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-virtual-keyboard
+02 - media queries
+============================================================================== */
+
+/* 01 - c-virtual-keyboard */
+
+.c-virtual-keyboard {
+  display: none;
+  position: absolute;
+  background: $brand-body-bg;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 5px 25px 0 rgba($black, 0.15);
+  .o-comp__content {
+    margin: 0;
+  }
+  &__wrapper {
+    padding: 35px 0;
+  }
+  &__btn-close {
+    text-align: right;
+  }
+  &__btn-wrapper {
+    text-align: center;
+    margin: 0 0 5px;
+    .-back-btn-wrapper{
+      display: inline-block;
+      //Support IE and edge
+      display: -ms-inline-flexbox;
+    }
+    input[type="button"], span {
+      @include typography-titles-commons();
+      width: 52px;
+      height: 52px;
+      border-radius: 25px;
+      border: solid 1px rgba($brand-font, 0.2);
+      background: rgba($brand-font, 0.05);
+      color: rgba($brand-font, 0.6);
+      text-transform: uppercase;
+      line-height: 1.3;
+      &.-back-btn {
+        @include typography-body-big-commons();
+        font-weight: 600;
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 110px;
+        height: 50px;
+        padding: 15px;
+        text-transform: none;
+        background: $brand-body-bg;
+        cursor: pointer;
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+      &.-caps-btn {
+        @include typography-body-big-commons();
+        font-weight: 600;
+        width: 166px;
+        background: $brand-body-bg;
+        text-transform: none;
+      }
+      &.-shift-activated {
+        background: $brand-font;
+        color: $brand-body-bg;
+      }
+      &.-special-char {
+        background: $brand-body-bg;
+      }
+      &:not(.-caps-btn):hover {
+        color: $brand-font;
+        border: solid 1px $brand-font;
+      }
+    }
+    &.-special-char-row {
+      input[type="button"] {
+        background: $brand-body-bg;
+      }
+    }
+  }
+}
+
+/*===========================
+      02 - media queries
+      ===========================*/
+
+/* Small devices (tablets, 768px and up) 
+@media (min-width: $screen-sm-min) {}*/
+
+/* Medium devices (desktops, 992px and up) 
+@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) 
+@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) 
+@media (min-width: $screen-xl-min) {}*/

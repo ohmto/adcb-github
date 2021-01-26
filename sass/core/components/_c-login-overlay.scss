@@ -1,0 +1,125 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-login-overlay
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-login-overlay */
+
+.c-login-overlay{	
+	padding-bottom: 0px;
+	.o-comp__content{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1170px;
+		.icon-close{
+			position: absolute;
+			padding: 20px 20px;
+			top: 5px;
+			right: 5px;
+			border-radius: 50%;
+			background-color: rgba($white, 0.1);
+			color: $white;
+			line-height: 0.1;
+		}
+		.c-widgetcolumns__content{
+			.c-widgetcolumns__col,
+			.c-widgetcolumns__col.-onethird,
+			.c-widgetcolumns__col.-twothird{
+				display: flex;
+			}
+			.c-widgetcolumns__col{  
+				&.-onethird { /* if 1/3 column width */
+					flex: 1;
+					background-color: $brand-font;
+					color: $white;
+					padding: 5%;
+
+					form {
+						color: $white;
+
+						.o-form__field{
+							label{
+							  color: $white;
+							}
+							.o-input__radio {
+								label:before{
+									border: 1px solid rgba(255,255,255, 0.4);
+								}
+							}
+							.o-btn-medium-adcp{
+							background-color: $brand-primary-dark;
+							color: $white;
+							border: 0px;
+							margin: 0;
+							}
+							.o-btn-medium-adcp-nostyle{
+								background-color: transparent;
+								border: 0px transparent;
+								color: $brand-primary-light;
+								flex: 1;
+								text-align: unset;
+								padding-left: 0;
+								padding-right: 0;
+								padding-bottom: 0;
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+			.c-widgetcolumns__col{
+				&.-twothird { /* if 1/3 column width */
+					flex: 2;
+					background-color: $white;
+					color: $brand-font;
+					padding: 5%;
+					display: flex;
+					flex-flow: column wrap;
+
+					.o-login-logo{
+						flex: 1;
+					}
+					.o-login-text{
+						flex: 2;
+						h3{
+							font-size: 48px;
+							font-weight: 600;
+							line-height: 1;
+							color: $brand-primary-dark;
+						}
+						p{
+							color: rgba($gray, 0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.c-login-overlay{
+		.o-comp__content{
+			.c-widgetcolumns__content{
+				.c-widgetcolumns__col{
+					&.-twothird{
+						flex-flow: row wrap;
+						.o-login-text{
+							h3{
+								font-size: 56px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

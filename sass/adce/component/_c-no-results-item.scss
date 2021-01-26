@@ -1,0 +1,54 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - no-results-item
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*  no-result-item */
+
+.c-no-results-item {
+  color: $brand-font;
+  padding: 32px 0 0;
+
+  &__heading {
+    margin-bottom: 25px;
+  }
+
+  .c-no-results-item-list {
+    display: flex;
+    flex-direction: column;
+    &__item {
+      @include typography-body-big-commons();
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      color: $brand-font;
+      // @include themify($themes) {
+      //   color: themed("brand-font");
+      // }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-no-results-item {
+    padding: 65px 0 0;
+
+    .c-no-results-item-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &__item {
+        width: 30%;
+        @include typography-body-tiny-commons();
+      }
+    }
+  }
+}

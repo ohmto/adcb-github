@@ -1,0 +1,259 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - c-cardbanner component styles
+02 - Background colors for Card banner (modifier)
+03 - Apply link for Card banner (modifier)
+04 - Element with in Card banner
+05 - Screen Viewpoint fix
+==============================================================================*/
+
+
+/* ----------------------------------------
+01 - Card banner
+---------------------------------------- */
+
+.c-cardbanner {
+    align-items: center;
+    margin-bottom: 0px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    // .container{
+    //       &:after{
+    //             content: " ";
+    //             display: block;
+    //             height: 1px;
+    //             background-color: #dddddd;
+    //             position: relative;
+    //       }
+    // }
+    >.o-comp__content {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .o-comp__title {
+        h2 {
+            font-size: calc(23px + 12*((100vw - 320px)/1120));
+        }
+    }
+    .o-comp__cardbanner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        // padding-top: 5rem;
+        // padding-bottom: 5rem;
+    }
+    .c-bayut-areaguide-form {
+        display: block;
+        width: 100%;
+        .o-form__field {
+            width: 100%;
+        }
+        .icon-arrow-down {
+            top: 0;
+        }
+        img {
+            width: 12px;
+        }
+    }
+}
+
+
+/* ----------------------------------------
+02 - Background Colors for Card Features
+---------------------------------------- */
+
+.c-cardbanner {
+    &.-lightgray-background {
+        background-color: rgba(221, 221, 221, 0.3);
+        // .container{
+        //       &:after{
+        //             display: none;
+        //       }
+        // }
+    }
+    &.-darkgray-background {
+        background-color: rgba(39, 50, 57, 1);
+        // .container{
+        //       &:after{
+        //             display: none;
+        //       }
+        // }
+        .o-comp {
+            &__title h2 {
+                color: #FFFFFF !important;
+            }
+            &__title_desc {
+                color: rgba(255, 255, 255, .7) !important;
+            }
+            .c-card-features__item {
+                .c-card-features__feature {
+                    color: rgba(255, 255, 255, .7) !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* ----------------------------------------
+03 - modifiers 
+---------------------------------------- */
+
+.c-cardbanner {
+    .c-standalone-link {
+        display: none;
+    }
+    &.-link {
+        .c-standalone-link {
+            display: block;
+            // text-align: center;
+            .o-link-more:nth-child(2) {
+                margin-left: 40px;
+                margin-top: 24px;
+            }
+            @media (min-width:768px) {
+                .o-link-more:nth-child(2) {
+                    margin-left: 40px;
+                    margin-top: inherit;
+                }
+            }
+        }
+    }
+    &.-reverse {
+        .o-comp__cardbanner {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+/* ----------------------------------------
+04 - Element with in Card Fetures 
+---------------------------------------- */
+
+.c-cardbanner {
+    .o-comp__title h2 {
+        margin-bottom: 0px !important;
+        text-align: center;
+    }
+    .o-comp__title_desc {
+        text-align: center !important;
+        margin-top: 0.5em !important;
+        margin-bottom: 2em !important;
+    }
+    .c-cardbanner__card {
+        // padding: 3% 0;
+        margin-bottom: 2.5em;
+        text-align: center;
+        img {
+            max-width: 340px;
+            width: 100%;
+            // width: 75%;
+        }
+    }
+    .c-cardbanner__features {
+        flex: 2;
+        // padding: 48px 48px 48px 0px;
+        align-items: center;
+    }
+    .c-standalone-link {
+        .more-link {
+            text-align: center;
+            .o-link-more:nth-child(2) {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+.c-cardbanner+.c-promotion-carousel .o-comp__content {
+    margin-top: 0px;
+}
+
+
+/* ----------------------------------------
+05 - Screen Viewpoint fix 
+---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    /* Medium devices (landscape tablets, 768px and up) */
+    .c-cardbanner {
+        // .container{
+        //       &:after{
+        //             display: none;
+        //       }
+        // }
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+        .o-comp__cardbanner {
+            flex-direction: row;
+        }
+        .o-comp__title {
+            align-items: baseline;
+            display: block;
+            h2 {
+                text-align: inherit;
+                max-width: 620px;
+            }
+        }
+        .o-comp__title_desc {
+            text-align: inherit !important;
+            max-width: 100% !important;
+        }
+        .c-cardbanner__card {
+            margin-bottom: 0;
+            flex: 1;
+            // text-align: inherit;
+            // img {
+            //       max-width: 75%; 
+            //       width: 75%;
+            // }
+        }
+        .c-cardbanner__features {
+            align-items: baseline;
+            // padding: 48px 48px 48px 0px;
+            padding-top: 48px;
+            padding-right: 48px;
+            padding-bottom: 48px;
+            padding-left: 0px;
+        }
+        &.-link {
+            .c-standalone-link {
+                display: block;
+                text-align: inherit !important;
+                .more-link {
+                    text-align: inherit !important;
+                }
+            }
+        }
+        &.-reverse .o-comp__cardbanner {
+            flex-direction: row-reverse;
+        }
+        &.-reverse .c-cardbanner__features {
+            align-items: baseline;
+            // padding: 48px 0px 48px 48px;
+            padding-top: 48px;
+            padding-right: 0px;
+            padding-bottom: 48px;
+            padding-left: 48px;
+        }
+        .c-bayut-areaguide-form {
+            .o-form__field {
+                display: inline-block;
+                width: 33%;
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+@media (min-width:1440px) {
+    .c-cardbanner#narrowBanner {
+        .container {
+            max-width: 1180px;
+        }
+    }
+}

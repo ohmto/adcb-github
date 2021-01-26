@@ -1,0 +1,45 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - tab-nav-content
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - tab-nav-content */
+.c-content-search {
+  &__input {
+    // font-size: 35px;
+    // font-weight: 500;
+    @include typography-page-section-commons();
+    outline: 0;
+    padding: 30px 0;
+    width: 100%;
+    border: 0;
+    color: $brand-font;
+  }
+  &__wrapper {
+    margin: 0;/*120px 0 155px 0*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+/*===========================
+  03 - media queries
+  ===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+/*@media (min-width: $screen-sm-min) {}*/
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+/*@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

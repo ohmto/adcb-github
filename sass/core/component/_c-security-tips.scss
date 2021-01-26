@@ -1,0 +1,42 @@
+.c-security-tips {
+  .c-cms-content {
+    margin-top: 0;
+
+    h2 {
+      display: none;
+    }
+
+    h3 {
+      //font-size: 19px;
+      @include typography-body-big-commons();
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      + h3 {
+        margin-top: 60px;
+      }
+
+      li {
+        //font-size: 17px;
+        @include typography-body-avg-commons();
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-security-tips {
+    .c-cms-content {
+      margin-top: 0;
+      h2 {
+        display: block;
+      }
+    }
+  }
+}

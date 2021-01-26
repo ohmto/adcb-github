@@ -1,0 +1,273 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-quick-links
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-quick-links */
+.c-quick-links {
+  position: absolute;
+  top: 50%;
+  right: $gutter-mobile;
+  transform: translateY(-50%);
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 35px;
+    font-size: 14px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+
+    &[class*="icon-"] {
+      font-size: 26px;
+      font-weight: bolder;
+      line-height: 0;
+    }
+
+    &:before {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      z-index: 0;
+      border-radius: 50%;
+      opacity: 0.3;
+      @include transition-cubic(all, 400ms);
+      background: none;
+    }
+
+    &:hover:after {
+      width: 50px;
+      height: 50px;
+    }
+
+    &.lang-switch {
+      font-weight: bold;
+      letter-spacing: normal;
+    }
+  }
+
+  .btn-login {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    border: 1px solid rgba($brand-font, 0.3);
+    border-radius: 1px;
+    height: 50px;
+    text-align: left;
+    text-transform: none;
+    line-height: 18px;
+    padding: 15.5px 20px;
+    min-width: 182px;
+    overflow: hidden;
+    @include transition-cubic(600ms, all);
+
+    &.is-active {
+      box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.15);
+      border: 0;
+    }
+
+    &:hover:after {
+      width: 200px;
+      height: 200px;
+    }
+
+    &:before {
+      font-weight: 400;
+      position: absolute;
+      color: rgba($brand-font, 0.7);
+      right: 8px;
+      font-size: 1.8em;
+      line-height: 18px;
+      box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0);
+    }
+
+    &.is-active:before {
+      transform: rotate(180deg);
+      transform-origin: center center;
+    }
+
+    &.btn-login-no-dropdown {
+      text-align: center;
+    }
+  }
+
+  .c-quick-login {
+    position: relative;
+    height: 50px;
+    margin-left: 35px;
+    padding-left: 0;
+
+
+    &__list {
+      @include typography-body-tiny-commons();
+      font-weight: 600;
+      width: 100vw;
+      text-transform: none;
+      position: absolute;
+      background: $white;
+      z-index: 1001;
+      max-height: 0;
+      height: auto;
+      overflow: hidden;
+      border-radius: 1px;
+      box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.15);
+      margin-top: 4px;
+      @include transition-cubic(800ms, all);
+      transform: translateX(-100%);
+
+      &.is-expanded {
+        max-height: 200px;
+        right: -24px;
+        transform: translateX(0);
+        transform-origin: center;
+      }
+    }
+
+    &__item {
+      position: relative;
+      font-style: normal;
+      font-stretch: normal;
+      padding: 0 30px;
+      letter-spacing: 0.2px #{"/*rtl:0;*/"};
+
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 10px;
+      }
+
+      a {
+        position: relative;
+        display: block;
+        padding: 17px 15px 15px 15px;
+        line-height: 1;
+        color: $brand-gray; /*This has been kept so the font doesn't become white on Private banking login menu*/
+        &:before {
+          font-size: 1.2em;
+          position: absolute;
+          font-weight: 600;
+          top: 50%;
+          transform: translateY(-50%) rotate(0deg) #{"/*rtl:translateY(-50%) rotate(180deg)*/"};
+          transform-origin: center center;
+          right: 10px;
+          z-index: 999;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          @include transition-cubic(400ms, width);
+          z-index: 0;
+          align-items: center;
+          height: 100%;
+          border-radius: 1px;
+          font-weight: 500;
+          background: $brand-primary-light;
+          // @include themify($themes) {
+          //   background: themed("brand-primary-light");
+          // }
+        }
+
+        .icon-next[dir="rtl"] {
+          transform: rotate(180deg);
+          transform-origin: center center;
+        }
+
+        span {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+/*===========================
+00 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-quick-links {
+    right: $gutter-tablet;
+
+    &__link {
+      &:after {
+        background: $brand-medium-gray;
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+/* @media (min-width: $screen-md-min) {} */
+@media (min-width: $screen-md-min) {
+  .c-quick-links {
+    .c-quick-login {
+      text-transform: uppercase;
+      &__list {
+        width: 100%;
+        transform: none;
+
+        &.is-expanded {
+          width: 100%;
+          transform: none;
+          right: 0;
+        }
+      }
+      &__item {
+        padding: 0 5px;
+
+        a {
+          &:hover {
+            color: $white;
+
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-quick-links {
+    right: $gutter-desktop;
+  }
+}
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

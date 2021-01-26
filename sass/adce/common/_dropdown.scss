@@ -1,0 +1,198 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - o-dropdown
+02 - placeholder styles
+03 - arrow-down
+============================================================================== */
+
+/* 01 - o-dropdown */
+
+.o-dropdown {
+  border: solid 1px rgba($brand-font, 0.3);
+  min-width: 260px;
+  cursor: pointer;
+  z-index: 2;
+  top: -16px;
+  &:hover {
+    border-color: rgba($brand-font, 0.7);
+  }
+  &__wrapper {
+    width: 260px;
+    position: relative;
+  }
+  &__filter {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+  }
+  &__checkmark {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: sub;
+    border: 1px solid rgba($brand-font, 0.2);
+    .is-checked {
+      border: none;
+      position: relative;
+      @extend .icon-tick;
+      font-size: 10px;
+      @include icon-styles;
+      color: $brand-primary-light;
+      &:before {
+        transform: rotateY(0) #{"/*rtl:rotateY(180deg)*/"};
+      }
+      // @include themify($themes) {
+      //   color: themed('brand-primary-light');
+      // }
+    }
+    // &:hover:after {
+    //   //transform: translate(0, -50%) scale(1);
+    // }
+  }
+  input.is-checked + .o-dropdown__checkmark {
+    border: none;
+  }
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &__label {
+    cursor: pointer;
+  }
+  /* 02 - placeholder styles */
+  &__placeholder {
+    //font-size: 15px;
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+    padding: 16px 0 14px 21px;
+    display: block;
+    &.-filter {
+      //text-transform: uppercase;
+      // font-size: 15px;
+      @include typography-body-tiny-commons();
+    }
+    /* 03 - arrow-down */
+    &:before {
+      color: rgba($brand-font, 0.7);
+      font-size: 1.2em;
+      font-weight: 600;
+      right: 15px;
+      position: absolute;
+      bottom: 14px;
+    }
+  }
+  &__content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: $white;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.67;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: none;
+    padding: 33px 26px;
+    box-shadow: 0 5px 25px 0 rgba($black, 0.15), 0 0 1px 0 rgba(0, 0, 0, 0.15);
+    &.is-visible {
+      display: flex;
+      background: $brand-body-bg;
+    }
+  }
+  &__filter-button {
+    color: $white;
+    padding: 13px 26px 12px;
+    @include transition-cubic(600ms, all);
+    background-color: $brand-primary-light;
+    border: 1px solid $brand-primary-light;
+    // @include themify($themes) {
+    //   background-color: themed('brand-primary-light');
+    //   border: 1px solid themed('brand-primary-light');
+    // }
+    &:hover {
+      background-color: $brand-primary-dark;
+      border-color: $brand-primary-dark;
+      // @include themify($themes) {
+      //   background-color: themed('brand-primary-dark');
+      //   border-color: themed('brand-primary-dark');
+      // }
+    }
+  }
+}
+
+.o-dropdown-search {
+  @extend .o-dropdown;
+}
+
+/*===========================
+  03 - media queries
+  ===========================*/
+
+/* 03 - (a) 768px & above */
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .o-dropdown {
+    &:hover {
+      // background-color: rgba($brand-primary-font, 0.05);
+      // border: 1px solid rgba($brand-primary-font, 0.05);
+      background-color: rgba($brand-font, 0.05);
+    }
+    &__checkmark {
+      &:hover {
+        background-color: rgba($brand-font, 0.1);
+      }
+      &__filter-button {
+        &:hover,
+        &:active,
+        &:visited {
+          color: $white;
+          background-color: $brand-primary-dark;
+          border-color: $brand-primary-dark;
+          // @include themify($themes) {
+          //   background-color: themed('brand-primary-dark');
+          //   border-color: themed('brand-primary-dark');
+          // }
+        }
+        &:disabled {
+          background-color: $brand-slate-gray;
+          border-color: $brand-slate-gray;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+
+/*@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) */
+
+/* @media (min-width: $screen-xl-min) {} */

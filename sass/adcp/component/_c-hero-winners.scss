@@ -1,0 +1,44 @@
+.c-hero-winners {
+  .o-comp__content {
+    padding-bottom: 0;
+    &.-colored {
+      .c-hero-segment {
+        .o-comp {
+          &__title {
+            margin-bottom: 0;
+          }
+          &__content {
+            h2 {
+              sup {
+                color: $brand-primary-light;
+                // @include themify($themes) {
+                //   color: themed('brand-primary-light');
+                // }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .c-hero-winners {
+    .o-comp__content {
+      padding-bottom: 0;
+    }
+    .c-hero-segment {
+      .o-comp__content {
+        padding-bottom: 0;
+        &.container {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+      .o-comp__title {
+        margin-bottom: 76px;
+      }
+    }
+  }
+}

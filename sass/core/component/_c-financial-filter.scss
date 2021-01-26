@@ -1,0 +1,103 @@
+/* ==============================================================================
+Index
+----------------------------------------
+
+============================================================================== */
+.c-financial-filter {
+  &:after {
+    content: '';
+    display: table;
+  }
+  &__content-wrapper {
+    display: block;
+    margin: 175px auto 100px;
+    &:before,
+    &:after {
+      content: ' ';
+      display: table;
+    }
+    .hero-section__content-wrapper {
+      margin: 0 auto 40px;
+    }  
+  }
+  &__category {
+    @include typography-label-tabs-commons();
+    display: block;
+    margin: 0 0 5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed('brand-primary-light');
+    // }
+
+    &-subdetails {
+      //font-size: 19px;
+      @include typography-body-big-commons();
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.6;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba($brand-font, 0.7);
+      margin-bottom: 0;
+      // @include themify($themes) {
+//        color: themed('brand-font');
+//      }
+    }
+  }
+
+  &__title {
+    @include typography-page-title-commons();
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+    color: $brand-font;
+    // @include themify($themes) {
+//      color: themed('brand-font');
+//    }
+  }
+  &__title-wrapper {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+}
+
+
+/*===========================
+06 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .preloader-titlehero-section {
+    &__content-wrapper {
+      margin: 200px auto 100px;
+    }
+    &__category {
+      margin: 0 0 20px;
+    }
+    &__title-wrapper {
+      display: flex;
+      text-align: center;
+    }
+    &__title {
+      max-width: 620px;
+      line-height: 1.2;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {}*/

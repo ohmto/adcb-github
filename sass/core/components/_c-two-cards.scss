@@ -1,0 +1,170 @@
+/*==============================================================================
+2.Index
+----------------------
+Two blocks with with images
+A modification on .c-mission-vision component made for uBank page
+==============================================================================*/
+
+.c-mission-vision {
+    .c-mission-vision__desc {
+        font-size: 19px;
+        letter-spacing: 0.1px #{"/*rtl:0*/"};
+        margin-top: 15px;
+        color: rgba(39, 50, 57, 0.7);
+        line-height: 1.8;
+        ul {
+            margin-top: 4vw;
+            display: table;
+            li {
+                font-size: 17px;
+                letter-spacing: 0.1px;
+                list-style: disc outside;
+                display: table-row;
+                &:before {
+                    content: ".";
+                    display: table-cell;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    .c-mission-vision__title {
+        font-size: calc(23px + 12 * ((100vw - 320px) / 1120));
+        font-weight: 600;
+        letter-spacing: 0.2px #{"/*rtl:0*/"};
+        color: #273239;
+    }
+    .c-mission-vision__list {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 75px 0;
+        border-top: 1px solid rgba(39, 50, 57, 0.2);
+        border-bottom: 1px solid rgba(39, 50, 57, 0.2);
+        &.-grey-bg {
+            background: #f3f3f3;
+            border: 0;
+        }
+    }
+    .c-mission-vision__content-desc {
+        margin-bottom: 30px;
+        width: 100%;
+         :last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.c-blockwithimages {
+        .c-mission-vision__content-desc img {
+            width: 100%;
+        }
+        .c-mission-vision__title {
+            font-size: 24px;
+        }
+        .c-mission-vision__desc {
+            margin-top: 0;
+        }
+        h2.c-mission-vision__title,
+        .c-standalone-link {
+            margin-top: 1em;
+        }
+        .c-mission-vision__content-desc {
+            margin-bottom: 96px;
+        }
+        .c-card-highlight-item__summary {
+            font-size: 17px;
+            font-weight: 400;
+            color: rgba(39, 50, 57, .5);
+            letter-spacing: 0.1px #{"/*rtl:0*/"};
+            line-height: 1.47;
+            padding: 24px 0px 12px 0px;
+            margin-top: 24px;
+            border-top: 1px solid rgba(39, 50, 57, .1);
+            small {
+                font-size: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .c-mission-vision {
+        &.c-blockwithimages {
+            .c-mission-vision__list {
+                border: none;
+            }
+            .c-mission-vision__content-desc,
+            .c-mission-vision__content-desc:nth-child(even),
+            .c-mission-vision__content-desc:last-child {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0px;
+            }
+            // .c-mission-vision__desc {
+            //     flex: 1;
+            //     align-content: flex-start;
+            // }
+            .c-mission-vision__list {
+                padding: 0 100px 100px 100px;
+            }
+        }
+        .c-mission-vision__title {
+            letter-spacing: 0.1px #{"/*rtl:0*/"};
+        }
+        .c-mission-vision__list {
+            -ms-flex-direction: row;
+            flex-direction: row;
+            padding: 100px 0;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .c-mission-vision__content {
+            max-width: 400px;
+            margin-bottom: 0;
+        }
+        .c-mission-vision__content-desc {
+            margin-right: 50px;
+            margin-bottom: 0;
+            width: 50%;
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+        .c-mission-vision__card {
+            width: 50vw;
+            border-radius: 3px;
+            border: 1px solid rgba(39, 50, 57, 0.2);
+            .c-leads__wrap {
+                padding: 50px 40px;
+            }
+            .c-leads__radio-btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .c-mission-vision__content {
+        max-width: 600px;
+    }
+    .c-mission-vision__card {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1232px) {
+    .c-mission-vision__list {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .c-mission-vision__title {
+        font-size: 35px;
+    }
+}

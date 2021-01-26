@@ -1,0 +1,95 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-not-found
+02 - o-link-more override
+03 - media queries
+03 - (a) 768px & above
+04 -
+05 -
+06 -
+07 -
+============================================================================== */
+/* 01 - c-not-found */
+.c-not-found {
+  .o-comp__content {
+    margin-top: 100px;
+    max-width: 1080px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0 0 12px 0;
+  }
+  &__img-wrapper {
+    padding: 0 76px 64px 76px;
+    flex: 1;
+  }
+  &__img {
+    max-width: 100%;
+    max-height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__text-content {
+    // font-size: 15px;
+    @include typography-body-tiny-commons();
+    font-weight: 400;
+    flex: 1;
+    h2 {
+      @include typography-titles-commons();
+      font-weight: 600;
+    }
+    p {
+      color: rgba($brand-font, 0.7);
+    }
+  }
+  /* 02 - o-link-more override */
+  .o-link-more {
+    // font-size: 15px;
+    // letter-spacing: 0.2px;
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    line-height: 20px;
+    display: table;
+    margin-top: 15px;
+    color: $brand-primary-dark;
+    cursor: pointer;
+//    @include themify($themes) {
+//      color: themed('brand-primary-light');
+//    }
+  }
+}
+
+/*===========================
+04 - media queries
+===========================*/
+/* Larger devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-not-found {
+    &__img-wrapper {
+      padding: 0;
+      flex: 2;
+    }
+    &__text-content {
+      font-size: 17px;
+      line-height: 1.76;
+      margin-right: 5vw;
+      flex: 3;
+      h2 {
+        // review
+        font-size: 40px;
+        font-weight: 600;
+      }
+      p {
+        margin: 6px 0 10px 0;
+      }
+    }
+    &__wrapper {
+      flex-direction: row;
+      //margin: 100px 0;
+    }
+  }
+}

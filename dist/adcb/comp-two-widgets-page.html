@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Widgets page - Component</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- manifest file for android icon 192x192 -->
+    <link rel="manifest" href="https://adcb-preview.surge.sh/personal-english/site.webmanifest" />
+
+
+    <script type="text/javascript" src="https://adcb.com/en/system/assets/toolkit/scripts/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="daterangepicker/daterangepicker.css" />
+    <!-- toolkit styles -->
+    <link rel="stylesheet" href="https://adcb.com/en/system/assets/toolkit/styles/personal/toolkit-en.css">
+    <link rel="stylesheet" href="assets/styles/personal/toolkit-en-custom.css">
+    <!-- /toolkit styles -->
+
+</head>
+
+<body class="en">
+
+    <div class="site-wrap">
+        <div class="site-content">
+
+
+
+            <!--start of 2 widgets component 3:3  -->
+            <div class="o-comp c-widgetcolumns">
+                <div class="o-comp c-widgetcolumns__content container">
+                    <div class="c-widgetcolumns__col -twothird -link">
+                        <div class="o-comp__title">
+                            <h3>Share price chart</h3>
+                        </div>
+                        <div class="o-comp__content">
+                            <!--start of Iframe -->
+                            <iframe id="euroland_frame_id" src="https://tools.eurolandir.com/tools/ticker/html/?companycode=ae-adcb&amp;v=chart&amp;lang=en-gb " width="100%" height="360" scrolling="no" frameborder="0" style="background-color: transparent; min-width: 100%; width: 1px; max-height: none; min-height: 0px; height: 360px; background-position: initial initial; background-repeat: initial initial;"></iframe>
+                            <script type="text/javascript" src="//tools.eurolandir.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    EurolandToolIntegrationObject.set("euroland_frame_id");
+                                });
+                            </script>
+                            <!--end of Iframe -->
+                        </div>
+                        <div class="o-comp__link">
+                            <div class="o-comp foot-text"></div>
+                            <div class="o-comp more-link">
+                                <a href="#" class="o-link-more icon-arrow-down">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-widgetcolumns__col -onethird -link">
+                        <div class="o-comp__title">
+                            <h3>Dividends</h3>
+                        </div>
+                        <div class="o-comp__content">
+                            <!--start of Iframe -->
+                            <iframe id="euroland_frame_id" src="https://tools.eurolandir.com/tools/tsr/iframe/?companycode=ae-adcb&amp;lang=en-GB&amp;v=redesign_ticker_v2 " width="100%" height="330" scrolling="no" frameborder="0"></iframe>
+                            <script type="text/javascript" src="//tools.eurolandir.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js">
+                            </script>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    EurolandToolIntegrationObject.set("euroland_frame_id");
+                                });
+                            </script>
+                            <!--end of Iframe -->
+                        </div>
+                        <div class="o-comp__link">
+                            <div class="o-comp foot-text"></div>
+                            <div class="o-comp more-link">
+                                <a href="#" class="o-link-more icon-arrow-down">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of 2 widgets component 3:3 -->
+
+
+            <!--start of 2 widgets component 3:3  -->
+            <div class="o-comp c-widgetcolumns ">
+                <div class="o-comp c-widgetcolumns__content container">
+                    <div class="c-widgetcolumns__col -onethird -link">
+                        <div class="o-comp__title">
+                            <h3>Financial Calendar</h3>
+                        </div>
+                        <div class="o-comp__content">
+                            <!--start of Iframe -->
+                            <iframe id="euroland_frame_id" src="https://tools.eurolandir.com/tools/ticker/fincalendar/?companycode=ae-adcb&amp;lang=en-gb " width="100%" height="330" scrolling="no" frameborder="0"></iframe>
+                            <script type="text/javascript" src="//tools.eurolandir.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js">
+                            </script>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    EurolandToolIntegrationObject.set("euroland_frame_id");
+                                });
+                            </script>
+                            <!--end of Iframe -->
+                        </div>
+                        <div class="o-comp__link">
+                            <div class="o-comp foot-text"></div>
+                            <div class="o-comp more-link">
+                                <a href="#" class="o-link-more icon-arrow-down">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-widgetcolumns__col -twothird -link">
+                        <div class="o-comp__title">
+                            <h3>Key Figure</h3>
+                        </div>
+                        <div class="o-comp__content">
+                            <!--start of Iframe -->
+                            <iframe id="euroland_frame_id" src="https://tools.eurolandir.com/tools/ia/?t0=1&amp;t=1&amp;t2=0&amp;companycode=ae-adcb&amp;lang=en-gb&amp;v=redesign_ticker " width="100%" height="330" scrolling="no" frameborder="0"></iframe>
+                            <script type="text/javascript" src="//tools.eurolandir.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    EurolandToolIntegrationObject.set("euroland_frame_id");
+                                });
+                            </script>
+                            <!--end of Iframe -->
+                        </div>
+                        <div class="o-comp__link">
+                            <div class="o-comp foot-text"></div>
+                            <div class="o-comp more-link">
+                                <a href="#" class="o-link-more icon-arrow-down">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of 2 widgets component 3:3 -->
+
+            <!--start of 2 widgets component 3:3 -->
+            <div class="o-comp c-widgetcolumns">
+                <div class="o-comp c-widgetcolumns__content container">
+                    <div class="c-widgetcolumns__col -twothird -link">
+                        <div class="o-comp__title">
+                            <h3>Press Release</h3>
+                        </div>
+                        <div class="o-comp__content">
+                            <!--start of Iframe -->
+                            <iframe id="euroland_frame_id" src="https://tools.eurolandir.com/tools/pressreleases/?companycode=ae-adcb&amp;v=redesign_ticker&amp;lang=en-GB " width="100%" height="330" scrolling="no" frameborder="0"></iframe>
+                            <script type="text/javascript" src="//tools.eurolandir.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    EurolandToolIntegrationObject.set("euroland_frame_id");
+                                });
+                            </script>
+                            <!--end of Iframe -->
+                        </div>
+                        <div class="o-comp__link">
+                            <div class="o-comp foot-text"></div>
+                            <div class="o-comp more-link">
+                                <a href="#" class="o-link-more icon-arrow-down">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-widgetcolumns__col -onethird -link">
+                        <div class="o-comp__title">
+                            <h3>Subscribtions</h3>
+                        </div>
+                        <div class="o-comp__content">
+                            <img src="banner-image.jpg" alt="banner image" style=" width: 100%;  margin-bottom: 1rem; clear: both;">
+                        </div>
+                        <div class="o-comp__link">
+                            <div class="o-comp foot-text"> For Information </div>
+                            <div class="o-comp more-link">
+                                <a href="#" class="o-link-more icon-arrow-down">Click here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of 2 widgets component 3:3 -->
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+.c-content-block {
+  margin: auto;
+  .o-comp__content {
+    padding-bottom: 0;
+  }
+  &__content {
+    padding: 44px 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1040px;
+    border-top: 1px solid rgba($brand-font, 0.2);
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+    &.-no-border-bottom {
+      border-bottom: none;
+    }
+    .c-cms-content ul li {
+      color: rgba($brand-font, 0.7);
+    }
+  }
+  &__title {
+    @include typography-titles-commons();
+  }
+  &__sub-title {
+    margin-top: 25px;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+  &__description {
+    @include typography-body-big-commons();
+    line-height: 30px;
+    font-weight: 400;
+    color: rgba($brand-font, 0.7);
+    margin-bottom: 0;
+  }
+  &.-is-last {
+    margin-bottom: 100px;
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+  }
+
+  &.-no-border-bottom {
+    border-bottom: none;
+  }
+  &__link {
+    padding: 45px 0;
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-content-block {
+    .o-comp__content {
+      padding-bottom: 0;
+    }
+    .c-cms-content .private{
+      color: rgba($brand-font, 0.7);
+    }
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-content-block {
+    &.-lg-width-lock {
+      max-width: 992px; // kept to 992 to match width of accordion-faqs
+      .o-comp__content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

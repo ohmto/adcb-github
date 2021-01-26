@@ -1,0 +1,22 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - generic global bootstrap colors
+02 - global scaffolding
+03 - brand colors
+04 -
+==============================================================================*/
+
+@import '../core/base/colors';
+
+/*--------------------
+04 - Brand_colors_scss
+--------------------*/
+
+//Generating Principal colors
+$brand-primary-light: #CAC5A1;
+$brand-primary-dark: #AE9859;
+$brand-body-bg: #fff;
+$brand-footer-title: #fff;
+$brand-footer-links: #fff;
+// %light-gradient: linear-gradient(-45deg, #f9f9f9 10%, #ffffff 35%);

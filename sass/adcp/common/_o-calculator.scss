@@ -1,0 +1,492 @@
+.c-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__operation {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @include fluid-type(19px, 23px);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed("brand-font");
+    // }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    padding-top: 58px;
+
+    &-title {
+      @include typography-body-tiny-commons();
+      font-weight: 600;
+      line-height: 1.33;
+    }
+
+    &-subtitle {
+      @include typography-legal-commons();
+      line-height: 1.5;
+      margin: 10px auto;
+      text-align: left;
+      max-width: 624px;
+      color: rgba($brand-font, 0.5);
+      // @include themify($themes) {
+      //   color: themed("brand-font");
+      // }
+    }
+  }
+
+  &__comparisionresult {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+    padding-top: 0;
+
+    &-item {
+      &:first-child {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__sticky-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 99999;
+    left: 0;
+    box-shadow: 0 0 40px 0 rgba($black, 0.2);
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px 25px;
+    .c-calculator {
+      &__result-title {
+        align-self: center;
+        font-weight: 400;
+        text-align: left;
+      }
+      &__output {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__input {
+    border-radius: 1px;
+    border: solid 1px rgba($brand-font, 0.2);
+    text-align: center;
+    padding: 1px 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-question {
+      .o-tooltip {
+        @include typography-legal-commons();
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 2;
+      align-items: center;
+      max-width: 70%;
+
+      &-curr {
+        @include typography-body-big-commons();
+        font-weight: 600;
+        margin-right: 5px;
+        color: rgba($brand-font, 0.6);
+      }
+
+      &-box {
+        flex-shrink: 2;
+        border: 0;
+        padding: 15px;
+        @include typography-body-big-commons();
+        background: $brand-body-bg;
+        color: $brand-font;
+        max-width: 120px;
+        &[type=number]::-webkit-inner-spin-button, 
+        &[type=number]::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+      }
+    }
+  }
+
+  &__output {
+    @include typography-display-commons();
+    @include fluid-type(32px, 70px);
+    margin-bottom: 5px;
+    display: block;
+    &.-inline {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-between;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      .c-calculator {
+        &__value {
+          @include typography-page-section-commons();
+        }
+        &__result-title {
+          font-weight: 400;
+        }
+      }
+    }
+    .-touchpoints & {
+      @include typography-page-section-commons();
+    }
+    span {
+      width: fit-content;
+      display: inline-block;
+    }
+  }
+
+  &__output__months {
+    @include typography-display-commons();
+    @include fluid-type(32px, 70px);
+    margin-bottom: 25px;
+    display: block;
+  }
+  &__touchpoint-result {
+    flex: 1 2 auto;
+    margin-top: 250px;
+    text-align: center;
+  }
+  &.no-border {
+    border: none;
+  }
+  &.-no-padding {
+    padding: 0;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .o-btn {
+      &:nth-child(2) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__graph {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-top: 60px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &-item {
+      width: 100%;
+
+      &:nth-child(2) {
+        direction: ltr #{"/*rtl: ltr*/"};
+      }
+    }
+
+    &-details {
+      width: 100%;
+
+      &-item {
+        padding-bottom: 30px;
+        &:first-child {
+          padding-bottom: 55px;
+          padding-top: 30px;
+        }
+      }
+
+      &-title {
+        font-size: 23px;
+      }
+
+      &-result {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 8px;
+      }
+
+      &-header {
+        @include typography-body-tiny-commons();
+        font-weight: 300;
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+        color: rgba($brand-font, 0.7);
+        width: 100%;
+      }
+
+      &-value {
+        @include typography-body-tiny-commons();
+        font-weight: 600;
+        line-height: 1.58;
+        letter-spacing: normal;
+        text-align: left;
+        font-size: 17px;
+        color: $brand-font;
+        width: 100%;
+      }
+    }
+
+    &-representation {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-right: 35px;
+
+      &-item {
+        @include typography-body-tiny-commons();
+        font-size: 12px;
+        letter-spacing: normal;
+        color: rgba($brand-font, 0.6);
+        padding: 5px;
+        direction: ltr;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          margin-right: 10px;
+          background-color: #ec0100;
+        }
+
+        &:first-child {
+          &:before {
+            background-color: #ba1b19;
+          }
+        }
+      }
+    }
+  }
+  &__calc-values {
+    
+    @include typography-body-big-commons();
+    font-weight: 500;
+    line-height: 1.6;
+    color: $brand-font;
+  }
+}
+@media (min-width: $screen-sm-min) {
+  .c-calculator {
+    flex-direction: row;
+
+    &__wrapper {
+      .o-btn {
+        max-width: 180px;
+        margin: 20px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+
+      .o-btn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 0;
+
+        &:first-child {
+          margin-bottom: 15px;
+        }
+
+        + & {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &__title {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    &__operation {
+      flex: 2 1 auto;
+      border-radius: 1px;
+      border: 1px solid rgba($brand-font, 0.2);
+      margin-bottom: 0;
+      padding: 5vw;
+      min-width: 350px;
+      &.no-border {
+        border: none;
+      }
+    }
+
+    &__result {
+      flex: 1 2 auto;
+      margin-left: 30px;
+      justify-content: center;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    &__input {
+      &-text {
+        &-box {
+          max-width: 161px;
+        }
+      }
+    }
+
+    &__comparisionresult {
+      text-align: center;
+      padding-top: 58px;
+
+      &-item {
+        padding-top: 0;
+        &:first-child {
+          padding-bottom: 5px;
+        }
+      }
+    }
+    &__touchpoint-result {
+      flex: 1 2 auto;
+      margin-top: 250px;
+      text-align: center;
+    }
+    &.-no-padding {
+      padding: 0;
+    }
+  }
+}
+@media (min-width: $screen-md-min) {
+  .c-calculator {
+    &__operation {
+      padding: 68px 3vw;
+      &.no-border {
+        border: none;
+      }
+      &.-no-padding {
+        padding: 0;
+      }
+    }
+
+    &__result {
+      flex: 2 1 auto;
+      &-subtitle {
+        text-align: center;
+      }
+    }
+
+    &__graph {
+      &-item {
+        width: 60%;
+
+        &:first-child {
+          width: 40%;
+        }
+      }
+
+      &-representation {
+        flex-direction: row;
+        justify-content: flex-end #{"/*rtl: flex-start*/"};
+
+        &-item {
+          padding: 15px;
+        }
+      }
+
+      &-details {
+        &-item {
+          padding-bottom: 80px;
+
+          &:first-child {
+            padding-bottom: 55px;
+            padding-top: 0px;
+          }
+        }
+
+        &-result {
+          flex-direction: row;
+        }
+
+        &-header {
+          width: 70%;
+        }
+
+        &-value {
+          font-size: 15px;
+          width: 26%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-calculator {
+    &__operation {
+      max-width: 450px;
+      flex: none;
+      flex-grow: 1;
+      margin-right: 15px;
+      .js-touchpoints & {
+        max-width: none;
+        margin-right: 0;
+      }
+    }
+    &__result {
+      max-width: 500px;
+    }
+    &__sticky-footer {
+      position: static;
+      box-shadow: none;
+      background: none;
+      display: block;
+      width: inherit;
+      padding: 0;
+      z-index: 0;
+      .c-calculator {
+        &__result-title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/** Supports only EDGE **/
+
+@supports (-ms-ime-align: auto) {
+  .c-calculator {
+    &__operation {
+      flex: 1 1 350px;
+    }
+    &__touchpoint-result {
+      flex: 1 2 auto;
+      margin-top: 250px;
+      text-align: center;
+    }
+  }
+}

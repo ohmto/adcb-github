@@ -1,0 +1,46 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-cms-content
+02 -
+03 - table style (responsive)
+04 - media queries
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/*
+01 - c-cms-content
+*/
+.o-bullet-points {
+  // font-size: 15px;
+  @include typography-body-avg-commons();
+  font-weight: 400;
+  display: flex;
+  color: rgba($brand-font, 0.7);
+  ul {
+    li {
+      padding-left: 25px;
+      position: relative;
+      line-height: 1.67;
+      @extend .icon-tick;
+      &:before {
+        font-size: 0.5em;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        @include icon-styles;
+        transform: rotateY(0) #{"/*rtl:rotateY(180deg)*/"};
+        color: rgba($brand-font, 0.7);
+      }
+    }
+  }
+}
+
+/*===========================
+04 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: $screen-sm-min) {}

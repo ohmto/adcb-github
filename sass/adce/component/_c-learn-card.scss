@@ -1,0 +1,183 @@
+.c-learn-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 50px 0;
+  border-bottom: 1px solid $brand-light-gray;
+  cursor: pointer;
+  &__intro {
+    display: flex;
+    flex-direction: column;
+  }
+  &__thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 68%;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+  &__video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__summary {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  &__section {
+    position: relative;
+    span {
+      @include typography-legal-commons();
+      display: block;
+    }
+    p {
+      @include typography-body-big-commons();
+      color: rgba($brand-font, 0.7);
+      font-weight: 400;
+    }
+  }
+  sup {
+    @include typography-label-tabs-commons();
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: $brand-primary-light;
+//    @include themify($themes) {
+//      color: themed('brand-primary-light');
+//    }
+  }
+  &__title {
+    @include typography-titles-commons();
+    color: $brand-font;
+  }
+  &__subtitle {
+    font-weight: 500;
+    color: $brand-silver;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    display: block;
+  }
+}
+
+.c-learn-cards {
+  &__item:first-child {
+    .c-learn-card {
+      padding-top: 0;
+    }
+  }
+  &__form-wrapper {
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin-bottom: 40px;
+      border-bottom: 1px solid $brand-light-gray;
+      padding-bottom: 40px;
+      .o-form__field {
+        margin-bottom: 0;
+        min-height: unset;
+        input {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/*===========================
+06 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-learn-card {
+    padding: 50px 0 30px;
+    &__intro {
+      flex-direction: row;
+      width: 100%;
+    }
+    &__thumbnail {
+      margin-right: 8%;
+      max-width: 364px;
+      width: 40%;
+      padding-bottom: 22.3%;
+    }
+    &__section {
+      flex: 1.5;
+      &:last-child {
+        max-width: 200px;
+        margin-left: 50px;
+      }
+    }
+    &__anchor {
+      margin-top: 12px;
+    }
+    &__summary {
+      flex-direction: row;
+    }
+    &__expiry {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .c-learn-cards__form-wrapper {
+    form {
+      flex-direction: row;
+      .o-form__field {
+        width: 260px;
+        margin-left: 26px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-md-min) {
+  .c-learn-card {
+    &__thumbnail {
+      overflow: hidden;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+
+@media (min-width: $screen-xl-min) {
+  .c-learn-card {
+    &__thumbnail {
+      padding-bottom: 20%;
+    }
+  }
+}

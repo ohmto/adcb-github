@@ -1,0 +1,275 @@
+/*==============================================================================
+  Index - By:Hemmat - Date:11Jan2020
+  ----------------------------------------
+  01 -  ubank features list component styles
+  02 - Background colors for ubank features list (modifier)
+  03 - Options of ubank features list component (modifier)
+  ==============================================================================*/
+
+
+/* --------------------
+  01 -  ubank features list component styles
+  -------------------- */
+
+.c-ubank-features-list {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    align-items: center;
+    .o-comp__content {
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: calc(1440px - 192px) !important;
+        .o-comp__content_feature:nth-child(n + 6) {
+            /* hide more that 3 features items by default */
+            display: none;
+        }
+    }
+    .o-comp__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 48px;
+        max-width: 1080px;
+        h2 {
+            margin-bottom: 0px !important;
+            margin: 0 10vw;
+            text-align: center;
+            font-size: calc(23px + 12*((100vw - 320px)/1120));
+            font-weight: 600;
+            letter-spacing: -0.2px #{"/*rtl: 0*/"};
+        }
+        .o-comp__title_desc {
+            text-align: center !important;
+            margin-top: 0.5em !important;
+        }
+    }
+    .o-comp__content_feature:nth-child(n) {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .o-comp__content_feature {
+        .o-image {
+            width: 100%;
+            flex: 1;
+            padding-top: 0px;
+            padding-bottom: 2.5rem;
+            img {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .o-feature {
+            flex: 2;
+            padding-bottom: 2.5rem;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 19px;
+            letter-spacing: 0;
+            margin-top: 15px;
+            color: rgba(39, 50, 57, 0.7);
+            line-height: 1.8;
+            h3 {
+                margin-bottom: 36px;
+                /* font-size: calc(23px + 8 * ((100vw - 320px) / 1120)); */
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: -0.2px;
+                color: #273239;
+                overflow: hidden;
+                position: relative;
+                &:before {
+                    content: "";
+                    height: 4px;
+                    background: #ec0100;
+                    position: absolute;
+                    top: 95%;
+                    width: 20%;
+                    transition: width 2s;
+                    animation: underline 2s;
+                }
+            }
+        }
+    }
+    .c-standalone-link {
+        margin-top: 2.5rem;
+    }
+    .c-compare-carousel__more .c-compare-carousel__more-content {
+        text-align: unset;
+    }
+    .viewmorelink {
+        text-align: center;
+        position: relative;
+    }
+    .viewmore {
+        font-weight: 600;
+        color: #ec0100;
+        margin-bottom: 30px;
+        line-height: 1.67;
+        letter-spacing: 0.2px;
+        cursor: pointer;
+        &:before {
+            content: " ";
+            height: 1px;
+            background: #ddd;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+        &:after {
+            content: " ";
+            height: 1px;
+            background: #ddd;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    }
+}
+
+@keyframes underline {
+    from {
+        width: 0%;
+        overflow: hidden;
+    }
+    to {
+        width: 20%;
+        overflow: visible;
+    }
+}
+
+
+/* --------------------
+02 - Background Colors for ubank features list component 
+-------------------- */
+
+.c-ubank-features-list {
+    &.-lightgray-background {
+        background-color: rgba(221, 221, 221, 0.3);
+    }
+    &.-darkgray-background {
+        background-color: rgba(39, 50, 57, 1);
+        .o-comp__title h2,
+        .o-comp__content_feature .o-feature h3 {
+            color: #ffffff !important;
+            /* title color fix for Dark Background */
+        }
+        .o-comp__title_desc,
+        .o-comp__content_feature .o-feature {
+            color: rgba(255, 255, 255, 0.5) !important;
+            /* body text color fix for Dark Background */
+        }
+    }
+}
+
+
+/* --------------------
+03 - options of ubank features list component (modifier)
+-------------------- */
+
+.c-ubank-features-list .o-comp__title h2,
+.c-ubank-features-list .o-comp__title_desc,
+.c-ubank-features-list .c-standalone-link {
+    display: none;
+}
+
+.-title .o-comp__title h2,
+.-describtion .o-comp__title_desc,
+.-links .c-standalone-link {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .c-ubank-features-list {
+        .o-comp__content_feature .o-image img {
+            width: 360px;
+        }
+        .o-comp__content_feature:nth-child(2n + 1) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .o-comp__content_feature:nth-child(2n) {
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+        }
+        .o-comp__content_feature {
+            .o-image {
+                img {
+                    width: 100%;
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+            }
+            .o-feature {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+    }
+}
+
+
+/* --------------------
+04 for UBank private/islamic pages
+-------------------- */
+
+h3.is-islamic-ubank:before {
+    background: #01a5a6 !important;
+}
+
+a.is-islamic-ubank {
+    color: #01a5a6 !important;
+}
+
+h3.is-private-ubank:before {
+    background: #3c5cab !important;
+}
+
+.c-ubank-features-list .o-comp__content_feature .is-private-ubank,
+p.is-private-ubank,
+small.is-private-ubank {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+a.is-private-ubank {
+    color: #7b94d1 !important;
+}
+
+h3.is-private-ubank,
+h2.is-private-ubank {
+    color: #fff !important;
+}
+
+p.c-card-highlight-item__summary.is-private-ubank {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.c-card-highlight-item__summary .is-private-ubank {
+    color: #fff !important;
+}
+
+a.viewmore.is-private-ubank:after {
+    content: " ";
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+a.viewmore.is-private-ubank:before {
+    content: " ";
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}

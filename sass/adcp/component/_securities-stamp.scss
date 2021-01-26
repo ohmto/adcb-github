@@ -1,0 +1,25 @@
+.c-securities-stamp {
+  svg {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .c-securities-stamp {
+    cursor: pointer;
+    svg {
+      height: 80px;
+      width: 80px;
+      margin-bottom: 10px;
+      &:hover {
+        path {
+          fill: $white;
+        }
+        g {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

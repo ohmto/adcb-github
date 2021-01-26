@@ -1,0 +1,90 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-product-benefits
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-product-benefits */
+.c-product-benefits {
+  /* 02 - o-comp__content overrides for 1232px max-width */
+  .o-comp {
+    &__content {
+      max-width: 992px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+  }
+  &__col {
+    max-width: 100%;
+    width: 100%;
+  }
+  &__title {
+    //font-size: 17px;
+    @include typography-body-avg-commons();
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');//opTheme
+    // }
+  }
+  &__items {
+    //font-size: 15px;
+    font-weight: 400;
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin: 0 0 30px 0;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');//opTheme
+    // }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 6px;
+      height: 12px;
+      left: 2px;
+      top: 5px;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      border: solid $brand-primary-light;
+      // @include themify($themes) {
+      //   border: solid themed('brand-primary-light');
+      // }
+    }
+  }
+}
+/*===========================
+03 - media queries
+===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+/*@media (min-width: $screen-sm-min) {}*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-product-benefits {
+    &__col {
+      max-width: 435px;
+    }
+    &__wrapper {
+      justify-content: space-between;
+      flex-flow: row;
+    }
+  }
+}
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* X-Large devices (large desktops, 1440px and up) */
+/*@media (min-width: $screen-xl-min) {}*/

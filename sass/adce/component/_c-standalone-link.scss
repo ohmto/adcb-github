@@ -1,0 +1,20 @@
+.c-standalone-link {
+  &.-lg-width-lock {
+    &.-is-last {
+      // border-bottom: 1px solid rgba($brand-font, 0.2);
+      margin-bottom: 15vw;
+      border-bottom: 1px solid rgba($brand-font, 0.2);
+    }
+  }
+}
+/* 01 - (a) 1232 & above */
+/* Large devices (desktops, 1232 and up) */
+@media (min-width: $screen-lg-min) {
+  .c-standalone-link {
+    &.-lg-width-lock {
+      margin: auto;
+      max-width: 992px;
+      //max-width: 1040px;
+    }
+  }
+}

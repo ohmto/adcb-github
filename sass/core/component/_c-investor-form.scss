@@ -1,0 +1,49 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-offer-cards--investor-form
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 c-offer-cards--investor-form*/
+.c-offer-cards--investor-form {
+  padding-bottom: 0;
+
+  .o-comp {
+    &__content {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .o-form__field {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-offer-cards--investor-form {
+    .o-comp {
+      &__content {
+        .o-form__field {
+          margin-bottom: 20px;
+
+          &:first-child,
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

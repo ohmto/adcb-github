@@ -1,0 +1,74 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - bootstrap mixins
+02 - bootstrap resets
+02 - bootstrap customised scaffolding
+03 - bootstrap customised grid base
+04 - bootstrap utility classes
+05 - owl carousle styles (TODO: May need to move from here later)
+06 - Flickity carousel styles
+07 - Icons font import
+08 -
+============================================================================== */
+
+
+/* ===========
+Note
+===========
+Any component to be used from bootstrap can be piced from the _bootstrap-reference.scss file
+& be included as import in below includes in the same order as appears in bootstrap to maintain
+the cascading order. */
+
+
+/* 01 - bootstrap mixins  */
+
+@import "../bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+/* 02 - bootstrap resets */
+
+// @import "../bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+// @import "../bootstrap-sass/assets/stylesheets/bootstrap/print";
+
+/* 02 - bootstrap customised scaffolding */
+
+@import "typography";
+@import "../template/themify";
+@import "variables";
+@import "scaffolding";
+
+/* 03 - bootstrap customised grid base */
+
+@import "grid";
+
+/* 04 - bootstrap utility classes */
+
+@import "../bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "../bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+/* 05 - owl carousle styles (TODO: May need to move from here later) */
+
+@import "../owl.carousel/src/scss/owl.carousel";
+
+/* 06 - Flickity carousel */
+
+@import "../flickity/flickity";
+@import "../flickity/flickity-fade";
+
+/* 07 - import font icons*/
+
+@import "font-icons";
+// Below rtlcss directive helps to reset the owl settings to keep as same as in EN and AR pages
+
+/*rtl:begin:ignore*/
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+
+/*rtl:end:ignore*/

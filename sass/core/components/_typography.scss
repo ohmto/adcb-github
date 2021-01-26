@@ -1,0 +1,165 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - font-face imports
+02 - base typography
+03 - fluid font mixin
+04 - h1-h6 base styles
+==============================================================================*/
+
+
+/*--------------------
+01 - font-face imports
+--------------------*/
+
+
+/*rtl:begin:ignore*/
+
+// @font-face {
+//     font-family: 'proxima_nova';
+//     src: url("../fonts/proximanova-light-webfont.eot");
+//     src: /*url("../fonts/proximanova-light-webfont?#iefix") format('embedded-opentype'),*/
+//     url("../fonts/proximanova-light-webfont.woff2") format('woff2'), url("../fonts/proximanova-light-webfont.woff") format('woff');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'proxima_nova';
+//     src: url("../fonts/proximanova-regular-webfont.eot");
+//     src: /*url("../fonts/proximanova-regular-webfont.eot?#iefix") format('embedded-opentype'),*/
+//     url("../fonts/proximanova-regular-webfont.woff2") format('woff2'), url("../fonts/proximanova-regular-webfont.woff") format('woff');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'proxima_nova';
+//     src: url("../fonts/proximanova-semibold-webfont.eot");
+//     src: /*url("../fonts/proximanova-semibold-webfont.eot?#iefix") format('embedded-opentype'),*/
+//     url("../fonts/proximanova-semibold-webfont.woff2") format('woff2'), url("../fonts/proximanova-semibold-webfont.woff") format('woff');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'proxima_nova';
+//     src: url("../fonts/proximanova-medium-webfont.eot");
+//     src: /*url("../fonts/proximanova-medium-webfont.eot?#iefix") format('embedded-opentype'),*/
+//     url("../fonts/proximanova-medium-webfont.woff2") format('woff2'), url("../fonts/proximanova-medium-webfont.woff") format('woff');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+
+/*rtl:end:ignore*/
+
+
+/*url("../fonts/tajawal-light-webfont.eot?#iefix") format('embedded-opentype'),*/
+
+// @font-face {
+//   font-family: 'Tajawal';
+//   src: url("../fonts/tajawal-light-webfont.eot");
+//   src: url('tajawal-light-webfont.eot?#iefix') format('embedded-opentype'), url("../fonts/tajawal-light-webfont.woff2") format('woff2'), url("../fonts/tajawal-light-webfont.woff") format('woff');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Tajawal';
+//   src: url("../fonts/tajawal-regular-webfont.eot");
+//   src: url('tajawal-regular-webfont.eot?#iefix') format('embedded-opentype'), url("../fonts/tajawal-regular-webfont.woff2") format('woff2'), url("../fonts/tajawal-regular-webfont.woff") format('woff');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Tajawal';
+//   src: url("../fonts/tajawal-medium-webfont.eot");
+//   src: url('tajawal-medium-webfont.eot?#iefix') format('embedded-opentype'), url("../fonts/tajawal-medium-webfont.woff2") format('woff2'), url("../fonts/tajawal-medium-webfont.woff") format('woff');
+//   font-weight: 600;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Tajawal';
+//   src: url("../fonts/tajawal-bold-webfont.eot");
+//   src: url('tajawal-bold-webfont.eot?#iefix') format('embedded-opentype'), url("../fonts/tajawal-bold-webfont.woff2") format('woff2'), url("../fonts/tajawal-bold-webfont.woff") format('woff');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+/*--------------------
+02 - base typography
+--------------------*/
+
+// $font-family-base: 'proxima_nova', 'sans-serif' #{"/*rtl:'Tajawal'*/"} !default;
+// $font-family-semibold-base: 'proxima_nova_semibold' #{"/*rtl:'Tajawal'*/"} !default;
+// $font-size-base: 17px !default;
+// $font-weight-base: 400;
+// $line-height-base: 1.4 !default;
+
+/*===================
+03 - fluid font mixin
+=====================*/
+
+//- Mixin: Fluid Type
+///
+/// Magic calc + vh to allow text to be fluid between minimum
+/// and maximum breakpoints.
+///
+/// @group typography
+/// @param {variable} $min-font-size [12px] - Minimum font size
+/// @param {variable} $max-font-size [24px] - Maximum font size
+/// @param {variable} $lower-range [420px] - Stop scaling font smaller at this screen resolution
+/// @param {variable} $upper-range [900px] - Stop scaling font larger at this screen resolution
+/// @example
+///   h1 {
+///     @include responsive-type(20px, 48px);
+///   }
+/// @site https://madebymike.com.au/writing/precise-control-responsive-typography/
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 320px, $upper-range: 1440px) {
+    font-size: calc(#{$min-font-size}+#{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+    @media screen and (max-width: $lower-range) {
+        font-size: $min-font-size;
+    }
+    @media screen and (min-width: $upper-range) {
+        font-size: $max-font-size;
+    }
+}
+
+
+/*--------------------
+04 - h1-h6 base styles
+--------------------*/
+
+%default-heading-weight {
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    @include fluid-type(32px, 50px);
+    @extend %default-heading-weight;
+}
+
+h2 {
+    @include fluid-type(25px, 35px);
+    // @extend .typography-page-section-commons;
+    @extend %default-heading-weight;
+}
+
+h3 {
+    @include fluid-type(20px, 35px);
+    @extend %default-heading-weight;
+}
+
+h4 {
+    @include fluid-type(17px, 27px);
+    // @extend .typography-page-section-commons;
+    @extend %default-heading-weight;
+}
+
+h5 {
+    @include fluid-type(15px, 23px);
+    @extend %default-heading-weight;
+}
+
+h6 {
+    @include fluid-type(14px, 17px);
+    @extend %default-heading-weight;
+}

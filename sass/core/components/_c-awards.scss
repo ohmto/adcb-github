@@ -1,0 +1,86 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-awards
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+
+/* 01 - c-awards */
+
+.c-awards {
+    margin: 0 auto;
+    .o-comp__content {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 0px auto 48px auto !important;
+        .c-awards__item {
+            margin-bottom: 48px;
+            .o-awards__img {
+                margin: 0px 0px;
+                position: relative;
+                z-index: 1;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .o-awards__item {
+                background: $white;
+                // border: 1px solid rgba($gray, 0.3);
+                padding: 2em;
+                margin: 0 0px;
+                position: relative;
+                color: $brand-font;
+                z-index: 2;
+                box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.05);
+                @include typography-body-avg-commons();
+                color: rgba($brand-font, .7);
+                .o-awards__item__category {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    color: $brand-primary-dark;
+                    border-bottom: 1px solid $brand-primary-light;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .c-awards {
+        .o-comp__content {
+            flex-flow: row wrap;
+            max-width: calc(1052px + 96px * 2);
+            .c-awards__item {
+                width: 49%;
+                margin-bottom: 48px;
+                .o-awards__img {
+                    margin: 0px 24px;
+                }
+                .o-awards__item {
+                    padding: 2em;
+                    margin: 0 24px;
+                    min-height: 410px;
+                    @include typography-body-avg-commons();
+                    color: rgba($brand-font, .8);
+                    h3 {
+                        color: $brand-font;
+                    }
+                    .o-awards__item__category {
+                        margin-top: 1em;
+                        margin-bottom: 2em;
+                        padding-bottom: 0.5em;
+                        border-bottom: 1px solid $brand-primary-light;
+                    }
+                }
+            }
+        }
+    }
+}

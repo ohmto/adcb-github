@@ -1,0 +1,196 @@
+/* Emerge to toolkit-custom.css - By:Hemmat - Date:15Jan200 */
+
+
+/*==============================================================================
+Index
+----------------------------------------
+01 - c-compare-carousel component new styles
+02 - Background colors for compare-carousel (modifier)
+03 - Apply link for compare-carousel (modifier)
+04 - Screen Viewpoint fix
+==============================================================================*/
+
+
+/* --------------------
+01 - Card Features
+-------------------- */
+
+.c-compare-carousel {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    align-items: center;
+    .o-comp__title {
+        margin-bottom: 1em;
+    }
+    .o-comp__title h2 {
+        font-size: calc(23px + 12*((100vw - 320px)/1120));
+        font-weight: 600;
+        letter-spacing: -0.2px #{"/*rtl: 0*/"};
+        margin: 0 0 1em 0;
+        max-width: 620px;
+        text-align: center;
+    }
+    &.-highlightnumber {
+        .c-compare-carousel-item__title {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .c-compare-carousel-item__info {
+        .c-compare-carousel-item__category {
+            margin-top: 2em !important;
+            margin-bottom: 0em !important;
+            text-transform: none;
+            font-weight: normal;
+        }
+    }
+    .c-compare-carousel-item__info>*:not(img) {
+        padding-right: 1em !important;
+        padding-left: 1em !important;
+    }
+    .c-compare-carousel-item__info>*:last-child {
+        padding-bottom: 1em !important;
+    }
+    .c-compare-carousel-item__desc {
+        margin-top: 0.5em !important;
+        margin-bottom: 0em !important;
+    }
+    .c-compare-carousel-item__info {
+        padding: 0em;
+        .o-bullet-points {
+            margin-top: 2em;
+            ul {
+                li {
+                    font-size: 0.9em;
+                    padding-bottom: 1em;
+                }
+                li:last-child {
+                    margin: 0.5em 0 0 0;
+                    padding: 0px;
+                }
+                li:last-child:before {
+                    content: "";
+                }
+            }
+        }
+    }
+    &.-icons {
+        .c-compare-carousel-item__info {
+            /* icon */
+            padding: 1em 0 0 0 !important;
+        }
+        .carouselicon {
+            /* icon */
+            width: 35% !important;
+            max-width: 96px;
+            margin: 1em auto 0em auto;
+        }
+    }
+    &.-images {
+        .c-compare-carousel-item__info {
+            /* image */
+            padding: 0 !important;
+        }
+        .carouselimage {
+            /* image */
+            margin-top: -1em;
+            width: 100%;
+        }
+    }
+    .owl-carousel .owl-item {
+        margin-bottom: 40px !important;
+    }
+    .disclaimer {
+        font-size: 0.9em;
+        color: rgba(39, 50, 57, 0.5);
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 1.47;
+        border-top: 1px solid #eee;
+        padding: 12px;
+    }
+}
+
+.c-compare-carousel .o-comp__title h2,
+.c-compare-carousel .carouselicon,
+.c-compare-carousel .carouselimage,
+// .c-compare-carousel .c-compare-carousel-item__title,
+.c-compare-carousel .c-compare-carousel__more {
+    display: none !important;
+}
+
+.c-compare-carousel.-title .o-comp__title h2,
+.c-compare-carousel.-icons .carouselicon,
+// .c-compare-carousel.-highlightnumber .c-compare-carousel-item__title, 
+.c-compare-carousel.-images .carouselimage,
+.c-compare-carousel.-viewmore .c-compare-carousel__more {
+    display: block !important;
+}
+
+
+/* 02 - Background Colors for Card Features */
+
+.c-compare-carousel {
+    &.-lightgray-background {
+        background-color: rgba(221, 221, 221, 0.3);
+    }
+    &.-darkgray-background {
+        background-color: rgba(39, 50, 57, 1);
+        .o-comp__title h2 {
+            color: #FFFFFF !important;
+            /* title color fix for Dark Background */
+        }
+        .c-compare-carousel-item__category {
+            color: rgba(255, 255, 255, 1) !important;
+        }
+        .c-compare-carousel-item__desc,
+        .o-comp__title_desc {
+            color: rgba(255, 255, 255, .5) !important;
+        }
+        .o-bullet-points {
+            color: rgba(255, 255, 255, .7) !important;
+        }
+        .c-compare-carousel-item__info {
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            background-color: rgba(39, 50, 57, 1) !important;
+        }
+        .c-compare-carousel-item__info:hover {
+            border: 1px solid rgba(255, 255, 255, 1) !important;
+            background-color: rgba(39, 50, 57, 1) !important;
+        }
+        .c-compare-carousel__more-content th {
+            color: rgba(255, 255, 255, 1) !important;
+            background-color: rgba(39, 50, 57, 1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        .c-compare-carousel__more-content td {
+            color: rgba(255, 255, 255, .5) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        .owl-carousel .owl-nav button.owl-next div,
+        .owl-carousel .owl-nav button.owl-prev div {
+            color: rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        .owl-carousel .owl-nav button.owl-next div:hover,
+        .owl-carousel .owl-nav button.owl-prev div:hover {
+            color: #ec0100 !important;
+            border: 1px solid #ec0100 !important;
+        }
+    }
+}
+
+
+/* 05 - Screen Viewpoint fix */
+
+@media (min-width: 768px) {
+    .c-compare-carousel {
+        .c-compare-carousel-item__info {
+            .o-bullet-points {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

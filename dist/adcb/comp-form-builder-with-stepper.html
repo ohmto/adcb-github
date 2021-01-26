@@ -1,0 +1,290 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>Form builder - Component</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- manifest file for android icon 192x192 -->
+    <link rel="manifest" href="https://adcb-preview.surge.sh/personal-english/site.webmanifest" />
+
+
+    <script type="text/javascript" src="https://adcb.com/en/system/assets/toolkit/scripts/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://adcb.com/en/system/assets/toolkit/styles/daterangepicker.css" />
+    <!-- toolkit styles -->
+    <link rel="stylesheet" href="https://adcb.com/en/system/assets/toolkit/styles/personal/toolkit-en.css">
+    <link rel="stylesheet" href="assets/styles/personal/toolkit-en-custom.css">
+    <!-- /toolkit styles -->
+
+
+</head>
+
+<body class="en" style="padding: 2.5em;">
+
+
+
+    <!-- start - MCLP hero-premium component -->
+    <div id="section00" data-type="lead" class="o-comp c-campaign-leads -form -numberstepper">
+        <div class="c-campaign-leads__container container">
+            <div class="o-comp c-campaign-leads__list ">
+                <div id="applynow" class="c-campaign-leads__card" data-type="lead" data-text="Request callback">
+                    <div class="c-campaign-leads__content">
+                        <div class="c-campaign-leads__wrap">
+
+
+                            <form id="wizard" method="post" class="c-leads__form" action="PER-PDP1-compaigns_thankyou.html" autocomplete="off" novalidate="novalidate">
+
+                                <!-- <form id="applynow" name="form_name" class="c-formbuild__form" action="05-thank-you.html" method='get' autocomplete="off" novalidate="novalidate"> -->
+
+                                <!-- start step -->
+                                <fieldset>
+                                    <!--From title-->
+                                    <legend class="steptitle">Step 01</legend>
+                                    <div class="stepdesc"><strong>Description parapraph, that better have maximum 50 carachters.</strong>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" id="name" class="o-input o-input__text" placeholder="Placeholder text" pattern='([A-z-À-ž\s]){2,}' required>
+                                            <label class='c-input__label' for="name">Label Text</label>
+                                            <span class="c-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--email-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="email" name="email" id="email" placeholder="email@domain.com" class="o-input o-input__text" required>
+                                            <label class='c-input__label' for="email">Email</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--text only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" placeholder="Name" pattern="^[A-Za-z -]+$" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Name</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--numbers only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input name="accountNum" placeholder="8 digit Account number" pattern="[0-9]*" type="text" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Account number</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <!-- /end step -->
+                                <!-- start step -->
+                                <fieldset>
+
+                                    <!--From title-->
+                                    <legend class="steptitle">Step 02</legend>
+                                    <div class="stepdesc"><strong>Description parapraph, that better have maximum 50 carachters.</strong>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" id="name" class="o-input o-input__text" placeholder="Placeholder text" pattern='([A-z-À-ž\s]){2,}' required>
+                                            <label class='c-input__label' for="name">Label Text</label>
+                                            <span class="c-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--email-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="email" name="email" id="email" placeholder="email@domain.com" class="o-input o-input__text" required>
+                                            <label class='c-input__label' for="email">Email</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--text only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" placeholder="Name" pattern="^[A-Za-z -]+$" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Name</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--numbers only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input name="accountNum" placeholder="8 digit Account number" pattern="[0-9]*" type="text" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Account number</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+
+                                </fieldset>
+                                <!-- /end step -->
+                                <!-- start step -->
+                                <fieldset>
+
+                                    <!--From title-->
+                                    <legend class="steptitle">Step 03</legend>
+                                    <div class="stepdesc"><strong>Description parapraph, that better have maximum 50 carachters.</strong>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" id="name" class="o-input o-input__text" placeholder="Placeholder text" pattern='([A-z-À-ž\s]){2,}' required>
+                                            <label class='c-input__label' for="name">Label Text</label>
+                                            <span class="c-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--email-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="email" name="email" id="email" placeholder="email@domain.com" class="o-input o-input__text" required>
+                                            <label class='c-input__label' for="email">Email</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--text only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" placeholder="Name" pattern="^[A-Za-z -]+$" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Name</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--numbers only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input name="accountNum" placeholder="8 digit Account number" pattern="[0-9]*" type="text" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Account number</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+
+                                </fieldset>
+                                <!-- /end step -->
+                                <!-- start step -->
+                                <fieldset>
+
+                                    <!--From title-->
+                                    <legend class="steptitle">Step 04</legend>
+                                    <div class="stepdesc"><strong>Description parapraph, that better have maximum 50 carachters.</strong>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" id="name" class="o-input o-input__text" placeholder="Placeholder text" pattern='([A-z-À-ž\s]){2,}' required>
+                                            <label class='c-input__label' for="name">Label Text</label>
+                                            <span class="c-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--email-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="email" name="email" id="email" placeholder="email@domain.com" class="o-input o-input__text" required>
+                                            <label class='c-input__label' for="email">Email</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--text only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input type="text" name="name" placeholder="Name" pattern="^[A-Za-z -]+$" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Name</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+                                    <!--numbers only-->
+                                    <div class="o-form__field">
+                                        <div class="c-input-text">
+                                            <input name="accountNum" placeholder="8 digit Account number" pattern="[0-9]*" type="text" class="o-input o-input__text" required>
+                                            <label class='c-input__label'>Account number</label>
+                                            <span class="c-input__error o-input__error">Error message</span>
+                                        </div>
+                                    </div>
+
+
+                                </fieldset>
+                                <!-- /end step -->
+
+
+                                <div class="c-contact-form__buttons">
+                                    <button class="o-btn-medium-red" type="submit">Submit</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/jquery.js"></script>
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/commons.js"></script>
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/toolkit.js"></script>
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/treatcode.js"></script>
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/search.js"></script>
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/flickity.js"></script>
+    <script src="https://adcb.com/en/system/assets/toolkit/scripts/jquery.quickWizard.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // Intialize form wizard - https://github.com/conzett/jquery.quickWizard
+            $('form#applynow').quickWizard();
+
+            // Input with plus minus
+            $('.qtyplus').on('click', function(e) {
+                e.preventDefault();
+                fieldName = $(this).attr('name');
+                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                if (!isNaN(currentVal)) {
+                    $('input[name=' + fieldName + ']').val(currentVal + 1);
+                } else {
+                    $('input[name=' + fieldName + ']').val(0);
+                }
+            });
+            $(".qtyminus").on('click', function(e) {
+                e.preventDefault();
+                fieldName = $(this).attr('name');
+                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                if (!isNaN(currentVal) && currentVal > 0) {
+                    $('input[name=' + fieldName + ']').val(currentVal - 1);
+                } else {
+                    $('input[name=' + fieldName + ']').val(0);
+                }
+            });
+
+        });
+    </script>

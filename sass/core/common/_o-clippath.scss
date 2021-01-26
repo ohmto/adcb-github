@@ -1,0 +1,26 @@
+.o-clippath {
+  &-hide {
+    /* this is to hide clippath from taking any space on the page itself.*/
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* iPhone 5 Retina regardless of IOS version */
+/* This is a fallback for iPhone 5c since it currently doesnt support clip path,
+   remove this entire block once clip-path support is introduced or removed out of device matrix
+   ------------------------------Block Starts Here------------------------------*/
+@media screen and (device-height: 568px),
+(device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .o-clippath {
+    &-hide {
+      /* this is to hide clippath totally.*/
+      display: none;
+    }
+  }
+}
+/* This is a fallback for iPhone 5c since it currently doesnt support clip path,
+   remove this entire block once clip-path support is introduced or removed out of device matrix
+   ------------------------------Block Ends Here------------------------------*/

@@ -1,0 +1,140 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - company-news-results-list
+02 - media queries
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 company-news-results - list IG*/
+.c-company-news-results {
+  .c-board-card {
+    &__details {
+      margin-left: 0;
+      width: 95%;
+    }
+
+    &__img-wrapper {
+      width: auto;
+      margin-right: 0;
+    }
+  }
+
+  .c-board-list {
+    & .-no-padding {
+      padding: 0;
+    }
+    &__wrap {
+      &.-feature {
+        .c-board-card {
+          &__title {
+            padding-top: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .o-comp-filter {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: center;
+      .c-offer-cards__form-wrapper {
+        form {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .o-comp__title {
+    border-bottom: 1px solid $brand-medium-gray;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+
+    h2 {
+      @include fluid-type(25px, 35px);
+      color: $brand-primary-font;
+      margin-bottom: 0;
+      font-weight: 600;
+      line-height: 1.14;
+      letter-spacing: -0.2px #{"/*rtl:0*/"};
+      font-style: normal;
+      font-stretch: normal;
+    }
+
+    p {
+      @include typography-legal-commons();
+      margin-top: 15px;
+      color: rgba($brand-font, 0.5);
+    }
+  }
+
+  .c-company-news-list {
+    &__wrap {
+      max-width: 1066px;
+      margin: auto;
+    }
+  }
+}
+
+/*===========================
+02 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-company-news-results {
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__filter {
+      margin-top: 0;
+    }
+
+    .o-comp-filter {
+      &__wrapper {
+        flex-direction: row;
+
+        .c-offer-cards {
+          &__form-wrapper {
+            width: auto;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .c-company-news-list {
+      &__wrap {
+        max-width: 884px;
+      }
+    }
+
+    .c-board-card {
+      &__details {
+        width: 55%;
+      }
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/* @media (min-width: $screen-md-min) {} */
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* @media (min-width: $screen-md-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

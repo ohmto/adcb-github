@@ -1,0 +1,90 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-adcb-banner
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+
+/* 01 - c-adcb-banner */
+
+.c-adcb-banner {
+    margin: 0 2em;
+    .o-comp__content {
+        border: 1px solid rgba($gray, 0.3);
+        padding: 2em 2em 2em;
+        margin: 0px auto 70px auto !important;
+        .o-comp-banner {
+            display: flex;
+            flex-direction: column;
+            .o-comp-banner__logo {
+                flex: 1;
+                margin-bottom: 24px;
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                }
+            }
+            .o-comp-banner__text {
+                flex: 2;
+                flex-grow: 2;
+                padding: 0px 2em;
+                h3 {
+                    color: $brand-font;
+                    text-align: center;
+                }
+                p {
+                    color: rgba($gray, 0.8);
+                    text-align: center;
+                    margin: 0 0 24px 0;
+                }
+            }
+            .o-comp-banner__cta {
+                flex: 1;
+                background-color: #ec0100;
+                border-color: #ec0100;
+                &:hover {
+                    background-color: #bb0000;
+                    border-color: #bb0000;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .c-adcb-banner {
+        margin: 0;
+        .o-comp__content {
+            padding: 1em 2em 1em;
+            max-width: 1024px !important;
+            .o-comp-banner {
+                flex-direction: row;
+                align-items: center;
+                .o-comp-banner__logo {
+                    margin-bottom: 0;
+                }
+                .o-comp-banner__text {
+                    h3 {
+                        text-align: inherit;
+                        font-size: 26px #{"/*rtl:20px*/"};
+                        letter-spacing: 0.1px #{"/*rtl:0*/"};
+                    }
+                    p {
+                        text-align: inherit;
+                        margin: 0 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

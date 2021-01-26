@@ -1,0 +1,1660 @@
+/* ------------------------------------------ 
+12.Index
+---------------------
+This is PERSONAL section 
+toolkit-custom Misc. 
+debug/overwite css
+------------------------------------------ */
+
+
+/*Overriding the inout color; Req from Waleed 7/22/19 */
+
+#jsamounttimeinterest {
+    &.c-calculator__wrapper {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        display: block;
+        .c-calculator__operation {
+            background: #fff;
+            z-index: 1;
+            .c-calculator__result {
+                z-index: 1;
+                .c-calculator__result-title,
+                .c-calculator__output {
+                    text-align: center;
+                }
+                .c-calculator__output {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .c-calculator-table__tnc {
+            z-index: 0;
+            padding: 0 24px;
+        }
+        // @media (min-width: 768px) {
+        &.js-home-saver {
+            margin-bottom: 0 !important;
+            padding-bottom: 75px;
+            .c-calculator-table__tnc {
+                z-index: 0;
+                padding: 0 24px;
+            }
+        }
+        // }
+        .js-amount-time-interest {
+            .c-calculator-table__tnc {
+                z-index: 0;
+                padding: 0 0;
+            }
+        }
+        @media (min-width: 1232px) {
+            .c-calculator__result {
+                max-width: 50%;
+            }
+        }
+        @media (min-width: 768px) {
+            &+.c-leads {
+                margin-top: -100px;
+            }
+        }
+    }
+}
+
+#tpcalculator {
+    &.c-calculator__wrapper {
+        padding-top: 100px;
+        padding-bottom: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    #jsamounttimeinterest,
+    #tpcalculator {
+        background: rgba(221, 221, 221, 0.3);
+    }
+    //     .c-add-touchpoints,
+    //     .c-product-card-item {
+    //         background: #f7f7f7;
+    //     }
+    //     .js-home-saver.-js-show-calculations .top-arrow-border:after {
+    //         background: #f7f7f7;
+    //     }
+    //     #tpcalculator {
+    //         padding-top: 85px;
+    //     }
+    //     #tpcalculator .o-comp__content {
+    //         padding-bottom: 85px;
+    //         margin-top: 45px;
+    //     }
+}
+
+.o-range-slider__value {
+    color: $generic-red;
+}
+
+.o-calculator-radio {
+    input[type="radio"]:checked+.o-calculator-radio__checkmark {
+        border: solid 1px $generic-red;
+    }
+    input[type="radio"]:not(:checked)+.o-calculator-radio__checkmark {
+        border: solid 1px #bababa;
+    }
+}
+
+// @media (min-width: 768px) {
+//     /* morgage calculator fix - hemmat 20April2020 */
+//     .o-comp__content.container.c-calculator.js-amount-time-interest,
+//     .js-active-saver {
+//         padding: 100px 0;
+//     }
+//     .c-calculator__operation {
+//         border: 1px solid rgba(39, 50, 57, 0.1);
+//         width: 100%;
+//     }
+// }
+// @media (min-width: 1232px) {
+//     .c-calculator__result {
+//         max-width: 700px;
+//         width: 100%;
+//         /* morgage calculator fix - hemmat 20April2020 */
+//     }
+// }
+// .js-home-saver {
+//     padding: 10px 0px 100px 0px;
+// }
+.message1,
+.message2,
+.message3 {
+    font-size: 18px;
+}
+
+@media (max-width: 850px) {
+    // #jsamounttimeinterest {
+    //     margin-bottom: 75px !important;
+    // }
+    // .hs-mt-0 {
+    //     margin-bottom: 0px;
+    // }
+    // .js-home-saver {
+    //     padding-bottom: 0px !important;
+    // }
+    .message1,
+    .message2,
+    .message3 {
+        font-size: 13px !important;
+    }
+}
+
+.c-calculator__graph-item {
+    text {
+        font-size: 13.5px;
+    }
+    text:not(:first-child) {
+        text-align: right;
+        display: block;
+        right: 45px;
+        padding-left: unset !important;
+        position: relative;
+    }
+    @media (max-width: 767px) {
+        text:not(:first-child) {
+            right: 0px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        text:not(:first-child) {
+            right: 0px;
+        }
+    }
+}
+
+
+/* Mortgage calculator DP - Ramanan 13 May2020 */
+
+.calc-need-to-pay-div {
+    color: rgba(39, 50, 57, 0.7);
+    margin-bottom: 20px;
+}
+
+.calc-need-to-pay-span {
+    color: $generic-red;
+}
+
+#saver,
+#standard {
+    text text {
+        right: 45px;
+        padding-left: unset !important;
+        float: right;
+        position: relative;
+    }
+}
+
+#savermobile {
+    text text {
+        padding-left: unset !important;
+        float: right;
+    }
+}
+
+.message1 {
+    .c-calculator {
+        &__value,
+        &__months {
+            color: #273239;
+            font-weight: bold;
+        }
+    }
+}
+
+#tpcalculator {
+    .o-comp__title_desc {
+        padding: 0 24px;
+    }
+}
+
+.e-channel-check {
+    border: solid 1px #27323933;
+    input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+    }
+    &.-selected {
+        border: solid 1px $generic-red;
+        outline: solid 1px $generic-red;
+    }
+    &:hover:not(.-selected) {
+        border: solid 1px #273239;
+        color: #273239;
+    }
+}
+
+.-current {
+    span {
+        background: rgba(39, 50, 57, 0.1);
+    }
+}
+
+.tp-calc-dis {
+    padding: 0;
+    margin-bottom: -10px;
+    color: #27323980;
+}
+
+.c-cms-content ol li {
+    color: rgba(39, 50, 57, 0.7);
+}
+
+.c-cms-content ol li:before,
+.c-table ol li:before,
+.c-table-seven-cols ol li:before,
+.c-table-three-cols ol li:before,
+.c-table-two-cols ol li:before,
+.c-thumbnails-table ol li:before {
+    color: $generic-red;
+    font-weight: bold;
+}
+
+.c-mission-vision {
+    &__title {
+        font-size: calc(23px + 12 * ((100vw - 320px) / 1120));
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        color: #273239;
+    }
+    &__list {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 75px 0;
+        border-top: 1px solid rgba(39, 50, 57, 0.2);
+        border-bottom: 1px solid rgba(39, 50, 57, 0.2);
+        &.-grey-bg {
+            background: #f3f3f3;
+            border: 0;
+        }
+    }
+    &__content-desc {
+        margin-bottom: 30px;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__desc {
+        font-size: 19px;
+        letter-spacing: 0;
+        margin-top: 15px;
+        color: rgba(39, 50, 57, 0.7);
+        line-height: 1.8;
+        ul {
+            margin-top: 4vw;
+            display: table;
+            li {
+                font-size: 17px;
+                letter-spacing: 0.1px;
+                list-style: disc outside;
+                display: table-row;
+                &:before {
+                    content: ".";
+                    display: table-cell;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &__list {
+            -ms-flex-direction: row;
+            flex-direction: row;
+            padding: 100px 0;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &__content {
+            max-width: 400px;
+            margin-bottom: 0;
+        }
+        &__content-desc {
+            margin-right: 50px;
+            margin-bottom: 0;
+            width: 50%;
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+        &__card {
+            width: 50vw;
+            border-radius: 3px;
+            border: 1px solid rgba(39, 50, 57, 0.2);
+            .c-leads__wrap {
+                padding: 50px 40px;
+            }
+            .c-leads__radio-btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &__content {
+            max-width: 600px;
+        }
+        &__card {
+            width: 50vw;
+        }
+    }
+    @media (min-width: 1232px) {
+        &__list {
+            padding-left: 6vw;
+            padding-right: 6vw;
+        }
+    }
+}
+
+// .c-mission-vision {
+// @media screen and (max-width: 320px) {
+//     &__title {
+//         font-size: 23px;
+//     }
+// }
+// @media screen and (min-width: 1440px) {
+//     &__title {
+//         font-size: 35px;
+//     }
+// }
+// @media (min-width: 768px) {
+//     &__title {
+//         letter-spacing: -0.1px;
+//     }
+// }
+// }
+@media (min-width: 768px) {
+    // .o-comp.c-cardbanner {
+    //     margin-bottom: 0 !important;
+    // }
+    .c-page-seperator+.c-leads {
+        .c-leads__container {
+            margin: 0;
+        }
+    }
+}
+
+.c-ways-to-bank__tabs {
+    .c-ways-to-bank__tab-list {
+        overflow-x: hidden;
+    }
+}
+
+
+/* fix for trending now transperant background when loading */
+
+.c-promotion-carousel-item {
+    background: #ffffff !important;
+    // @media (max-width: 768px) {
+    //     .c-promotion-carousel-item__info {
+    //         min-height: 260px;
+    //     }
+    // }
+    .c-promotion-carousel-item__info {
+        // min-height: 230px;
+        /* fix for "trending now" body text height when loading */
+        .c-promotion-carousel-item__desc {
+            height: 4.7em !important;
+            min-height: 90px;
+            // line-height: 1.7 !important;
+            overflow: hidden !important;
+            &.o-ellipse-two-lines {
+                display: block;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+@media (min-width:1232px) {
+    .c-promotion-carousel-item__img {
+        // width: 35%;
+        height: 220px;
+    }
+}
+
+
+/* for for "News" section text height */
+
+.c-news-carousel-item {
+    &__desc {
+        &.o-ellipse-two-lines {
+            display: block;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .c-table-custom table tr td.-td-avg-font {
+        /* fix for Annual general assymbly page */
+        font-size: 17px;
+        letter-spacing: 0.1px #{"/*rtl:0*/"};
+        font-weight: 400;
+        color: rgb(118, 118, 118);
+    }
+}
+
+@media (min-width: 992px) {
+    .site-footer .c-footer .c-footer-brand__logo .o-site-logo__icon,
+    .site-footer .c-footer--securities .c-footer-brand__logo .o-site-logo__icon {
+        width: 27% !important;
+    }
+}
+
+.o-comp__content .container .c-compare-carousel__wrap .owl-nav:last-child {
+    display: none !important;
+}
+
+
+/*==============================================================================
+1- Travel &lifestyle benefits component 
+Find these classes and change the properity as following:
+==============================================================================*/
+
+@media (min-width: 992px) {
+    .c-compare-carousel-item__info {
+        .o-bullet-points {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+/* 2- Betaqti card features component */
+
+// @media screen and (min-width: 768px) {
+//     .o-comp.c-cardbanner {
+//         margin-bottom: 0 !important;
+//     }
+// }
+
+/* 3- Terms and conditions */
+
+@media (min-width: 768px) {
+    .c-page-seperator+.c-leads .c-leads__container {
+        margin: 0;
+    }
+    .c-compare-carousel .o-bullet-points ul li .hero-premium__img,
+    .hero-premium__video {
+        height: 100%;
+    }
+    /* Create this classes and add the properity as following */
+    .c-compare-carousel {
+        .o-bullet-points {
+            ul {
+                li {
+                    &:before {
+                        font-size: 0.5em;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        font-family: "icon-font";
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        font-weight: 400;
+                        font-style: normal;
+                        text-decoration: inherit;
+                        text-rendering: auto;
+                        display: inline-block;
+                        transform: rotateY(0deg);
+                        color: rgba(39, 50, 57, 0.7);
+                    }
+                    &:nth-child(1) {
+                        margin: 0;
+                        padding: 0 0 1em 0;
+                        &:before {
+                            content: "";
+                        }
+                    }
+                    &:last-child {
+                        &:before {
+                            content: "";
+                        }
+                    }
+                    &:last-child {
+                        margin: 0.5em 0 0 0;
+                    }
+                }
+            }
+            a {
+                color: $generic-red;
+            }
+        }
+    }
+}
+
+
+/* ----------------
+emirati.aspx CSS
+---------------- */
+
+.c-breadcrumbs__item:last-child a {
+    pointer-events: all !important;
+    cursor: default;
+}
+
+.c-quick-links .c-quick-login__list.is-expanded {
+    max-height: inherit !important;
+}
+
+.c-quick-links .btn-login:hover:after {
+    width: 204px;
+}
+
+.former-unb-list a:hover:after {
+    color: #fff;
+    background-color: #758c95 !important;
+}
+
+.former-unb-list a:after {
+    background: #758c95 !important;
+}
+
+.c-quick-login__list li:first-child {
+    margin-top: 0px;
+}
+
+.c-quick-login__list li:last-child {
+    margin-bottom: 0px !important;
+}
+
+.c-quick-links .c-quick-login__item {
+    padding: 0px;
+}
+
+.c-quick-login__item-adcb {
+    position: relative;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px #{"/*rtl:0*/"};
+    padding: 15px 5px;
+}
+
+@media only screen and (orientation: landscape) {
+    /*.c-quick-login__list.is-expanded {max-height: 300px !important;overflow: scroll;overflow-y: scroll;} */
+}
+
+.c-quick-login__item-unb {
+    position: relative;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px #{"/*rtl:0*/"};
+    background-color: #758c95;
+    padding: 15px 5px;
+}
+
+.former-unb {
+    color: #fff !important;
+    left: 16px;
+    position: relative;
+}
+
+.c-quick-links .btn-login {
+    min-width: 204px !important;
+}
+
+.former-unb img {
+    z-index: 99;
+    position: relative;
+    top: -4px;
+    left: 0px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .former-unb {
+        left: 10px !important;
+    }
+    .c-main-nav .nav-footer__list li {
+        padding-right: 10px;
+        font-size: 13px;
+    }
+    .c-main-nav .nav-footer__list {
+        padding-left: 5px;
+    }
+}
+
+.-former-unb-customer {
+    margin-top: 15vh;
+    font-size: 28px !important;
+    letter-spacing: 0.2px #{"/*rtl:0*/"} !important;
+    border-left: 10px solid #758c95;
+    color: #758c95;
+}
+
+.-former-unb-customer-mob {
+    margin-top: 2.5vh;
+    font-size: 32px !important;
+    border-left: 5px solid #758c95;
+    color: #758c95;
+    padding-left: 16px !important;
+}
+
+.former-unb-list {
+    border-left: 5px solid #758c95;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) {
+    .c-quick-links .c-quick-login__list.is-expanded {
+        right: -48px;
+    }
+}
+
+.bor-top-none {
+    border-top: none;
+}
+
+#__pagination>li {
+    cursor: pointer;
+}
+
+#OfferLoading {
+    top: 0px;
+}
+
+.js-acc-content {
+    width: 100% !important;
+}
+
+.c-offer-flex {
+    margin-bottom: 10px;
+}
+
+.c-offer-item__wrap {
+    justify-content: flex-start;
+    flex-direction: row;
+    line-height: 1.67;
+    letter-spacing: 0.1px #{"/*rtl:0*/"};
+}
+
+.c-offer-item__section {
+    margin-right: 52px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 260px;
+    display: flex;
+    font-weight: 400;
+    flex-direction: column;
+    margin-bottom: 8px;
+    min-width: 135px;
+    &:last-of-type {
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+}
+
+.c-offer-item__subtitle {
+    font-weight: 600;
+    color: #797d82;
+    padding-bottom: 3px;
+}
+
+.c-offer-cards__list {
+    width: 100%;
+    .c-offer-cards__item {
+        margin-bottom: 1.5rem;
+        // padding-bottom: 2rem;
+        .c-offer-card-list__item {
+            background: #ffffff;
+            min-height: 440px;
+            border: 1px solid #dddddd;
+            padding-bottom: 34px;
+            .c-offer-card__details {
+                transform: unset;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #list,
+    #_offerList,
+    #partenersOffers {
+        .c-offer-cards__item {
+            width: 33.3% !important;
+            border: none;
+            margin: 0 0 24px;
+            padding: 0px 13px 0 13px;
+            .c-offer-card-list__item {
+                background: #ffffff;
+                min-height: 492px;
+                border: 1px solid #dddddd;
+                padding-bottom: 24px;
+                .c-offer-card__details {
+                    transform: unset;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .c-offer-flex {
+        display: block !important;
+        margin-bottom: 10px;
+    }
+    .c-offer-cards__item {
+        background: white;
+    }
+}
+
+.location-title {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #273239 !important;
+}
+
+.c-offer-card__new {
+    font-size: 17px;
+    letter-spacing: 0.1px #{"/*rtl:0*/"};
+    color: #273239;
+    width: 100%;
+    display: block;
+}
+
+.feature-accordion-group {
+    .accordion-item__content {
+        .c-cms-content {
+            padding-bottom: 0px !important;
+        }
+    }
+}
+
+.c-offer-detail {
+    .o-comp__content {
+        padding-top: 50px !important;
+    }
+}
+
+.c-offer-detail__image {
+    margin: 0 auto !important;
+    margin-bottom: 30px !important;
+    .c-offer-card__thumb {
+        border: 0 !important;
+        border: 2px solid silver;
+    }
+}
+
+.c-offer-detail__text h2 {
+    font-size: 30px !important;
+    margin-bottom: 24px !important;
+    font-weight: 600 !important;
+}
+
+.o-comp {
+    .c-offer-detail {
+        .feature-accordion-group {
+            .accordion-item__content {
+                padding: 0px !important;
+            }
+        }
+        .c-cms-content {
+            margin-top: 0px !important;
+        }
+    }
+}
+
+.c-offer-detail__wrapper {
+    .c-cms-content {
+        margin-top: 0px !important;
+    }
+    .feature-accordion-group {
+        .accordion-item__content {
+            padding: 0px !important;
+        }
+    }
+}
+
+
+/* 05 - COVID Table fix */
+
+@media (max-width: 992px) {
+    .covidtable {
+        width: 85vw !important;
+        overflow-y: scroll;
+    }
+}
+
+#active-tab .c-cms-content__video {
+    padding-bottom: 56.3% !important;
+}
+
+.c-product-feature {
+    // .o-comp__content.container {
+    //     &:before {
+    //         margin-top: 140px;
+    //     }
+    //     &:after {
+    //         margin-top: -30px;
+    //     }
+    // }
+    a {
+        color: $generic-red;
+    }
+}
+
+
+/* procash video component fix hemmat 05April2020 */
+
+
+/* .c-hero-video.-tabedcontent {
+    max-width: 100% !important;
+    padding: 0px;
+}
+
+.c-hero-video.-tabedcontent .c-hero-video__wrapper {
+    background-color: none;
+    box-shadow: none;
+    border: none;
+}
+
+.c-hero-video.-tabedcontent .c-hero-video__wrapper #video-overlay {
+    max-width: 100% !important;
+}
+
+.c-hero-video.-tabedcontent .c-hero-video__wrapper .video {
+    padding: 0;
+} */
+
+
+/* bitaqati component top margin fix hemmat 08April2020 */
+
+.c-page-seperator+.c-cardbanner {
+    margin-top: 0px;
+}
+
+.c-page-seperator__link {
+    text-align: center;
+    margin-top: 24px;
+}
+
+
+/* bitaqati component visited link color hemmat fix 08April2020 */
+
+.c-cardbanner.-darkgray-background .c-standalone-link a.o-link-more:link,
+.c-cardbanner.-darkgray-background .c-standalone-link a.o-link-more:visited,
+.c-cardbanner.-darkgray-background .c-standalone-link a.o-link-more:hover {
+    color: $generic-red !important;
+}
+
+
+/* Wealth management board committee spacing fix hemmat 22JUNE2020 */
+
+.c-wm.c-board-committee .c-offer-card__details {
+    min-height: 100px !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    transform: unset;
+}
+
+.c-wm.c-board-committee .c-wm-detail {
+    border-bottom: 1px solid #eeeeee;
+    .c-offer-cards__item {
+        margin-bottom: 1em;
+    }
+    .c-offer-card-list__item {
+        border: none;
+    }
+}
+
+
+/* annual general assymply page spacing fix hemmat 08April2020*/
+
+@media (min-width: 992px) {
+    .mrg_btm_50 {
+        margin-bottom: 24px !important;
+    }
+}
+
+
+/*@media (min-width: 992px) {
+    .c-offer-cards__form-wrapper form .o-form__field:last-child {
+        margin-bottom: 60px;
+    }
+}*/
+
+
+/* corporate governance page spacing fix */
+
+.c-discover-card-list .c-discover-card-list__wrap {
+    margin-bottom: -48px;
+}
+
+
+/* about us tabs bottom spacing fix */
+
+.c-aboutus-tabs .container {
+    max-width: 1040px;
+    margin-bottom: 75px;
+}
+
+
+/* about us investor relations (three columns cards) fix hemmat 09April2020*/
+
+.useful-info__item.c-aboutus-card-list__item {
+    min-height: 405px !important;
+}
+
+
+/* range slider :disable fix */
+
+.o-range-slider :disabled {
+    background: #fff;
+    color: rgba(39, 50, 57, 0.3);
+}
+
+
+/* morgage calc fix */
+
+.c-calculator__apply-button-holder+.c-calculator__result-subtitle {
+    margin-top: 35px;
+}
+
+
+/* Offers MIB search Icon fix */
+
+.c-product-feature {
+    .c-faq-search {
+        .c-faq-search__link[class*="icon-"] {
+            color: #273239ab;
+            // background: #f9f9f9;
+            padding: 0.2em 0.5em;
+            border-radius: 29px;
+            border: 1px solid #ccc;
+            // top: -2px;
+            font-size: 24px;
+        }
+    }
+}
+
+
+/* side tabs text wrap fix */
+
+@media (min-width: 992px) {
+    .c-section-nav__list {
+        white-space: normal;
+        letter-spacing: inherit;
+        padding-right: 30px;
+        /* sibetabs padding fix hemmat 20April2020 */
+    }
+}
+
+
+/* morgage calculator slider fox hemmat 20April2020 */
+
+.o-range-slider .slider::-ms-thumb,
+_:-ms-lang(x) .slider::-ms-thumb {
+    border: none;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    background-color: $generic-red;
+}
+
+
+/* MIB offers header spacing issue fix hemmat 28April2020 */
+
+.site-wrap {
+    .site-header {
+        &.mib-offers-header+div {
+            margin-top: 90px;
+            &>.c-product-feature {
+                padding-top: 30px;
+                .o-comp__content {
+                    margin-top: 30px;
+                    p {
+                        text-align: center;
+                    }
+                }
+                .c-faq-search__content-wrapper.container {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* offer header breadcrumb top spacing hemmat 05April2020 */
+
+
+/* .site-wrap .site-header+div {
+  margin-top: 120px;
+}
+@media (min-width: 992px) {
+.site-wrap .site-header+div {
+  margin-top: 90px;
+}
+} */
+
+.c-contact-form__select-cus {
+    margin-bottom: 0px;
+}
+
+
+/* GDPR style edit for COVID19 Waleed 04May2020 */
+
+.c-gdpr-bar__btn-wrapper {
+    .o-btn {
+        min-width: 160px;
+        margin-bottom: 5px;
+    }
+}
+
+.c-gdpr-bar {
+    background-color: #ba1b19;
+    font-size: 20px;
+}
+
+.c-gdpr-bar__message {
+    padding: 10px 0;
+}
+
+
+/* MIB offers App Fake linktabs style waleed 06May2020 */
+
+.fake-mib-link {
+    cursor: default;
+    text-decoration: none !important;
+    color: rgba(39, 50, 57, 0.7) !important;
+}
+
+
+/* covid19 tabs styles hemmat 09Dec2020 */
+
+.o-comp.o-tabs.c-covid19-tabs {
+    margin: -90px auto 48px auto;
+    padding: 120px 0 0 0;
+    // &.-js-exceedsPort {
+    //     margin: 0;
+    //     padding: 0;
+    // }
+    .o-comp__content.container {
+        max-width: auto;
+        width: auto;
+        height: auto;
+        margin: 0 auto 50px auto;
+        padding: 0 0 0 0;
+        /* First tab */
+        .o-tabs__tab-nav__holder {
+            //overflow-y: hidden;
+            //overflow-x: auto;
+            &::-webkit-scrollbar {
+                width: 1px !important;
+            }
+            &:after,
+            &:before {
+                height: 100%;
+                width: 35px;
+            }
+            .o-tabs__tab-nav {
+                margin-bottom: 0;
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+                ul.o-tabs__tab-nav-list {
+                    align-items: flex-end;
+                    justify-content: left;
+                    margin: 0 0 0 0;
+                    padding: 0 24px 0 24px;
+                    li.o-tabs__tab-nav-item {
+                        width: 130px;
+                        margin: 0 0 0 0;
+                        padding: 0 0 0 0;
+                        border-bottom: 1px solid #ddd;
+                        a.o-tabs__tab-nav-link {
+                            white-space: normal;
+                            padding-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        /* Second tab */
+        .o-tabs__tab-nav__holder:nth-child(2) {
+            &::-webkit-scrollbar {
+                width: 1px !important;
+            }
+            .o-tabs__tab-nav {
+                margin-bottom: 0;
+                width: 100%;
+                ul.o-tabs__tab-nav-list {
+                    background-image: linear-gradient(to top, rgba(250, 250, 250, 10%), #fff);
+                    //background-color: rgba(255,255,255,255, 0.5%);
+                    //background-image: -o-linear-gradient(to top, rgba(0,0,0,0, 0%) 10%, rgba(0,0,0,0, 0.05%) 70%);
+                    //background-image: linear-gradient(to top, rgba(0,0,0,0, 0%) 10%, rgba(0,0,0,0, 0.05%) 70%);
+                    li.o-tabs__tab-nav-item {
+                        border-bottom: 1px solid #ddd;
+                        a.o-tabs__tab-nav-link {
+                            white-space: normal;
+                            padding-top: 12px;
+                            &.is-active {
+                                &:after {
+                                    background: $brand-font;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .o-comp.o-tabs.c-covid19-tabs {
+        .o-comp__content.container {
+            /* First tab */
+            .o-tabs__tab-nav__holder {
+                .o-tabs__tab-nav {
+                    width: inherit;
+                    ul.o-tabs__tab-nav-list {
+                        justify-content: center;
+                        text-align: center;
+                        li.o-tabs__tab-nav-item {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+            /* Second tab */
+            .o-tabs__tab-nav__holder:nth-child(2) {
+                .o-tabs__tab-nav {
+                    ul.o-tabs__tab-nav-list {
+                        li.o-tabs__tab-nav-item {
+                            a.o-tabs__tab-nav-link {
+                                white-space: normal;
+                                padding-top: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Start - Marketing campaign incremental-input validation Ramanan 11may2020 */
+
+.c-number-counter__wrap {
+    .o-input.error {
+        &~span,
+        &~label {
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+.c-number-counter__wrap {
+    .c-input__label {
+        position: absolute;
+        top: -30px;
+    }
+}
+
+
+/* offers map view switcher - hemmat 19May2020 */
+
+.switcher {
+    background: none;
+    position: fixed;
+    z-index: 2;
+    bottom: 26px;
+    right: 50%;
+    transform: translateX(50%);
+    .action-link {
+        background: $generic-red;
+        color: #fff;
+        padding: 1em 1.75em;
+        transition: all 0.35s;
+        border-radius: 40px;
+        transition: 0.5s all;
+        box-shadow: none;
+        .icon-img {
+            width: 18px;
+            height: inherit;
+            margin: -6px 5px 0 0;
+            padding: 0;
+        }
+        &:hover {
+            background: #ba1b19;
+            color: #fff;
+        }
+    }
+    a.list {
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    }
+}
+
+#list,
+#_offerList .c-offer-cards__list,
+#partenersOffers .c-offer-cards__list {
+    margin-top: 24px;
+}
+
+div#map {
+    margin-top: -48px;
+}
+
+@media (min-width: 768px) {
+    #list,
+    #_offerList .c-offer-cards__list,
+    #partenersOffers .c-offer-cards__list {
+        margin-top: 0;
+    }
+    div#map {
+        margin-top: -90px;
+    }
+}
+
+
+/* MIB offer map tooltip bug fix - hemmat 01june2020 */
+
+.gm-style .gm-style-iw-c,
+.gm-style-iw-d {
+    overflow: hidden !important;
+    max-height: inherit !important;
+    min-height: 90px !important;
+}
+
+
+/* some input's round corner fix - hemmat - 22JUNE2020*/
+
+.c-input-telephone__wrap input.c-input-telephone__country,
+.o-btn-medium-red {
+    border-radius: 0 !important;
+}
+
+// /* data-gtm-category Home Loans  hemmat - 6JULY2020 */
+// div[data-gtm-category="Home Loans"] {
+//     margin-top: -96px;
+// }
+// @media (min-width: 768px) {
+//     div[data-gtm-category="Home Loans"] {
+//          margin-top: -72px;
+//     }
+// }
+
+/* modal title decrease size */
+
+@media (min-width: 768px) {
+    .c-calculator-overlay__modal-title {
+        font-size: 23px;
+    }
+}
+
+// modal-xl for iframe - bayut
+.c-modal-xl {
+    .c-calculator-overlay__popup {
+        padding: 0;
+        max-width: 90%;
+    }
+    .icon-close {
+        padding: 10px;
+        background-color: rgba(39, 50, 57, 0.2);
+        border-radius: 50%;
+    }
+    iframe {
+        height: 85vh;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+
+/* Dislike/Like pages styles for desktop */
+
+#deslike,
+#like {
+    &.c-campaign-leads {
+        .c-campaign-leads__container {
+            &.container {
+                &::after {
+                    display: none;
+                }
+                // &::before {
+                //     width: 30%;
+                //     height: 1px;
+                //     background-color: #ddd;
+                //     margin: 0px auto;
+                // }
+                .c-campaign-leads__card {
+                    max-width: 450px;
+                    // border: 1px solid #ddd;
+                    // padding: 60px !important;
+                    .o-form__field {
+                        margin-bottom: 36px;
+                    }
+                    .o-form__field--text-area {
+                        margin-top: -24px;
+                        margin-bottom: 24px;
+                    }
+                    .c-input__label {
+                        font-size: 19px;
+                        font-weight: 400;
+                        line-height: 1.4;
+                        letter-spacing: 0;
+                    }
+                    .c-leads__radio-btn {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        .o-input__radio {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        // .g-recaptcha {
+        //     transform: scale(1) !important;
+        //     &>div {
+        //         width: 100%!important;
+        //     }
+        // }
+    }
+}
+
+@media (min-width: 768px) {
+    #deslike,
+    #like {
+        .c-campaign-leads__container {
+            &.container {
+                .c-campaign-leads__card {
+                    max-width: 500px !important;
+                    border: 1px solid #ddd;
+                    padding: 60px !important;
+                    .c-leads__radio-btn {
+                        margin-bottom: 36px;
+                        .o-input__radio {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-rich-text {
+    .o-comp__content {
+        .rich-text_row {
+            display: flex;
+            flex-flow: column;
+            flex-wrap: wrap;
+            margin-top: -48px;
+            .rich-text_column {
+                flex: 1;
+                border: 1px solid #ddd;
+                // background-color: #f9f9f9;
+                padding: 3rem;
+                color: rgba(39, 50, 57, 0.7);
+                &.no-border {
+                    border: 0 !important;
+                    &:nth-child(2) {
+                        padding-top: 0px;
+                    }
+                }
+                h4,
+                h3,
+                h5 {
+                    margin-bottom: 12px;
+                    color: rgba(39, 50, 57, 1);
+                }
+                &:nth-child(1) {
+                    margin-right: 0;
+                    margin-bottom: 2em;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .o-comp__content {
+            margin-top: 50px;
+            .rich-text_row {
+                flex-flow: row;
+                margin-top: 0;
+                .rich-text_column {
+                    padding: 5rem;
+                    &:nth-child(1) {
+                        margin-right: 2em;
+                        margin-bottom: 0;
+                    }
+                    &.no-border {
+                        &:nth-child(2) {
+                            padding-top: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* no top/bottom spacing */
+
+.no-top-pad,
+.no-top-padding {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    .o-comp__content {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+        &.container {
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+    }
+}
+
+.no-bottom-pad,
+.no-bottom-padding {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    .o-comp__content {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+        &.container {
+            margin-bottom: 0px !important;
+            padding-bottom: 0px !important;
+        }
+    }
+}
+
+
+/* MCLP lead form mobile backgrond image */
+
+@media (max-width:415px) {
+    .hero-premium__mobile-poster {
+        width: 100vw;
+        min-height: 80vh;
+        box-sizing: content-box;
+        z-index: 1;
+        position: absolute;
+        background-color: #273239;
+        img {
+            width: 100%;
+            min-height: 80vh;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (min-width:416px) {
+    .hero-premium__mobile-poster {
+        display: none;
+    }
+}
+
+
+/* c-image-seperator mobile backgrond image */
+
+@media (max-width:415px) {
+    .c-image-seperator {
+        img {
+            &.image-seperator-mobile {
+                display: block;
+            }
+            &.image-seperator-desktop {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width:416px) {
+    .c-image-seperator {
+        img {
+            &.image-seperator-mobile {
+                display: none;
+            }
+            &.image-seperator-desktop {
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* Apply now button on MCLP - IE fix */
+
+// _:-ms-fullscreen,
+//  :root .hero-pdp__content {
+//     display: none;
+// }
+.hero-pdp__content {
+    .c-quick-links__item {
+        opacity: 0;
+    }
+    &.is-sticky {
+        opacity: 0;
+        .hero-pdp__title-wrapper,
+        .c-quick-links__item {
+            opacity: 0;
+        }
+    }
+    &.sticky {
+        opacity: 1 !important;
+        .hero-pdp__title-wrapper,
+        .c-quick-links__item {
+            opacity: 1 !important;
+        }
+    }
+    // &.background {
+    //     opacity: 0 !important;
+    //     .hero-pdp__title-wrapper,
+    //     .c-quick-links__item {
+    //         opacity: 0 !important;
+    //     }
+    // }
+}
+
+
+/* superset text - hemmat */
+
+p>sup,
+li>sup,
+a>sup {
+    top: -.5em;
+}
+
+
+/* branch finder - locator trigger ATM sub menu - hemmat-30Sep2020 */
+
+.c-branch-finder {
+    .c-branch-list {
+        @media (min-width: 992px) {
+            &__tabs_atm {
+                padding: 14px 52px;
+                width: auto !important;
+                height: 50px;
+                margin: 0;
+            }
+            &__nav {
+                ul {
+                    a {
+                        vertical-align: inherit;
+                    }
+                }
+            }
+        }
+        @media (min-width:768px) {
+            &__tabs_atm {
+                padding-left: 52px !important;
+                overflow-x: hidden;
+            }
+        }
+        &__tabs {
+            overflow-x: hidden;
+            &_atm {
+                width: 100vw;
+                height: 50px;
+                padding-left: 32px;
+                padding-top: 17px;
+                border-bottom: 1px solid #ddd;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+    }
+}
+
+
+/* Call Us page links - hemmat 21 OCT2020 */
+
+.c-call-us__item {
+    a {
+        color: #273239 !important;
+    }
+}
+
+
+/* Aboutus Iframe - Ownership structure reset BODY background color to transperent */
+
+
+/* it overlaps with Private BODY background */
+
+// .t-islamic body,
+// .t-personal body,
+// .t-securities body,
+// body {
+//     background-color: transparent;
+// }
+
+/* home loan resut width IE fix - temprary */
+
+@media (min-width: 1232px) {
+    #jsamounttimeinterest.c-calculator__wrapper .c-calculator__result {
+        max-width: none !important;
+    }
+}

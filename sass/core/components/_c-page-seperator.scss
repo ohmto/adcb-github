@@ -1,0 +1,74 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - Global Component Background grade classes 
+02 - c-page-seperator component styles
+03 - 
+04 - 
+05 - 
+==============================================================================*/
+
+
+/* 1- Global Component Background grade classes */
+
+.o-nogray-background {
+    background-color: rgb(255, 255, 255);
+    background-image: none !important;
+}
+
+.o-lightgray-background {
+    background-color: rgba(221, 221, 221, 0.3);
+    background-image: none !important;
+}
+
+.o-darkgray-background {
+    background-color: rgba(39, 50, 57, 1);
+    background-image: none !important;
+}
+
+.o-darkgray-background .o-comp__title h2 {
+    color: #ffffff !important;
+    /* title color fix for Dark Background */
+}
+
+.o-darkgray-background .o-comp__title_desc {
+    color: rgba(255, 255, 255, 0.7) !important;
+    /* body text color fix for Dark Background */
+}
+
+
+/* 2- Page Seperator new component classes */
+
+.c-page-seperator {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.c-page-seperator+.o-comp {
+    margin-top: -100px;
+}
+
+.c-page-seperator .o-comp__title h2 {
+    // max-width: 884px;
+    max-width: 620px;
+}
+
+.c-page-seperator .c-page-seperator__link {
+    display: none;
+}
+
+.c-page-seperator.-link .c-page-seperator__link {
+    display: block;
+}
+
+.c-page-seperator .c-page-seperator__link,
+.c-page-seperator.-link .c-page-seperator__link {
+    text-align: center !important;
+    padding-top: 25px;
+}
+
+.c-page-seperator .o-comp__title_desc,
+.c-page-seperator.-link .o-comp__title_desc {
+    text-align: center !important;
+    margin-top: 1em !important;
+}

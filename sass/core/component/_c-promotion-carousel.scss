@@ -1,0 +1,151 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-promotion-carousel
+02 - media queries
+03 - owl carousel
+03 - owl carousel dots
+04 -
+05 -
+============================================================================== */
+
+// 01 - c-promotion-carousel
+.c-promotion-carousel {
+  //background: $brand-light-gray;
+  background-color: rgba($brand-font, 0.1);
+  .owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+  &.-relative {
+    .o-btn-rounded {
+      position: absolute;
+      right: 0;
+      height: 40px;
+    }
+  }
+  .o-comp {
+    &__content {
+      padding-top: 75px;
+      padding-bottom: 75px;
+      margin-bottom: 0;
+    }
+    &__title {
+      margin-bottom: 0;
+      h2 {
+        text-align: left;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      &.-relative {
+        .o-btn-rounded {
+          position: absolute;
+          right: 0;
+          height: 40px;
+        }
+      }
+    }
+  } // 03 - Owl carousel
+  .owl-carousel {
+    padding-top: 10vw; // Equal height for all items
+    .owl-stage {
+      display: flex;
+    }
+    .owl-item {
+      display: flex;
+      flex: 1 0 auto;
+      margin-bottom: 40px;
+      overflow: visible;
+    }
+    .owl-dots {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: -20px;
+      .owl-dot {
+        background: rgba($brand-font, 0.4);
+        border-radius: 20px;
+        display: block;
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        &.active{
+          background: $brand-font;
+        }
+      }
+      .owl-dot:only-child {
+        display: none;
+      }
+    }
+  }
+}
+
+/*===========================
+02 - media queries
+===========================*/
+
+/* large mobile screen */
+
+/* @media (min-width: $screen-xs) {} */
+
+/* Small devices (tablets, 768px and up) */
+
+/* @media (min-width: $screen-sm-min) {} */
+
+/* desktop */
+
+@media (min-width: $screen-md-min) {
+  .c-promotion-carousel {
+    .owl-carousel .owl-stage-outer {
+      overflow: hidden;
+    }
+    .owl-carousel .owl-dots {
+      position: relative;
+      top: unset;
+      right: unset;
+      margin-top: 0;
+    }
+    .o-comp__title {
+      &.-relative {
+        .o-btn-rounded {
+          top: 3px;
+          height: 41px;
+        }
+        +.owl-carousel {
+          .owl-nav {
+            right: 100px;
+          }
+        }
+      }
+    }
+
+    .owl-carousel {
+      padding-top: 50px; // owl carousel dots
+      .owl-nav {
+        text-align: right;
+        top: -3.8vw;
+      }
+    }
+  }
+}
+
+/* @media (min-width: $screen-lg-min) {} */
+
+/* desktop */
+
+@media (min-width: $screen-lg-min) {
+  .c-promotion-carousel {
+    .o-comp {
+      &__content {
+        padding-top: 100px;
+        padding-bottom: 80px;
+      }
+    }
+    .owl-carousel {
+      .owl-nav {
+        top: -43px;
+      }
+    }
+  }
+}

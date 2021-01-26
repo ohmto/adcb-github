@@ -1,0 +1,61 @@
+/*
+    01. Page title seperator
+*/
+
+.c-page-title-seperator{
+  // padding-top: 48px;
+
+  .o-comp__content{
+    margin: 0px auto 24px auto;
+
+    .o-page-title-seperator__line{
+      text-align: center;
+      max-width: 1040px;
+      margin: 0px auto 48px;
+      padding: 0;
+
+      &:before{
+        content: "";
+        display: block;
+        width: 80%;
+        height: 1px;
+        background: $brand-primary-light;
+        margin: 0px auto -37px auto;
+      }
+
+      span{
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        box-sizing: content-box;
+        img{
+          width: 30px;
+          margin: 0px auto;
+        }
+      }
+    }
+
+    .o-page-title-seperator__title{
+      text-align: center;
+      color: $brand-primary-dark;
+      margin-top: 1.5em;
+      font-size: 3rem;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px){
+  .c-page-title-seperator{
+    .o-comp__content{
+      margin: 0px auto 48px auto;
+
+      .o-page-title-seperator__line{
+        margin: 0px auto 48px;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.c-gdpr-bar {
+    position: fixed;
+    bottom: 0;
+    padding: 10px 26px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #273239;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 210px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    @include transition-cubic(all, 1s);
+    &.-top {
+        top: 0;
+    }
+    &__message {
+        display: flex;
+        align-items: center;
+    }
+    &__btn-wrapper {
+        .o-btn {
+            border: 1px solid #fff;
+            border-radius: 1px;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #fff;
+            margin-left: 0;
+        }
+    }
+    &.-hide {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+}
+
+
+/*===========================
+06 - media queries
+===========================*/
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+    .c-gdpr-bar {
+        padding: 0 48px;
+    }
+}
+
+
+/* 06 - (a) 992px & above */
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-md-min) {
+    .c-gdpr-bar {
+        padding: 0 96px;
+        flex-direction: row;
+        height: 70px;
+        padding: 0 26px;
+        &__btn-wrapper {
+            width: 50%;
+            text-align: right;
+            .o-btn {
+                width: 100px;
+                text-align: center;
+                margin-left: 10px;
+                @include transition-cubic(all, 400ms);
+                &:hover {
+                    background-color: #fff;
+                    color: #273239;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .c-gdpr-bar {
+        padding: 0 96px;
+        &__btn-wrapper {
+            width: auto;
+        }
+    }
+}
+
+
+/* X-Large devices (large desktops, 1440px and up) */
+
+//@media (min-width: $screen-xl-min) {}

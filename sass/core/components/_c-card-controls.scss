@@ -1,0 +1,257 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - Card Controls component styles
+02 - Background colors for Card controls (modifier)
+03 - Options of Card Controls component (modifier)
+==============================================================================*/
+
+
+/* --------------------
+01 - Card Controls component styles
+-------------------- */
+
+.c-card-controls {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin-top: 0;
+    align-items: center;
+    // .container {
+    //   &:after{
+    //     content: " ";
+    //     display: block;
+    //     height: 1px;
+    //     background-color: #dddddd;
+    //     position: relative;
+    //     top: 75px;
+    //     margin-left: 24px;
+    //     margin-right: 24px;
+    //   }
+    // }
+    .o-comp__content {
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 1440px !important;
+    }
+    .o-comp__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .c-card-highlight__wrap {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: baseline;
+        width: 100%;
+    }
+    .c-card-highlight-item {
+        // flex: 1;
+        // margin: 5px;
+        padding: 0 1em 1em;
+        text-align: center;
+        width: 350px;
+        img {
+            width: 100%;
+            max-width: 96px;
+            margin-bottom: 16px;
+        }
+        &__title {
+            font-size: 19px;
+            font-weight: 600;
+        }
+        >p {
+            font-size: 19px;
+            color: rgba(39, 50, 57, .7);
+            margin-top: 12px;
+        }
+    }
+    .o-tabs__tab-nav__wrapper {
+        padding-bottom: 0px;
+    }
+    .o-tabs-content__wrapper {
+        padding-top: 36px;
+    }
+    .o-tabs__tab-content-item.is-active {
+        display: flex !important;
+        border: none;
+    }
+    .o-tabs__tab-content-item {
+        display: none !important;
+    }
+    .o-comp__title h2 {
+        margin-bottom: 0px !important;
+        margin: 0 10vw;
+        text-align: center;
+        font-size: calc(32px + 12 * ((11vw - 320px) / 1120));
+        font-weight: 600;
+        letter-spacing: -0.2px #{"/*rtl: 0*/"};
+        max-width: 620px;
+    }
+    .o-comp__title .o-comp__title_desc {
+        text-align: center !important;
+        margin-top: 0.5em !important;
+    }
+    .disclaimer {
+        font-size: 0.9em;
+        color: rgba(39, 50, 57, .5);
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 1.47;
+        border-top: 1px solid #eee;
+        padding: 12px;
+    }
+    &.c-compare-carousel {
+        padding-top: 5em;
+        padding-bottom: 5em;
+        .c-compare-carousel__more {
+            margin-bottom: 2em;
+            margin-top: 1em;
+            .c-compare-carousel__more-content {
+                padding: 0;
+                .table-main-header {
+                    padding: 0px 0 50px;
+                }
+            }
+        }
+    }
+}
+
+
+/* if using bootstrap grid */
+
+// .cardcontrol-viewmore-header {
+//     h2 {
+//         text-align: left;
+//         padding: 24px 0px;
+//         margin: 0;
+//     }
+// }
+// .cardcontrol-viewmore {
+//     text-align: left;
+//     border-bottom: 1px solid #ddd;
+//     background-color: white;
+//     div {
+//         padding: 6px 12px;
+//         border-top: 1px solid #ddd;
+//         font-size: 13px;
+//         &.cardcontrol-viewmore-title {
+//             border-top: 0px;
+//             border-bottom: 2px solid #ccc;
+//             background-color: #f1f1f1;
+//             font-weight: bold;
+//         }
+//     }
+// }
+
+/* --------------------
+02 - Background Colors for Card Controls component 
+-------------------- */
+
+.c-card-controls {
+    &.-lightgray-background {
+        background-color: rgba(221, 221, 221, 0.3);
+        // .container{
+        //   &:after{
+        //     display: none;
+        //   }
+        // }
+    }
+    &.-darkgray-background {
+        background-color: rgba(39, 50, 57, 1);
+        // .container{
+        //   &:after{
+        //     display: none;
+        //   }
+        // }
+    }
+    &.-darkgray-background .o-comp__title h2,
+    &.-darkgray-background .o-tabs__tab-nav-link.is-active,
+    &.-darkgray-background .c-card-highlight-item__title {
+        color: #FFFFFF !important;
+        /* title color fix for Dark Background */
+    }
+    &.-darkgray-background .o-comp__title_desc,
+    &.-darkgray-background .o-tabs__tab-nav-link,
+    &.-darkgray-background .disclaimer,
+    &.-darkgray-background .c-card-highlight-item>p {
+        color: rgba(255, 255, 255, .5) !important;
+        /* body text color fix for Dark Background */
+    }
+    &.-darkgray-background .disclaimer {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+    &.-lightgray-background .o-tabs.-js-exceedsPort.-js-noRight .o-comp__content.container .o-tabs__tab-nav__holder:after {
+        background-image: linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0.3));
+    }
+    &.-lightgray-background .o-tabs.-js-exceedsPort.-js-noLeft .o-comp__content.container .o-tabs__tab-nav__holder:before {
+        background-image: linear-gradient(to left, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0.3));
+    }
+    &.-darkgray-background .o-tabs.-js-exceedsPort.-js-noRight .o-comp__content.container .o-tabs__tab-nav__holder:after {
+        background-image: linear-gradient(to right, rgba(39, 50, 57, 0), rgba(39, 50, 57, 1));
+    }
+    &.-darkgray-background .o-tabs.-js-exceedsPort.-js-noLeft .o-comp__content.container .o-tabs__tab-nav__holder:before {
+        background-image: linear-gradient(to left, rgba(39, 50, 57, 0), rgba(39, 50, 57, 1));
+    }
+}
+
+
+/* --------------------
+03 - options of Card Controls component (modifier)
+-------------------- */
+
+.c-card-controls {
+    .o-tabs-content__wrapper,
+    .o-comp__title_desc,
+    &.-cardtabs .-notabs {
+        display: none;
+    }
+    &.-cardtabs .o-tabs-content__wrapper,
+    &.-desc .o-comp__title_desc,
+    .-notabs {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Large devices (laptops/desktops, 992px and up) */
+    .c-card-controls {
+        // .container{
+        //   &:after{
+        //     display: none;
+        //   }
+        // }
+        // .c-card-highlight__wrap {
+        //     flex-flow: row wrap;
+        //     justify-content: center;
+        //     align-items: center;
+        //     .c-card-highlight-item {
+        //         align-items: stretch;
+        //     }
+        // }
+        &.c-compare-carousel {
+            .c-compare-carousel__more {
+                .c-compare-carousel__more-content {
+                    padding: 0 48px;
+                }
+            }
+        }
+        .o-tabs__tab-content {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            &-item {
+                border-top: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .c-card-controls {
+        .o-comp__title h2 {
+            font-size: 35px;
+        }
+    }
+}

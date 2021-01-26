@@ -1,0 +1,84 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - search-results-item
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/*  search-result-item IG*/
+
+.glossary-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0;
+  color: $brand-font;
+  // @include themify($themes) {
+  //   color: themed("$brand-font");
+  // }
+  &.-lastchild {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+  }
+  &.-firstchild {
+    //border-top: 1px solid rgba($brand-primary-font, 0.2);
+    border-top: 1px solid rgba($brand-font, 0.2);
+  }
+  &__serial-number {
+    display: flex;
+    flex-direction: column;
+    @include typography-label-tabs-commons();
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed("brand-primary-light");
+    // }
+  }
+  &__title {
+    margin: 0 0 10px 0;
+    // font-size: 19px;
+    @include typography-body-big-commons();
+    font-weight: 600;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed("$brand-font");
+    // }
+  }
+  &__summary {
+    // font-size: 15px;
+    // font-weight: 300;
+    @include typography-body-tiny-commons();
+    font-weight: 400;
+    display: block;
+    color: rgba($brand-font, 0.7);
+    cursor: pointer;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .glossary-item {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 60px 0 0;
+
+    &.-lastchild {
+      padding-bottom: 60px;
+    }
+
+    &__serial-number {
+      width: 200px;
+    }
+    &__details {
+      flex: 1;
+    }
+  }
+}

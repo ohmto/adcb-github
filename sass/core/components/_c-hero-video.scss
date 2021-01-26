@@ -1,0 +1,240 @@
+/*==============================================================================
+Index
+default: video width = boxed [to make it fullwidth add "-fullwidth" class to .video]
+----------------------------------------
+01 - c-hero-video component new styles
+02 - if modifier ".-fullwidthonly" - video component width option 
+03 - if modifier ".-fullwidthvideo" - video width option 
+04 - if modifier ".-tabedcontent" - procash video component fix hemmat 05April2020
+05 - custom fix for page title with the hero video for ubank page 
+==============================================================================*/
+
+
+/* ----------------------------------------
+1. c-hero-video component new styles */
+
+.hero-premium__img,
+.hero-premium__video {
+    height: 100%;
+}
+
+.c-hero-video {
+    margin: auto;
+    max-width: 1440px;
+    padding: 0 96px;
+    .c-hero-video__wrapper {
+        background-color: transparent;
+        box-shadow: 10px 10px 0px #e9eaeb;
+        .video {
+            display: table;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            #videotag {
+                width: 100%;
+                /*margin-bottom: 0px !important; */
+                /* adjust video bottom pixels (try -6px) */
+            }
+        }
+        #video-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            width: 100%;
+            // max-width: 1080px;
+            height: 100%;
+            margin: auto;
+            z-index: 1;
+            box-sizing: content-box;
+            background-image: url(https://via.placeholder.com/1420x800);
+            /* default image otherwise the imagehas to be uploaded from Tradian */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+                transition: 0.15s ease-out;
+                &:hover {
+                    width: 110px;
+                    height: 110px;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                    transition: 0.15s ease-out;
+                }
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------- 
+ 1. if modifier ".-smallwidthvideo" - video component width option */
+
+.c-hero-video {
+    &.-smallwidthvideo {
+        .c-hero-video__wrapper {
+            box-shadow: none;
+            max-width: 992px;
+            margin: auto;
+            .video {
+                max-width: 992px;
+            }
+            #video-overlay {
+                max-width: 992px;
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------- 
+ 2. if modifier ".-fullwidthonly" - video component width option */
+
+.c-hero-video {
+    &.-fullwidthonly {
+        /* if fullwidth */
+        max-width: 100% !important;
+        &.-blackbackground {
+            .c-hero-video__wrapper {
+                /* if fullwidthonly / if black background */
+                background-color: #000;
+            }
+        }
+        &.-whitebackground {
+            .c-hero-video__wrapper {
+                /* if fullwidthonly / if white background */
+                background-color: #FFF;
+            }
+        }
+        .c-hero-video__wrapper {
+            /* if fullwidthonly */
+            background-color: #ba1b19;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 48px;
+            .video {
+                #videotag {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    max-width: 992px;
+                }
+            }
+            #video-overlay {
+                /* if fullwidthonly */
+                max-width: 100% !important;
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------- 
+ 3. if modifier ".-fullwidthvideo" - video width option  */
+
+.c-hero-video {
+    &.-fullwidthvideo {
+        /* if fullwidthvideo */
+        max-width: 100% !important;
+        .c-hero-video__wrapper {
+            /* if fullwidthvideo */
+            box-shadow: none;
+            border: none;
+            .video {
+                /* if fullwidthvideo */
+                width: 100vw !important;
+            }
+            #video-overlay {
+                /* if fullwidthvideo */
+                max-width: 100% !important;
+            }
+        }
+    }
+}
+
+.c-hero-video.-fullwidthvideo {
+    .c-hero-video__wrapper,
+    &.-blackbackground .c-hero-video__wrapper,
+    &.-whitebackground .c-hero-video__wrapper {
+        background-color: none !important;
+    }
+}
+
+
+/* --------------------------------------------------- 
+ 4. if modifier ".-tabedcontent" - procash video component fix hemmat 05April2020  */
+
+.c-hero-video {
+    &.-tabedcontent {
+        max-width: 100% !important;
+        padding: 0px;
+        .c-hero-video__wrapper {
+            background-color: none;
+            box-shadow: none;
+            border: none;
+            #video-overlay {
+                max-width: 100% !important;
+            }
+            .video {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-hero-video {
+        padding: 0px;
+        .c-hero-video__wrapper {
+            box-shadow: none;
+            .video.container {
+                padding: 0 !important;
+            }
+            #video-overlay {
+                padding: 0 96px;
+                width: auto !important;
+            }
+        }
+        &.-fullwidthonly {
+            .c-hero-video__wrapper #videotag {
+                margin-top: 0;
+                margin-bottom: -6px;
+            }
+        }
+    }
+}
+
+.c-hero-video.-fullwidthvideo .c-hero-video__wrapper #video-overlay,
+.c-hero-video.-fullwidthonly .c-hero-video__wrapper #video-overlay,
+.c-hero-video.-fullwidthvideo,
+.c-hero-video.-fullwidthonly {
+    padding: 0px;
+}
+
+
+/* --------------------------------------------------- 
+ 5. custom fix for page title with the hero video for ubank page */
+
+.center-text {
+    text-align: center;
+    width: 100%;
+    flex: none;
+}
+
+.c-breadcrumbs+.hero-pdp {
+    .hero-pdp__content-wrapper {
+        margin-top: 75px;
+    }
+}
+
+.c-card-controls-ubank-title .hero-pdp__content.sticky,
+.isubank .hero-pdp__content.sticky {
+    display: none;
+}

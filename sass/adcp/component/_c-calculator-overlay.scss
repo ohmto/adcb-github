@@ -1,0 +1,471 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - calculator overlay css
+02 - media queries
+
+============================================================================== */
+
+/* 01 - START:calculator overlay css */
+
+.c-calculator-overlay {
+  padding-bottom: 0;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .o-comp__content {
+    margin: 0;
+  }
+  &__wrapper {
+    display: block;
+    .contract {
+      height: 80px;
+      overflow: hidden;
+      @include transition-cubic(600ms, all);
+    }
+  }
+  &__popup {
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    border-radius: 1px;
+    box-shadow: 0 10px 40px 0 rgba($black, 0.5);
+    background-color: $brand-body-bg;
+    padding: 100px 25px;
+    .icon-close {
+      cursor: pointer;
+      position: absolute;
+      line-height: 0;
+      font-size: 24px;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+    }
+  }
+
+  &__back-step {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    .o-link-more {
+      color: rgba($brand-font, 0.6);
+      &:after {
+        content: none;
+      }
+      &:before {
+        right: unset;
+        left: -17px;
+        top: 3px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__title-section {
+    sup {
+      text-align: center;
+    }
+  }
+  &__modal-title {
+    @include typography-titles-commons();
+    font-weight: 600;
+    margin-top: 0;
+    text-align: center;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed("brand-font");
+    // }
+  }
+  &__count {
+    @include typography-label-tabs-commons();
+    display: block;
+    margin: 0 0 5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed("brand-primary-light");
+    // }
+  }
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+  &__button {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    white-space: pre;
+    border-radius: 2px;
+    border: solid 1px rgba($brand-font, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__input {
+    margin-top: 30px;
+    .c-calculator {
+      input {
+        &::placeholder {
+          font-weight: 600;
+          color: $brand-font;
+        }
+      }
+      &__input {
+        &-text {
+          flex-wrap: wrap;
+          max-width: inherit;
+          margin: 0;
+        }
+        &-label {
+          flex: 1 1 auto;
+          @include typography-body-tiny-commons();
+          font-weight: 600;
+          color: rgba($brand-font, 0.7);
+          // @include themify($themes) {
+          //   color: themed("brand-font");
+          // }
+        }
+        &-wrapper {
+          flex: 1 1 100%;
+          position: relative;
+          margin-top: 5px;
+        }
+        &-text-box {
+          width: 100%;
+          max-width: inherit;
+          padding: 15px 0 15px 75px;
+          border: solid 1px rgba($brand-font, 0.2);
+          &[type=number]::-webkit-inner-spin-button, 
+          &[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+          }
+        }
+        &-text-curr {
+          position: absolute;
+          transform: translate(50%, 62%);
+        }
+        &-error {
+          @include typography-label-tabs-commons();
+          opacity: 0;
+          text-align: right;
+          width: 100%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  &__input-borderless {
+    margin-top: 30px;
+    & .has-icon {
+      padding-right: 35px;
+      &:before {
+        position: absolute;
+        right: 0;
+        color: rgba($brand-font, 0.4);
+      }
+    }
+    .c-calculator {
+      input {
+        &::placeholder {
+          font-weight: 600;
+          color: $brand-font;
+        }
+      }
+      &__input {
+        &-text {
+          flex-wrap: wrap;
+          max-width: inherit;
+          margin: 0;
+        }
+        &-label {
+          flex: 1 1 auto;
+          @include typography-body-tiny-commons();
+          font-weight: 600;
+          color: rgba($brand-font, 0.7);
+          // @include themify($themes) {
+          //   color: themed("brand-font");
+          // }
+        }
+        &-wrapper {
+          flex: 1 1 100%;
+          position: relative;
+          margin-top: 5px;
+          flex-direction: row;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &-text-box {
+          width: 60%;
+          max-width: inherit;
+          padding: 15px 0;
+          border: 0;
+          @include typography-titles-commons();
+          font-weight: 600;
+        }
+        &-text-curr {
+          position: absolute;
+          transform: translate(50%, 62%);
+        }
+        &-error {
+          @include typography-label-tabs-commons();
+          opacity: 0;
+          text-align: right;
+          width: 100%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .error {
+    .c-calculator {
+      &__input {
+        &-label {
+          color: $brand-primary-light;
+        }
+        &-text-box {
+          border-color: $brand-primary-light;
+        }
+        &-error {
+          opacity: 1;
+          color: $brand-primary-light;
+        }
+      }
+    }
+  }
+  &__calculator-wrapper {
+    width: 100%;
+    .c-calculator {
+      &__result {
+        margin-left: 0px;
+      }
+      &__output {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      &__value {
+        @include typography-page-section-commons();
+        font-weight: 600;
+      }
+      &__result-title {
+        text-align: left;
+      }
+    }
+    &.-mod-radio {
+      .o-calculator-radio {
+        &__label {
+          width: 30%;
+          flex: 0 0 auto;
+          margin: 0;
+        }
+      }
+    }
+
+    .o-calculator-radio {
+      flex-direction: column;
+      &__title {
+        @include typography-body-tiny-commons();
+        font-weight: 600;
+        color: rgba($brand-font, 0.7);
+        // @include themify($themes) {
+        //   color: themed("brand-font");
+        // }
+      }
+      &__label {
+        width: 100%;
+        flex: 1 0 auto;
+        margin: 5px 0;
+      }
+      &__checkmark {
+        white-space: normal;
+        z-index: 0;
+      }
+    }
+
+    input[type="radio"] {
+      &:not(:checked) {
+        + .o-calculator-radio__checkmark {
+          border: solid 1px $brand-silver;
+          &:hover {
+            background: inherit;
+            border: solid 1px $brand-font;
+            color: $brand-font;
+          }
+        }
+      }
+    }
+    input[type="radio"] {
+      &:checked {
+        + .o-calculator-radio__checkmark {
+          border: solid 1px $brand-primary-light;
+        }
+      }
+    }
+  }
+  .-mod-extra-btn {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 30px 0 0;
+    .c-calculator {
+      &__add-btn {
+        border: solid 1px rgba($brand-font, 0.2);
+        background-color: transparent;
+        /* Added not important as it has to override default button color 
+        that is marked as not important */
+        color: $brand-font !important;
+        &:hover {
+          border: solid 1px $brand-font;
+        }
+      }
+    }
+    .o-btn-medium-red {
+      min-width: 221px;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}
+
+.c-add-touchpoints {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/** 01 - END:calculator overlay css  **/
+
+/*===========================
+    02 - media queries
+    ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+@media (min-width: $screen-sm-min) {
+  .c-calculator-overlay {
+    padding-bottom: 25px;
+    .o-comp__content {
+      margin: 60px 0;
+    }
+    &__popup {
+      padding: 100px 60px;
+      min-height: auto;
+      max-width: 728px;
+      margin: 0 auto;
+    }
+    &__button {
+      width: 470px;
+      height: 60px;
+      &:hover {
+        border: solid 1px $brand-font;
+      }
+    }
+    &__button-wrapper {
+      margin-top: 10px;
+    }
+    &__calculator-wrapper {
+      padding: 0 60px;
+      width: 100%;
+      .o-calculator-radio {
+        flex-direction: row;
+        &__label {
+          width: 45%;
+          flex: 1 0 auto;
+          margin: 5px;
+        }
+        &__checkmark {
+          height: 100%;
+        }
+      }
+    }
+    .-mod-extra-btn {
+      flex-flow: row wrap;
+      flex: 1 1 auto;
+      justify-content: space-between;
+      .o-btn {
+        width: 48%;
+        margin: 0;
+      }
+    }
+    &__popup {
+      .icon-close {
+        &:before {
+          position: relative;
+          z-index: 1;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 0;
+          height: 0;
+          z-index: 0;
+          border-radius: 50%;
+          @include transition-cubic(all, 400ms);
+          background: rgba($brand-font, 0.1);
+        }
+
+        &:hover {
+          &:after {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    &__input {
+      .c-calculator {
+        &__input {
+          &-text {
+            margin: 5px 5px;
+          }
+          /*&-text-box {
+            padding: 10px;
+          }*/
+        }
+      }
+    }
+  }
+  .c-add-touchpoints {
+    flex-flow: row;
+  }
+}
+
+/* Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md-min) {} */
+
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-calculator-overlay {
+    &__modal-title {
+      display: block;
+      @include typography-page-section-commons();
+    }
+  }
+  .c-add-touchpoints {
+    .c-calculator {
+      &__touchpoint-result {
+        align-self: center;
+        margin-top: 0;
+        max-width: 550px;
+      }
+    }
+  }
+}
+
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-calculator-overlay {
+    .container {
+      max-width: 100%; // Modal was not appearing in the center in IE, since max-width was set to 1140px
+    }
+  }
+}

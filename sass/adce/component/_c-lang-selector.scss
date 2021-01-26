@@ -1,0 +1,66 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-lang-sel-links
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-quick-links */
+.c-lang-selector {
+  $lang-selector-parent: &;
+  display: flex;
+  padding: 25px 0;
+  // margin:0 -24px;
+  // background: $brand-ultra-light-gray;
+  &__item {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 30px;
+    border: 1px solid $brand-medium-gray;
+    color: $brand-gray;
+  }
+}
+
+html[lang="ar"] {
+  .c-lang-selector {
+    &__link.-lang-ar {
+      border: 1px solid $brand-primary-font;
+      color: $brand-primary-font;
+    }
+
+    .-lang-en {
+      font-family: 'proxima_nova';
+    }
+  }
+}
+
+html[lang="en"] {
+  .c-lang-selector {
+    &__link.-lang-en {
+      border: 1px solid $brand-primary-font;
+      color: $brand-primary-font;
+    }
+
+    .-lang-ar {
+      font-family: 'Tajawal';
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-lang-selector {
+    display: none !important;
+  }
+}

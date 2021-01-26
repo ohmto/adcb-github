@@ -1,0 +1,147 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-offers-promotions
+02 - c-offers-promotions__thumb
+03 - c-offers-promotions__details
+04 - c-offers-promotions__title
+05 - c-offers-promotions__summary
+06 - media queries
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+
+/* 01 - promotions-card */
+.c-offers-promotions {
+  // font-size: 18px;
+  @include typography-body-avg-commons();
+  color: $black;
+  width: 100%;
+  display: block;
+
+  & .o-comp {
+    &__title {
+      margin-bottom: 0;
+
+      & h2 {
+        margin: 0;
+      }
+    }
+  }
+
+  /* 02 - promotions-card__thumb */
+
+  &__thumb {
+    width: 100%;
+    padding-bottom: 45%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      @include transition-cubic(all, 1000ms);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background: $brand-primary-font;
+      opacity: 0.2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    &:hover {
+      img {
+        transform: scale(1.08);
+      }
+      &:after {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__sticker {
+    // font-size: 23px;
+    // font-weight: 600;
+    @include typography-titles-commons();
+    color: $white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    z-index: 1;
+    &__count {
+      font-weight: 400;
+    }
+  }
+
+  /* 03 - promotions-card__details */
+  &__details {
+    line-height: 1.6;
+    background: $white;
+    padding: 30px 20px 20px 20px;
+    margin-right: 40px;
+    font-weight: 400;
+    color: inherit;
+    transform: translateY(-40px);
+    margin-bottom: -40px;
+  }
+
+  /* 04 - promotions-card__title */
+
+  &__summary {
+    // font-size: 0.85em;
+    @include typography-body-avg-commons();
+    color: rgba($brand-font, 0.7);
+    margin-bottom: 25px;
+    max-width: 700px;
+  }
+}
+
+/*===========================
+  06 - media queries
+  ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-offers-promotions {
+    & .o-comp {
+      &__title {
+        margin-bottom: 0;
+      }
+    }
+
+    &__details {
+      padding: 3.45vw 2vw 2vw 2vw;
+    }
+
+    &__summary {
+      font-size: 17px;
+      margin: 20px auto 100px;
+      text-align: center;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-offers-promotions {
+    &__details {
+      padding: 50px 30px 30px 30px;
+    }
+  }
+}

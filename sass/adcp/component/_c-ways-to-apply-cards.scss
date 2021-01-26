@@ -1,0 +1,177 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-apply-card
+02 - c-apply-card__thumb
+03 - c-apply-card__details
+04 - c-apply-card__title
+05 - c-apply-card__summary
+06 - media queries
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+
+
+/* 01 - value-card */
+
+.c-apply-card {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    /* 02 - apply-card__thumb */
+    &__thumb {
+        margin: auto;
+        width: 80px;
+        height: 80px;
+        display: block;
+        border-radius: 50%;
+        background: $brand-primary-light;
+        // @include themify($themes) {
+        //   background: themed('brand-primary-light');
+        // }
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 70px;
+            color: $brand-body-bg;
+            // @include themify($themes) {
+            //   color: themed('brand-body-bg');
+            // }
+        }
+    }
+    /* 03 - apply-card__details */
+    &__details {
+        //font-size: 19px;
+        @include typography-body-big-commons();
+        font-weight: 400;
+        line-height: 1.3;
+        padding: 30px;
+        margin-bottom: 20px;
+        color: $brand-font;
+        // @include themify($themes) {
+        //      color: themed('brand-font');
+        //    }
+        .o-tabs__tab-content-summary {
+            width: 100%;
+            .more-link {
+                //font-size: 19px;
+                @include typography-body-big-commons();
+                font-weight: 600;
+                line-height: 1.7;
+                cursor: pointer;
+            }
+            .icon-next:before {
+                font-size: 17px;
+                transform: rotate(-48deg);
+            }
+            .icon-arrow-down:before {
+                top: 5px;
+            }
+            &.-hasarrow {
+                display: block;
+                padding-top: 20px;
+                .icon-arrow-down:before {
+                    top: 16px;
+                    right: -22px;
+                }
+            }
+        }
+    }
+    /* 04 - apply-card__title */
+    &__title {
+        // font-size: 19px;
+        @include typography-body-big-commons();
+        font-weight: 600;
+        line-height: 1.6;
+        color: $brand-font;
+        // @include themify($themes) {
+        //      color: themed('brand-font');
+        //    }
+    }
+    &__summary {
+        //font-size: 17px;
+        @include typography-body-avg-commons();
+        font-weight: 400;
+        margin: 0 0 15px;
+        line-height: 1.5;
+        color: rgba($brand-font, 0.7);
+        // @include themify($themes) {
+        //      color: themed('brand-font');
+        //    }
+        strong {
+            font-weight: 500;
+            color: $brand-font;
+            // @include themify($themes) {
+            //        color: themed('brand-font');
+            //      }
+        }
+    }
+    &__link {
+        //font-size: 15px;
+        @include typography-body-tiny-commons();
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: $brand-primary-light;
+        //    @include themify($themes) {
+        //      color: themed('brand-primary-light');
+        //    }
+    }
+    &-list__item {
+        &:last-child {
+            .c-apply-card__details {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    &.more-link {
+        cursor: pointer;
+        &.icon-next:before {
+            transform: rotate(-45deg) #{"/*rtl: rotate(-135deg) */"};
+        }
+    }
+}
+
+
+/*===========================
+  06 - media queries
+  ===========================*/
+
+
+/* Small devices (tablets, 768px and up) */
+
+
+/* @media (min-width: $screen-sm-min) {} */
+
+@media (min-width: $screen-md-min) {
+    .c-apply-card {
+        max-width: 350px;
+        &__details {
+            padding: 30px 30px 0;
+            margin-bottom: 0;
+        }
+        &__summary {
+            @include fluid-type(17px, 19px);
+        }
+    }
+}
+
+
+/* 06 - (a) 992px & above */
+
+
+/* Medium devices (desktops, 992px and up) */
+
+
+/* Large devices (large desktops, 1232px and up) */
+
+
+/* @media (min-width: $screen-lg-min) {} */
+
+
+/* X-Large devices (large desktops, 1440px and up) */
+
+
+/* @media (min-width: $screen-xl-min) {} */

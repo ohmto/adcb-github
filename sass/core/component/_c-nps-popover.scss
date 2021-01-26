@@ -1,0 +1,231 @@
+body {
+  &.open-modal {
+    overflow: hidden;
+  }
+}
+
+.c-nps {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    background: $white;
+    position: relative;
+    .o-button {
+      width: calc(130px - 2px);
+      height: calc(50px - 2px);
+      border-radius: 1px;
+      border: solid 1px rgba(39, 50, 57, 0.2);
+      display: flex;
+      justify-content: center;
+      line-height: 50px;
+      cursor: pointer;
+      &--red {
+        @extend .o-button;
+        border: solid 1px #ec0100;
+        background: #ec0100;
+        color: white;
+        font-weight: 400;
+      }
+      &--link {
+        border: none;
+        text-decoration: underline;
+      }
+    }
+    .icon-close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+    }
+  }
+  &__form {
+    display: flex;
+    padding-top: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .o-input__radio {
+      margin-top: 12px;
+      margin-left: 0;
+      label:hover {
+        &:before {
+          background: $brand-light-gray;
+        }
+      }
+    }
+  }
+  &__col {
+    position: relative;
+    min-width: 300px;
+    background: black;
+    height: 400px;
+    margin: auto;
+    &:first-of-type {
+      display: none;
+    }
+  }
+  &__text {
+    background: #fff;
+    width: 345px;
+    height: 100%;
+    padding: 34px;
+    h3 {
+      margin: 0 auto 14px;
+      font-size: 35px;
+      line-height: 1.14;
+      font-weight: 400;
+    }
+
+    h4 {
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.67;
+      color: #273239;
+      margin: 0 auto 46px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 8px;
+  }
+  &__disclaimer {
+    width: 100%;
+    text-align: center;
+    span {
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+      line-height: 2.5;
+      letter-spacing: normal;
+      color: rgba(39, 50, 57, 0.4);
+    }
+  }
+  &__popover {
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    &.open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.c-nps__wrapper--share {
+  @extend .c-nps__wrapper;
+  text-align: center;
+  .c-nps {
+    &__row {
+      width: 100%;
+    }
+    &__text {
+      width: 345px;
+      margin: auto;
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      .o-button {
+        width: 100%;
+        &:first-of-type {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+.c-nps-image {
+  &__background {
+    position: absolute;
+    width: 300px;
+    height: 280px;
+  }
+  &__front {
+    position: absolute;
+    height: 300px;
+    bottom: 0;
+    left: 24px;
+  }
+}
+
+.c-nps-text__contain {
+  width: 275px;
+}
+
+.c-nps-message {
+  font-family: 'proxima_nova';
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #273239;
+  width: calc(100vw - 192px);
+  height: 50px;
+  padding: 0 96px;
+  line-height: 50px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  &__btn {
+    border: 1px solid #fff;
+    border-radius: 1px;
+    height: 30px;
+    width: 96px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    span {
+      line-height: 30px;
+    }
+  }
+}
+
+.red-message {
+  border: solid 1px #ec0100;
+  background: #ec0100;
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-nps {
+    &__text {
+      padding: 68px 34px 30px 34px;
+    }
+    &__wrapper {
+      width: 640px;
+      &--share {
+        width: 600px;
+        .c-nps {
+          &__buttons {
+            justify-content: center;
+            margin-bottom: 34px;
+            padding: 0 76px;
+            .o-button {
+              width: auto;
+              padding: 0 24px;
+            }
+          }
+          &__text {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &__col:first-of-type {
+      display: block;
+    }
+  }
+}

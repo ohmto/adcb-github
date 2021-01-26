@@ -1,0 +1,13 @@
+.o-progress-bar {
+  width: 100%;
+  background-color: $white;
+  .bar {
+    width: 1%;
+    height: 4px;
+    background-color: $generic-red;
+  }
+  .-top-fix {
+    z-index: 1001;
+    position: fixed;
+  }
+}

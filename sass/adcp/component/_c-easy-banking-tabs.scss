@@ -1,0 +1,201 @@
+.c-easy-banking {
+  .o-comp {
+    &__title {
+      margin-bottom: 60px;
+
+      h2 {
+        margin: 0 10vw;
+        text-align: center;
+        // font-weight: 600;
+        // @include fluid-type(23px, 40px);
+        @include typography-page-title-commons();
+      }
+    }
+
+    &__content {
+      max-width: 1040px;
+
+      .o-tabs__tab-nav {
+        display: none;
+      }
+
+      .o-tabs__tab-content {
+        &-summary {
+          h4 {
+            padding: 0;
+
+            sup {
+              // letter-spacing: 1px;
+              // font-size: 13px;
+              // font-weight: 500;
+              @include typography-label-tabs-commons();
+              line-height: 1.5;
+              padding: 0;
+              color: $brand-primary-light;
+
+              // @include themify($themes) {
+              //   color: themed("brand-primary-light");
+              // }
+            }
+          }
+        }
+
+        &-thumb-wrap {
+          overflow: visible;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex: 1 0 100%;
+    line-height: 1.67;
+    letter-spacing: 0.2px;
+    margin-bottom: 13px;
+
+    &.-has-multi-links {
+      .more-link {
+        /** changed display block to table as it was not supporting in IE and edge **/
+        display: table;
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  .o-tabs {
+    .o-comp__content {
+      margin-bottom: 0;
+      height: 0 !important;
+    }
+  }
+
+}
+
+@media (max-width: $screen-sm-min) {
+  .c-easy-banking {
+    .o-tabs {
+      &__tab-nav {
+        margin-bottom: 0;
+
+        &__wrapper {
+          display: none;
+          padding: 0;
+        }
+      }
+
+      &__tab-content-summary {
+        width: 70%;
+        max-width: 390px;
+      }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-easy-banking {
+    .o-tabs__tab-nav__wrapper {
+      display: block;
+    }
+
+    .o-tabs {
+      .o-comp {
+        &__content {
+          margin-top: 0;
+          margin-bottom: 50px;
+          height: auto !important;
+        }
+      }
+    }
+
+    .o-comp {
+      &__title {
+        margin-bottom: 40px;
+      }
+
+      &__content {
+        .o-tabs__tab-content {
+          &-thumb-wrap {
+            overflow: hidden;
+          }
+        }
+
+        .o-tabs__tab-nav {
+          display: block;
+
+          &-link {
+            padding-bottom: 18px;
+          }
+        }
+
+        .o-tabs__tab-content-summary {
+          padding-right: 26px;
+
+          h4 {
+            padding-bottom: 10px;
+          }
+
+          p {
+            letter-spacing: 0.1px;
+            line-height: 1.5;
+          }
+
+          .more-link {
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .c-easy-banking {
+    .o-comp__content {
+      .o-tabs__tab-content-summary {
+        width: 100%;
+        max-width: 470px;
+        /*padding: unset; Note: property unset is not supported in IE */
+        padding: inherit;
+      }
+    }
+
+    &__item {
+      /*flex: unset; Note: property unset is not supported in IE */
+      flex: auto;
+      width: 48%;
+
+      &:nth-child(odd) {
+        margin-right: 4%;
+      }
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
+  /*Added fix to make tab-content div browser centric in IE 11*/
+  .c-easy-banking {
+    .o-comp {
+      &__content {
+        max-width: none;
+
+        .o-tabs__tab-content {
+          max-width: 868px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

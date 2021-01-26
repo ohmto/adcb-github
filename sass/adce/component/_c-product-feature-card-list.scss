@@ -1,0 +1,189 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-product-feature
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-product-feature */
+
+.c-product-feature {
+  /* 02 - o-comp__content overrides for 1232px max-width */
+  .o-comp {
+    &__content {
+      max-width: calc(1260px + #{$gutter-desktop} * 2);
+      // margin-bottom: 0;
+      // margin-top: 75px;
+    }
+    &__title {
+      justify-content: center;
+    }
+  }
+  &__summary {
+    //font-size: 19px;
+    @include typography-body-big-commons();
+    line-height: 1.5;
+    margin: 20px 0 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+//      color: themed('brand-font');
+//    }
+    p {
+      margin: 0;
+      max-width: 700px;
+    }
+  }
+  &__list {
+    //margin-top: 60px;
+    margin-bottom: -15px;
+    width: 100%;
+    //max-width: 900px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &.-ourvalues {
+    .o-comp__title {
+      padding-bottom: 0;
+      font-size: 35px;
+    }
+    .c-product-feature {
+      &__summary {
+        font-weight: 400;
+      }
+      &__item {
+        border: 1px solid rgba($brand-font, 0.2);
+        min-height: 200px;
+        margin: 0 0 20px;
+        width: 100%;
+        .c-feature-card {
+          &__details {
+            padding: 40px 20px 20px;
+            &__title {
+              // font-size: 17px;
+              @include typography-body-avg-commons();
+              font-weight: 600;
+              line-height: 1.47;
+              color: $brand-font;
+            }
+            &__summary {
+              // font-size: 15px;
+              @include typography-body-tiny-commons();
+              font-weight: 400;
+              line-height: 1.67;
+              color: $brand-font;
+            }
+          }
+        }
+      }
+      &__list {
+        margin: 0 auto;
+      }
+      &__summary {
+        margin: 20px 0 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  .c-product-feature {
+    &__item {
+      margin-bottom: 0;
+      display: initial;
+      width: 335px;
+    }
+    .o-comp {
+      &__content {
+        padding-top: 0;
+        h2 {
+          text-align: center;
+          margin-bottom: 0;
+        }
+      }
+      &__title {
+        margin-bottom: 12px;
+        h2 {
+          max-width: 620px;
+        }
+      }
+    }
+    .c-feature-card {
+      &__details {
+        padding-top: 10px;
+      }
+      &__title {
+        margin-bottom: 5px;
+      }
+      &__summary {
+        padding-top: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/*===========================
+03 - media queries
+===========================*/
+
+/* 03 - (a) 768px & above */
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-product-feature {
+    .o-comp {
+      &__title {
+        margin-bottom: 30px;
+        h2 {
+          margin: 0;
+          max-width: 620px;
+          text-align: center;
+        }
+      }
+    }
+    &__summary {
+      margin: 10px auto 60px;
+      text-align: center;
+    }
+    &__list {
+      flex-flow: row wrap;
+      align-items: stretch;
+      margin: 0 auto -15px;// discussed and applied negative margin on large only.
+    }
+    &__item {
+      margin-bottom: 15px;
+      max-width: 335px;
+      width: 100%;
+    }
+    &.-ourvalues {
+      .c-product-feature {
+        &__item {
+          margin: 0 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+// @media (max-width: $screen-md-min) {}
+
+/* Large devices (large desktops, 1232px and up)*/
+// @media (min-width: $screen-lg-min) {}
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

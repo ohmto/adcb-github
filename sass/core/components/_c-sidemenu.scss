@@ -1,0 +1,456 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-sidemenu
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+
+/* 01 - c-sidemenu */
+
+// position: fixed;
+// bottom: 20px;
+// right: 20px;
+// z-index: 10;
+// transform: rotate(0);
+// &--position {
+//   position: relative;
+//   top: -80px;
+//   float: right;
+//   height: 0;
+//   &:after {
+//     clear: both;
+//   }
+// }
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+    @if $xy==xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+    }
+    @else if $xy==x {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    @else if $xy==y {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+}
+
+// breakpoints
+$S: 480px;
+$M: 768px;
+$L: 1170px;
+// media queries
+@mixin MQ($canvas) {
+    @if $canvas==S {
+        @media only screen and (min-width: $S) {
+            @content;
+        }
+    }
+    @else if $canvas==M {
+        @media only screen and (min-width: $M) {
+            @content;
+        }
+    }
+    @else if $canvas==L {
+        @media only screen and (min-width: $L) {
+            @content;
+        }
+    }
+}
+
+
+/* -------------------------------- 
+Stretchy Nav style - common to:
+ - basic navigation
+ - add-content navigation
+ - edit-content navigation
+-------------------------------- */
+
+.cd-stretchy-nav {
+    position: fixed;
+    z-index: 98;
+    bottom: 50px;
+    right: 30px;
+    pointer-events: none;
+    .stretchy-nav-bg {
+        /* this is the stretching navigation background */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        // background: $brand-primary-light;
+    }
+    // .stretchy-nav-bg:hover{
+    // 	background: $brand-primary-dark;
+    // }
+    &.nav-is-visible {
+        pointer-events: auto;
+    }
+}
+
+.cd-nav-trigger {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* replace text with image */
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+    pointer-events: auto;
+    background: $brand-primary-dark;
+    box-shadow: 0 8px 20px rgba(#000, .2);
+    transition: all 0.2s;
+    /*rtl:begin:ignore*/
+    span,
+    span:after,
+    span:before {
+        /* this is the hamburger icon */
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: $white;
+    }
+    span {
+        /* middle line of the hamburger icon */
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        transform: translateX(-50%);
+        /* transform: translateY(-50%); */
+        transition: all .2s;
+        z-index: 1;
+    }
+    span:after,
+    span:before {
+        /* top and bottom lines of the hamburger icon */
+        content: '';
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: all .2s;
+    }
+    span:before {
+        transform: translateY(-8px);
+    }
+    span:after {
+        transform: translateY(8px);
+    }
+    .no-touch &:hover~.stretchy-nav-bg {
+        box-shadow: 0 6px 20px rgba(#000, .2);
+    }
+    .nav-is-visible & {
+        span {
+            background-color: transparent;
+            width: 24px;
+        }
+        span:before {
+            transform: rotate(-45deg);
+            width: 24px;
+        }
+        span:after {
+            transform: rotate(45deg);
+            width: 24px;
+        }
+    }
+    /*rtl:end:ignore*/
+}
+
+.cd-nav-trigger:hover {
+    background: rgba($brand-primary-dark, 0.9);
+    box-shadow: 0 6px 20px rgba(#000, .2);
+    span:before {
+        width: 24px;
+    }
+    span {
+        width: 18px;
+    }
+    span:after {
+        width: 10px;
+    }
+    .nav-is-visible & {
+        span {
+            background-color: transparent;
+            width: 24px;
+        }
+        span:before {
+            transform: rotate(-45deg);
+            width: 24px;
+        }
+        span:after {
+            transform: rotate(45deg);
+            width: 24px;
+        }
+    }
+}
+
+.cd-stretchy-nav ul {
+    position: relative;
+    padding: 0 0 60px;
+    visibility: hidden;
+    transition: visibility .3s;
+    text-align: right;
+    a {
+        position: relative;
+        display: block;
+        height: 50px;
+        padding: 0 calc(1em + 10px) 1em 1em;
+        color: rgba($white, 0.85);
+        @include typography-titles-commons();
+        transition: all 0.2s;
+        text-shadow: 0px 0px 10px rgba( $brand-font, 0.5);
+        // &:after {
+        // 	/* navigation item icons */
+        // 	content: '';
+        // 	position: absolute;
+        // 	height: 16px;
+        // 	width: 16px;
+        // 	right: 22px;
+        // 	top: 50%;
+        // 	transform: translateY(-50%), scale(0);
+        // 	opacity: .6;
+        // 	background: url(../img/cd-sprite-1.svg) no-repeat 0 0;
+        // }
+        &:before {
+            /* line visible next to the active navigation item */
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 25px;
+            top: 0;
+            right: 20px;
+            transform: translateX(3px), translateY(-50%), scaleY(0);
+            background-color: $brand-primary-light;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+        &:hover {
+            font-size: 24px;
+            font-weight: 700;
+            color: rgba($white, 1);
+        }
+    }
+    span {
+        /* navigation item labels */
+        display: block;
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+}
+
+.cd-stretchy-nav.nav-is-visible ul {
+    visibility: visible;
+    a {
+        &:after {
+            /* navigation item icons */
+            transform: translateY(-50%), scale(1);
+            animation: scaleIn .15s backwards;
+            transition: opacity .2s;
+        }
+        &:before {
+            opacity: 1;
+            transition: opacity .2s;
+        }
+    }
+    // a.active {
+    // 	color: $white;
+    // 	&:after {
+    // 		opacity: 1;
+    // 	}
+    // 	&:before {
+    // 		transform: translateX(3px), translateY(-50%), scaleY(1);
+    // 		transition: transform .15s .3s;
+    // 	}
+    // }
+    li:first-of-type a:after {
+        /* change custom icon using image sprites */
+        background-position: -16px 0;
+    }
+    li:nth-of-type(2) a:after {
+        background-position: -32px 0;
+    }
+    li:nth-of-type(3) a:after {
+        background-position: -48px 0;
+    }
+    li:nth-of-type(4) a:after {
+        background-position: -64px 0;
+    }
+    li:nth-of-type(5) a:after {
+        background-position: -80px 0;
+    }
+    li:nth-of-type(6) a:after {
+        background-position: -96px 0;
+    }
+    li:nth-of-type(7) a:after {
+        background-position: -112px 0;
+    }
+    li:nth-of-type(8) a:after {
+        background-position: -128 0;
+    }
+    li:nth-of-type(9) a:after {
+        background-position: -144px 0;
+    }
+    li:nth-of-type(10) a:after {
+        background-position: -160px 0;
+    }
+    li:nth-of-type(11) a:after {
+        background-position: -176px 0;
+    }
+    span {
+        opacity: 1;
+        transform: translateX(0);
+        animation: slideIn .15s backwards;
+        transition: transform .2s;
+    }
+    .no-touch & a:hover {
+        // color: $white;
+        color: $brand-primary-dark;
+        &:after {
+            opacity: 1;
+        }
+        span {
+            transform: translateX(-5px);
+        }
+    }
+    li:first-of-type a:after,
+    li:first-of-type span {
+        @include animation-delay(.05s);
+    }
+    li:nth-of-type(2) a:after,
+    li:nth-of-type(2) span {
+        @include animation-delay(.1s);
+    }
+    li:nth-of-type(3) a:after,
+    li:nth-of-type(3) span {
+        @include animation-delay(.15s);
+    }
+    li:nth-of-type(4) a:after,
+    li:nth-of-type(4) span {
+        @include animation-delay(.2s);
+    }
+    li:nth-of-type(5) a:after,
+    li:nth-of-type(5) span {
+        @include animation-delay(.25s);
+    }
+    li:nth-of-type(6) a:after,
+    li:nth-of-type(6) span {
+        @include animation-delay(.3s);
+    }
+    li:nth-of-type(7) a:after,
+    li:nth-of-type(7) span {
+        @include animation-delay(.35s);
+    }
+    li:nth-of-type(8) a:after,
+    li:nth-of-type(8) span {
+        @include animation-delay(.4s);
+    }
+    li:nth-of-type(9) a:after,
+    li:nth-of-type(9) span {
+        @include animation-delay(.5s);
+    }
+    li:nth-of-type(10) a:after,
+    li:nth-of-type(10) span {
+        @include animation-delay(.55s);
+    }
+    li:nth-of-type(11) a:after,
+    li:nth-of-type(11) span {
+        @include animation-delay(.6s);
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .cd-stretchy-nav {
+        bottom: 90px;
+        right: 50px;
+    }
+    .cd-nav-trigger {
+        height: 70px;
+        width: 70px;
+    }
+    .cd-stretchy-nav ul {
+        padding: 0 0 90px;
+        a {
+            padding: 0 calc(1em + 30px) 1em 1em;
+            &:before {
+                right: 35px;
+            }
+        }
+    }
+}
+
+
+/* -------------------------------- 
+main content basic style
+-------------------------------- */
+
+.sidemenu-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    background-image: linear-gradient(to right, rgba($brand-font, 0.6), rgba($brand-font, 1));
+    z-index: 98;
+    animation: slideIn 0.2;
+}
+
+@media screen and (min-width: $screen-sm) {
+    .sidemenu-bg {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        background-image: linear-gradient(to right, rgba($brand-font, 0.6), rgba($brand-font, 1));
+        animation: slideIn 0.2;
+    }
+}
+
+
+/* -------------------------------- 
+keyframes
+-------------------------------- */
+
+@keyframes scaleIn {
+    from {
+        transform: translateY(-50%) scale(0);
+    }
+    to {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

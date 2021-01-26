@@ -1,0 +1,15 @@
+$top-nav-height-desktop: 90px;
+$top-nav-height-mobile: 120px;
+$gutter-desktop: 96px;
+$gutter-tablet: 48px;
+$gutter-mobile: 24px;
+// Standard cubic animation curve mixin
+@mixin transition-cubic($property, $speed) {
+  transition: $property $speed cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+%default-heading-weight {
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}

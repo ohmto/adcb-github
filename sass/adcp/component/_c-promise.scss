@@ -1,0 +1,142 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 -
+02 -
+03 -
+04 -
+05 -
+06 - media queries
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+
+/* 01 - promise */
+.c-promise {
+  width: 100%;
+  position: relative;
+  background: $brand-font;
+  .o-comp {
+    &__content {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .container {
+    background-color: #ffffff;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &__img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__wrapper {
+    padding: 40px 0;
+    border-radius: 1px;
+    position: relative;
+    background: $brand-body-bg;
+  }
+  &__sup-title {
+    // font-size: 17px;
+    @include typography-body-avg-commons();
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  &__item {
+    border-bottom: 1px solid rgba($brand-medium-gray, 0.2);
+    margin-bottom: 50px;
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    // font-size: 35px;
+    // font-weight: 600;
+    @include typography-page-section-commons();
+    line-height: 1.14;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    //   //opTheme
+    // }
+  }
+  &__desc {
+    // font-size: 15px;
+    @include typography-body-tiny-commons();
+    font-weight: 400;
+    margin-bottom: 15px;
+    // color: rgba($brand-font, 0.6);
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    //   //opTheme
+    // }
+  }
+  &__link {
+    // font-size: 15px;
+    @include typography-body-tiny-commons();
+    font-weight: 600;
+    margin-bottom: 50px;
+    display: block;
+    color: $brand-primary-light;
+//    @include themify($themes) {
+//      color: themed('brand-primary-light');
+//    }
+    &:hover {
+      text-decoration: underline;
+      color: $brand-primary-light;
+      //@include themify($themes) {
+//        color: themed('brand-primary-light');
+//      }
+    }
+  }
+}
+
+/*===========================
+06 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-promise {
+    .container {
+      background-color: $brand-font;
+      padding-top: 10vw;
+      padding-bottom: 10vw;
+    }
+    &__img-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &__wrapper {
+      max-width: 50%;
+      padding: 40px 50px;
+      position: relative;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {} */
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

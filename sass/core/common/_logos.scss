@@ -1,0 +1,48 @@
+// /* ==============================================================================
+// Index
+// ----------------------------------------
+// 00 - logo size variable declarations
+// 01 - o-site-logo
+// 02 - o-site-logo__text
+// 03 -
+// 04 -
+// 05 -
+// 06 -
+// 07 -
+// 08 -
+// ============================================================================== */
+// /* 00 - logo size variable declarations */
+// $base-logo-sizing : 30px;
+// $base-logo-text-sizing: 72px;
+// /* 01 - o-site-logo */
+// .o-site-logo {
+//   /*rtl:ignore*/
+//   direction: ltr;
+//   display: inline-block;
+//   span {
+//     display: inline-block;
+//     vertical-align: top;
+//   }
+//   /* 02 - o-site-logo__text */
+//   &__text {
+//     width: $base-logo-text-sizing;
+//     overflow: hidden;
+//     svg {
+//       width: $base-logo-text-sizing;
+//     }
+//     .text path {
+//       fill: #333e48;
+//     }
+//   }
+//   &__icon {
+//     width: $base-logo-sizing;
+//     //height: $base-logo-sizing;
+//     height: auto;
+//     .text path {
+//       fill: #b92026;
+//     }
+//     .icon path {
+//       fill: #e2231a;
+//     }
+//   }
+// }

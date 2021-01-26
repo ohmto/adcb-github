@@ -1,0 +1,147 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-promotion-carousel
+02 - media queries
+03 - owl carousel
+03 - owl carousel dots
+04 -
+05 -
+============================================================================== */
+
+// 01 - c-promotion-carousel
+.c-compare-carousel {
+  //background: $brand-light-gray;
+  .o-comp {
+    &__title {
+      margin-bottom: 0;
+      h2 {
+        text-align: left;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      &.-relative {
+        .o-btn-rounded {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+
+  // 03 - Owl carousel
+  .owl-carousel {
+    //padding-top: 10vw; // Equal height for all items
+    padding-top: 0;
+    .owl-stage {
+      display: flex;
+    }
+    .owl-item {
+      display: flex;
+      flex: 1 0 auto;
+    }
+  }
+
+  &__more {
+    width: 100%;
+    text-align: center;
+    .more-link {
+      //font-size: 15px;
+      font-weight: 600;
+      color: $brand-primary-light;
+      margin-bottom: 30px;
+      line-height: 1.67;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      &:before {
+        transform: translate(90px, 4px);
+      }
+
+      &.-rotate {
+        &:before {
+          transform: translate(90px, 4px) rotate(180deg);
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+      transition: all 0.5s ease;
+      opacity: 1;
+      margin-top: 0;
+      height: auto;
+      max-height: 3000px;
+      &.-close {
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+      table {
+        thead {
+          text-align: left;
+        }
+        th {
+          text-align: left;
+        }
+        td {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+/*===========================
+  02 - media queries
+===========================*/
+
+/* large mobile screen */
+
+/* @media (min-width: $screen-xs) {} */
+
+/* Small devices (tablets, 768px and up) */
+
+/* @media (min-width: $screen-sm-min) {} */
+
+/* desktop */
+
+@media (min-width: $screen-md-min) {
+  .c-compare-carousel {
+    .owl-carousel .owl-stage-outer {
+      overflow: hidden;
+    }
+    .owl-carousel {
+      margin-top: 0; // owl carousel dots
+      .owl-nav {
+        top: -45px;
+      }
+      .owl-item {
+        margin-bottom: 40px;
+        overflow: visible;
+      }
+    }
+    .o-comp__title {
+      &.-relative {
+        .o-btn-rounded {
+          top: 3px;
+        }
+        + .owl-carousel {
+          .owl-nav {
+            right: 100px;
+          }
+        }
+      }
+    }
+
+    &__more-content {
+      .table-main-header {
+        padding: 80px 0 50px;
+      }
+    }
+  }
+}

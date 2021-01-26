@@ -1,0 +1,79 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-cms-content
+02 - c-hero-articles
+03 - media queries
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 c-cms-content */
+.c-cms-content {
+  &.-article-content {
+    max-width: 728px;
+    margin: 0 auto 75px;
+    p {
+      margin: auto $gutter-mobile;
+    }
+  }
+}
+/* 02 c-hero-articles */
+.c-hero-articles {
+  .o-comp {
+    &__content {
+      margin: 0 auto;
+    }
+    &__title {
+      h2 {
+        text-align: left;
+        max-width: 728px;
+        sup {
+          text-align: left;
+          color: $brand-primary-light;
+          // @include themify($themes) {
+          //   color: themed('$brand-primary-light');
+          // }
+        }
+      }
+      &_desc {
+        margin-top: 20px;
+        max-width: 728px;
+        text-align: left;
+      }
+      .hero-section__img {
+        height: fit-content;
+      }
+    }
+  }
+}
+@media (min-width: $screen-sm-min) {
+  .c-cms-content {
+    &.-article-content {
+      margin-bottom: 100px;
+      p {
+        margin: auto;
+      }
+
+      .owl-dots {
+        left: 26px;
+      }
+    }
+  }
+
+  .c-hero-articles {
+    .o-comp {
+      &__content {
+        margin-bottom: 30px;
+      }
+      &__title {
+        &_desc {
+          margin-top: 45px;
+        }
+      }
+    }
+  }
+}

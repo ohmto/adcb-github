@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Plane Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Utility-Bill-Payments" transform="translate(-531.000000, -885.000000)">
+            <g id="Plane-Icon" transform="translate(532.000000, 886.000000)">
+                <g id="Plane" transform="translate(15.542857, 16.457143)">
+                    <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="0" y="0" width="32.9142857" height="32.9142857"></rect>
+                    <rect id="Rectangle" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="14.4527473" y="2.74285714" width="5.83736264" height="26.5142857" rx="2.91868132"></rect>
+                    <path d="M6.15384615,14.7518972 L6.15384615,9.32125436 C6.15384615,8.97641315 6.53169815,8.69686411 6.9978022,8.69686411 L8.68571429,8.69686411 C9.15181834,8.69686411 9.52967033,8.97641315 9.52967033,9.32125436 L9.52967033,12.4032478" id="Rectangle-Copy-6" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M25,12.1852435 L25,8.62439024 C25,8.27954903 25.377852,8 25.843956,8 L27.5318681,8 C27.9979722,8 28.3758242,8.27954903 28.3758242,8.62439024 L28.3758242,15.3176872 L28.3758242,14.4591905" id="Rectangle-Copy-7" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M11.7548175,10.2100446 L11.3727086,20.8507975 C11.3777058,21.6422803 10.8197253,22.2887816 10.1091271,22.3148401 C9.37720005,22.3416808 8.730539,21.7695882 8.58694675,20.9681871 L6.13753748,7.29781617" id="Rectangle" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(8.946177, 14.806781) rotate(-300.000000) translate(-8.946177, -14.806781) "></path>
+                    <path d="M28.5050101,10.2869636 L28.1229012,20.9277164 C28.1278984,21.7191992 27.569918,22.3657006 26.8593197,22.3917591 C26.1273927,22.4185997 25.4807316,21.8465072 25.3371394,21.0451061 L22.8877301,7.37473513" id="Rectangle" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(25.696370, 14.883700) scale(-1, 1) rotate(-300.000000) translate(-25.696370, -14.883700) "></path>
+                    <path d="M13.5220697,26.229263 L9.90743791,26.229263 C9.35515316,26.229263 8.90743791,25.7815478 8.90743791,25.229263 C8.90743791,24.9022621 9.06731605,24.5959188 9.33556984,24.4089174 L14.1846813,21.0285714" id="Triangle" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M26.4929425,26.229263 L22.2156991,26.229263 C21.6634144,26.229263 21.2156991,25.7815478 21.2156991,25.229263 C21.2156991,24.9022621 21.3755773,24.5959188 21.6438311,24.4089174 L26.4929425,21.0285714" id="Triangle" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(23.760757, 23.628917) scale(-1, 1) translate(-23.760757, -23.628917) "></path>
+                </g>
+                <circle id="Oval-Copy-2" stroke-opacity="0.6" stroke="#273239" cx="32" cy="32" r="32"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

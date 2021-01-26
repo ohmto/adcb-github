@@ -1,0 +1,73 @@
+.c-reports-list {
+  @extend .c-table;
+  table {
+    thead {
+      display: none;
+      tr {
+        th {
+          color: rgba($brand-font, 0.4);
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          color: $brand-font;
+          &:first-child {
+            z-index: 6;
+          }
+          &:nth-child(3) {
+            color: rgba($brand-font, 0.7);
+            text-transform: none;
+            padding-right: 30px;
+            order: 0;
+            font-weight: 400;
+          }
+          &:last-child {
+            color: rgba($brand-font, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .c-reports-list {
+    table {
+      thead {
+        display: table-header-group;
+        tr {
+          letter-spacing: 1px;
+          th {
+            padding-bottom: 30px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: unset;
+          td {
+            padding: 40px 0 32px;
+            vertical-align: top;
+            &:first-child {
+              padding-left: 0;
+            }
+            &:nth-child(2) {
+              @include typography-body-big-commons();
+              padding-right: 30px;
+            }
+            &:nth-child(3) {
+              @include typography-body-avg-commons();
+              padding-right: 0;
+            }
+            &:last-child {
+              padding: 40px 0 32px;
+              @include typography-body-tiny-commons();
+            }
+          }
+        }
+      }
+    }
+  }
+}

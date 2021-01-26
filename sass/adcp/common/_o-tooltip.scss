@@ -1,0 +1,51 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - o-tooltip
+02 -
+03 - table style (responsive)
+04 - media queries
+============================================================================== */
+/*
+01 - o-tooltip
+*/
+
+.o-tooltip {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  line-height: 1.47;
+  color: rgba($brand-font, 0.4);
+  border-bottom: 1px solid rgba($brand-font, 0.4);
+  white-space: nowrap;
+  @include transition-cubic(800ms, all);
+
+  &__text {
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    width: 260px;
+    padding: 8px;
+    text-transform: initial;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: $brand-primary-font;
+    color: $white;
+    left: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+    white-space: normal;
+    // @include themify($themes) {
+    //   background: themed('$brand-primary-font');
+    // }
+  }
+  &:hover {
+    cursor: pointer;
+    .o-tooltip__text {
+      visibility: visible;
+    }
+  }
+}

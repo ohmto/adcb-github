@@ -1,0 +1,39 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-lang-sel-links
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-quick-links */
+.c-lang-sel-links {
+  display: flex;
+  flex-direction: row;
+  padding: 25px 32px;
+  background: $brand-ultra-light-gray;
+  &__items {
+    // font-size: 15px;
+    @include typography-body-avg-commons();
+    flex: 1;
+    text-align: center;
+    font-weight: 400;
+  }
+  &__links {
+    display: block;
+    padding: 12px 30px;
+    &--en {
+      border: 1px solid $brand-primary-font;
+      color: $brand-primary-font;
+    }
+    &--ar {
+      border: 1px solid $brand-medium-gray;
+      color: $brand-gray;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-stamp
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - stamp IG*/
+
+.c-stamp {
+  .o-comp__content {
+    //max-width: 1248px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba($brand-font, 0.2);
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+    // border-top: 1px solid rgba($brand-font, 0.2);
+    // border-bottom: 1px solid rgba($brand-font, 0.2);
+  }
+
+  &__img-wrapper {
+    margin-right: 24px;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__para {
+    // font-size: 13px;
+    @include typography-legal-commons();
+    font-weight: 400;
+    color: $brand-font;
+    line-height: 1.54;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-stamp {
+    .o-comp__content {
+      margin-top: 72px;
+      margin-bottom: 72px;
+    }
+
+    &__section {
+      padding: 20px 10%;
+    }
+
+    &__img-wrapper {
+      margin: 0 52px;
+    }
+
+    &__img {
+      width: 105px;
+      height: 105px;
+    }
+
+    &__para {
+      font-size: 19px;
+      font-weight: 600;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up)
+  @media (min-width: $screen-md-min) {} */

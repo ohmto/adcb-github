@@ -1,0 +1,192 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-discover-card
+02 - c-discover-card__thumb
+03 - c-discover-card__details
+04 - c-discover-card__title
+05 - c-discover-card__summary
+06 - media queries
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+/* 01 - discover-card */
+.c-discover-card {
+  font-size: 18px;
+  color: $brand-font;
+  width: calc(100%);
+  height: calc(100%);
+  display: block;
+  /* 02 - reward-card__thumb */
+  &__thumb {
+    background: $brand-light-gray;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 125%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+      @include transition-cubic(1000ms, all);
+    }
+    &.-animate {
+      background: url('../../images/cards/shadow.png') no-repeat;
+      background-size: 100% 100%;
+
+      img {
+        position: absolute;
+        height: auto;
+        width: 80%;
+        top: 26%;
+        left: 10%;
+        @include transition-cubic(600ms, all);
+      }
+    }
+  }
+
+  /* 03 - reward-card__details */
+  &__details {
+    line-height: 1.6;
+    background: $brand-body-bg;
+    padding: 30px 20px 20px 20px;
+    transform: translateY(-26px);
+    margin-right: 26px;
+    font-weight: 400;
+    color: inherit;
+    @include transition-cubic(1000ms, all);
+    min-height: 150px;
+  }
+
+  sup {
+    @include typography-label-tabs-commons();
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    line-height: 1.54;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed('brand-primary-light');
+    // }
+
+    &.-brand-color {
+      color: rgba($brand-font, 0.4);
+      // @include themify($themes) {
+      //   color: themed('$brand-font');
+      // }
+    }
+  }
+
+  /* 04 - reward-card__title */
+  &__title {
+    @include typography-body-avg-commons();
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('brand-font');
+    // }
+  }
+
+  &__summary {
+    @include typography-body-avg-commons();
+    line-height: 1.67;
+    margin-top: 0;
+    color: rgba($brand-font, 0.7);
+    // @include themify($themes) {
+    //   color: themed('brand-font');
+    // }
+  }
+
+  &__sticker {
+    color: $white;
+    font-size: 0.6em;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px #{"/*rtl: 0*/"};
+    background-color: $brand-primary-light;
+    // @include themify($themes) {
+    //   background-color: themed('brand-primary-light');
+    // }
+  }
+  .c-animated-arrow  {
+    position: relative;
+    left: -25px;
+    top: 40px;
+    margin-bottom: 50px;
+
+    &__next {
+    bottom: 0;
+
+      &-layer {
+        bottom: 5px;
+      }
+    }
+  }
+}
+
+/*===========================
+06 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-discover-card {
+    width: calc(100% + 13px);
+    &__details {
+      padding: 3.45vw 2vw 2vw 2vw;
+    }
+
+    &:hover {
+      .c-animated-arrow {
+        &__next {
+          margin-left: 25px;
+        }
+        &__next-layer {
+          width: 31px;
+        }
+      }
+      .c-discover-card {
+
+        &__thumb {
+
+          img {
+            transform: scale(1.08);
+          }
+
+          &.-animate {
+            img {
+              transform: rotate(4deg) translate(6px, 6px) #{"/*rtl: rotate(4deg) translate(6px, 6px)*/"};
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-discover-card {
+    &__details {
+      padding: 35px 25px 10px 25px;
+    }
+    .c-animated-arrow {
+      margin-bottom: 0;
+    }
+  }
+}

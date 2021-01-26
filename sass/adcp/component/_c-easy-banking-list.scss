@@ -1,0 +1,61 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-easy-banking
+02 - media queries
+03 -
+============================================================================== */
+/*===========================
+01 - c-easy-banking
+===========================*/
+.c-easy-banking-list {
+
+  .o-comp__content {
+    max-width: calc(1170px + #{$gutter-mobile} * 2);
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 30px 20px 0;
+  }
+}
+
+/*===========================
+02 - media queries
+===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-easy-banking-list {
+    &__item {
+      width: calc(50% - 60px);
+      max-width: calc(50% - 60px);
+      margin: 30px 30px 0;
+
+      & .o-tabs {
+        &__tab-content-summary {
+          margin-right: 130px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-easy-banking-list {
+    &__item {
+      margin: 30px 60px 0;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

@@ -1,0 +1,134 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-faq-cards
+02 - c-faq-cards__title
+03 - c-faq-cards__thumb
+04 - c-faq-cards__details
+05 - media queries
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+
+/* 01 - faq-cards*/
+.c-faq-cards {
+  width: 100%;
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 40px;
+
+  /* 02 - faq-cards__title */
+  &__title {
+    // font-size: 35px;
+    // font-weight: 600;
+    @include typography-page-section-commons();
+    letter-spacing: -0.2px;
+    color: $font-gray;
+    margin-bottom: 26px;
+  }
+
+  /* 03 - faq-card__thumb */
+
+  &__thumb {
+    width: 100%;
+    padding-bottom: 45%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      @include transition-cubic(all, 1000ms);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.2;
+      background: $brand-font;
+    }
+    &:hover {
+      img {
+        transform: scale(1.08);
+      }
+      &:after {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__sticker {
+    // font-size: 23px;
+    // font-weight: 500;
+    @include typography-titles-commons();
+    color: $white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  &__type {
+    font-weight: 600;
+  }
+  &__count {
+    font-weight: 400;
+  }
+
+  /* 04 - faq-card__details */
+  &__details {
+    line-height: 1.6;
+    background: $white;
+    padding: 30px 20px 20px 20px;
+    margin-right: 40px;
+    font-weight: 400;
+    color: inherit;
+    transform: translateY(-40px);
+    margin-bottom: -40px;
+  }
+}
+
+/*===========================
+  05 - media queries
+  ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-faq-cards {
+    margin-top: 119px;
+    margin-bottom: 0;
+    &__section {
+      margin-bottom: 83px;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-faq-cards {
+    &__details {
+      padding: 3.45vw 2vw 2vw 2vw;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-xl-min) {
+  .c-faq-cards {
+    &__details {
+      padding: 50px 30px 30px 30px;
+    }
+  }
+}

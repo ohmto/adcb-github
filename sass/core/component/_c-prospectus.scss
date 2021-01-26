@@ -1,0 +1,120 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-prospectus-form
+02 - c-prospectus-disclaimer
+03 - media queries
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 c-prospectus-form */
+.c-prospectus-form {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    .o-form__field {
+      min-height: unset;
+      padding-top: 20px;
+    }
+  }
+  &__error {
+    padding: 5vw 10vw 5vw 25vw;
+    border: 1px solid $brand-primary-light;
+    position: relative;
+    h6 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    &.icon-error {
+      &:before {
+        font-size: 50px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $brand-primary-light;
+      }
+    }
+  }
+}
+/* 02 c-prospectus-disclaimer */
+.c-prospectus-disclaimer {
+  &__buttons {
+    a {
+      margin-top: 10px;
+      &:hover {
+        text-decoration: none;
+      }
+      &.o-btn-transparent {
+        color: $brand-font;
+        &:hover {
+          color: $brand-font;
+        }
+      }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-prospectus-form {
+    &__wrap {
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      .o-form__field {
+        padding-top: 0;
+        width: 182px;
+        align-items: center;
+        &:first-of-type {
+          margin-right: 28px;
+        }
+      }
+    }
+    &__error {
+      max-width: 1040px;
+      padding: 32px 156px 32px 182px;
+      line-height: 1.47;
+      margin: 0 auto;
+      h6 {
+        @include typography-body-avg-commons();
+      }
+      span {
+        margin-top: 0;
+        // font-size: 17px;
+        font-weight: 400;
+        @include typography-body-avg-commons();
+        color: rgba($brand-font, 0.7);
+      }
+      &.icon-error {
+        &:before {
+          font-size: 50px;
+          left: 78px;
+          top: 50%;
+        }
+      }
+    }
+  }
+  .c-prospectus-disclaimer {
+    h2,
+    .c-cms-content {
+      width: 80%;
+      margin: auto;
+    }
+    h2 {
+      margin-bottom: 52px;
+    }
+    &__buttons {
+      padding-top: 72px;
+      a {
+        margin-right: 12px;
+        width: 180px;
+      }
+    }
+  }
+}

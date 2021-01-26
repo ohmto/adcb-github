@@ -1,0 +1,57 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-search
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - value-card */
+.c-faqs {
+  .container {
+    padding: 0;
+  }
+  .c-cms-content {
+    margin-top: 0;
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+  .accordion-item {
+    &__title {
+      &:before {
+        font-weight: 400;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__content {
+    padding: 0;
+  }
+  .feature-accordion-group {
+    .o-comp__content {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*===========================
+    06 - media queries
+    ===========================*/
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

@@ -1,0 +1,74 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-email-overlay
+02 - 
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+
+/* 01 - c-email-overlay*/
+.c-email-overlay {
+  .c-calculator-overlay {
+    &__popup {
+      .thank-you {
+        display: none;
+        .c-thank-you{
+          &__icon {
+            margin-top: 0;
+          }
+        }
+      }
+      &.show-thanks {
+        .c-calculator-overlay {
+          &__modal-title {
+            display: none;
+          }
+        }
+        .c-leads__form {
+          display: none;
+        }
+        .thank-you {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*===========================
+00 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-email-overlay {
+    .c-calculator-overlay {
+      &__calculator-wrapper {
+        padding: 0;
+        .c-leads__form {
+          padding: 0 120px;
+        }
+        .c-thank-you {
+          &__desc {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+
+/* X-Large devices (large desktops, 1440px and up) */
+//@media (min-width: $screen-xl-min) {}

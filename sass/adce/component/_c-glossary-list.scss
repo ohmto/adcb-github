@@ -1,0 +1,85 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - search-results-list
+02 - pagination
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*  search-results - list IG*/
+.c-search-results {
+  /* 02 - o-comp__content overrides for 1232px max-width */
+  .o-comp {
+    &__content {
+      max-width: calc(1052px + #{$gutter-desktop} * 2);
+    }
+  }
+
+  .o-comp__title {
+    padding-bottom: 74px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+    border-bottom: 1px solid $brand-medium-gray;
+
+    h2 {
+      @include fluid-type(25px, 35px);
+      margin-bottom: 0;
+      font-weight: 600;
+      line-height: 1.14;
+      letter-spacing: -0.2px #{"/*rtl:0*/"};
+      font-style: normal;
+      font-stretch: normal;
+      color: $brand-font;
+      // @include themify($themes) {
+      //   color: themed("$brand-font");
+      // }
+    }
+
+    p {
+      font-size: 13px;
+      margin-top: 15px;
+      //color: rgba($brand-primary-font, 0.3);
+      color: rgba($brand-font, 0.3);
+    }
+  }
+
+  &__filter {
+    margin-top: 15px;
+  }
+}
+
+/*===========================
+06 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+  .c-search-results {
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__filter {
+      margin-top: 0;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/* @media (min-width: $screen-md-min) {} */
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* @media (min-width: $screen-md-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */
+

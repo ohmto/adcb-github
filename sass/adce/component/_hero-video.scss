@@ -1,0 +1,180 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - hero-video
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*hero-section*/
+.c-hero-video {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    background: $black;
+    margin-top: 0;
+    .video {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+    padding-bottom: 75px;
+  }
+  &__desc {
+    width: 100%;
+  }
+  &__title {
+    @include typography-page-section-commons();
+    line-height: 1.5;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    // }
+    sup {
+      @include typography-label-tabs-commons();
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      color: rgba($brand-font, 0.4);
+    }
+  }
+  &__info {
+    // font-size: 19px;
+    @include typography-body-big-commons();
+    color: rgba($brand-font, 0.7);
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  &__publish {
+    // font-size: 12px;
+    @include typography-legal-commons();
+    margin-bottom: 50px;
+    //color: rgba($brand-primary-font, 0.6);
+    color: rgba($brand-font, 0.7);
+  }
+  &__social {
+    width: 100%;
+    text-align: left;
+  }
+  &__views {
+    // font-size: 13px;
+    // font-weight: 500;
+    // letter-spacing: 1px;
+    @include typography-label-tabs-commons();
+    line-height: 1.5;
+    text-transform: uppercase;
+    //color: rgba($brand-primary-font, 0.4);
+    color: rgba($brand-font, 0.4);
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    float: left;
+    margin-top: 20px;
+  }
+  &__icon {
+    // font-size: 13px;
+    // font-weight: 500;
+    // letter-spacing: 1px;
+    @include typography-label-tabs-commons();
+    position: relative;
+    display: inline-block;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 6px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 1px solid rgba($brand-font, 0.2);
+    &:hover:before {
+      content: 'SHARE' #{"/*rtl:'شارك'*/"};
+      position: absolute;
+      left: 0;
+      top: -30px;
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      .social path {
+        fill: rgba($brand-font, 0.6);
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      border-color: $brand-font;
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+/*===========================
+06 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-hero-video {
+    &__publish {
+      margin-bottom: 0;
+    }
+    &__content {
+      flex-direction: row;
+      padding-bottom: 100px;
+    }
+    &__desc {
+      flex: 2;
+    }
+    &__social {
+      flex: 1;
+      text-align: right;
+    }
+    &__icons {
+      float: right;
+      margin-top: 20%;
+      justify-content: space-between;
+      width: 150px;
+    }
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md-min) {}
+@media (min-width: $screen-md-min) {
+  .c-hero-video {
+    &__wrapper {
+      .video {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+/* Large devices (large desktops, 1232px and up) */
+/*@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) */
+/*@media (min-width: $screen-xl-min) {} */

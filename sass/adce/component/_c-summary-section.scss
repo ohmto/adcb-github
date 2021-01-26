@@ -1,0 +1,81 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - c-section-nav
+02 - c-cms-content video
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*01 - c-section-nav*/
+.c-section-nav {
+  &__list {
+    &__item {
+      //font-size: 15px;
+      @include typography-body-tiny-commons();
+      font-weight: 600;
+      color: $brand-font;
+    }
+  }
+}
+/*02 - c-cms-content video*/
+.c-cms-content {
+  &__video {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56%;
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__video-text {
+    //font-size: 17px;
+    @include typography-body-avg-commons();
+    font-weight: 600;
+    display: block;
+    .o-btn-medium-red,
+    .o-btn-medium-red:visited,
+    .o-btn-medium-red:active,
+    .o-btn-medium-red:hover {
+      width: 100%;
+      color: $white;
+      text-decoration: none;
+      margin: auto 0;
+    }
+  }
+}
+/*===========================
+06 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-cms-content {
+    &__video-text {
+      display: flex;
+      justify-content: space-between;
+      .o-btn-medium-red,
+      .o-btn-medium-red:visited,
+      .o-btn-medium-red:active,
+      .o-btn-medium-red:hover {
+        width: 225px;
+      }
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: $screen-md-min) {}*/
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */

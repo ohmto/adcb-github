@@ -1,0 +1,48 @@
+.o-link-more {
+  display: inline-block;
+  position: relative;
+  @include typography-body-tiny-commons();
+  font-weight: 600;
+  line-height: 1.4;
+  color: $brand-primary-dark;
+  cursor: pointer;
+
+  // @include themify($themes) {
+  //   color: themed('brand-primary-light');
+  // }
+
+  &:before {
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center center;
+  }
+
+  &:after {
+    @include transition-cubic(width, 400ms);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $brand-primary-dark;
+
+    // @include themify($themes) {
+    //   background: themed('brand-primary-light');
+    // }
+  }
+
+  &:hover {
+    color: $brand-primary-dark;
+
+//  @include themify($themes) {
+//    color: themed('brand-primary-light');
+//  }
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

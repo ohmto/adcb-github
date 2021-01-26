@@ -1,0 +1,269 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-iban
+02
+03
+04
+05
+06
+06
+07
+08
+============================================================================== */
+
+.c-iban {
+  .o-comp {
+    &__content {
+      .c-cms-content {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__grid {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & ul {
+      & li {
+        position: relative;
+        padding-left: 25px;
+        font-weight: 400;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 12px;
+          left: 4px;
+          top: 5px;
+          transform: rotate(45deg);
+          border: solid $brand-primary-light;
+          // @include themify($themes) {
+          //   border: solid themed('brand-primary-light');
+          // }
+          border-width: 0 2px 2px 0;
+        }
+
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    & .o-btn-transparent {
+      @include typography-body-avg-commons();
+      width: 100%;
+      //padding: 12px 25px;
+      color: $brand-font;
+      border: 1px solid rgba($brand-font, 0.2);
+    }
+
+    & :last-child.col-md-23 {
+      width: 100%;
+    }
+  }
+
+  &-faqbutton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    padding-bottom: 25px;
+    width: 100%;
+  }
+
+  &__form {
+    h4 {
+      @include typography-titles-commons();
+      padding-bottom: 20px;
+    }
+
+    border-radius: 1px;
+    border: 1px solid $brand-medium-gray;
+    padding: 20px;
+
+    & .o-input {
+      width: 100%;
+      padding-left: 8px;
+      color: $brand-font;
+      // @include themify($themes) {
+      //   color: themed('$brand-font');
+      // }
+    }
+  }
+
+  &__acctno {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 14px 0;
+
+    .o-btn-medium-red {
+      @include typography-body-big-commons();
+      font-weight: 600;
+      margin-left: 0;
+      padding: 11px 13px;
+      width: 100%;
+      line-height: 27px;
+    }
+  }
+
+  &__keygen {
+
+    & .o-form__field {
+      align-items: flex-start;
+    }
+
+    & a {
+      &.c-input-copy {
+        @include typography-legal-commons();
+        position: absolute;
+        text-transform: uppercase;
+        right: 0;
+        margin-right: 15px;
+        top: 50px;
+        transform: translateY(-20%);
+        display: none;
+        font-weight: 600;
+        color: $brand-primary-light;
+        // @include themify($themes) {
+        //   color: themed('brand-primary-light');
+        // }
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 200px;
+    font-weight: 200;
+    padding: 16px 15px;
+    text-transform: initial;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    display: none;
+
+    background: $brand-primary-font;
+    color: $white;
+    // @include themify($themes) {
+    //   background: themed('$brand-primary-font');
+    // }
+  }
+}
+
+/*===========================
+  03 - media queries
+  ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .c-iban {
+    &__grid {
+      padding-top: 40px;
+
+      & ul {
+        & li {
+          &:last-child {
+            margin-bottom: 20px;
+          }
+
+          p {
+            margin-top: 0;
+          }
+        }
+      }
+
+      &__buttons {
+        .o-btn-medium-red {
+          margin-left: 18px;
+        }
+      }
+    }
+
+    &__form {
+      padding: 40px 30px 20px;
+
+      & .o-input {
+        margin-bottom: 0;
+      }
+    }
+
+    .o-comp {
+      &__content {
+        .c-cms-content {
+          width: 80%;
+        }
+
+        .c-iban__grid {
+          .c-cms-content {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__keygen {
+      & a {
+        &.c-input-copy {
+          font-size: 17px;
+          letter-spacing: 0.1px;
+        }
+      }
+    }
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: $screen-md-min) {
+    .c-iban {
+      &__grid {
+        & .o-btn-transparent {
+          width: auto;
+        }
+
+        & :last-child.col-md-23 {
+          width: 45%;
+        }
+      }
+
+      &-faqbutton {
+        justify-content: right;
+        margin-bottom: 0;
+      }
+
+      &__acctno {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 8px;
+      }
+
+      &__buttons {
+        margin-top: 30px;
+        margin-bottom: 0;
+
+        .o-btn-medium-red {
+          margin-left: 20px;
+          width: auto;
+        }
+      }
+
+      &__tooltip {
+        width: 250px;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 -  c-news-carousel-item
+02 - media queries
+03 -
+03 -
+04 -
+05 -
+============================================================================== */
+// 01 - c-news-carousel-item
+.c-compare-carousel-item {
+  display: flex;
+  line-height: 1.6;
+  width: 100%;
+  text-align: center;
+  color: $brand-font;
+  // @include themify($themes) {
+  //   color: themed('$brand-font');
+  // }
+  &__category {
+    @include typography-label-tabs-commons();
+    margin: 10px 0 27px;
+    color: rgba($brand-font, 0.4);
+    line-height: 1.54;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    // font-size: 17px;
+    // font-weight: 600;
+    margin: 0 0 10px 0;
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed('$brand-primary-light');
+    // }
+    sup {
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: capitalize;
+      bottom: 0;
+      margin-left: -7px;
+    }
+  }
+
+  &__info {
+    padding: 30px 24px;
+    min-height: 380px;
+    //height: 410px;
+    flex-grow: 1;
+    border: 1px solid rgba($brand-font, 0.2);
+    //margin: auto;
+    background-color: $brand-body-bg;
+    // @include themify($themes) {
+    //   background-color: themed('$brand-body-bg');
+    // }
+    &:hover {
+      border: 1px solid $brand-font;
+      // @include themify($themes) {
+      //   border: 1px solid themed('$brand-font');
+      // }
+    }
+
+    .o-bullet-points {
+      text-align: left;
+
+      li {
+        //font-size: 17px;
+        @include typography-body-avg-commons();
+        font-weight: 400;
+        line-height: 1.47;
+        padding-bottom: 21px;
+
+        &:before {
+          color: $brand-primary-light;
+          // @include themify($themes) {
+          //   color: themed('$brand-primary-light');
+          // }
+        }
+      }
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 30px;
+    //font-size: 19px;
+    @include typography-body-big-commons();
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.58;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('$brand-font');
+    // }
+  }
+}
+
+/*===========================
+02 - media queries
+===========================*/
+
+/* desktop */
+@media (min-width: $screen-md-min) {
+  .c-compare-carousel-item {
+    padding: 5px 10px 5px 0;
+    &__info {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 30px 20px;
+
+      &:hover {
+        border: 1px solid $brand-font;
+        // @include themify($themes) {
+        //   border: 1px solid themed('$brand-font');
+        // }
+      }
+
+      .o-bullet-points {
+        li {
+          font-size: 19px;
+        }
+      }
+    }
+    &__title {
+      font-size: 40px;
+      sup {
+        font-size: 17px;
+      }
+    }
+    &__desc {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+@media (min-width: $screen-lg-min) {
+  .c-compare-carousel-item {
+    &__info {
+      padding: 40px 28px;
+    }
+  }
+}
+
+

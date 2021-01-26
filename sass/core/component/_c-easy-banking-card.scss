@@ -1,0 +1,157 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-easy-banking-card__img-wrapper
+02 - c-easy-banking-card__info
+03 -
+04 -
+04 -
+05 -
+06 - media queries
+============================================================================== */
+.c-easy-banking-card {
+  $ebc: &;
+  // Usage: #{$ebc}__className
+  display: block;
+  width: 100%;
+  max-width: 390px;
+  /*========================================
+	01 - c-easy-banking-card__img-wrapper
+	=========================================*/
+  &__img-wrapper {
+    position: relative;
+    // Shadow effect for image;
+    &:before {
+      transition: all 0.8s ease-out;
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-color: $brand-light-gray;
+      position: absolute;
+      transform: translate(-2.08vw, -2.08vw);
+      z-index: 1;
+      pointer-events: none;
+    }
+    // Red shadow color (default is grey)
+    &-shadow-red {
+      &:before {
+        background-color: $brand-primary-light;
+        // @include themify($themes) {
+        //   background-color: themed('brand-primary-light');
+        // }
+      }
+    }
+    // Right shadow direction (default is left)
+    &-shadow-right {
+      &:before {
+        transform: translate(2.08vw, -2.08vw);
+      }
+    }
+    // Image & image zoom style
+    #{$ebc}__img-holder {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    #{$ebc}__img {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+      transition: all 0.8s ease-in;
+      transform: scale3d(1.2, 1.2, 1);
+    }
+  }
+  // Item :hover style for image shadow and image zoom
+  &:hover {
+    #{$ebc}__img-wrapper {
+      &:before {
+        transition: all 0.6s ease-out;
+        transform: translate(0,0);
+      }
+    }
+    // Image & image zoom style
+    #{$ebc}__img-holder {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+
+      #{$ebc}__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 2;
+        transition: all 0.6s ease-in;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+  /*========================================
+	02 - c-easy-banking-card__info
+	=========================================*/
+  &__info {
+    padding: 2.5vh 2.15vw 3.26vh;
+  }
+
+  &__category {
+    @include typography-label-tabs-commons();
+    display: block;
+    margin: 0 0 13px;
+    line-height: 2.46;
+    text-transform: uppercase;
+    color: $brand-primary-light;
+    // @include themify($themes) {
+    //   color: themed('brand-primary-light');
+    // }
+  }
+
+  &__title {
+    @include typography-body-avg-commons();
+    font-weight: 500;
+    margin: 0 0 16px;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('brand-font');
+    // }
+  }
+
+  &__desc {
+    @include typography-body-tiny-commons();
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.58;
+    color: $brand-font;
+    // @include themify($themes) {
+    //   color: themed('brand-font');
+    // }
+  }
+}
+/*===========================
+02 - media queries
+===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+/* Medium devices (desktops, 992px and up) */
+/* @media (min-width: $screen-md-min) {} */
+/* Large devices (large desktops, 1232px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-easy-banking-card {
+    &__img-wrapper {
+      &:before {
+        transform: translate(-25px, -25px);
+      }
+
+      &-shadow-right {
+        &:before {
+          transform: translate(25px, -25px);
+        }
+      }
+    }
+  }
+}
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

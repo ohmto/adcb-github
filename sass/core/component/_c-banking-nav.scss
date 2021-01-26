@@ -1,0 +1,116 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-search
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 -  */
+.c-banking-nav {
+  position: absolute;
+  background: $white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 20px 0;
+  display: none;
+  z-index: 1000;
+
+  &__navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .icon-arrow {
+      &:before {
+        padding: 17px 19px;
+        transform: rotate(180deg);
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  &__item {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    color: $brand-slate-gray;
+    margin-top: 50px;
+    &-icon {
+      display: inline-block;
+      width: 36px;
+      text-align: center;
+      svg {
+        width: 100%;
+      }
+    }
+    &-text {
+      padding-top: 12px;
+      display: block;
+    }
+    &.is-active,
+    &:hover {
+      background: $brand-light-gray;
+    }
+    &:hover {
+      background: $brand-ultra-light-gray;
+    }
+  }
+
+  &__link {
+    color: $black !important;
+    display: block;
+    padding: 30px 0;
+    &:hover {
+      .c-banking-nav__item-text {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*===========================
+    06 - media queries
+    ===========================*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-banking-nav {
+    top: 100%;
+    height: auto;
+    padding: 20px 0 70px 0;
+    overflow-y: hidden;
+    &__list {
+      flex-direction: row;
+    }
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-banking-nav {
+    &__navigation {
+      display: none;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

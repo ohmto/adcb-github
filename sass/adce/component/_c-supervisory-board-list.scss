@@ -1,0 +1,51 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-supervisory-board-list
+02 - o-comp__content overrides for 1232px max-width
+03 - media queries
+03 - (a) 992px & above
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - c-supervisory-board-list */
+.c-board-list {
+  margin-left: auto;
+  margin-right: auto;
+  /* 02 - o-comp__content overrides for 1232px max-width */
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    &:last-child {
+      .c-board-list .o-comp__content {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.-no-padding {
+    padding: 0;
+  }
+  
+}
+/*===========================
+  03 - media queries
+  ===========================*/
+/* 03 - (a) 768px & above */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-board-list {
+    &__wrap {
+      margin: auto;
+    }
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md-min) {}
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* X-Large devices (large desktops, 1440px and up)
+@media (min-width: $screen-xl-min) {} */

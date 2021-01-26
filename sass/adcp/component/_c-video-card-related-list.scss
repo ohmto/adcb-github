@@ -1,0 +1,57 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-video-related-carousel
+02 - media queries
+02 - (a) 768px & above
+04 -
+05 -
+============================================================================== */
+
+.c-video-related-carousel {
+  &__wrap {
+    padding-top: 70px;
+  }
+  .c-video-card-list__item {
+    width: 100%;
+    padding: 0;
+  }
+  .o-comp__title {
+    h2 {
+      text-align: left;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    margin-bottom: 0;
+  }
+  .owl-carousel {
+    .owl-dots {
+      display: none;
+    }
+  }
+}
+
+/*===========================
+  02 - media queries
+  ===========================*/
+
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+@media (min-width: $screen-sm-min) {
+  .c-video-related-carousel {
+    .owl-carousel .owl-nav {
+      text-align: right;
+      top: -45px;
+    }
+  }
+}
+
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+
+
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */

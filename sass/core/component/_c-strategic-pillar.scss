@@ -1,0 +1,116 @@
+.c-company-news-results.-strategic__wrapper .c-company-news-list {
+  &__wrap {
+    max-width: 1092px;
+  }
+}
+
+//.c-strategic-pillar {
+.-strategic.company-news-item {
+  $compBase: '.company-news-item';
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  padding: 0;
+  border: 0;
+  #{$compBase}__main-title {
+    text-align: center;
+    font-size: 200px;
+    font-weight: 500;
+    line-height: 0.75;
+    width: 100%;
+    color: $brand-primary-light;
+    flex: 0 0 100%;
+    margin: 75px 0 50px 0;
+  }
+
+  #{$compBase}__title {
+    @include typography-titles-commons();
+  }
+
+  #{$compBase}__summary {
+    @include typography-body-avg-commons();
+    @include transition-cubic(600ms, all);
+    color: rgba($brand-font, 0.7);
+    cursor: default;
+  }
+
+  #{$compBase}__details {
+    border-bottom: 1px solid rgba($brand-font, 0.2);
+    flex: 0 0 100%;
+    margin: 0 0 40px 0;
+    padding-bottom: 75px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .more-link {
+      display: inline-block;
+      position: relative;
+      @include typography-body-tiny-commons();
+      font-weight: 600;
+      color: $brand-primary-light;
+      cursor: pointer;
+      &:before {
+        position: absolute;
+        right: -17px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0);
+        transform-origin: center center;
+        //transform: translate(85px, 4px) rotate(-90deg);
+      }
+
+      &.-rotate {
+        &:before {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+    }
+  }
+
+  &:first-child {
+    #{$compBase}__main-title {
+      margin-top: 0;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    #{$compBase}__details {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-sm-min) {
+  .-strategic.company-news-item {
+    $compBase: '.company-news-item';
+    #{$compBase}__main-title {
+      flex: 1;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    #{$compBase}__details {
+      flex: 1;
+      border-top: 1px solid rgba($brand-font, 0.2);
+      border-bottom: none;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    #{$compBase}__summary {
+      @include typography-body-avg-commons();
+    }
+    &:last-child {
+      #{$compBase}__main-title {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

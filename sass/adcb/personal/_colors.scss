@@ -1,0 +1,70 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - generic global bootstrap colors
+02 - global scaffolding
+03 - brand colors
+04 -
+==============================================================================*/
+
+
+/*--------------------
+01 - generic global bootstrap colors
+--------------------*/
+
+//## Gray and base colors for use across Bootstrap.
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+
+/*--------------------
+02 - global scaffolding
+--------------------*/
+
+$white: #fff;
+$black: $gray-base; //used
+$font-gray: #273239; //used
+$alto: #d8d8d8;
+$text-color: $black;
+$link-color: $black;
+$link-hover-color: $black; //used
+$link-hover-decoration: none; //used
+
+/*--------------------
+03 - brand colors
+--------------------*/
+
+$brand-primary-font: $font-gray; //used
+//Generating Fonts colors
+$brand-font: $font-gray;
+//Generating Greys colors
+$brand-silver: #bababa; //used
+$brand-gray: #45555f; //used
+$brand-slate-gray: #797d82; //used
+$brand-medium-gray: #ddd; //used
+$brand-light-medium-gray: #e9eaeb; //used
+$brand-light-gray: #f3f3f3; //used
+$brand-ultra-light-gray: #fafafa; //used
+$brand-medium-light-gray: #d4dbe0; //used
+//Generating Generic colors
+$generic-red: #ec0100; //used
+$generic-dark-red: #ba1b19; //used
+$generic-green: #01a5a6; //used
+$generic-dark-green: #007a89; //used
+$generic-blue: #2d2d89; //used
+$generic-dark-blue: #272756; //used
+
+/*--------------------
+04 - Brand_colors_scss
+--------------------*/
+
+//Generating Principal colors
+$brand-primary-light: $generic-red;
+$brand-primary-dark: $generic-dark-red;
+$brand-body-bg: $white;
+$brand-footer-title: $white;
+$brand-footer-links: $white;
+// %light-gradient: linear-gradient(-45deg, #f9f9f9 10%, #ffffff 35%);

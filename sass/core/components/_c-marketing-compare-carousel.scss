@@ -1,0 +1,493 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - c-compare-carousel component new styles
+02 - Background colors for compare-carousel (modifier)
+03 - Apply link for compare-carousel (modifier)
+04 - Screen Viewpoint fix
+==============================================================================*/
+
+// from _site-layout.scss
+$body-avg-mobile-font-size: 17px;
+$body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
+@mixin typography-body-avg-commons() {
+    font-size: $body-avg-mobile-font-size;
+    letter-spacing: $body-avg-mobile-letter-spacing;
+}
+
+.o-bullet-points {
+    // font-size: 15px;
+    @include typography-body-avg-commons();
+    font-weight: 400;
+    display: flex;
+    color: rgba($brand-font, 0.7);
+    ul {
+        li {
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.67;
+            @extend .icon-tick;
+            &:before {
+                font-size: 9px;
+                position: absolute;
+                left: 0;
+                top: 10px;
+                @include icon-styles;
+                transform: rotateY(0);
+                color: rgba($brand-font, 0.7);
+            }
+        }
+    }
+}
+
+
+/* --------------------
+01 - Card Features
+-------------------- */
+
+.c-marketing-compare-carousel {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    align-items: center;
+    .container {
+        &:after {
+            display: none;
+        }
+    }
+    .o-comp__title {
+        margin-bottom: 1.5em;
+        h2 {
+            font-size: calc(23px + 12*((100vw - 320px)/1120));
+            font-weight: 600;
+            letter-spacing: -0.2px #{"/*rtl: 0*/"};
+            margin: 0 0 0 0;
+            max-width: 620px;
+            text-align: center;
+        }
+        &_desc {
+            margin-top: 1em;
+            text-align: center;
+        }
+    }
+    .main-carousel {
+        .carousel-cell {
+            &:after {
+                content: ' ';
+                display: block;
+                height: 2px;
+                // border-bottom: 1px solid red; 
+            }
+            .carouselimage {
+                width: 100%;
+                height: auto;
+                height: 230px;
+                margin-bottom: 12px;
+                position: relative;
+                overflow: hidden;
+                // background: #eee;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    object-fit: cover;
+                    transition: 1000ms all cubic-bezier(.19, 1, .22, 1);
+                    // &:hover {
+                    //     transform: scale(1.01)
+                    // }
+                }
+            }
+            .carouselicon {
+                width: 100px;
+                height: 100px;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        .carousel-cell,
+        .carousel-cell.is-selected {
+            width: 100%;
+            // padding-left: 18px;
+            // padding-right: 18px;
+        }
+        .flickity-prev-next-button {
+            top: 115px;
+            width: 48px;
+            height: 48px;
+            background: none;
+            border-radius: 48px;
+            border: 1px solid rgba(39, 50, 57, .2);
+            color: rgba(39, 50, 57, .7);
+            transition: all 400ms cubic-bezier(.19, 1, .22, 1);
+            svg.flickity-button-icon {
+                position: absolute;
+                left: 35%;
+                top: 35%;
+                width: 16px;
+                height: 16px;
+            }
+            &:hover {
+                color: #ec0100;
+                border: 1px solid #ec0100 !important;
+                border-radius: 48px;
+                width: 72px;
+            }
+            &.previous {
+                transform: translate(-50%, -50%);
+            }
+            &.next {
+                transform: translate(50%, -50%);
+            }
+        }
+        ol.flickity-page-dots {
+            display: none;
+            bottom: -45px;
+        }
+    }
+    .carouselicon {
+        width: 96px;
+        margin-left: 12px;
+    }
+    .disclaimer {
+        font-size: 0.9em;
+        letter-spacing: .1px;
+        font-weight: 400;
+        line-height: 1.47;
+        color: rgba(39, 50, 57, .5);
+        border-top: 1px solid #eee;
+        padding: 12px;
+        margin-top: 48px;
+        & {
+            .o-comp__content {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+        // &:before {
+        //     width: 100%;
+        //     height: 1px;
+        //     background-color: #eee;
+        //     margin-bottom: 12px;
+        // }
+    }
+    .c-compare-carousel-item__desc {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .c-compare-carousel-item__category,
+    .c-compare-carousel-item__title,
+    .c-compare-carousel-item__desc,
+    .c-compare-carousel-item__subesc,
+    .o-bullet-points {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 12px 0 0 0 !important;
+        margin-bottom: 12px !important;
+    }
+    &.-icon {
+        .carouselicon,
+        .c-compare-carousel-item__category,
+        .c-compare-carousel-item__title,
+        .c-compare-carousel-item__desc,
+        .c-compare-carousel-item__subesc {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+        }
+    }
+    .c-compare-carousel-item__subesc {
+        @include typography-body-avg-commons();
+        font-weight: 400;
+        display: flex;
+        color: rgba($brand-font, 0.7);
+    }
+    // carousel item hidden by default
+    .o-comp__title h2,
+    .carouselicon,
+    .carouselimage,
+    .c-marketing-compare-carousel-item__title,
+    .c-compare-carousel-item__subesc,
+    .c-marketing-compare-carousel__more {
+        display: none !important;
+    }
+    // .carouselicon,
+    // .carouselimage {
+    //     height: 1px;
+    // }
+    // carousel unhidden if used the modifier for each
+    &.-title .o-comp__title h2,
+    &.-icon .carouselicon,
+    &.-image .carouselimage,
+    &.-highlightnumber .c-marketing-compare-carousel-item__title,
+    &.-desc .c-compare-carousel-item__subesc,
+    &.-viewmore .c-marketing-compare-carousel__more {
+        display: block !important;
+    }
+    // &.-icon .carouselicon,
+    // &.-image .carouselimage {
+    //     height: auto;
+    // }
+}
+
+
+/* 02 - Background Colors for Card Features */
+
+.c-marketing-compare-carousel {
+    &.-lightgray-background {
+        background-color: rgba(221, 221, 221, 0.3);
+        .disclaimer {
+            border-top: 1px solid rgba(39, 50, 57, 0.1);
+        }
+        // .container {
+        //     &:after {
+        //         display: none;
+        //     }
+        // }
+    }
+    &.-darkgray-background {
+        background-color: rgba(39, 50, 57, 1);
+        .c-compare-carousel-item {
+            &__category,
+            &__subesc {
+                color: rgba(255, 255, 255, .7) !important;
+            }
+            &__desc {
+                color: #fff;
+            }
+        }
+        .o-comp__title {
+            h2 {
+                color: #FFFFFF !important;
+            }
+            &_desc {
+                color: rgba(255, 255, 255, .5) !important;
+                // margin-top: 0.5em !important;
+            }
+        }
+        .o-bullet-points {
+            color: rgba(255, 255, 255, .7) !important;
+            li:before {
+                color: rgba(255, 255, 255, .7) !important;
+            }
+        }
+        .o-btn-transparent {
+            font-size: 15px;
+            letter-spacing: .1px;
+            opacity: 1;
+            display: inline-block;
+            color: #fff;
+            padding: 0;
+            line-height: 48px;
+            margin-right: 30px;
+            margin-bottom: 10px;
+            min-width: 80px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, .4);
+            transition: all 400ms cubic-bezier(.19, 1, .22, 1);
+        }
+        &__category {
+            color: rgba(255, 255, 255, 1) !important;
+        }
+        &-item__desc,
+        &-item {
+            &__info {
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                background-color: rgba(39, 50, 57, 1) !important;
+            }
+            &__info:hover {
+                border: 1px solid rgba(255, 255, 255, 1) !important;
+                background-color: rgba(39, 50, 57, 1) !important;
+            }
+        }
+        &__more-content {
+            th {
+                color: rgba(255, 255, 255, 1) !important;
+                background-color: rgba(39, 50, 57, 1) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            }
+            td {
+                color: rgba(255, 255, 255, .5) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            }
+        }
+        .disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, .2);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .flickity-page-dots {
+            .dot {
+                background: #fff;
+            }
+        }
+        .flickity-prev-next-button {
+            color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            &:hover {
+                color: #ec0100;
+            }
+        }
+        // .container {
+        //     &:after {
+        //         display: none;
+        //     }
+        // }
+    }
+}
+
+
+/* 05 - Screen Viewpoint fix */
+
+@media (min-width: 768px) {
+    .c-marketing-compare-carousel {
+        // .o-comp__title {
+        //     &_desc {
+        //         text-align: inherit;
+        //     }
+        // }
+        .main-carousel {
+            .flickity-viewport {
+                // display: block;
+                // height: 100% !important;
+                &:after {
+                    content: ' ';
+                    display: block;
+                    height: 2px;
+                }
+            }
+            .flickity-slider {
+                // display: block;
+                // height: 100% !important;
+                &:after {
+                    content: ' ';
+                    display: block;
+                    height: 2px;
+                }
+            }
+            .carousel-cell {
+                counter-increment: carousel-cell;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                min-height: 100%;
+                height: auto;
+                &:after {
+                    content: ' ';
+                    display: block;
+                    height: 2px;
+                    // border-bottom: 1px solid red;
+                }
+                .c-compare-carousel-item__desc {
+                    min-height: 60px;
+                    width: 100%; //IE fix 
+                }
+                .c-compare-carousel-item__subesc {
+                    align-self: stretch;
+                    flex-basis: auto;
+                }
+                .o-bullet-points {
+                    flex-grow: 2;
+                    flex-shrink: 0;
+                    flex-basis: auto;
+                    align-self: stretch;
+                }
+            }
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 100%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+            .flickity-prev-next-button {
+                &.previous {
+                    transform: translate(-150%, -50%);
+                }
+                &.next {
+                    transform: translate(150%, -50%);
+                }
+            }
+        }
+        &.-twoitems {
+            // .carousel-cell {
+            //     height: auto;
+            //     height: 300px;
+            // }
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 50%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        &.-threeitems {
+            // .carousel-cell {
+            //     height: auto;
+            //     height: 280px;
+            // }
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 50%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        &.-fouritems {
+            // .carousel-cell {
+            //     height: auto;
+            //     height: 280px;
+            // }
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 50%;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .c-marketing-compare-carousel {
+        .main-carousel {
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 90%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        &.-twoitems {
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 50%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        &.-threeitems {
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 33.33%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        &.-fouritems {
+            .carousel-cell,
+            .carousel-cell.is-selected {
+                width: 25%;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+    }
+}
+
+// ----------------------------------------
+// Marketing campaign carousel library css
+// [ITS A MUST TO MAKE THE CAROUSEL WORKING]
+// https://flickity.metafizzy.co
+// ----------------------------------------
+// @import "flickity";

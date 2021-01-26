@@ -1,0 +1,76 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - search-results-item
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*  search-result-item */
+
+.search-results-item {
+  color: $brand-font;
+  // border-bottom: 1px solid rgba($brand-primary-font, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 35px 0;
+  border-bottom: 1px solid rgba($brand-font, 0.2);
+
+  &__serial-number {
+    @include typography-label-tabs-commons();
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 12px 0;
+    color: $brand-primary-light;
+//    @include themify($themes) {
+//      color: themed('brand-primary-light');
+//    }
+  }
+
+  &__title {
+    //font-size: 19px;
+    @include typography-body-big-commons();
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: $brand-font;
+    // @include themify($themes) {
+//      color: themed('brand-font');
+//    }
+  }
+
+  &__summary {
+    // font-size: 15px;
+    @include typography-body-avg-commons();
+    font-weight: 400;
+    color: rgba($brand-font, 0.7);
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .search-results-item {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 60px 0;
+
+    &__serial-number {
+      width: 200px;
+    }
+
+    &__details {
+      flex: 1;
+    }
+  }
+}

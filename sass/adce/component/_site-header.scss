@@ -1,0 +1,536 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-header
+02 - header-content
+03 - o-site-logo conponent override for header
+04 - t-premium theme
+04 - (a) o-menu-button override
+04 - (b) o-site-logo overrides
+04 - (c) quick-links overrides
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - header-wrap */
+.site-header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $brand-body-bg;
+  transition: background 0.3s ease-out;
+  border-bottom: 1px solid rgba($brand-font, 0.3);
+
+  .top-main-header {
+    height: 90px;
+    // margin-top: 30px; //this is for the tiny header link "go to islamic"
+
+    .top-menu {
+      top: -30px;
+    }
+  }
+
+  a {
+    color: $brand-font;
+  }
+  /* 02 - header-content */
+  &__content {
+    position: relative;
+    height: $top-nav-height-mobile;
+    display: flex;
+    align-items: center;
+    transition: height 0.3s ease-out;
+    max-width: none;
+
+    .top-menu {
+      position: absolute;
+      top: 0;
+      margin: 0;
+      width: 100%;
+      margin-top: -10px;
+      left: 0;
+
+      .o-switch-button {
+        width: 100%;
+        padding: 8px 22px; //border-bottom: 1px solid rgba($brand-gray, 0.2);
+        border-bottom: 1px solid rgba($brand-font, 0.2);
+
+        &__text {
+          width: 100%;
+          padding-top: 10px;
+          // font-size: 12px;
+          @include typography-legal-commons();
+          font-weight: 400;
+        }
+      }
+    }
+
+    .o-site-logo {
+      position: absolute;
+      top: 50%;
+      /*rtl:ignore*/
+      left: 50%;
+      text-align: center;
+      transform: translate3d(-50%, -50%, 0) #{"/*rtl:translate3d(-50%, -50%, 0)*/"};
+      width: 140px;
+      height: auto;
+      font-size: 0;
+      /*rtl:ignore*/
+      direction: ltr;
+      @include transition-cubic(600ms, all);
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &__text {
+        width: 68%;
+        height: inherit;
+        overflow-x: hidden;
+
+        &.animate {
+          animation: animateLogoInit 600ms ease-out 5s 1 normal forwards;
+        }
+
+        &.hover-animate {
+          animation: animateLogoHover 2800ms ease-out 0s 1 normal forwards;
+        }
+
+        svg {
+          @include transition-cubic(600ms, all);
+          height: 100%;
+        }
+
+        .text path {
+          @include transition-cubic(600ms, all);
+          fill: $brand-font;
+        }
+      }
+
+      &__icon {
+        width: 27%;
+        padding-left: 2px;
+
+        svg {
+          width: 100%;
+
+          .text path {
+            @include transition-cubic(600ms, all);
+            fill: $brand-primary-dark;
+            // @include themify($themes) {
+            //   fill: themed('brand-primary-dark');
+            // }
+          }
+
+          .icon path {
+            @include transition-cubic(600ms, all);
+            fill: $brand-primary-light;
+            // @include themify($themes) {
+            //   fill: themed('brand-primary-light');
+            // }
+          }
+        }
+      }
+    }
+    /* 03 - o-site-logo component override for all except personal banking */
+    .o-site-logo-general {
+      width: 110px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .c-general-icon {
+        &__text {
+          fill: $brand-font;
+        }
+      }
+
+      &__text {
+        width: 110px;
+        opacity: 1;
+        line-height: 1;
+        animation: FullHoverIn 0.5s ease-out 0s 1 forwards;
+
+        &.-animate {
+          animation: FullHoverOut 0.5s ease-out 0s 1 forwards;
+        }
+
+        svg {
+          @include transition-cubic(600ms, all);
+          height: 100%;
+        }
+
+        .text path {
+          @include transition-cubic(600ms, all);
+        }
+      }
+
+      &__icon {
+        width: 35px;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0;
+        line-height: 1;
+        animation: IconHoverIn 0.5s ease-out 0s 1 forwards;
+
+        &.-animate {
+          animation: IconHoverOut 0.5s ease-out 0s 1 forwards;
+        }
+
+        svg {
+          width: 100%;
+
+          .text path {
+            @include transition-cubic(600ms, all);
+            fill: $brand-primary-dark;
+            // @include themify($themes) {
+            //   fill: themed('brand-primary-dark');
+            // }
+          }
+
+          .icon path {
+            @include transition-cubic(600ms, all);
+            fill: $brand-primary-light;
+            // @include themify($themes) {
+            //   fill: themed('brand-primary-light');
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-bar {
+    opacity: 1;
+    font-size: 10px;
+    position: absolute;
+    font-weight: 600;
+    top: 20px;
+    left: 0;
+    color: $brand-font;
+  }
+
+  &.t-premium__header {
+    .site-header__content {
+      .o-site-logo {
+        &__text {
+          .text path {
+            fill: $white;
+          }
+        }
+
+        &__icon {
+          svg {
+            .text path {
+              fill: transparent;
+              stroke: $white;
+            }
+
+            .icon path {
+              fill: $white;
+            }
+          }
+        }
+      }
+
+      .o-site-logo-general {
+        &__text {
+          .c-general-icon {
+            &__backdrop {
+              fill: transparent;
+              stroke: $white;
+            }
+
+            &__pattern,
+            &__subheading,
+            &__text {
+              fill: $white;
+            }
+          }
+        }
+
+        &__icon {
+          .c-general-icon {
+            &__pattern {
+              fill: $white;
+            }
+
+            &__backdrop {
+              fill: transparent;
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-bar {
+      color: $white;
+    }
+  }
+
+  &.is-sticky {
+    .site-header__content {
+      height: 70px;
+
+      .o-site-logo {
+        width: 100px;
+        height: 28.5px;
+
+        &__icon {
+          padding-left: 0;
+        }
+
+        &-general {
+          &__icon {
+            width: 30px;
+          }
+
+          &__text {
+            svg {
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-bar {
+      opacity: 0;
+    }
+
+    .c-main-nav {
+      &.is-expanded {
+        top: 70px;
+      }
+    }
+  }
+
+  &.is-header-transparent {
+    background: transparent;
+    border-bottom: 0;
+  }
+}
+@keyframes IconHoverIn {
+  0% {
+    opacity: 0;
+    right: 20%;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    right: 50%;
+  }
+}
+@keyframes FullHoverIn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    margin-left: -15px;
+  }
+}
+@keyframes IconHoverOut {
+  0% {
+    opacity: 1;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    right: 20%;
+  }
+}
+@keyframes FullHoverOut {
+  0% {
+    opacity: 0;
+    margin-left: -15px;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animateLogoInit {
+  0% {
+    width: 68%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+@keyframes animateLogoHover {
+  0% {
+    width: 0;
+  }
+
+  20% {
+    width: 68%;
+  }
+
+  80% {
+    width: 68%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+/* 04 -t-premium theme */
+.t-premium__header {
+  border: none;
+  background: rgba($white, 0);
+  position: absolute;
+  transition: background 0.6s ease-in;
+
+  &:after {
+    display: none;
+  }
+
+  a {
+    color: $white;
+  }
+  /* 04 - (a) o-menu-button override */
+  .o-menu-button {
+    &__icon {
+      span {
+        background: $white;
+      }
+    }
+
+    &__text {
+      color: $white;
+    }
+  }
+  /* 04 - (b) quick-links overrides */
+  .c-quick-links {
+    .btn-login {
+      border: 1px solid $white;
+      background: transparent;
+
+      &:before {
+        color: $white;
+      }
+    }
+  }
+}
+/*===========================
+00 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+/* @media (min-width: $screen-sm-min) {} */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .site-header {
+    &__content {
+      height: $top-nav-height-desktop;
+
+      .o-site-logo-general {
+        &__icon {
+          width: 40px;
+        }
+      }
+    }
+
+    &.is-sticky {
+      .site-header {
+        &__content {
+          height: calc(#{$top-nav-height-desktop} * 0.7);
+
+          .c-main-nav {
+            &.is-expanded {
+              top: 0;
+            }
+          }
+        }
+      }
+
+      .o-menu-button {
+        &.-right-border {
+          border-right: 1px solid rgba($brand-font, 0.5);
+        }
+      }
+    }
+
+    .menu-bar {
+      top: 27px;
+    }
+
+    &.t-premium__header {
+      .o-menu-button {
+        &.-right-border {
+          border-right: 1px solid rgba($white, 0.5);
+        }
+      }
+    }
+  }
+}
+/* Large devices (large desktops, 1232px and up) */
+/* @media (min-width: $screen-lg-min) {} */
+/* X-Large devices (large desktops, 1440px and up) */
+/* @media (min-width: $screen-xl-min) {} */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .site-header {
+    &__content {
+      .o-site-logo {
+        transform: translate3d(-50%, -50%, 0) #{"/*rtl:translate3d(50%, -50%, 0)*/"};
+      }
+    }
+
+    &.is-sticky {
+      .site-header__content {
+        .o-site-logo {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .o-menu-button {
+    .menu-bar {
+      left: 0;
+    }
+  }
+}
+@supports (-ms-ime-align:auto) {
+  .site-header {
+    &__content {
+      .o-site-logo {
+        transform: translate3d(-50%, -50%, 0) #{"/*rtl:translate3d(50%, -50%, 0)*/"};
+      }
+    }
+  }
+}

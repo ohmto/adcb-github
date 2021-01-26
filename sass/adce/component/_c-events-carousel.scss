@@ -1,0 +1,174 @@
+.c-event-gallery {
+    display: none;
+}
+
+.c-events-carousel {
+    @extend .c-promotion-carousel;
+    // .o-comp__content {
+    //   padding-top: 0;
+    //   padding-bottom: 0;
+    // }
+}
+
+.js-events-carousel {
+    .c-offer-card {
+        cursor: auto;
+    }
+}
+
+.c-photo-gallery {
+    &.-js-single-item {
+        margin-bottom: 40px;
+    }
+    &.owl-carousel {
+        padding-top: 0;
+        .owl-stage-outer {
+            overflow: hidden;
+        }
+        .owl-item {
+            display: block;
+            margin-bottom: 70px;
+            img {
+                position: relative;
+                width: 100%;
+                margin: auto;
+            }
+        }
+        .owl-nav {
+            top: auto;
+            bottom: 40px;
+            right: 50%;
+            transform: translateX(100%);
+        }
+        .owl-dots {
+            counter-reset: slides-num;
+            /* Initialize counter. */
+            position: relative;
+            bottom: 40px;
+            right: auto;
+            left: 50%;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            &:before {
+                content: " ";
+                display: table;
+            }
+            &:after {
+                @include typography-body-avg-commons();
+                font-weight: 400;
+                content: " / " counter(slides-num);
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .owl-dot,
+            .owl-dot.active {
+                background: transparent;
+            }
+        }
+        .owl-dot {
+            display: inline-block;
+            counter-increment: slides-num;
+            background: rgba($brand-font, 0.4);
+            border-radius: 20px;
+            height: 20px;
+            width: 12px;
+            margin: 0 5px;
+            position: absolute;
+            /* Increment counter */
+            span {
+                display: none;
+                background-color: blue;
+            }
+            &.active {
+                background: $brand-font;
+                &:before {
+                    @include typography-body-avg-commons();
+                    font-weight: 400;
+                    content: counter(slides-num);
+                    /* Use the same counter to get current item. */
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    margin-left: -39px;
+                    top: -3px;
+                }
+            }
+        }
+        .owl-dot:only-child {
+            display: none;
+        }
+    }
+}
+
+.c-modal {
+    &__content {
+        .c-offer-card__expiration {
+            margin-bottom: 42px;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .c-photo-gallery {
+        &.owl-carousel {
+            padding-top: 0;
+            .owl-dots {
+                position: absolute;
+                bottom: 40px;
+                right: auto;
+                left: 15px;
+            }
+            .owl-item {
+                display: block;
+                margin-bottom: 90px;
+                img {
+                    // height: 430px;
+                    // width: auto;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .c-events-carousel {
+        .o-comp-content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .c-photo-gallery {
+        &.owl-carousel {
+            &.-navleftalign {
+                .owl-nav {
+                    right: 0;
+                    transform: translateX(0);
+                }
+                .owl-dots {
+                    right: 132px;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+
+/* IE10+ CSS styles go here */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .c-photo-gallery {
+        &.owl-carousel {
+            .owl-dot {
+                &.active {
+                    &:before {
+                        top: -18px;
+                    }
+                }
+            }
+        }
+    }
+}

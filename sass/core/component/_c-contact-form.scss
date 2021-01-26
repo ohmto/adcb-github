@@ -1,0 +1,192 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-contact-form
+02 -
+03 -
+04 -
+05 -
+06 -
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+/* 01 - c-contact-form IG* */
+.c-contact-form {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  &__list {
+    .o-comp__content {
+      .o-tabs__tab-nav {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .o-comp__content {
+    padding-bottom: 0;
+
+    .row {
+      border-bottom: 1px solid $brand-medium-light-gray;
+      padding-bottom: 100px;
+    }
+  }
+  .c-input {
+    &__label {
+      font-weight: 600;
+      color: rgba($brand-font, 0.7);
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @include typography-page-section-commons();
+    flex: 1;
+    line-height: 1.54;
+    margin-bottom: 50px;
+  }
+
+  &__subtitle {
+    position: relative;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  &__radio-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .o-input__radio {
+      margin-bottom: 16px;
+      margin-left: 0;
+      line-height: 1.47;
+      letter-spacing: 0.1px;
+
+      label {
+        padding-left: 45px;
+        opacity: 0.6;
+      }
+    }
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    margin-bottom: 18px;
+    .c-input-select__wrap input.o-input::placeholder {
+      @include typography-body-avg-commons();
+      color: rgba($brand-font, 0.4);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    padding-top: 30px;
+    text-align: right;
+
+    button {
+      min-width: 100px;
+
+      &:first-of-type {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__bank-told {
+    justify-content: space-between;
+    flex: 1 1 100%;
+    padding-top: 30px;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.c-contact-form__subtitle--type {
+  @extend .c-contact-form__subtitle;
+  @include typography-titles-commons();
+  line-height: 1.3;
+  letter-spacing: -0.1px;
+}
+/*===========================
+06 - media queries
+===========================*/
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: $screen-sm-min) {
+// }
+/* Large devices (large desktops, 1232px and up) */
+// @media (min-width: $screen-lg-min) {}
+/* X-Large devices (large desktops, 1440px and up) */
+@media (min-width: $screen-lg-min) {
+  .c-contact-form {
+    &__wrapper {
+      flex-direction: row;
+    }
+
+    &__radio-buttons {
+      flex-wrap: wrap;
+
+      &:first-of-type {
+        flex-direction: row;
+
+        .o-input__radio {
+          width: 50%;
+        }
+      }
+
+      &.js-bank-told {
+        .o-input__radio {
+          width: 100%;
+        }
+      }
+    }
+
+    &__list {
+      .o-comp__content {
+        .o-tabs__tab-nav {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .o-form__field {
+        min-height: 120px;
+        width: 100%;
+
+        &--text-area,
+        &--additional {
+          padding-top: 30px;
+          width: 100%;
+        }
+      }
+    }
+
+    &__buttons {
+      padding: 5px 60px 20px 0;
+      flex-direction: row;
+
+      button {
+        min-width: 250px;
+
+        &:first-of-type {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}

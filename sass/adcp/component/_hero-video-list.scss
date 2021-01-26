@@ -1,0 +1,192 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - hero-video
+02 -
+03 -
+04 -
+05 -
+06 -
+06 -
+07 -
+08 -
+============================================================================== */
+/*ero-section*/
+.c-hero-video-list {
+  &__wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    background: $black;
+    .video {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    padding: 50px 0;
+    flex-direction: column;
+    border-bottom: 1px solid $brand-medium-gray;
+  }
+  &__desc {
+    width: 100%;
+  }
+  &__title {
+    // font-size: 35px;
+    // letter-spacing: -0.2px;
+    @include typography-page-section-commons();
+    font-weight: 600;
+    line-height: 1.1;
+    color: $brand-font;
+    sup {
+      // font-size: 13px;
+      // letter-spacing: 1px;
+      // font-weight: 500;
+      @include typography-label-tabs-commons();
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      // color: rgba($brand-primary-font, 0.4);
+      color: rgba($brand-font, 0.4);
+      // @include themify($themes) {
+      //   color: themed('$brand-font');
+      // }
+    }
+  }
+  &__info {
+    //font-size: 19px;
+    @include typography-body-big-commons();
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: rgba($brand-font, 0.7);
+  }
+  &__publish {
+    // font-size: 13px;
+    @include typography-legal-commons();
+    margin-bottom: 50px;
+    // color: rgba($brand-primary-font, 0.6);
+    color: rgba($brand-font, 0.7);
+  }
+  &__social {
+    width: 100%;
+    text-align: left;
+  }
+  &__views {
+    // font-size: 13px;
+    // font-weight: 500;
+    // letter-spacing: 1px;
+    @include typography-label-tabs-commons();
+    line-height: 1.5;
+    text-transform: uppercase;
+    // color: rgba($brand-primary-font, 0.4);
+    color: rgba($brand-font, 0.4);
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    float: left;
+    margin-top: 10%;
+  }
+  &__icon {
+    position: relative;
+    display: inline-block;
+    height: 42px;
+    width: 42px;
+    //border: 1px solid rgba($brand-primary-font, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 6px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 1px solid rgba($brand-font, 0.4);
+    &:hover:before {
+      content: 'SHARE' #{"/*rtl:'شارك'*/"};
+      position: absolute;
+      left: 0;
+      top: -30px;
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      .social path {
+        fill: rgba($brand-font, 0.6);
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      transition: all 0.4s ease;
+      border-color: $brand-font;
+      // @include themify($themes) {
+      //   border-color: themed('$brand-font');
+      // }
+    }
+  }
+}
+
+/*===========================
+06 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-hero-video-list {
+    &__wrapper {
+      margin: 0 auto 30px;
+    }
+    &__content {
+      flex-direction: row;
+      max-width: calc(1052px + 96px * 2);
+      padding: 0 0 50px 0;
+    }
+    &__desc {
+      width: 67%;
+    }
+    &__social {
+      width: 30%;
+      text-align: right;
+    }
+    &__icons {
+      float: right;
+      margin-top: 20%;
+      justify-content: space-between;
+      width: 150px;
+    }
+  }
+}
+/* 06 - (a) 992px & above */
+/* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md-min) {}
+@media (min-width: $screen-md-min) {
+  .c-hero-video-list {
+    &__wrapper {
+      margin: 0 auto 30px;
+      .video {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+/* Large devices (large desktops, 1232px and up) */
+/*@media (min-width: $screen-lg-min) {}*/
+
+/* X-Large devices (large desktops, 1440px and up) */
+/*@media (min-width: $screen-xl-min) {} */

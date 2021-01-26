@@ -1,0 +1,74 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - bill-payment
+02 -
+03 -
+04 -
+05 -
+06 -
+06 - (a) 992px & above
+07 -
+08 -
+============================================================================== */
+/* 01 - bill-payment */
+.c-bill-payment {
+  .c-cms-content {
+    h3 {
+      @include typography-body-big-commons();
+    }
+    ul li {
+      @include typography-body-avg-commons();
+    }
+  }
+  .c-tab-nav {
+    display: block;
+  }
+  .c-input-select {
+    .c-input-select__wrap {
+      input {
+        text-transform: initial;
+      }
+    }
+  }
+}
+/*===========================
+00 - media queries
+===========================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-bill-payment {
+    .c-tab-content {
+      .c-cms-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .c-cms-content {
+      ul li {
+        @include typography-body-big-commons();
+      }
+    }
+    .c-tab-nav {
+      display: block;
+    }
+    .c-input-select {
+      display: none;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-bill-payment {
+    .c-tab-content {
+      .c-cms-content {
+        padding: 0 8vw;
+      }
+    }
+  }
+}
+
+/* Large devices (large desktops, 1232px and up)
+@media (min-width: $screen-lg-min) { */

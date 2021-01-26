@@ -1,0 +1,66 @@
+/* ==============================================================================
+Index
+----------------------------------------
+01 - c-our-partners
+02 -
+03 -
+04 -
+05 -
+06 -
+07 -
+08 -
+============================================================================== */
+/* 01 - our-partners */
+
+.c-our-partners {
+  .o-comp__title {
+    margin-bottom: 25px;
+    h2 {
+      /*Before making any change below, verify if the font-size is required at page or component level*/
+      @include fluid-type(23px, 35px);
+    }
+  }
+  .o-comp__content {
+    max-width: 1024px;
+    margin-top: 75px;
+    margin-bottom: 48px;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .c-our-partners {
+    .o-comp__content {
+      margin: 100px auto;
+    }
+
+    &__list {
+      text-align: center;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .c-our-partners {
+    &__list {
+      flex-wrap: nowrap;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+/*
+// Origional template selector
+@font-face {
+  font-family: "icon-font";
+  src: url('src/assets/toolkit/fontsicon-font.eot');
+  src: url('src/assets/toolkit/fontsicon-font.eot?#iefix') format('eot'),
+  url('src/assets/toolkit/fontsicon-font.woff') format('woff'),
+  url('src/assets/toolkit/fontsicon-font.ttf') format('truetype'),
+  url('src/assets/toolkit/fontsicon-font.svg#icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+// // Updated template selector
+// @font-face {
+//     font-family: "icon-font";
+//     src: url('../../fonts/icon-font.eot');
+//     src: url('../../fonts/icon-font.eot?#iefix') format('eot'), url('../../fonts/icon-font.woff') format('woff'), url('../../fonts/icon-font.ttf') format('truetype'), url('../../fonts/icon-font.svg#icon-font') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+@mixin icon-styles {
+    font-family: "icon-font";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-rendering: auto;
+    display: inline-block;
+}
+
+%icon {
+    @include icon-styles;
+}
+
+@function icon-char($filename) {
+    $char: "";
+    @if $filename==add {
+        $char: "\E001";
+    }
+    @if $filename==arrow-down {
+        $char: "\E002";
+    }
+    @if $filename==arrow {
+        $char: "\E003";
+    }
+    @if $filename==close {
+        $char: "\E004";
+    }
+    @if $filename==error {
+        $char: "\E005";
+    }
+    @if $filename==location {
+        $char: "\E006";
+    }
+    @if $filename==location_bak {
+        $char: "\E007";
+    }
+    @if $filename==menu {
+        $char: "\E008";
+    }
+    @if $filename==minus {
+        $char: "\E009";
+    }
+    @if $filename==next {
+        $char: "\E00A";
+    }
+    @if $filename==pdf {
+        $char: "\E00B";
+    }
+    @if $filename==photo {
+        $char: "\E00C";
+    }
+    @if $filename==play-media {
+        $char: "\E00D";
+    }
+    @if $filename==play {
+        $char: "\E00E";
+    }
+    @if $filename==search {
+        $char: "\E00F";
+    }
+    @if $filename==search_bak {
+        $char: "\E010";
+    }
+    @if $filename==tick {
+        $char: "\E011";
+    }
+    @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+    &:#{$insert} {
+        @if $extend {
+            @extend %icon;
+        }
+        @else {
+            @include icon-styles;
+        }
+        content: icon-char($filename);
+    }
+}
+
+.icon-add {
+    @include icon(add);
+}
+
+.icon-arrow-down {
+    @include icon(arrow-down);
+}
+
+.icon-arrow {
+    @include icon(arrow);
+}
+
+.icon-close {
+    @include icon(close);
+}
+
+.icon-error {
+    @include icon(error);
+}
+
+.icon-location {
+    @include icon(location);
+}
+
+.icon-location_bak {
+    @include icon(location_bak);
+}
+
+.icon-menu {
+    @include icon(menu);
+}
+
+.icon-minus {
+    @include icon(minus);
+}
+
+.icon-next {
+    @include icon(next);
+}
+
+.icon-pdf {
+    @include icon(pdf);
+}
+
+.icon-photo {
+    @include icon(photo);
+}
+
+.icon-play-media {
+    @include icon(play-media);
+}
+
+.icon-play {
+    @include icon(play);
+}
+
+.icon-search {
+    @include icon(search);
+}
+
+.icon-search_bak {
+    @include icon(search_bak);
+}
+
+.icon-tick {
+    @include icon(tick);
+}

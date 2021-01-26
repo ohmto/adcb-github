@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Utilities</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Utility-Bill-Payments" transform="translate(-219.000000, -885.000000)">
+            <g id="Utilities" transform="translate(220.000000, 886.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="14.6285714" y="15.5428571" width="32.9142857" height="32.9142857"></rect>
+                <path d="M35.2087843,43.7664575 L35.2087843,39.0531082 C35.2087843,38.8777343 35.3061544,38.7176104 35.4626125,38.6413609 C38.9554551,36.9316774 42.0761607,33.2962703 42.0570196,29.3795871 C42.0328851,26.0008867 40.4042235,22.9331147 37.6603821,21.0285714 L37.6603821,27.9537213 C37.6603821,28.1155397 37.5738309,28.2663443 37.4356817,28.3493715 L32.2242973,31.4103657 C32.0844838,31.493393 31.9172068,31.493393 31.7757288,31.4103657 L26.5610155,28.3493715 C26.4228663,28.2663443 26.3363151,28.1163869 26.3363151,27.9537213 L26.3363151,21.038738 C23.5908093,22.9534479 21.9246976,26.1254275 21.9430065,29.4973503 C21.9621476,33.4089501 25.029591,36.910497 28.5390781,38.6345831 C28.6955361,38.7108326 28.7929063,38.8709566 28.7929063,39.044636 L28.7929063,43.7664575" id="Wrench-3" stroke="#273239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle id="Oval" stroke-opacity="0.6" stroke="#273239" cx="32" cy="32" r="32"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

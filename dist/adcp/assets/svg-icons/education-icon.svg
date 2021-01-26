@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Book Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Utility-Bill-Payments" transform="translate(-1153.000000, -885.000000)">
+            <g id="Book-Icon" transform="translate(1154.000000, 886.000000)">
+                <g id="Book" transform="translate(15.542857, 15.542857)">
+                    <rect id="Rectangle" fill="#FFFFFF" opacity="0" x="0" y="0" width="32.9142857" height="32.9142857"></rect>
+                    <g id="Option-2" transform="translate(3.657143, 6.400000)" stroke="#273239" stroke-linejoin="round" stroke-width="2">
+                        <path d="M12.8,3.55841612 L0,0 L0,18.601302 L12.8,21.9428571 C12.8,9.68656313 12.8,3.55841612 12.8,3.55841612 Z" id="Path-4"></path>
+                        <polygon id="Path-4" points="12.8 3.55841612 25.6 0 25.6 18.601302 12.8 21.9428571"></polygon>
+                    </g>
+                </g>
+                <circle id="Oval-Copy-4" stroke-opacity="0.6" stroke="#273239" cx="32" cy="32" r="32"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

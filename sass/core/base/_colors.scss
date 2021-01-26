@@ -1,0 +1,43 @@
+/*==============================================================================
+Index
+----------------------------------------
+01 - generic global bootstrap colors
+02 - global scaffolding
+03 - brand colors
+04 -
+==============================================================================*/
+
+
+/*--------------------
+01 - generic global bootstrap colors
+--------------------*/
+
+//## Gray and base colors for use across Bootstrap.
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+
+/*--------------------
+02 - global scaffolding
+--------------------*/
+
+$white: #fff;
+$black: #000;
+$font-gray: #273239;
+$alto: #d8d8d8;
+$text-color: $black;
+$link-color: $black;
+$link-hover-color: $black;
+$link-hover-decoration: none;
+
+/*--------------------
+03 - brand colors
+--------------------*/
+
+$brand-primary-font: $font-gray;
+//Generating Fonts colors
+$brand-font: $font-gray;
+@import 'core-colors';

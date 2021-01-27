@@ -60,25 +60,25 @@ After running the gulp tasks you will be generated the following css files to ta
 
  <pre>
   <code>
-    <link rel="stylesheet" href="dist/adcb/assets/styles/personal/toolkit-en-custom.css" />
-    <link rel="stylesheet" href="dist/adcb/assets/styles/personal/toolkit-ar-custom.css" />
+    dist/adcb/assets/styles/personal/toolkit-en-custom.css
+    dist/adcb/assets/styles/personal/toolkit-ar-custom.css
   </code>
 </pre>
 <pre>
   <code>
-    <link rel="stylesheet" href="dist/adcb/assets/styles/about/toolkit-en-custom.css" />
-    <link rel="stylesheet" href="dist/adcb/assets/styles/about/toolkit-ar-custom.css" />
+    dist/adcb/assets/styles/about/toolkit-en-custom.css
+    dist/adcb/assets/styles/about/toolkit-ar-custom.css
   </code>
 </pre>
 <pre>
   <code>
-    <link rel="stylesheet" href="dist/adcp/assets/styles/toolkit-en.css">
-    <link rel="stylesheet" href="dist/adcp/assets/styles/toolkit-ar.css">
+    dist/adcp/assets/styles/toolkit-en.css
+    dist/adcp/assets/styles/toolkit-ar.css
   </code>
 </pre>
 <pre>
   <code>
-    <link rel="stylesheet" href="dist/adce/assets/styles/toolkit-en.css">
-    <link rel="stylesheet" href="dist/adce/assets/styles/toolkit-ar.css">
+    dist/adce/assets/styles/toolkit-en.css
+    dist/adce/assets/styles/toolkit-ar.css
   </code>
 </pre>

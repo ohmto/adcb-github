@@ -2,8 +2,7 @@
 
 # ADCB "Personal" & "About", ADCP, ADCE Styles ~~and Scripts~~ UI toolkit
 
-<p>This is the styles automation generator for Abu Dhabi Commercial Bank Website.<br/>
-These files need to be downloaded on you local machine.</p>
+<p>These files need to be downloaded on you local machine.</p>
 
 ## Requirements
 

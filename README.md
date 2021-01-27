@@ -1,6 +1,6 @@
 <!-- ![ADCB Logo](https://www.healthholistic.com/wp-content/uploads/2016/10/ADCB-logo-320x100.png "ADCB Logo") -->
 
-# ADCB "Personal" & "About", ADCP, ADCE Styles ~~and Scripts~~ UI toolkit
+# ADCB "Personal" & "About", ADCP, ADCE UI toolkit (Styles ~~and Scripts~~)
 
 <p>These files need to be downloaded on you local machine.</p>
 

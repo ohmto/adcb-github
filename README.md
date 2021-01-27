@@ -59,24 +59,28 @@
 After running the gulp tasks you will be generated the following css files to take them to tradion CMS
 
  <pre>
+ ADCB Personal
   <code>
     dist/adcb/assets/styles/personal/toolkit-en-custom.css
     dist/adcb/assets/styles/personal/toolkit-ar-custom.css
   </code>
 </pre>
 <pre>
+ ADCB About us
   <code>
     dist/adcb/assets/styles/about/toolkit-en-custom.css
     dist/adcb/assets/styles/about/toolkit-ar-custom.css
   </code>
 </pre>
 <pre>
+ ADCP
   <code>
     dist/adcp/assets/styles/toolkit-en.css
     dist/adcp/assets/styles/toolkit-ar.css
   </code>
 </pre>
 <pre>
+ ADCE
   <code>
     dist/adce/assets/styles/toolkit-en.css
     dist/adce/assets/styles/toolkit-ar.css

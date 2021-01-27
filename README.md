@@ -24,7 +24,7 @@
 
 <pre><code>npm install bootstrap-sass d3 flickity jquery owl.carousel</code></pre>
 
-#### Dev.Dependencies:
+### Dependencies for development (Mandetory):
 
 <pre>
 <code>

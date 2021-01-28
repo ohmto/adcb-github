@@ -13,13 +13,14 @@
 */
 
 // // Updated template selector
-// @font-face {
-//     font-family: "icon-font";
-//     src: url('../../fonts/icon-font.eot');
-//     src: url('../../fonts/icon-font.eot?#iefix') format('eot'), url('../../fonts/icon-font.woff') format('woff'), url('../../fonts/icon-font.ttf') format('truetype'), url('../../fonts/icon-font.svg#icon-font') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: "icon-font";
+    src: url('../fonts/icon-font.eot');
+    src: url('../fonts/icon-font.eot?#iefix') format('eot'), url('../fonts/icon-font.woff') format('woff'), url('../fonts/icon-font.ttf') format('truetype'), url('../fonts/icon-font.svg#icon-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @mixin icon-styles {
     font-family: "icon-font";
     -webkit-font-smoothing: antialiased;
@@ -95,7 +96,9 @@
     @return $char;
 }
 
-@mixin icon($filename, $insert: before, $extend: true) {
+@mixin icon($filename,
+$insert: before,
+$extend: true) {
     &:#{$insert} {
         @if $extend {
             @extend %icon;

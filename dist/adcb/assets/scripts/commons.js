@@ -34,27 +34,27 @@ if (_el) {
     if (_loc.indexOf("/en") >= 0) {
         if (_loc.indexOf("islamic/") >= 0) {
             if (_loc.indexOf("/islamic/personal/") >= 0) {
-                _adcbLogo.href = "/en/islamic/personal";
-                _adcbFooterlogo.href = "/en/islamic/personal";
+                _adcbLogo.href = "#";
+                _adcbFooterlogo.href = "#";
             } else if (_loc.indexOf("/islamic/business/") >= 0) {
-                _adcbLogo.href = "/en/islamic/business";
-                _adcbFooterlogo.href = "/en/islamic/business";
+                _adcbLogo.href = "#/business";
+                _adcbFooterlogo.href = "#/business";
             } else {
-                _adcbLogo.href = "/en/islamic/personal";
-                _adcbFooterlogo.href = "/en/islamic/personal";
+                _adcbLogo.href = "#";
+                _adcbFooterlogo.href = "#";
             }
         } else if (_loc.indexOf("business/") >= 0) {
-            _adcbLogo.href = "/en/business/";
-            _adcbFooterlogo.href = "/en/business/";
+            _adcbLogo.href = "#";
+            _adcbFooterlogo.href = "#";
         } else if (_loc.indexOf("private/") >= 0) {
-            _adcbLogo.href = "/en/private/";
-            _adcbFooterlogo.href = "/en/private/";
+            _adcbLogo.href = "#";
+            _adcbFooterlogo.href = "#";
         } else if (_loc.indexOf("about/") >= 0) {
-            _adcbLogo.href = "/en/personal/";
-            _adcbFooterlogo.href = "/en/personal/";
+            _adcbLogo.href = "#";
+            _adcbFooterlogo.href = "#";
         } else {
-            _adcbLogo.href = "/en/personal/";
-            _adcbFooterlogo.href = "/en/personal/";
+            _adcbLogo.href = "#";
+            _adcbFooterlogo.href = "#";
         }
     }
     if (_loc.indexOf("/ar") >= 0) {
@@ -91,8 +91,11 @@ if (_productText) {
     $("#txtProduct").val(_productText)
 }
 $(document).ready(function() {
-    $("._ref-change").each(function() { var _this = $(this); var _href = _this.attr("href");
-        _this.attr("href", _href + "#active-tab"); })
+    $("._ref-change").each(function() {
+        var _this = $(this);
+        var _href = _this.attr("href");
+        _this.attr("href", _href + "#active-tab");
+    })
 })
 
 var _webLang = $("html").attr("lang");

@@ -799,4 +799,17 @@ hr {
 }
 
 
+/* hero premium overiding */
+
+@media (min-width: $screen-sm-min) {
+    .hero-premium {
+        &__item,
+        .owl-item {
+            height: auto;
+            min-height: 80vh;
+        }
+    }
+}
+
+
 /* Ends here 0 */

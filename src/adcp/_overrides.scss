@@ -16,7 +16,7 @@ Index
 
 
 /*
-Starts here 0 - Required to change o-tabs__tab-content-summary width to 100%, currently it's 70%
+ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary width to 100%, currently it's 70%
 */
 
 .c-easy-banking {
@@ -806,10 +806,34 @@ hr {
         &__item,
         .owl-item {
             height: auto;
-            min-height: 80vh;
+            min-height: 80vh !important;
+        }
+        .owl-dot {
+            span {
+                height: 2px !important;
+            }
+            .progress {
+                top: 1px;
+                height: 2px;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .hero-premium {
+        .owl-dots {
+            left: calc((100vw - 1150px) / 2) !important;
+            bottom: 110px !important;
+            .owl-dot {
+                .progress {
+                    top: 1px !important;
+                    height: 2px !important;
+                }
+            }
         }
     }
 }
 
 
-/* Ends here 0 */
+/* ADCP override - Ends here 00  */

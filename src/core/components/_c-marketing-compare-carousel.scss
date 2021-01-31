@@ -356,6 +356,9 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
                     display: block;
                     height: 2px;
                 }
+                &:before {
+                    display: none;
+                }
             }
             .flickity-slider {
                 // display: block;

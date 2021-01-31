@@ -19,7 +19,7 @@ Index
         padding-bottom: 3rem;
         z-index: 2;
         &.-with-hero {
-            transform: translateY(-10%);
+            transform: translateY(-5%);
         }
         &__content {
             justify-content: center;
@@ -35,17 +35,25 @@ Index
         .c-widgetcolumns__col.-onethird,
         .c-widgetcolumns__col.-twothird {
             display: flex;
-            .o-input__radio input[type="radio"]:checked+label:before {
-                border: $brand-primary-dark;
-                background: $white;
-            }
-            .o-input__radio input[type="radio"]:checked+label:after {
-                background: $brand-primary-dark;
+            .o-input__radio {
+                input[type="radio"]:checked+label:before {
+                    border: $brand-primary-dark;
+                    background: $white;
+                }
+                input[type="radio"]:checked+label:after {
+                    background: $brand-primary-dark;
+                }
             }
         }
         .c-widgetcolumns__col {
             /* if 1/2 column width */
             flex: 1;
+            .c-leads__radio-btn {
+                margin-bottom: 1em;
+                &.-horizontal {
+                    display: block;
+                }
+            }
             &.-onethird {
                 /* if 1/3 column width */
                 flex: 1;
@@ -60,9 +68,9 @@ Index
                     font-size: 30px #{"/*rtl:30px*/"};
                     .titleicon {
                         border-top: 5px solid $brand-primary-dark;
-                        padding: 30px 0px 0px 0px;
+                        padding: 26px 0px 0px 0px;
                         margin-left: -42px;
-                        margin-top: -34px;
+                        margin-top: -30px;
                         position: absolute;
                         img {
                             // width: 26px;
@@ -151,9 +159,9 @@ Index
                     font-size: 30px #{"/*rtl:30px*/"};
                     .titleicon {
                         border-top: 5px solid $brand-primary-dark;
-                        padding: 30px 0px 0px 0px;
+                        padding: 26px 0px 0px 0px;
                         margin-left: -42px;
-                        margin-top: -34px;
+                        margin-top: -30px;
                         position: absolute;
                         img {
                             // width: 26px;
@@ -276,7 +284,7 @@ Index
         /* Medium devices (tablets, 768px and up) */
         .c-hero-forms-widgetcolumns {
             &.-with-hero {
-                transform: translateY(-15%);
+                transform: translateY(-5%);
             }
             &__content {
                 display: flex;
@@ -285,12 +293,19 @@ Index
             }
             .o-comp__content {
                 margin: 2em;
+                padding: 0;
                 display: flex;
                 flex-direction: column;
                 // justify-content: space-between;
             }
             .c-widgetcolumns__col {
                 min-height: 420px;
+                .c-leads__radio-btn {
+                    margin-bottom: 1em;
+                    &.-horizontal {
+                        display: flex;
+                    }
+                }
                 &.-onethird {
                     /* if 1/3 column width */
                     flex: 1;

@@ -20,6 +20,8 @@ Index
         z-index: 2;
         &.-with-hero {
             transform: translateY(-5%);
+            z-index: 2;
+            position: relative;
         }
         &__content {
             justify-content: center;

@@ -214,6 +214,61 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
+.c-4tiles01 {
+    .o-comp__title {
+        margin-bottom: 48px;
+        .o-comp__title_desc {
+            padding-top: 0px;
+            text-align: center;
+        }
+    }
+    .o-comp__content {
+        max-width: calc(1040px + 96px * 2) !important;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+    .c-offers-promotions__summary {
+        p {
+            text-align: center;
+        }
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: $screen-md-min) {
+        .c-offers-promotions-list {
+            &__item {
+                width: 25%;
+                padding: 0 1% 0 1%;
+            }
+            &__wrap {
+                margin-left: -1%;
+                width: 102% !important;
+            }
+        }
+    }
+    .c-offers-promotions__thumb {
+        padding-bottom: 120%;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(39, 50, 57, 0.7)), to(rgba(0, 0, 0, 0)));
+            background-image: linear-gradient(to top, rgba(39, 50, 57, 0.7), rgba(0, 0, 0, 0));
+        }
+        .c-offers-promotions__sticker {
+            left: 0;
+            bottom: 20%;
+            top: initial;
+            padding-right: 16px;
+            padding-left: 16px;
+            transform: none;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
 .c-3tiles01 {
     .o-comp__title {
         margin-bottom: 48px;
@@ -661,29 +716,31 @@ hr {
 .flickity-button {
     background: transparent;
     color: $brand-primary-dark;
+    &:hover {
+        background: transparent;
+        color: $brand-primary-light;
+    }
 }
 
-.flickity-button:hover {
-    background: transparent;
-    color: $brand-primary-light;
+.flickity-prev-next-button {
+    &.next {
+        /*rtl:begin:ignore*/
+        right: -50px;
+        left: inherit;
+        /*rtl:end:ignore*/
+    }
+    &.previous {
+        /*rtl:begin:ignore*/
+        left: -50px;
+        right: inherit;
+        /*rtl:end:ignore*/
+    }
 }
 
-.flickity-prev-next-button.next {
-    /*rtl:begin:ignore*/
-    right: -50px;
-    left: inherit;
-    /*rtl:end:ignore*/
-}
-
-.flickity-prev-next-button.previous {
-    /*rtl:begin:ignore*/
-    left: -50px;
-    right: inherit;
-    /*rtl:end:ignore*/
-}
-
-.c-sidemenu .c-chat__link:hover {
-    width: 160px;
+.c-sidemenu {
+    .c-chat__link:hover {
+        width: 160px;
+    }
 }
 
 .o-comp__content {
@@ -758,8 +815,10 @@ hr {
     border-left: none;
 }
 
-.c-cms-content-table-responsive td:before {
-    color: $brand-primary-dark;
+.c-cms-content-table-responsive {
+    td:before {
+        color: $brand-primary-dark;
+    }
 }
 
 .c-cms-content table td,
@@ -794,46 +853,42 @@ hr {
 
 /* Footer breadcrumb top padding  - remove  */
 
-.site-wrap .site-footer .c-breadcrumbs {
-    margin-top: 0 !important;
+.site-wrap {
+    .site-footer {
+        .c-breadcrumbs {
+            margin-top: 0 !important;
+        }
+    }
 }
 
 
 /* hero premium overiding */
 
-@media (min-width: $screen-sm-min) {
-    .hero-premium {
-        &__item,
-        .owl-item {
-            height: auto;
-            min-height: 80vh !important;
-        }
+// @media (min-width: $screen-sm-min) {
+// .hero-premium {}
+// }
+// @media (min-width: $screen-lg-min) {
+.hero-premium {
+    &__item,
+    .owl-item {
+        height: auto;
+        min-height: 80vh !important;
+    }
+    .owl-dots {
+        left: calc((100vw - 1150px) / 2) !important;
+        bottom: 110px !important;
         .owl-dot {
             span {
                 height: 2px !important;
             }
             .progress {
-                top: 1px;
-                height: 2px;
+                top: 1px !important;
+                height: 2px !important;
             }
         }
     }
 }
 
-@media (min-width: $screen-lg-min) {
-    .hero-premium {
-        .owl-dots {
-            left: calc((100vw - 1150px) / 2) !important;
-            bottom: 110px !important;
-            .owl-dot {
-                .progress {
-                    top: 1px !important;
-                    height: 2px !important;
-                }
-            }
-        }
-    }
-}
-
+// }
 
 /* ADCP override - Ends here 00  */

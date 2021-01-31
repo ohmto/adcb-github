@@ -129,8 +129,8 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
                 height: 16px;
             }
             &:hover {
-                color: #ec0100;
-                border: 1px solid #ec0100 !important;
+                color: $brand-primary-dark;
+                border: 1px solid $brand-primary-dark !important;
                 border-radius: 48px;
                 width: 72px;
             }

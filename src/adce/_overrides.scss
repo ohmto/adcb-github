@@ -890,39 +890,31 @@ hr {
 
 /* hero premium overiding */
 
-@media (min-width: $screen-sm-min) {
-    .hero-premium {
-        &__item,
-        .owl-item {
-            height: auto;
-            min-height: 80vh !important;
-        }
+// @media (min-width: $screen-sm-min) {
+// .hero-premium {}
+// }
+// @media (min-width: $screen-lg-min) {
+.hero-premium {
+    &__item,
+    .owl-item {
+        height: auto;
+        min-height: 80vh !important;
+    }
+    .owl-dots {
+        left: calc((100vw - 1150px) / 2) !important;
+        bottom: 110px !important;
         .owl-dot {
             span {
                 height: 2px !important;
             }
             .progress {
-                top: 1px;
-                height: 2px;
+                top: 1px !important;
+                height: 2px !important;
             }
         }
     }
 }
 
-@media (min-width: $screen-lg-min) {
-    .hero-premium {
-        .owl-dots {
-            left: calc((100vw - 1150px) / 2) !important;
-            bottom: 110px !important;
-            .owl-dot {
-                .progress {
-                    top: 1px !important;
-                    height: 2px !important;
-                }
-            }
-        }
-    }
-}
-
+// }
 
 /* Ends here 0 */

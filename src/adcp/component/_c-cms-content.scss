@@ -90,7 +90,7 @@ Index
         li {
             padding-left: 33px;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 1em;
             color: rgba($brand-font, 0.7);
             // @include themify($themes) {
             //   color: themed("brand-font");
@@ -125,6 +125,7 @@ Index
         padding-left: 20px;
         li {
             padding-left: 15px;
+            margin-bottom: 1em;
             ol {
                 margin-bottom: 1.73vw;
             }

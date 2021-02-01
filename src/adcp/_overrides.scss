@@ -771,31 +771,19 @@ hr {
     }
 }
 
-.c-cms-content,
+// .c-cms-content,
 .c-table,
 .c-table-three-cols,
 .c-thumbnails-table,
 .c-table-two-cols,
 .c-table-seven-cols {
     color: $brand-primary-dark;
-}
-
-.c-cms-content table,
-.c-table table,
-.c-table-three-cols table,
-.c-thumbnails-table table,
-.c-table-two-cols table,
-.c-table-seven-cols table {
-    border: none;
-}
-
-.c-cms-content table thead,
-.c-table table thead,
-.c-table-three-cols table thead,
-.c-thumbnails-table table thead,
-.c-table-two-cols table thead,
-.c-table-seven-cols table thead {
-    background: transparent;
+    table {
+        border: none;
+        thead {
+            background: transparent;
+        }
+    }
 }
 
 .c-cms-content table th,

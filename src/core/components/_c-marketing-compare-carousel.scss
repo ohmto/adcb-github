@@ -135,10 +135,10 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
                 width: 72px;
             }
             &.previous {
-                transform: translate(-50%, -50%);
+                transform: translate(50%, -50%);
             }
             &.next {
-                transform: translate(50%, -50%);
+                transform: translate(-50%, -50%);
             }
         }
         ol.flickity-page-dots {

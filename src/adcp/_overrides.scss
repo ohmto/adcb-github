@@ -874,6 +874,11 @@ hr {
         height: auto;
         min-height: 80vh !important;
     }
+    .owl-nav {
+        &.disabled {
+            display: none;
+        }
+    }
     .owl-dots {
         left: calc((100vw - 1150px) / 2) !important;
         bottom: 110px !important;
@@ -885,6 +890,9 @@ hr {
                 top: 1px !important;
                 height: 2px !important;
             }
+        }
+        &.disabled {
+            display: none;
         }
     }
 }

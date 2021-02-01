@@ -913,4 +913,35 @@ hr {
 
 // }
 
+/* no top/bottom spacing */
+
+.no-top-pad,
+.no-top-padding {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    .o-comp__content {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+        &.container {
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+    }
+}
+
+.no-bottom-pad,
+.no-bottom-padding {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    .o-comp__content {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+        &.container {
+            margin-bottom: 0px !important;
+            padding-bottom: 0px !important;
+        }
+    }
+}
+
+
 /* Ends here 0 */

@@ -117,6 +117,12 @@ Index
                     &:before {
                         content: none;
                     }
+                    ul,
+                    ol {
+                        li {
+                            padding-left: 10px;
+                        }
+                    }
                 }
             }
         }
@@ -128,6 +134,12 @@ Index
             margin-bottom: 1em;
             ol {
                 margin-bottom: 1.73vw;
+            }
+            ul,
+            ol {
+                li {
+                    padding-left: 10px;
+                }
             }
         }
     }

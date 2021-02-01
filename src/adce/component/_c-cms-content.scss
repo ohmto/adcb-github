@@ -86,8 +86,8 @@ Index
     ol {
         margin-bottom: 1.5em;
     }
-    >ul {
-        li {
+    ul {
+        >li {
             padding-left: 33px;
             position: relative;
             margin-bottom: 1em;
@@ -122,9 +122,9 @@ Index
             }
         }
     }
-    >ol {
+    ol {
         padding-left: 20px;
-        li {
+        >li {
             padding-left: 15px;
             margin-bottom: 1em;
             ol,

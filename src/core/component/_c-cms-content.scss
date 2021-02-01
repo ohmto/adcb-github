@@ -84,7 +84,7 @@ Index
     }
     ul,
     ol {
-        margin-bottom: 30px;
+        margin-bottom: 1.5em;
     }
     ul {
         li {
@@ -108,20 +108,16 @@ Index
                 //   color: themed("brand-primary-light");
                 // }
             }
-            ul {
+            ul,
+            ol {
                 margin-bottom: 1.73vw;
+                margin-top: 1em;
                 li {
                     list-style-type: circle;
-                    padding-left: 10px;
+                    padding-left: 1.5em;
                     margin-left: 20px;
                     &:before {
                         content: none;
-                    }
-                    ul,
-                    ol {
-                        li {
-                            padding-left: 10px;
-                        }
                     }
                 }
             }
@@ -132,14 +128,10 @@ Index
         li {
             padding-left: 15px;
             margin-bottom: 1em;
-            ol {
+            ol,
+            ul {
                 margin-bottom: 1.73vw;
-            }
-            ul,
-            ol {
-                li {
-                    padding-left: 10px;
-                }
+                margin-top: 1em;
             }
         }
     }

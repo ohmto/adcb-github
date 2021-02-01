@@ -405,10 +405,10 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
             }
             .flickity-prev-next-button {
                 &.previous {
-                    transform: translate(-150%, -50%);
+                    transform: translate(150%, -50%);
                 }
                 &.next {
-                    transform: translate(150%, -50%);
+                    transform: translate(-150%, -50%);
                 }
             }
         }

@@ -86,8 +86,8 @@ Index
     ol {
         margin-bottom: 1.5em;
     }
-    >ul {
-        li {
+    ul {
+        >li {
             padding-left: 33px;
             position: relative;
             margin-bottom: 1em;
@@ -116,6 +116,7 @@ Index
                     list-style-type: circle;
                     padding-left: 1.5em;
                     margin-left: 20px;
+                    margin-bottom: 0.5em;
                     &:before {
                         content: none;
                     }
@@ -123,15 +124,18 @@ Index
             }
         }
     }
-    >ol {
+    ol {
         padding-left: 20px;
-        li {
+        >li {
             padding-left: 15px;
             margin-bottom: 1em;
             ol,
             ul {
                 margin-bottom: 1.73vw;
                 margin-top: 1em;
+                li {
+                    margin-bottom: 0.5em;
+                }
             }
         }
     }

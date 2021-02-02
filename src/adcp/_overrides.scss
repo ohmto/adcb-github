@@ -918,4 +918,16 @@ hr {
 }
 
 
+/* for description text height */
+
+.o-ellipse-two-lines {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 /* ADCP override - Ends here 00  */

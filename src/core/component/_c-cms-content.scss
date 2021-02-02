@@ -129,6 +129,11 @@ Index
         >li {
             padding-left: 15px;
             margin-bottom: 1em;
+            color: rgba($brand-font, 0.7);
+            &::marker {
+                color: $brand-primary-light;
+                font-weight: 600;
+            }
             ol,
             ul {
                 margin-bottom: 1.73vw;

@@ -91,19 +91,21 @@
 }
 
 .flickity-prev-next-button.previous {
+    right: auto;
     left: 10px;
 }
 
 .flickity-prev-next-button.next {
     right: 10px;
+    left: auto;
 }
 
 
 /* right to left */
 
 .flickity-rtl .flickity-prev-next-button.previous {
-    left: auto;
     right: 10px;
+    left: auto;
 }
 
 .flickity-rtl .flickity-prev-next-button.next {

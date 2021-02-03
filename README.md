@@ -61,28 +61,28 @@ After running the gulp tasks you will be generated the following css files to ta
  <pre>
  ADCB Personal
   <code>
-    dist/adcb/assets/styles/personal/toolkit-en-custom.css
-    dist/adcb/assets/styles/personal/toolkit-ar-custom.css
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adcb/assets/styles/personal/toolkit-en-custom.css">dist/adcb/assets/styles/personal/toolkit-en-custom.css</a>
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adcb/assets/styles/personal/toolkit-ar-custom.css">dist/adcb/assets/styles/personal/toolkit-ar-custom.css</a>
   </code>
 </pre>
 <pre>
  ADCB About us
   <code>
-    dist/adcb/assets/styles/about/toolkit-en-custom.css
-    dist/adcb/assets/styles/about/toolkit-ar-custom.css
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adcb/assets/styles/about/toolkit-en-custom.css">dist/adcb/assets/styles/about/toolkit-en-custom.css</a>
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adcb/assets/styles/about/toolkit-ar-custom.css">dist/adcb/assets/styles/about/toolkit-ar-custom.css</a>
   </code>
 </pre>
 <pre>
  ADCP
   <code>
-    dist/adcp/assets/styles/toolkit-en.css
-    dist/adcp/assets/styles/toolkit-ar.css
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adcp/assets/styles/toolkit-en.css">dist/adcp/assets/styles/toolkit-en.css</a>
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adcp/assets/styles/toolkit-ar.css">dist/adcp/assets/styles/toolkit-ar.css</a>
   </code>
 </pre>
 <pre>
  ADCE
   <code>
-    dist/adce/assets/styles/toolkit-en.css
-    dist/adce/assets/styles/toolkit-ar.css
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adce/assets/styles/toolkit-en.css">dist/adce/assets/styles/toolkit-en.css</a>
+    <a href="https://github.com/ohmto/adcb-github/blob/main/dist/adce/assets/styles/toolkit-ar.css">dist/adce/assets/styles/toolkit-ar.css</a>
   </code>
 </pre>

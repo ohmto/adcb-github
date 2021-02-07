@@ -1,34 +1,33 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
-    <title>Form builder - Component</title>
+    <title>Starter HTML EN Template</title>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta name="format-detection" content="telephone=no">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- favicon for classic desktop browsers -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- favicon for apple 180x180 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
     <!-- manifest file for android icon 192x192 -->
-    <link rel="manifest" href="https://adcb-preview.surge.sh/personal-english/site.webmanifest" />
+    <link rel="manifest" href="site.webmanifest" />
 
-
-    <script type="text/javascript" src="https://adcb.com/en/system/assets/toolkit/scripts/jquery.js"></script>
-    <link type="text/css" rel="stylesheet" href="daterangepicker/daterangepicker.css" />
     <!-- toolkit styles -->
-    <link rel="stylesheet" href="https://adcb.com/en/system/assets/toolkit/styles/personal/toolkit-en.css">
+    <link rel="stylesheet" href="https://www.adcb.com/en/system/assets/toolkit/styles/personal/toolkit-en.css">
     <link rel="stylesheet" href="assets/styles/personal/toolkit-en-custom.css">
     <!-- /toolkit styles -->
-
-
-
 </head>
 
-<body class="en" style=" padding: 2.5em;">
+<body class="en">
 
     <div class="o-comp c-campaign-leads">
         <div class="o-comp__content container">
@@ -37,315 +36,320 @@
             <!-- #### start of form #### -->
             <form id="applynow" method="post" class="c-leads__form" action="PER-PDP1-compaigns_thankyou.html" autocomplete="off" novalidate="novalidate">
 
-                <fieldset>
+                <!-- <fieldset> -->
 
-                    <!--From title--->
-                    <legend class="steptitle">Current Form Elements</legend>
-                    <div class="stepdesc"><strong>Description parapraph, that better have maximum 50 carachters.</strong></div>
+                <!--From title--->
+                <legend class="steptitle">Current Form Elements</legend>
+                <div class="stepdesc"><strong>Description parapraph, that better have maximum 50
+                            carachters.</strong></div>
 
-                    <!-- 01 ## text-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <input type="text" name="" id="field01" class="o-input o-input__text" placeholder="Placeholder text" pattern='([A-z-À-ž\s]){2,}' required>
-                            <label class='c-input__label' for="field01">Label Text</label>
-                            <span class="c-input__error">Error message</span>
-                        </div>
+                <!-- 1 ## text-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <input type="text" name="" id="field01" class="o-input o-input__text" placeholder="Placeholder text" pattern='([A-z-À-ž\s]){2,}' required>
+                        <label class='c-input__label' for="field01">1. Label Text</label>
+                        <span class="c-input__error">Error message</span>
                     </div>
-
-                    <!-- 02 ## email--->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <input type="email" name="email" id="field02" placeholder="email@domain.com" class="o-input o-input__text" required>
-                            <label class='c-input__label' for="field02">Email</label>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 03 numbers only-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <input name="accountNum" id="field03" placeholder="8 digit Account number" pattern="[0-9]*" type="text" class="o-input o-input__text" required>
-                            <label class='c-input__label' for="field03">Account number</label>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 04 ## phone number (9 digits)-->
-                    <div class="o-form__field">
-                        <div class="c-input-telephone">
-                            <div class="c-input-telephone__wrap">
-                                <label class='c-input__label' for="telephone">Phone number</label>
-                                <span class="c-input__error o-input__error">Please provide a valid phone</span>
-                                <input type="tel" class="c-input-telephone__country" pattern="^[+]\d{1,3}$" maxlength="4" name="country-prefix" value="+971" required>
-                                <input type="tel" class="c-input-telephone__number o-input o-input__text" pattern="[0-9]*$" placeholder="" name="telephone" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 05 ## select box-->
-                    <div class="o-form__field">
-                        <div class="c-contact-form__select">
-                            <div class="c-input-select">
-                                <div class="c-input-select__wrap">
-                                    <input name="ctl00$MainContent$uc_applylead_emirati$emirate" type="text" id="emirate" class="o-input" placeholder="Select your emirate" required readonly>
-                                    <input name="ctl00$MainContent$uc_applylead_emirati$emirate__hide" type="text" id="emirate__hide" class="value__holder hide" readonly>
-                                    <label class="c-input__label">Emirate</label>
-                                    <span class="c-input__error">Select your emirate</span>
-                                    <span class="icon-arrow-down"></span>
-                                    <div class="c-input-select__dropdown">
-                                        <span data-value="Abu Dhabi" tabindex="0" class="c-input-select__option">Abu Dhabi </span>
-                                        <span data-value="Dubai" tabindex="0" class="c-input-select__option">Dubai </span>
-                                        <span data-value="Fujairah" tabindex="0" class="c-input-select__option">Fujairah </span>
-                                        <span data-value="Ajman" tabindex="0" class="c-input-select__option">Ajman </span>
-                                        <span data-value="Ras Al Khaimah" tabindex="0" class="c-input-select__option">Ras Al Khaimah </span>
-                                        <span data-value="Sharjah" tabindex="0" class="c-input-select__option">Sharjah </span>
-                                        <span data-value="Umm al Quwain" tabindex="0" class="c-input-select__option">Umm al Quwain </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="o-form__field">
-              <div class="c-input-select">
-                <div class="c-input-select__wrap">
-                  <label class='c-input__label' for=" o-input-field ">Label</label>
-                  <input autocomplete="off" readonly='readonly' name='select-input' class="o-input o-input__text" placeholder="Placeholder">
-                    <input readonly name='selectInput__hide' class="value__holder hide" value="" />
-                    <span class="icon-arrow-down "></span>
-                  </input>
-                  <div class="c-input-select__dropdown"></div>
-                  <span class="c-input__error">Error message</span>
                 </div>
-                <select name="select-input" id="">
-                  <option value="Option 1"></option>
-                  <option value="Option 2"></option>
-                  <option value="Option 3"></option>
-                </select>
-              </div>
-            </div> -->
 
-                    <!-- 07 ## textarea-->
-                    <div class="o-form__field">
-                        <div class="c-input__text-area">
-                            <textarea class='o-input' rows="4" cols='50' name='text-area' placeholder="Type something here ..." required></textarea>
-                            <label class='c-input__label' for="text-area">Text area label</label>
-                            <span class="c-input__error">Error message</span>
+                <!-- 2 ## email--->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <input type="email" name="email" id="field02" placeholder="email@domain.com" class="o-input o-input__text" required>
+                        <label class='c-input__label' for="field02">2. Email</label>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 3 numbers only-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <input name="accountNum" id="field03" placeholder="8 digit Account number" pattern="[0-9]*" type="text" class="o-input o-input__text" required>
+                        <label class='c-input__label' for="field03">3. Account number</label>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 4 ## phone number (9 digits)-->
+                <div class="o-form__field">
+                    <div class="c-input-telephone">
+                        <div class="c-input-telephone__wrap">
+                            <label class='c-input__label' for="telephone">4. Phone number</label>
+                            <span class="c-input__error o-input__error">Please provide a valid phone</span>
+                            <input type="tel" class="c-input-telephone__country" pattern="^[+]\d{1,3}$" maxlength="4" name="country-prefix" value="+971" required>
+                            <input type="tel" class="c-input-telephone__number o-input o-input__text" pattern="[0-9]*$" placeholder="" name="telephone" required>
                         </div>
                     </div>
+                </div>
 
-                    <!-- 08 ## text with pre unit-->
-                    <div class="o-form__field">
-                        <div class="c-calculator-overlay__input">
-                            <div class="c-calculator__input-text">
-                                <label class="c-calculator__input-label">Amount Per Month</label>
-                                <div class="c-calculator__input-wrapper">
-                                    <label class="c-calculator__input-text-curr">AED</label>
-                                    <input class="c-calculator__input-text-box o-input" type="number" data-start-balance="0" placeholder="0" required>
-                                    <span class="c-calculator__input-error">Error message</span>
+                <!-- 5 ## select box-->
+                <div class="o-form__field">
+                    <div class="c-contact-form__select">
+                        <div class="c-input-select">
+                            <div class="c-input-select__wrap">
+                                <input name="ctl00$MainContent$uc_applylead_emirati$emirate" type="text" id="emirate" class="o-input" placeholder="Select your emirate" required readonly>
+                                <input name="ctl00$MainContent$uc_applylead_emirati$emirate__hide" type="text" id="emirate__hide" class="value__holder hide" readonly>
+                                <label class="c-input__label">5. Emirate</label>
+                                <span class="c-input__error">Select your emirate</span>
+                                <span class="icon-arrow-down"></span>
+                                <div class="c-input-select__dropdown">
+                                    <span data-value="Abu Dhabi" tabindex="0" class="c-input-select__option">Abu
+                                            Dhabi </span>
+                                    <span data-value="Dubai" tabindex="0" class="c-input-select__option">Dubai
+                                        </span>
+                                    <span data-value="Fujairah" tabindex="0" class="c-input-select__option">Fujairah
+                                        </span>
+                                    <span data-value="Ajman" tabindex="0" class="c-input-select__option">Ajman
+                                        </span>
+                                    <span data-value="Ras Al Khaimah" tabindex="0" class="c-input-select__option">Ras Al Khaimah </span>
+                                    <span data-value="Sharjah" tabindex="0" class="c-input-select__option">Sharjah
+                                        </span>
+                                    <span data-value="Umm al Quwain" tabindex="0" class="c-input-select__option">Umm
+                                            al Quwain </span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- 10 ## range slider -->
-                    <div class="o-form__field">
-                        <div class="o-range-slider">
-                            <div class="o-range-slider__title">
-                                <label for="" class="o-range-slider__label">Amount</label>
-                                <div class="o-range-slider__value-holder">
-                                    <span class="o-tooltip">
-                      <input class="o-range-slider__value money" type="text" value="5000">
-                      <span class="o-tooltip__text">
-                      Click on the text box to enter your desired value.
-                      </span>
-                                    </span>
-                                    <span class="o-range-slider__value-name">AED</span>
-                                </div>
+                <!-- 6 ## textarea-->
+                <div class="o-form__field">
+                    <div class="c-input__text-area">
+                        <textarea class='o-input' rows="4" cols='50' name='text-area' placeholder="Type something here ..." required></textarea>
+                        <label class='c-input__label' for="text-area">6. Text area label</label>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 7 ## text with pre unit-->
+                <div class="o-form__field">
+                    <div class="c-calculator-overlay__input">
+                        <div class="c-calculator__input-text">
+                            <label class="c-calculator__input-label">7. Amount Per Month</label>
+                            <div class="c-calculator__input-wrapper">
+                                <label class="c-calculator__input-text-curr">AED</label>
+                                <input class="c-calculator__input-text-box o-input" type="number" data-start-balance="0" placeholder="0" required>
+                                <span class="c-calculator__input-error">Error message</span>
                             </div>
-                            <input class="slider" type="range" min="5000" max="50000000" data-start-value="80000" value="80000" step="1000" style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(236, 1, 0)), from(rgb(249, 175, 175)));" required>
-                            <span class="o-range-slider__label-wrapper">
-                  <span>AED <span class="o-range-slider__label--range">5,000</span></span>
-                            <span>AED <span class="o-range-slider__label--range">50,000,000</span></span>
-                            </span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Parapragh -->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <!-- 8 ## range slider -->
+                <div class="o-form__field">
+                    <div class="o-range-slider">
+                        <div class="o-range-slider__title">
+                            <label for="" class="o-range-slider__label">8. Amount</label>
+                            <div class="o-range-slider__value-holder">
+                                <span class="o-tooltip">
+                                        <input class="o-range-slider__value money" type="text" value="5000">
+                                        <span class="o-tooltip__text">
+                                            Click on the text box to enter your desired value.
+                                        </span>
+                                </span>
+                                <span class="o-range-slider__value-name">AED</span>
+                            </div>
                         </div>
+                        <input class="slider" type="range" min="5000" max="50000000" data-start-value="80000" value="80000" step="1000" style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(236, 1, 0)), from(rgb(249, 175, 175)));" required>
+                        <span class="o-range-slider__label-wrapper">
+                                <span>AED <span class="o-range-slider__label--range">5,000</span></span>
+                        <span>AED <span class="o-range-slider__label--range">50,000,000</span></span>
+                        </span>
                     </div>
+                </div>
+
+                <!-- 9 ## Parapragh -->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <p>9. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    </div>
+                </div>
 
 
-                    <!-- </fieldset>
+                <!-- </fieldset>
           <fieldset> -->
 
-                    <!--From title--->
-                    <!-- <legend class="steptitle">New Form Elements</legend>
+                <!--From title--->
+                <!-- <legend class="steptitle">New Form Elements</legend>
             <div class="stepdesc"><strong>Description parapraph, that better have maximum 50 carachters.</strong></div> -->
 
-                    <!-- 12 ## checkbox vertical-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <label class='c-input__label' for="name">Please choose one or multiple option</label>
-                            <div class="c-leads__checkbox-btn">
-                                <div class="o-input__checkbox">
-                                    <input type="checkbox" id="check01" name="customer" value="check01" checked required>
-                                    <label for="check01">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore</label>
-                                </div>
-                                <div class="o-input__checkbox">
-                                    <input type="checkbox" id="check02" name="customer" value="check02" required>
-                                    <label for="check02">Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</label>
-                                </div>
+                <!-- 10 ## checkbox vertical-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <label class='c-input__label' for="name">10. Please choose one or multiple option</label>
+                        <div class="c-leads__checkbox-btn">
+                            <div class="o-input__checkbox">
+                                <input type="checkbox" id="check01" name="customer" value="check01" checked required>
+                                <label for="check01">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</label>
                             </div>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 13 ## checkbox horizontal-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <label class='c-input__label' for="checkboxhoriz">Please choose one or multiple option</label>
-                            <div class="c-leads__checkbox-btn -horizontal">
-                                <div class="o-input__checkbox">
-                                    <input type="checkbox" id="check01horiz" name="checkboxhoriz" value="check01horiz" checked>
-                                    <label for="check01horiz">Yes</label>
-                                </div>
-                                <div class="o-input__checkbox">
-                                    <input type="checkbox" id="check02horiz" name="checkboxhoriz" value="check02horiz">
-                                    <label for="check02horiz">No</label>
-                                </div>
+                            <div class="o-input__checkbox">
+                                <input type="checkbox" id="check02" name="customer" value="check02" required>
+                                <label for="check02">Lonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</label>
                             </div>
-                            <span class="c-input__error">Error message</span>
                         </div>
+                        <span class="c-input__error">Error message</span>
                     </div>
-
-                    <!-- 11 ## checkbox no label-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <div class="c-leads__checkbox-btn">
-                                <label class="checkboxcontainer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                    <input type="checkbox" id="checkbox00" name="isEmirati" value="true" required="" class="o-input o-input__text" required>
-                    <span class="checkmark"></span>
-                  </label>
-                            </div>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 14 ## radio button vertical-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <label class='c-input__label' for="name">Answer a question with yes or no?</label>
-                            <div class="c-leads__radio-btn">
-                                <div class="o-input__radio">
-                                    <input type="radio" id="radio01" name="radio" value="radio01" checked required>
-                                    <label for="radio01">Yes</label>
-                                </div>
-                                <div class="o-input__radio">
-                                    <input type="radio" id="radio02" name="radio" value="radio02" required>
-                                    <label for="radio02">No</label>
-                                </div>
-                            </div>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 16 ## radio button horizontal-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <label class='c-input__label' for="namehoriz">Answer a question with yes or no?</label>
-                            <div class="c-leads__radio-btn -horizontal">
-                                <div class="o-input__radio">
-                                    <input type="radio" id="radio01horiz" name="radiohoriz" value="radio01horiz" checked required>
-                                    <label for="radio01horiz">Yes</label>
-                                </div>
-                                <div class="o-input__radio">
-                                    <input type="radio" id="radio02horiz" name="radiohoriz" value="radio02horiz" required>
-                                    <label for="radio02horiz">No</label>
-                                </div>
-                            </div>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 17 ## radio toggle button // https://danklammer.com/articles/simple-css-toggle-switch/-->
-                    <!-- <div class="o-form__field">
-              <div class="c-input-text">
-                <label class="c-input__label">Answer a question with yes or no?</label>
-                <div class="c-calculator__input-question">
-                  <input class="toggle" type="checkbox" required>
                 </div>
-              </div>
-            </div> -->
-                    <div class="o-form__field">
-                        <div style="display:flex; justify-content: space-between; width: 100%;">
-                            <label class="c-input__label" style="display: flex; flex: 1 1 auto;"> Answer a question with yes or no? </label>
-                            <div class="c-calculator__input-question ">
-                                <input class="toggle" type="checkbox" />
+
+                <!-- 11 ## checkbox horizontal-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <label class='c-input__label' for="checkboxhoriz">11. Please choose one or multiple option</label>
+                        <div class="c-leads__checkbox-btn -horizontal">
+                            <div class="o-input__checkbox">
+                                <input type="checkbox" id="check01horiz" name="checkboxhoriz" value="check01horiz" checked>
+                                <label for="check01horiz">Yes</label>
                             </div>
-                            <span class="c-input__error">Error message</span>
-                        </div>
-                    </div>
-
-                    <!-- 09 ## input with plus minus-->
-                    <div class="o-form__field">
-                        <div class="c-number-counter">
-                            <label class='c-input__label' for="plusminus-number">Select and option from the drop down menu</label>
-                            <div class="c-number-counter__wrap">
-                                <input type="button" value="+" class="qtyplus valid" name="plusminus-number">
-                                <input type="text" value="" placeholder="Number" id="plusminus-number" class="o-input qty" name="plusminus-number" required>
-                                <input type="button" value="-" class="qtyminus valid" name="plusminus-number">
+                            <div class="o-input__checkbox">
+                                <input type="checkbox" id="check02horiz" name="checkboxhoriz" value="check02horiz">
+                                <label for="check02horiz">No</label>
                             </div>
-                            <span class="c-input__error">Error message</span>
                         </div>
+                        <span class="c-input__error">Error message</span>
                     </div>
+                </div>
 
-                    <!-- 15 ## upload file-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <label class='c-input__label' for="file">Upload your document (PDF, DOC, PNG, JPG - Max. size
-                  5Mb)</label>
-                            <div class="c-leads__file">
-                                <input class="o-input" type="file" id="file01" name="file" required>
+                <!-- 12 ## checkbox no label-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <div class="c-leads__checkbox-btn">
+                            <label class="checkboxcontainer">
+                                    12. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    <input type="checkbox" id="checkbox00" name="isEmirati" value="true" required="" class="o-input o-input__text" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 13 ## radio button vertical-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <label class='c-input__label' for="name">13. Answer a question with yes or no?</label>
+                        <div class="c-leads__radio-btn">
+                            <div class="o-input__radio">
+                                <input type="radio" id="radio01" name="radio" value="radio01" checked required>
+                                <label for="radio01">Yes</label>
                             </div>
-                            <span class="c-input__error">Error message</span>
+                            <div class="o-input__radio">
+                                <input type="radio" id="radio02" name="radio" value="radio02" required>
+                                <label for="radio02">No</label>
+                            </div>
+                        </div>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 14 ## radio button horizontal-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <label class='c-input__label' for="namehoriz">14. Answer a question with yes or no?</label>
+                        <div class="c-leads__radio-btn -horizontal">
+                            <div class="o-input__radio">
+                                <input type="radio" id="radio01horiz" name="radiohoriz" value="radio01horiz" checked required>
+                                <label for="radio01horiz">Yes</label>
+                            </div>
+                            <div class="o-input__radio">
+                                <input type="radio" id="radio02horiz" name="radiohoriz" value="radio02horiz" required>
+                                <label for="radio02horiz">No</label>
+                            </div>
+                        </div>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 15 ## radio toggle button // https://danklammer.com/articles/simple-css-toggle-switch/-->
+                <div class="o-form__field">
+                    <div class="c-input-toggle">
+                        <label class="c-input__label">15. Answer a question with yes or no?</label>
+                        <div class="c-calculator__input-question">
+                            <input class="toggle" type="checkbox" required>
                         </div>
                     </div>
+                </div>
 
-                    <!-- 18 ## date range picker-->
-                    <div class="o-form__field">
-                        <div class="c-input-text">
-                            <label class='c-input__label'>Select date</label>
-                            <input class="o-input c-input__datepicker" type="text" name="birthday" value="" required>
-                            <span class="c-input__error o-input__error">Error message</span>
+                <!-- 16 ## input with plus minus-->
+                <div class="o-form__field">
+                    <div class="c-number-counter">
+                        <label class='c-input__label' for="plusminus-number">16. Select and option from the drop down
+                                menu</label>
+                        <div class="c-number-counter__wrap">
+                            <input type="button" value="+" class="qtyplus valid" name="plusminus-number">
+                            <input type="text" value="" placeholder="Number" id="plusminus-number" class="o-input qty" name="plusminus-number" required>
+                            <input type="button" value="-" class="qtyminus valid" name="plusminus-number">
                         </div>
+                        <span class="c-input__error">Error message</span>
                     </div>
+                </div>
 
-                    <!--captcha-->
-                    <div class="o-form__field--additional">
-                        <div class="c-input-text--captcha js-captcha">
-                            <label class='c-input__label'>Please validate the captcha</label>
-                            <div data-type="image" class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback='recaptchaCallback'></div>
-                            <span class="c-input__error o-input__error">Please fill the captcha</span>
+                <!-- 17 ## upload file-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <label class='c-input__label' for="file">17. Upload your document (PDF, DOC, PNG, JPG - Max. size 5Mb)</label>
+                        <div class="c-leads__file">
+                            <input class="c-leads__file o-input" type="file" id="file01" name="file" required>
                         </div>
+                        <span class="c-input__error">Error message</span>
                     </div>
+                </div>
 
-                    <!--apply & reset button field-->
-                    <!-- <div class="c-calculator__apply-button-holder">
-              <button id="form-wizard-prev" class="o-btn-transparent js-clear" data-index="1"
-                type="reset">Clear</button>
-              <button id="form-wizard-next" class="o-btn-medium-red" data-index="1" type="submit">Submit</button>
-            </div> -->
+                <!-- 18 ## date range picker-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <label class='c-input__label'>18. Select date</label>
+                        <input class="o-input c-input__datepicker" type="text" name="birthday" value="" required>
+                        <span class="c-input__error o-input__error">Error message</span>
+                    </div>
+                </div>
 
-                </fieldset>
+                <!-- 19 ## numbers only (Disabled)-->
+                <div class="o-form__field">
+                    <div class="c-input-text">
+                        <input name="EnteredTelephone" id="EnteredTelephone" placeholder="+971526396638" pattern="([0-9]*)" type="text" class="o-input o-input__text" disabled />
+                        <label class="c-input__label" for="EnteredTelephone">19. You have entered</label>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+
+                <!-- 20 ## Mobile OTP with verified -->
+                <div class="o-form__field">
+                    <div class="c-input-text c-otp">
+                        <div class="c-input-text-wrapper">
+                            <input class="o-input__text o-input" type="text" placeholder="Enter 6 digits OTP" pattern="([0-9]{6})" required />
+                            <span class="o-input__text-curr verify"></span>
+                        </div>
+                        <label class="c-input__label">20. OTP (One Time Password) <br/> to <span>waxxxxxxda@gmail.com</span></label>
+                        <span class="c-input__error">Error message</span>
+                    </div>
+                </div>
+                <div class="c-input__help resend-otp"> You can resend OTP in XX seconds
+                    <a href="#">
+                            Resend OTP
+                        </a>
+                </div>
+
+                <!-- ## captcha-->
+                <div class="o-form__field--additional">
+                    <div class="c-input-text--captcha js-captcha">
+                        <label class='c-input__label'>21. Please validate the captcha</label>
+                        <div data-type="image" class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback='recaptchaCallback'></div>
+                        <span class="c-input__error o-input__error">Please fill the captcha</span>
+                    </div>
+                </div>
+
+                <!--apply & reset button field-->
+                <!-- <div class="c-calculator__apply-button-holder">
+                    <button id="form-wizard-prev" class="o-btn-transparent js-clear" data-index="1"
+                        type="reset">Clear</button>
+                    <button id="form-wizard-next" class="o-btn-medium-red" data-index="1" type="submit">Submit</button>
+                    </div> -->
+
+                <!-- </fieldset> -->
 
                 <div class="c-calculator__apply-button-holder">
                     <button class="o-btn o-btn-medium-red" type="submit">Submit</button>

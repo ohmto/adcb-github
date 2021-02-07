@@ -7,6 +7,27 @@ Index
 04 - Screen Viewpoint fix
 ==============================================================================*/
 
+.c-input-text-wrapper,
+.c-input__datepicker,
+.c-leads__file,
+.c-number-counter__wrap,
+.c-calculator__input-question,
+.c-leads__radio-btn,
+.c-leads__checkbox-btn,
+.o-range-slider__value-holder,
+.c-calculator__input-text-box {
+    &.error {
+        &~span,
+        ~label {
+            color: $generic-red !important;
+            opacity: 1 !important;
+            display: block;
+            letter-spacing: normal !important;
+        }
+        border-color: $generic-red;
+    }
+}
+
 
 /* -------------------------
 01 - Form spacing and position styles 
@@ -154,54 +175,10 @@ Index
         height: calc(2.55rem + 2px);
         color: #717a82;
     }
-    // /* ------------
-    // input - style
-    // -------------- */
-    // .o-input {
-    //     width: 100%;
-    //     height: 50px;
-    //     color: #273239;
-    //     background: #fff;
-    // }
-    // .o-input,
-    // .o-input--captcha {
-    //     display: inline-block;
-    //     border: solid 1px #ddd;
-    //     padding-left: 26px;
-    //     margin-bottom: 18px;
-    //     border-radius: 0;
-    //     box-shadow: none;
-    //     padding-right: 30px;
-    //     font-size: 17px;
-    // }
     .g-recaptcha>div {
         width: 250px !important;
         transform: scale(1) !important;
     }
-    // .c-input-text--captcha {
-    //     width: 100%;
-    //     margin-bottom: 40px;
-    // }
-    // .c-input-text,
-    // .c-input-text--captcha {
-    //     display: flex;
-    //     flex-direction: column;
-    //     position: relative;
-    // }
-    // .c-input-telephone {
-    //     display: flex;
-    //     flex-direction: column;
-    //     padding-top: 25px;
-    //     color: #273239;
-    // }
-    // .c-input-telephone__number {
-    //     font-size: 17px;
-    //     padding-left: 24px;
-    //     width: calc(100% - 60px);
-    //     margin-left: 0;
-    //     border-left: none;
-    //     background: #fff;
-    // }
     .c-input-telephone__number {
         &.error {
             &~label {
@@ -213,36 +190,6 @@ Index
             }
         }
     }
-    // .c-input-telephone__wrap input.c-input-telephone__country {
-    //     border-right: none;
-    //     font-size: 17px;
-    //     direction: ltr;
-    // }
-    // .c-input-telephone__wrap {
-    //     position: relative;
-    //     display: flex;
-    //     height: 50px;
-    //     flex-direction: row;
-    //     flex-wrap: nowrap;
-    //     margin-bottom: 18px;
-    // }
-    // .c-input-telephone__wrap input {
-    //     border: 1px solid #ddd;
-    // }
-    // /*-----------------------
-    // input label - form style
-    // ------------------------- */
-    // .c-input__label {
-    //     font-size: 15px;
-    //     letter-spacing: 0.1px;
-    //     font-weight: 600;
-    //     display: block;
-    //     line-height: 1.67;
-    //     order: -1;
-    //     padding-bottom: 6px;
-    //     left: 0;
-    //     color: rgba(39, 50, 57, 0.7);
-    // }
     // /* -----------------------
     // radio button - form style
     // -------------------------- */
@@ -283,65 +230,6 @@ Index
             }
         }
     }
-    // /*----------------------------
-    // validation error - form style
-    // ------------------------------*/
-    // .c-input__error {
-    //     font-size: 13px;
-    //     font-weight: 500;
-    //     opacity: 0;
-    //     display: block;
-    //     text-align: right;
-    //     bottom: 0;
-    //     position: absolute;
-    //     right: 0;
-    // }
-    // /*-------------------
-    // button - form style
-    // ---------------------*/
-    // /* red button hemmat - 20April2020 */
-    // // .o-btn-medium-red:active,
-    // // .o-btn-medium-red:hover {
-    // //   color: #fff;
-    // //   background-color: #ba1b19;
-    // //   border-color: #ba1b19;
-    // // }
-    // // .o-btn-medium-red,
-    // // .t-personal .o-btn-medium-red {
-    // //   background-color: #ec0100;
-    // //   border-color: #ec0100;
-    // // }
-    // .o-btn-medium-red {
-    //     color: #fff !important;
-    //     opacity: 1;
-    //     margin: auto;
-    // }
-    // .o-btn,
-    // .o-btn-medium-red,
-    // .o-btn-red,
-    // .o-btn-transparent {
-    //     font-size: 15px;
-    //     letter-spacing: .1px;
-    //     padding: 0 32px;
-    //     line-height: 48px;
-    //     text-align: center;
-    //     border-width: 1px;
-    //     border-style: solid;
-    //     display: inline-block;
-    //     cursor: pointer;
-    //     min-width: 50px;
-    //     width: 100%;
-    //     margin-top: 18px;
-    //     margin-bottom: 18px;
-    //     border-radius: 0px;
-    // }
-    // .c-contact-form__buttons button {
-    //     min-width: initial;
-    // }
-    // .c-contact-form__buttons {
-    //     padding-left: 0px;
-    //     padding-right: 0px;
-    // }
     .c-calculator__apply-button-holder {
         /* two buttons */
         display: flex;
@@ -426,33 +314,6 @@ Index
         margin: 0px auto 18px;
         width: 100%;
     }
-    // .o-range-slider__title {
-    //     width: 100%;
-    //     position: relative;
-    //     margin-top: 15px;
-    //     margin-bottom: 15px;
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
-    // /*.o-range-slider .slider {
-    //     -webkit-appearance: none;
-    //     width: 100%;
-    //     height: 3px;
-    //     background: #45555f;
-    //     outline: none;
-    //     -webkit-transition: opacity 0.2s;
-    //     transition: opacity 0.2s;
-    //     background-color: #ec0100;
-    // }*/
-    // .o-range-slider__label-wrapper {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     font-size: 15px;
-    //     letter-spacing: 0.1px;
-    //     color: rgba(39, 50, 57, 0.7);
-    //     line-height: 2.3;
-    //     margin-bottom: 18px;
-    // }
     // /*---------------------
     // input with currency - form style
     // -----------------------*/
@@ -605,50 +466,6 @@ Index
             min-height: 70px;
         }
     }
-    // textarea.o-input {
-    //     padding-top: 20px;
-    //     height: auto;
-    // }
-    /*------------------
-    Select - form style
-    --------------------*/
-    // .c-input-select,
-    // .c-input-select--trigger {
-    //     width: 100%;
-    //     cursor: pointer;
-    // }
-    // .c-input-select,
-    // .c-input-select--trigger,
-    // .c-input__text-area {
-    //     display: flex;
-    //     flex-direction: column;
-    //     position: relative;
-    // }
-    // .c-input-select__wrap {
-    //     position: relative;
-    //     display: flex;
-    //     flex-direction: column;
-    //     margin-bottom: 18px;
-    // }
-    // .c-input-select {
-    //   .o-input {
-    //     margin-bottom: 18px;
-    //   }
-    // }
-    // .c-input-telephone__wrap {
-    //   // .c-input__error {
-    //   //   bottom: -18px;
-    //   // }
-    //   input {
-    //     &.o-input.error~span,
-    //     &.error.o-input--captcha~span {
-    //       bottom: 0;
-    //     }
-    //   }
-    // }
-    // .c-contact-form__select {
-    //   margin-bottom: 0px;
-    // }
     /*------------------
     radio box - form style
   --------------------*/

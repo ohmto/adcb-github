@@ -374,10 +374,16 @@ Index
                 }
                 &-box {
                     width: 100%;
-                    padding: 1em 0 1em 4.5em;
+                    padding: 0 0 0 4.5em;
+                    margin-bottom: 18px;
+                    height: 50px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 1.7;
+                    letter-spacing: .2px #{'/*rtl:0px*/'};
                     &.o-input {
                         width: 100%;
-                        padding: 1em 0 1em 4.5em;
+                        padding: 0 0 0 4.5em;
                     }
                 }
             }

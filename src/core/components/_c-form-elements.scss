@@ -18,7 +18,7 @@ Index
 .c-calculator__input-text-box {
     &.error {
         &~span,
-        ~label {
+        &~label {
             color: $generic-red !important;
             opacity: 1 !important;
             display: block;
@@ -26,10 +26,6 @@ Index
         }
         border-color: $generic-red;
     }
-}
-
-.c-calculator__input-text-box {
-    padding: 1.5em 3em;
 }
 
 
@@ -361,15 +357,26 @@ Index
                 text-align: center;
             }
         }
-        .c-calculator__input-text {
-            margin: 0px;
-            &-curr {
-                transform: translate(50%, 50%);
+        .c-calculator__input {
+            &__label {
+                font-weight: 600;
+                display: block;
+                line-height: 1.67;
+                order: -1;
+                padding-bottom: 6px;
+                left: 0;
+                color: rgba($brand-font, 0.7);
             }
-            &-box {
-                &.o-input {
-                    width: 100%;
-                    padding: 1em 0 1em 4.5em;
+            &-text {
+                margin: 0px;
+                &-curr {
+                    transform: translate(50%, 50%);
+                }
+                &-box {
+                    &.o-input {
+                        width: 100%;
+                        padding: 1em 0 1em 4.5em;
+                    }
                 }
             }
         }

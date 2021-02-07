@@ -28,6 +28,10 @@ Index
     }
 }
 
+.c-calculator__input-text-box {
+    padding: 1.5em 3em;
+}
+
 
 /* -------------------------
 01 - Form spacing and position styles 
@@ -365,7 +369,7 @@ Index
             &-box {
                 &.o-input {
                     width: 100%;
-                    padding: 15px 0 15px 75px;
+                    padding: 1em 0 1em 4.5em;
                 }
             }
         }
@@ -378,6 +382,7 @@ Index
             bottom: 0;
             position: absolute;
             right: 0;
+            letter-spacing: normal;
         }
     }
     // /*---------------------

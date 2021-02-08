@@ -788,7 +788,11 @@ hr {
 
 .c-cms-content table {
     border: 0px !important;
-    th {
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
         background-color: transparent !important;
     }
 }

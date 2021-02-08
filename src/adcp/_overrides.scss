@@ -786,6 +786,13 @@ hr {
     }
 }
 
+.c-cms-content table {
+    border: 0px !important;
+    th {
+        background-color: transparent !important;
+    }
+}
+
 .c-cms-content table th,
 .c-table table th,
 .c-table-three-cols table th,

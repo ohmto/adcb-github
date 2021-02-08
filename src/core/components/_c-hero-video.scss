@@ -228,9 +228,12 @@ default: video width = boxed [to make it fullwidth add "-fullwidth" class to .vi
     flex: none;
 }
 
-.c-breadcrumbs+.hero-pdp {
-    .hero-pdp__content-wrapper {
-        margin-top: 75px;
+.hero-section {
+    &__content-wrapper {
+        .c-breadcrumbs+.hero-section & {
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
     }
 }
 

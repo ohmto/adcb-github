@@ -785,6 +785,17 @@ hr {
     }
 }
 
+.c-cms-content table {
+    border: 0px !important;
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        background-color: transparent !important;
+    }
+}
+
 .c-cms-content table th,
 .c-table table th,
 .c-table-three-cols table th,
@@ -802,8 +813,10 @@ hr {
     border-left: none;
 }
 
-.c-cms-content-table-responsive td:before {
-    color: $brand-primary-dark;
+.c-cms-content-table-responsive {
+    td:before {
+        color: $brand-primary-dark;
+    }
 }
 
 .c-cms-content table td,

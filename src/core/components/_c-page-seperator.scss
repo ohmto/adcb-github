@@ -24,16 +24,16 @@ Index
 .o-darkgray-background {
     background-color: rgba(39, 50, 57, 1);
     background-image: none !important;
-}
-
-.o-darkgray-background .o-comp__title h2 {
-    color: #ffffff !important;
-    /* title color fix for Dark Background */
-}
-
-.o-darkgray-background .o-comp__title_desc {
-    color: rgba(255, 255, 255, 0.7) !important;
-    /* body text color fix for Dark Background */
+    .o-comp__title {
+        h2 {
+            color: #ffffff !important;
+            /* title color fix for Dark Background */
+        }
+        &_desc {
+            color: rgba(255, 255, 255, 0.7) !important;
+            /* body text color fix for Dark Background */
+        }
+    }
 }
 
 
@@ -42,23 +42,23 @@ Index
 .c-page-seperator {
     padding-top: 75px;
     padding-bottom: 75px;
-}
-
-.c-page-seperator+.o-comp {
-    margin-top: -100px;
-}
-
-.c-page-seperator .o-comp__title h2 {
-    // max-width: 884px;
-    max-width: 620px;
-}
-
-.c-page-seperator .c-page-seperator__link {
-    display: none;
-}
-
-.c-page-seperator.-link .c-page-seperator__link {
-    display: block;
+    .o-comp__title {
+        h2 {
+            // max-width: 884px;
+            max-width: 620px;
+        }
+    }
+    .c-page-seperator__link {
+        display: none;
+    }
+    &.-link {
+        .c-page-seperator__link {
+            display: block;
+        }
+    }
+    &+.o-comp {
+        margin-top: -100px;
+    }
 }
 
 .c-page-seperator .c-page-seperator__link,

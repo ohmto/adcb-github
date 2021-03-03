@@ -7,3 +7,6 @@
 package-lock.json
 node_modules
 package-lock.json
+dist/adcb/assets/videos/ADCB.mp4
+dist/adcb/assets/videos/adcb-trade-booster.mp4
+dist/adcb/assets/videos/adcb-emirati.mp4

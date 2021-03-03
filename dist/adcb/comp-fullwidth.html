@@ -716,11 +716,6 @@
 
 
 
-
-
-
-
-
         <!-- -------------------------- -->
         <!-- start fullwidth hero video -->
         <div class="o-comp c-hero-video -fullwidthonly">
@@ -729,20 +724,14 @@
                     <img src="https://via.placeholder.com/150" alt="adcb video play button" />
                 </div>
                 <div class="video">
-                    <video id="videotag" controls> 
-        <source src="https://media.adcb.com/ADCB/intaj-emarati-011220.mov" type="video/mp4">
-      </video>
+                    <video id="videotag" controls>
+                        <source src="https://static.videezy.com/system/resources/previews/000/005/037/original/Abstract_Blur_4K_Motion_Background_Loop.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
         <!-- end fullwidth hero video -->
         <!-- ------------------------- -->
-
-
-
-
-
-
 
 
 
@@ -1013,6 +1002,21 @@
             var scroll = $(this).scrollTop();
             scroll > 320 ? myvid.pause() : myvid.play()
         })
+
+        // <div class="o-comp c-hero-video -fullwidthonly">
+        //     <div class="o-comp__content c-hero-video__wrapper">
+        //         <div id="video-overlay">
+        //             <img src="https://via.placeholder.com/150" alt="adcb video play button" />
+        //         </div>
+        //         <div class="video">
+        //             <video id="videotag" controls>
+        //                 <source src="https://static.videezy.com/system/resources/previews/000/005/037/original/Abstract_Blur_4K_Motion_Background_Loop.mp4" type="video/mp4">
+        //             </video>
+        //         </div>
+        //     </div>
+        // </div>
+
+
 
         // if click playbutton play video
         var overlay = document.getElementById('video-overlay');

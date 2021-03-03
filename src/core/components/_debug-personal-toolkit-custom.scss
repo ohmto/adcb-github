@@ -1063,20 +1063,26 @@ _:-ms-lang(x) .slider::-ms-thumb {
 
 /* GDPR style edit for COVID19 Waleed 04May2020 */
 
-.c-gdpr-bar__btn-wrapper {
-    .o-btn {
-        // min-width: 160px;
-        margin-bottom: 5px;
+.c-gdpr-bar {
+    background-color: #ba1b19;
+    font-size: 19px;
+    padding: 20px 24px;
+    height: auto;
+    &__btn-wrapper {
+        .o-btn {
+            // min-width: 160px;
+            margin-bottom: 5px;
+        }
+    }
+    &__message {
+        padding: 10px 0;
     }
 }
 
-.c-gdpr-bar {
-    background-color: #ba1b19;
-    font-size: 20px;
-}
-
-.c-gdpr-bar__message {
-    padding: 10px 0;
+@media (min-width: 768px) {
+    .c-gdpr-bar {
+        padding: 0px 96px 5px;
+    }
 }
 
 
@@ -1639,6 +1645,34 @@ a>sup {
 }
 
 
+/* Global Component Background grade classes */
+
+.o-nogray-background {
+    background-color: rgb(255, 255, 255);
+    background-image: none !important;
+}
+
+.o-lightgray-background {
+    background-color: rgba(221, 221, 221, 0.3);
+    background-image: none !important;
+}
+
+.o-darkgray-background {
+    background-color: rgba(39, 50, 57, 1);
+    background-image: none !important;
+    .o-comp__title {
+        h2 {
+            color: #ffffff !important;
+            /* title color fix for Dark Background */
+        }
+        &_desc {
+            color: rgba(255, 255, 255, 0.7) !important;
+            /* body text color fix for Dark Background */
+        }
+    }
+}
+
+
 /* Aboutus Iframe - Ownership structure reset BODY background color to transperent */
 
 
@@ -1656,5 +1690,38 @@ a>sup {
 @media (min-width: 1232px) {
     #jsamounttimeinterest.c-calculator__wrapper .c-calculator__result {
         max-width: none !important;
+    }
+}
+
+
+/* transperent banking bottom margin orverride */
+
+.c-transperant-banking {
+    .o-comp__content {
+        margin-bottom: 100px;
+    }
+}
+
+
+/* prelogin box position fix -hemmat */
+
+
+/* added to toolkit-en.css */
+
+.c-transparent-banking__wrap_prelogin {
+    padding: 1em;
+    background-color: rgba(39, 50, 57, .05);
+    margin-bottom: 2em;
+    p {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-transparent-banking__wrap_prelogin {
+        padding: 1em;
+        max-width: 50%;
+        transform: translateY(90px);
+        margin-top: -90px;
     }
 }

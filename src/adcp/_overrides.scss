@@ -19,6 +19,9 @@ Index
 ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary width to 100%, currently it's 70%
 */
 
+
+/* start - easy-banking */
+
 .c-easy-banking {
     .o-tabs__tab-content-summary {
         width: 100%;
@@ -34,6 +37,12 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
         margin-bottom: 13px;
     }
 }
+
+
+/* end - easy-banking */
+
+
+/* start - Our promise */
 
 .c-our-promise {
     margin-bottom: 60px;
@@ -110,9 +119,11 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
-.site-wrap .c-breadcrumbs {
-    margin-top: 90px !important;
-}
+
+/* end - Our promise */
+
+
+/* start - Page title 01 */
 
 .c-page-title01 {
     .o-comp-page-title-image {
@@ -168,6 +179,23 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
+@media (min-width: 768px) {
+    .c-page-title01 {
+        .c-hero-segment__title_desc {
+            padding-top: 24px;
+        }
+        .hero-section__content-wrapper {
+            margin: -2.5em auto 0em !important;
+        }
+    }
+}
+
+
+/* end - Page title 01 */
+
+
+/* start - Page title 02 */
+
 .c-page-title02 {
     .hero-section__content-wrapper {
         margin: 0px auto 48px !important;
@@ -191,28 +219,28 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
-.c-hero-segment+.c-awards {
-    margin-top: 70px;
-}
-
 @media (min-width: 768px) {
-    .c-page-title01 {
-        .c-hero-segment__title_desc {
-            padding-top: 24px;
-        }
-        .hero-section__content-wrapper {
-            margin: -2.5em auto 0em !important;
-        }
-    }
     .c-page-title02 {
         .c-hero-segment__title_desc {
             padding-top: 24px;
         }
     }
-    .c-hero-segment+.c-awards {
-        margin-top: 100px;
+    .c-breadcrumbs {
+        +.hero-section {
+            .hero-section__content-wrapper {
+                margin-top: 75px !important;
+                margin-bottom: 75px !important;
+                padding-top: 0;
+            }
+        }
     }
 }
+
+
+/* end - Page title 02 */
+
+
+/* start - Four tiles 01 */
 
 .c-4tiles01 {
     .o-comp__title {
@@ -269,6 +297,12 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
+
+/* end - Four tiles 01 */
+
+
+/* start - Three tiles 01 */
+
 .c-3tiles01 {
     .o-comp__title {
         margin-bottom: 48px;
@@ -279,6 +313,7 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
     .o-comp__content {
         max-width: calc(1040px + 96px * 2) !important;
+        margin-top: 75px;
         margin-bottom: 75px;
     }
     .c-offers-promotions__summary {
@@ -307,6 +342,12 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
         }
     }
 }
+
+
+/* end - Three tiles 01 */
+
+
+/* start - Three tiles 02 */
 
 .c-3tiles02 {
     margin-bottom: 0px;
@@ -364,6 +405,23 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
+@media (min-width: 768px) {
+    .c-3tiles02 {
+        .o-comp__title {
+            margin-bottom: 48px;
+        }
+        c-adcb-segments-card__details {
+            padding-bottom: 24px;
+        }
+    }
+}
+
+
+/* end - Three tiles 02 */
+
+
+/* Start - Two tiles 01 */
+
 .c-2tiles01 {
     margin-top: 48px;
     .o-comp__title {
@@ -403,6 +461,7 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
 
 @media (min-width: 768px) {
     .c-2tiles01 {
+        margin-top: 100px;
         .c-2tiles01__content {
             flex-flow: row wrap;
             .c-awards__item {
@@ -414,14 +473,6 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
             padding: 2vw 2vw 0 2vw;
         }
     }
-    .c-3tiles02 {
-        .o-comp__title {
-            margin-bottom: 48px;
-        }
-        c-adcb-segments-card__details {
-            padding-bottom: 24px;
-        }
-    }
 }
 
 @media (min-width: 1440px) {
@@ -431,6 +482,12 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
         }
     }
 }
+
+
+/* end - Two tiles 01 */
+
+
+/* start - Page content 01 */
 
 .c-page-content01 {
     .c-awards__item {
@@ -529,19 +586,11 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
     }
 }
 
-.col-md-24 {
-    .c-contact-form {
-        margin-top: 48px;
-    }
-}
 
-@media (min-width: 768px) {
-    .col-md-24 {
-        .c-contact-form {
-            margin-top: 0px;
-        }
-    }
-}
+/* end - Page content 01 */
+
+
+/* start - Page content 02 */
 
 .c-page-content02 {
     .o-comp__content {
@@ -660,6 +709,37 @@ ADCP override - Starts here 00 - Required to change o-tabs__tab-content-summary 
         }
         a {
             color: $brand-primary-dark !important;
+        }
+    }
+}
+
+
+/* end - Page content 02 */
+
+.site-wrap .c-breadcrumbs {
+    margin-top: 90px !important;
+}
+
+.c-hero-segment+.c-awards {
+    margin-top: 70px;
+}
+
+@media (min-width: 768px) {
+    .c-hero-segment+.c-awards {
+        margin-top: 100px;
+    }
+}
+
+.col-md-24 {
+    .c-contact-form {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-24 {
+        .c-contact-form {
+            margin-top: 0px;
         }
     }
 }
@@ -850,7 +930,31 @@ hr {
 }
 
 
-/* Footer breadcrumb top padding  - remove  */
+/* Sidemenu Title */
+
+.c-main-nav {
+    .nav-lvl {
+        margin-bottom: 24px;
+    }
+}
+
+
+/* Sidemenu back button */
+
+.o-switch-button__backtext {
+    flex: 1;
+}
+
+
+/* projects listing page filter */
+
+@media (max-width:768px) {
+    .c-offer-cards__list {
+        &:first-child {
+            margin-bottom: 24px;
+        }
+    }
+}
 
 .site-wrap {
     .site-footer {
@@ -861,33 +965,90 @@ hr {
 }
 
 
-/* hero premium overiding */
+/* start - Global Component Background grade classes */
 
-// @media (min-width: $screen-sm-min) {
-// .hero-premium {}
-// }
-// @media (min-width: $screen-lg-min) {
-.hero-premium {
-    &__item,
-    .owl-item {
-        height: auto;
-        min-height: 80vh !important;
-    }
-    .owl-nav {
-        &.disabled {
-            display: none;
+.-nogray-background {
+    background-color: rgb(255, 255, 255);
+    background-image: none !important;
+}
+
+.-lightgray-background {
+    background-color: rgba(221, 221, 221, 0.3);
+    background-image: none !important;
+}
+
+.-darkgray-background {
+    background-color: rgba(39, 50, 57, 1);
+    background-image: none !important;
+    .o-comp__title {
+        h2 {
+            color: #ffffff !important;
+            /* title color fix for Dark Background */
+        }
+        &_desc {
+            color: rgba(255, 255, 255, 0.7) !important;
+            /* body text color fix for Dark Background */
         }
     }
+}
+
+
+/* end - Global Component Background grade classes */
+
+
+/* start - c-projects-carousel */
+
+.c-events-carousel.c-projects-carousel.-lightgray-background {
+    .c-offer-card__details {
+        transform: translateY(0px);
+        margin-right: 0px;
+    }
     .owl-dots {
-        left: calc((100vw - 1150px) / 2) !important;
-        bottom: 110px !important;
+        margin-top: 24px;
+    }
+}
+
+
+/* end - c-projects-carousel */
+
+
+/* hero premium overiding */
+
+.hero-premium {
+    &__content {
+        z-index: 0;
+        background-image: none;
+        &:after {
+            content: "";
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 115%;
+            height: 50%;
+            z-index: 0;
+        }
+    }
+    &__content-wrapper {
+        max-width: 100%;
+        z-index: 2;
+    }
+    .owl-stage-outer,
+    .owl-stage,
+    .owl-item,
+    .hero-premium__item,
+    .hero-premium__backdrop {
+        height: 75vh; // ADCE+ADCP hero banner height
+    }
+    .owl-dots {
+        width: 300px;
         .owl-dot {
             span {
-                height: 2px !important;
+                height: 3px !important;
             }
             .progress {
                 top: 1px !important;
-                height: 2px !important;
+                height: 3px !important;
             }
         }
         &.disabled {
@@ -896,7 +1057,66 @@ hr {
     }
 }
 
+// override the Hero-Banner with Two-Form-Widgets
+// .c-hero-forms-widgetcolumns {
+//     ~.hero-premium {
+//         &__item,
+//         .owl-item {
+//             height: auto;
+//             min-height: 80vh !important;
+//         }
+//         .owl-nav {
+//             &.disabled {
+//                 display: none;
+//             }
+//         }
+//         .owl-dots {
+//             display: none;
+//         }
+//     }
 // }
+// .hero-premium+.c-hero-forms-widgetcolumns {
+//     background: yellow !important;
+// }
+// .hero-premium {
+//     background: orange !important;
+//     .hero-premium {
+//         &__content-wrapper {
+//             background: red !important;
+//             // height: 75% !important;
+//         }
+//         &__title-wrapper {
+//             background: green !important;
+//         }
+//     }
+// }
+
+/* start - GDPR font size */
+
+.c-gdpr-bar {
+    font-size: 19px;
+    padding: 20px 24px;
+    height: auto;
+    &__btn-wrapper {
+        .o-btn {
+            // min-width: 160px;
+            margin-bottom: 5px;
+        }
+    }
+    &__message {
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .c-gdpr-bar {
+        padding: 0px 96px 5px;
+    }
+}
+
+
+/* end - GDPR font size */
+
 
 /* no top/bottom spacing */
 

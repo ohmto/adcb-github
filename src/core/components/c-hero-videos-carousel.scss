@@ -1,14 +1,16 @@
 .hero-premium {
     &.hero-videos {
-        position: absolute;
         &::after,
         &::before {
             z-index: 1;
+            // position: absolute;
         }
         .c-hero-videos-carousel {
             z-index: 2;
             .o-comp__content {
-                margin-top: 160px;
+                // margin-top: 160px;
+                margin-top: 0;
+                padding: 160px;
                 .o-comp__title {
                     max-width: 768px;
                     margin-left: auto;
@@ -180,7 +182,9 @@
         &.hero-videos {
             .c-hero-videos-carousel {
                 .o-comp__content {
-                    margin-top: 180px;
+                    // margin-top: 180px;
+                    padding-top: 180px;
+                    margin-top: 0;
                     .hero-video-carousel {
                         margin-top: 48px;
                         margin-bottom: 48px;

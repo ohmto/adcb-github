@@ -834,9 +834,9 @@
     <script src="assets/scripts/flickity.js"></script>
     <script src="assets/scripts/flickity-hash.js"></script>
     <script src="assets/scripts/flickity-fade.js"></script>
-    <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+    <script src="assets/scripts/video.js"></script>
     <script src="https://www.adcb.com/en/system/assets/toolkit/scripts/jquery.quickWizard.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $(document).ready(function() {
             // ---------------------------
             // hero video carousel component scripts - by: Hemmat - 10March2021
@@ -868,6 +868,56 @@
             $(this).find(".play-btn").addClass("video-" + index);
         });
         // ---------------------------
+    </script> -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // ---------------------------
+            // hero video carousel component scripts - by: Hemmat - 10March2021
+            // ---------------------------
+            var playWholeVideo = true;
+            // Initialize marketing campaign LP carousel - https://flickity.metafizzy.co
+            $('.video-carousel, .hero-video-carousel').flickity({
+                // Carousel options
+                contain: true, // make slide media contained in focus area
+                wrapAround: true, // Wrap-around to the other end for infinite scrolling.
+                draggable: false, //Enable dragging with at least 2 slides
+                initialIndex: '.is-intital', // the intial video class
+                groupCells: 1,
+                fade: 0, // to use fade slide transition animation
+                hash: true, // adding video title attribute to url anchor
+                arrowShape: {
+                    x0: 10,
+                    x1: 60,
+                    y1: 50,
+                    x2: 65,
+                    y2: 45,
+                    x3: 20
+                }
+            });
+
+            $(".flickity-page-dots").css("display", "block");
+
+            //Adding VideoID to index video tags
+            $(".carousel-cell").each(function(index, element) {
+                $(this).find("video").attr("id", "video-" + index);
+                $(this).find(".play-btn").attr("data-video-name", "video-" + index);
+            });
+
+            $(".play-btn").on("click", function() {
+                var $this = $(this);
+                var clsName = $this.attr("data-video-name");
+                $("#" + clsName).get(0).play();
+                //$this.parent().find(".video-poster").hide();
+                $this.parent().hide();
+            });
+
+            $(".flickity-prev-next-button").on("click", function() {
+                $('video').each(function() {
+                    $(this).get(0).pause();
+                    $(this).parent().find(".video-poster").show();
+                });
+            });
+        });
     </script>
 
 </body>

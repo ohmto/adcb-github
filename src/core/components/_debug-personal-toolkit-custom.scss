@@ -243,6 +243,17 @@ debug/overwite css
     color: #27323980;
 }
 
+.o-darkgray-background {
+    .c-cms-content {
+        color: rgba(39, 50, 57, 0.7);
+        h2,
+        h3,
+        h4 {
+            color: white;
+        }
+    }
+}
+
 .c-cms-content ol li {
     color: rgba(39, 50, 57, 0.7);
 }
@@ -1721,8 +1732,8 @@ a>sup {
     .c-transparent-banking__wrap_prelogin {
         padding: 1em;
         max-width: 50%;
-        transform: translateY(90px);
-        margin-top: -90px;
+        // transform: translateY(90px);
+        // margin-top: -90px;
     }
 }
 

@@ -20,6 +20,7 @@
         }
         .c-hero-videos-carousel {
             z-index: 2;
+            position: relative;
             .o-comp__content {
                 // margin-top: 160px;
                 margin-top: 0;
@@ -83,8 +84,8 @@
                                 transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
                                 .play-btn {
                                     border-radius: 45px;
-                                    width: 45px;
-                                    height: 45px;
+                                    width: 75px;
+                                    height: 75px;
                                     box-shadow: 0 0 15px rgba(39, 50, 57, .3);
                                     transform: scale(1);
                                     transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -248,8 +249,8 @@
                                 .video-poster {
                                     .play-btn {
                                         border-radius: 75px;
-                                        width: 75px;
-                                        height: 75px;
+                                        width: 85px;
+                                        height: 85px;
                                     }
                                 }
                             }

@@ -78,7 +78,8 @@
                                 justify-content: center;
                                 object-fit: contain;
                                 background-size: cover;
-                                border-radius: 10px;
+                                // border-radius: 10px;
+                                border-radius: 0px;
                                 transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
                                 .play-btn {
                                     border-radius: 45px;
@@ -228,12 +229,14 @@
                                 width: 68%;
                                 transform: scale(0.9);
                                 opacity: 0.5;
-                                border-radius: 10px;
+                                // border-radius: 10px;
+                                border-radius: 0px;
                                 transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
                                 &.is-selected {
                                     opacity: 1;
                                     transform: scale(1);
-                                    border-radius: 10px;
+                                    // border-radius: 10px;
+                                    border-radius: 0px;
                                 }
                                 video {
                                     border-radius: 10px;

@@ -243,17 +243,6 @@ debug/overwite css
     color: #27323980;
 }
 
-.o-darkgray-background {
-    .c-cms-content {
-        color: rgba(39, 50, 57, 0.7);
-        h2,
-        h3,
-        h4 {
-            color: white;
-        }
-    }
-}
-
 .c-cms-content ol li {
     color: rgba(39, 50, 57, 0.7);
 }
@@ -1454,6 +1443,32 @@ div#map {
             }
         }
     }
+    .c-cms-content {
+        color: rgba(39, 50, 57, 0.7);
+        h2,
+        h3,
+        h4 {
+            color: white;
+        }
+        h2 {
+            font-size: 35px;
+            font-weight: 600;
+        }
+    }
+    &.o-darkgray-background {
+        .c-cms-content {
+            color: rgba(39, 50, 57, 0.7);
+            h2,
+            h3,
+            h4 {
+                color: white;
+            }
+            h2 {
+                font-size: calc(32px + 12 * ((11vw - 320px) / 1120));
+                font-weight: 600;
+            }
+        }
+    }
     @media (min-width: 768px) {
         .o-comp__content {
             margin-top: 50px;
@@ -1472,6 +1487,12 @@ div#map {
                         }
                     }
                 }
+            }
+        }
+        .c-cms-content {
+            h2 {
+                font-size: 35px;
+                font-weight: 600;
             }
         }
     }
@@ -1748,14 +1769,15 @@ a>sup {
 
 /* overwrite padding/margin all component */
 
-// .o-comp {
-//     &__content {
-//         margin-top: 0 !important;
-//         margin-bottom: 0 !important;
-//         padding-top: 75px;
-//         padding-bottom: 75px;
-//     }
-// }
+.o-comp {
+    &__content {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
 @media (min-width: 1232px) {
     .o-comp {
         &__content {

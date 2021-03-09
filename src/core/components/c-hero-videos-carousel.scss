@@ -23,7 +23,7 @@
             .o-comp__content {
                 // margin-top: 160px;
                 margin-top: 0;
-                padding-top: 130px;
+                padding-top: 135px;
                 .o-comp__title {
                     max-width: 768px;
                     margin-left: auto;
@@ -154,6 +154,10 @@
         .flickity-button:disabled {
             display: none;
         }
+        .hero-premium-scroll {
+            bottom: 85px;
+            z-index: 2;
+        }
     }
     // if Light gray background  modifier is used
     &.-lightgray-background {
@@ -197,7 +201,7 @@
             .c-hero-videos-carousel {
                 .o-comp__content {
                     // margin-top: 180px;
-                    padding-top: 130px;
+                    padding-top: 135px;
                     margin-top: 0;
                     .hero-video-carousel {
                         margin-top: 48px;
@@ -208,7 +212,7 @@
                                 content: " ";
                                 position: absolute;
                                 z-index: 2;
-                                left: 0;
+                                left: -1px;
                                 top: 0;
                                 width: 13%;
                                 height: 100%;
@@ -218,7 +222,7 @@
                                 content: " ";
                                 position: absolute;
                                 z-index: 2;
-                                right: 0;
+                                right: -1px;
                                 top: 0;
                                 width: 13%;
                                 height: 100%;
@@ -273,6 +277,9 @@
                     }
                 }
             }
+        }
+        .hero-premium-scroll {
+            bottom: 115px;
         }
     }
 }

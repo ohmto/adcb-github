@@ -1444,20 +1444,19 @@ div#map {
         }
     }
     .c-cms-content {
-        color: rgba(39, 50, 57, 0.7);
         h2,
         h3,
         h4 {
-            color: white;
+            font-weight: 600;
         }
         h2 {
             font-size: 35px;
-            font-weight: 600;
+            line-height: 1.4;
         }
     }
     &.o-darkgray-background {
         .c-cms-content {
-            color: rgba(39, 50, 57, 0.7);
+            color: rgba(255, 255, 255, 0.6);
             h2,
             h3,
             h4 {
@@ -1465,7 +1464,6 @@ div#map {
             }
             h2 {
                 font-size: calc(32px + 12 * ((11vw - 320px) / 1120));
-                font-weight: 600;
             }
         }
     }

@@ -35,6 +35,7 @@
                     }
                     p {
                         text-align: center !important;
+                        font-size: 15px;
                     }
                 }
                 .hero-video-carousel {
@@ -252,6 +253,11 @@
                     // margin-top: 180px;
                     padding-top: 135px;
                     margin-top: 0;
+                    .o-comp__title {
+                        p {
+                            font-size: 19px;
+                        }
+                    }
                     .hero-video-carousel {
                         margin-top: 48px;
                         margin-bottom: 0;
@@ -292,7 +298,7 @@
                                     border-radius: 0px;
                                 }
                                 video {
-                                    border-radius: 10px;
+                                    border-radius: 0px;
                                 }
                                 .video-poster {
                                     .play-btn {

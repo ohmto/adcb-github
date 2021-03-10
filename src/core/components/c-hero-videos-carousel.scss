@@ -162,7 +162,7 @@
         .flickity-button:disabled {
             display: none;
         }
-        .hero-premium-scroll {
+        .hero-premium__scroll {
             bottom: 85px;
             z-index: 2;
         }
@@ -332,10 +332,10 @@
             .flickity-prev-next-button.previous {
                 left: -20px;
             }
-        }
-        .hero-premium-scroll {
-            bottom: 115px;
-            z-index: 2;
+            .hero-premium__scroll {
+                bottom: 115px;
+                z-index: 2;
+            }
         }
     }
 }
@@ -348,6 +348,11 @@
                     .hero-video-carousel {
                         .flickity-viewport {
                             height: 420px !important;
+                            .carousel-cell {
+                                video {
+                                    max-height: initial;
+                                }
+                            }
                         }
                     }
                 }

@@ -30,6 +30,8 @@ Index
     >.o-comp__content {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
+        padding-top: 0;
+        padding-bottom: 0;
     }
     .o-comp__title {
         h2 {
@@ -186,8 +188,8 @@ Index
         //             display: none;
         //       }
         // }
-        padding-top: 75px !important;
-        padding-bottom: 75px !important;
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
         .o-comp__cardbanner {
             flex-direction: row;
         }

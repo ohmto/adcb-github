@@ -113,7 +113,7 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
             // padding-right: 18px;
         }
         .flickity-prev-next-button {
-            top: 115px;
+            top: 100px;
             width: 48px;
             height: 48px;
             background: none;
@@ -135,10 +135,14 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
                 width: 72px;
             }
             &.previous {
-                transform: translate(50%, -50%) #{"/*translate(-50%, -50%*/"};
+                // transform: translate(50%, -50%) #{"/*translate(-50%, -50%*/"};
+                left: 0;
+                transform:rotateY(0) #{"/*rtl:rotateY(180deg)*/"};
             }
             &.next {
-                transform: translate(-50%, -50%) #{"/*translate(50%, -50%*/"};
+                // transform: translate(-50%, -50%) #{"/*translate(50%, -50%*/"};
+                right: 0;
+                transform:rotateY(0) #{"/*rtl:rotateY(180deg)*/"};
             }
         }
         ol.flickity-page-dots {
@@ -403,14 +407,14 @@ $body-avg-mobile-letter-spacing: 0.1px #{"/*rtl: 0*/"};
                 padding-left: 18px;
                 padding-right: 18px;
             }
-            .flickity-prev-next-button {
-                &.previous {
-                    transform: translate(150%, -50%) #{"/*translate(-150%, -50%*/"};
-                }
-                &.next {
-                    transform: translate(-150%, -50%) #{"/*translate(150%, -50%*/"};
-                }
-            }
+            // .flickity-prev-next-button {
+            //     &.previous {
+            //         transform: translate(150%, -50%) #{"/*translate(-150%, -50%*/"};
+            //     }
+            //     &.next {
+            //         transform: translate(-150%, -50%) #{"/*translate(150%, -50%*/"};
+            //     }
+            // }
         }
         &.-twoitems {
             // .carousel-cell {

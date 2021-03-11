@@ -5,6 +5,7 @@
         //     z-index: 1;
         //     // position: absolute;
         // }
+        min-height: 100vh;
         &::after {
             content: none;
         }
@@ -125,7 +126,7 @@
         }
         .flickity-prev-next-button.next {
             right: -20px;
-            transform:rotateY(0) translateY(0) #{"/*rtl:rotateY(180deg) translateY(-22px)*/"};
+            transform:rotateY(0) translateY(0) #{"/*rtl:rotateY(180deg) translateY(250%)*/"};
             border: 0;
             z-index: 3;
             color: rgba($brand-font, 1);
@@ -139,7 +140,7 @@
         }
         .flickity-prev-next-button.previous {
             left: -20px;
-            transform:rotateY(0) translateY(0) #{"/*rtl:rotateY(180deg) translateY(-22px)*/"};
+            transform:rotateY(0) translateY(0) #{"/*rtl:rotateY(180deg) translateY(250%)*/"};
             border: 0;
             z-index: 3;
             color: rgba($brand-font, 1);
@@ -337,9 +338,11 @@
             }
             .flickity-prev-next-button.next {
                 right: -20px;
+                transform:rotateY(0) translateY(0) #{"/*rtl:rotateY(180deg) translateY(0)*/"};
             }
             .flickity-prev-next-button.previous {
                 left: -20px;
+                transform:rotateY(0) translateY(0) #{"/*rtl:rotateY(180deg) translateY(0)*/"};
             }
             .hero-premium__scroll {
                 bottom: 115px;

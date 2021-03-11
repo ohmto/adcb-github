@@ -1776,6 +1776,17 @@ a>sup {
     }
 }
 
+@media (min-width: 768px) {
+    .c-product-feature {
+        .o-comp {
+            &__content {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+        }
+    }
+}
+
 @media (min-width: 1232px) {
     .o-comp {
         &__content {

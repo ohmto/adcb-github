@@ -125,7 +125,7 @@
             color: $white;
         }
         .flickity-prev-next-button.next {
-            right: -20px;
+            right: 0;
             transform:rotateY(0) translateY(250%) #{"/*rtl:rotateY(180deg) translateY(250%)*/"};
             border: 0;
             z-index: 3;
@@ -139,7 +139,7 @@
             }
         }
         .flickity-prev-next-button.previous {
-            left: -20px;
+            left: 0;
             transform:rotateY(0) translateY(250%) #{"/*rtl:rotateY(180deg) translateY(250%)*/"};
             border: 0;
             z-index: 3;

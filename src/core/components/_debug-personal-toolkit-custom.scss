@@ -1771,8 +1771,18 @@ a>sup {
     &__content {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        padding-top: 48px !important;
-        padding-bottom: 48px !important;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .c-product-feature {
+        .o-comp {
+            &__content {
+                padding-top: 48px !important;
+            }
+        }
     }
 }
 
